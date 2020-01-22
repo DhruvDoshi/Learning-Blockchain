@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.500
+In general, Wallets have feature limitations that can make them difficult to manage.
+
+00:00:05.500 --> 00:00:07.060
+With the debug console,
+
+00:00:07.059 --> 00:00:11.544
+you can gain access to additional features that are hidden from the user interface.
+
+00:00:11.544 --> 00:00:14.460
+In this video, we'll cover three commands you can use
+
+00:00:14.460 --> 00:00:17.480
+to explore wild information from the debug console.
+
+00:00:17.480 --> 00:00:22.914
+We'll cover getwalletinfo, listwallets, and walletspassphrasechange.
+
+00:00:22.914 --> 00:00:27.554
+These commands are extremely important when configuring Blockchain services.
+
+00:00:27.554 --> 00:00:30.370
+First, we'll look at getwalletinfo.
+
+00:00:30.370 --> 00:00:35.035
+getwalletinfo returns various information about the state of a wallet.
+
+00:00:35.034 --> 00:00:39.894
+This is a helpful way to access wallet balances and other metadata.
+
+00:00:39.895 --> 00:00:41.530
+Using the help function,
+
+00:00:41.530 --> 00:00:44.765
+you can see that this will return details about the wallet name,
+
+00:00:44.765 --> 00:00:47.609
+version, balance, and much more.
+
+00:00:47.609 --> 00:00:51.689
+Try running this command for yourself by typing getwalletinfo.
+
+00:00:51.689 --> 00:00:55.699
+As you can see, the name of my wallet is wallet.dat.
+
+00:00:55.700 --> 00:00:59.950
+This is the standard wallet name and yours is probably similar.
+
+00:00:59.950 --> 00:01:01.730
+It also shows that I've made
+
+00:01:01.729 --> 00:01:05.769
+zero transactions and sadly that I have no money in my wallet.
+
+00:01:05.769 --> 00:01:09.204
+If you've been playing around with your wallet and doing transactions,
+
+00:01:09.204 --> 00:01:12.260
+it might show something else here, and that's fine too.
+
+00:01:12.260 --> 00:01:15.560
+Next, we'll check out the listwallets command.
+
+00:01:15.560 --> 00:01:18.820
+This command returns a list of currently loaded wallets,
+
+00:01:18.819 --> 00:01:21.774
+meaning anywhere that you have available under your account.
+
+00:01:21.775 --> 00:01:23.180
+Using the help function,
+
+00:01:23.180 --> 00:01:25.925
+we can see that this is a pretty straightforward command.
+
+00:01:25.924 --> 00:01:30.209
+It tells us that we'll get back a wallet name and provides a few examples.
+
+00:01:30.209 --> 00:01:32.810
+Let's try this by typing listwallets.
+
+00:01:32.810 --> 00:01:38.689
+What I get back is the same wallet.dat that came up using the previous command.
+
+00:01:38.689 --> 00:01:40.844
+This isn't too exciting yet,
+
+00:01:40.844 --> 00:01:44.924
+but it becomes more useful in cases where you start managing multiple wallets.
+
+00:01:44.924 --> 00:01:49.579
+This will be common as you start building applications to test transactions between them.
+
+00:01:49.579 --> 00:01:53.959
+Or if you have other reasons to manage multiple wallets for yourself.
+
+00:01:53.959 --> 00:01:59.459
+You can also check to see that this is correct by navigating to your main bitcoin folder.
+
+00:01:59.459 --> 00:02:05.214
+What you see here is the wallet.dat that's being read from the debug console.
+
+00:02:05.215 --> 00:02:08.884
+Finally, let's look at walletpassphrasechange.
+
+00:02:08.884 --> 00:02:11.349
+The purpose of this command is to change the wallet
+
+00:02:11.349 --> 00:02:15.060
+passphrase from its current passphrase to a new one.
+
+00:02:15.060 --> 00:02:17.590
+You might remember this passphrase as
+
+00:02:17.590 --> 00:02:21.235
+the 12 word phrase you used when you originally created your wallet.
+
+00:02:21.235 --> 00:02:23.140
+This helps you do things like recover
+
+00:02:23.139 --> 00:02:26.014
+your wallet in the case that you forgot your password.
+
+00:02:26.014 --> 00:02:29.709
+Using the help menu, you'll see that this command expects you to provide
+
+00:02:29.710 --> 00:02:34.115
+both the old passphrase and the new passphrase along with the command.
+
+00:02:34.115 --> 00:02:37.480
+I'm not interested in updating my passphrase right now so,
+
+00:02:37.479 --> 00:02:39.069
+I'll leave this command alone.
+
+00:02:39.069 --> 00:02:42.560
+I only wanted to mention it to show you that things like this are possible.
+
+00:02:42.560 --> 00:02:45.849
+To quickly recap, we just walked through some of the details of
+
+00:02:45.849 --> 00:02:48.894
+three helpful commands you can use related to wallets.
+
+00:02:48.895 --> 00:02:54.240
+These commands were getwalletinfo, listwallets, and walletpassphrasechange.
+
+00:02:54.240 --> 00:02:56.950
+These will help you manage wallets you create when building
+
+00:02:56.949 --> 00:03:00.869
+applications or when checking out your own personal wallets.
+

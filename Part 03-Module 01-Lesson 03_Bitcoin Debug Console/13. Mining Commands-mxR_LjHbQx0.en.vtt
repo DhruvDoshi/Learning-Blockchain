@@ -1,0 +1,154 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.160
+The Bitcoin Blockchain currently uses miners and proof-of-work to achieve consensus.
+
+00:00:05.160 --> 00:00:06.839
+Using the debug console,
+
+00:00:06.839 --> 00:00:10.015
+we can check out information about miners on the network.
+
+00:00:10.015 --> 00:00:13.110
+In this video, we'll cover two commands you can use
+
+00:00:13.109 --> 00:00:16.019
+to explore mining info using your debug console.
+
+00:00:16.019 --> 00:00:20.375
+We'll cover getmininginfo and prioritisetransaction.
+
+00:00:20.375 --> 00:00:24.829
+These commands are a great way to get an overview of the state of each block,
+
+00:00:24.829 --> 00:00:27.320
+it provides ways to use block data that might
+
+00:00:27.320 --> 00:00:30.460
+help you with creating and testing applications later on.
+
+00:00:30.460 --> 00:00:33.500
+First, let's look at getmininginfo.
+
+00:00:33.500 --> 00:00:38.174
+getmininginfo returns an overview of mining related information,
+
+00:00:38.174 --> 00:00:40.969
+this helps you understand some pretty interesting things
+
+00:00:40.969 --> 00:00:44.164
+like which block is currently being worked on by a minor.
+
+00:00:44.164 --> 00:00:45.769
+Using the help command,
+
+00:00:45.770 --> 00:00:48.135
+you can see that it will return the current block,
+
+00:00:48.134 --> 00:00:49.655
+the weight of the last block,
+
+00:00:49.655 --> 00:00:52.359
+transaction information and more.
+
+00:00:52.359 --> 00:00:56.125
+I'll run this now by typing getmininginfo.
+
+00:00:56.125 --> 00:01:00.994
+Here it shows we're currently on this block along with some other information.
+
+00:01:00.994 --> 00:01:04.754
+If you're still wondering why the blockchain is so large to download,
+
+00:01:04.754 --> 00:01:06.795
+here's a good example of why.
+
+00:01:06.795 --> 00:01:08.745
+Even being on the test net,
+
+00:01:08.745 --> 00:01:11.650
+we're still sync to over 1,000,000 blocks,
+
+00:01:11.650 --> 00:01:14.234
+with each block being around two megabytes,
+
+00:01:14.233 --> 00:01:17.019
+this can easily take up a lot of space.
+
+00:01:17.019 --> 00:01:21.364
+Another command I wanted to show you was prioritisetransaction.
+
+00:01:21.364 --> 00:01:26.685
+This command accepts a transaction into mined blocks at a higher or lower priority.
+
+00:01:26.685 --> 00:01:29.385
+This means that you can control the likelihood and
+
+00:01:29.385 --> 00:01:32.500
+order that transactions will be accepted into blocks.
+
+00:01:32.500 --> 00:01:35.200
+Having this type of control can be very helpful
+
+00:01:35.200 --> 00:01:38.174
+later on when building and testing your applications.
+
+00:01:38.174 --> 00:01:39.750
+Using the help function,
+
+00:01:39.750 --> 00:01:42.034
+you can see that it needs three inputs to run,
+
+00:01:42.034 --> 00:01:45.914
+the transaction id, a dummy value and a fee_delta.
+
+00:01:45.915 --> 00:01:49.090
+This is a little more complicated than other commands.
+
+00:01:49.090 --> 00:01:51.159
+This may come up again in testing,
+
+00:01:51.159 --> 00:01:53.170
+but we can avoid running it for now.
+
+00:01:53.170 --> 00:01:57.185
+I just wanted to mention this command to show you that this type of thing is possible.
+
+00:01:57.185 --> 00:02:00.040
+One thing you might notice is that prioritise is
+
+00:02:00.040 --> 00:02:03.650
+spelled with an 'S' where normally I'd spell it with a Z,
+
+00:02:03.650 --> 00:02:06.190
+that's common in the UK and it tells us
+
+00:02:06.189 --> 00:02:08.954
+that whoever came up with this was likely from there.
+
+00:02:08.955 --> 00:02:11.930
+Given that Satoshi Nakamoto is still unknown,
+
+00:02:11.930 --> 00:02:15.819
+maybe this is a clue that they are from the UK? You never know.
+
+00:02:15.819 --> 00:02:18.555
+We might just find them someday using clues like this,
+
+00:02:18.555 --> 00:02:21.585
+but anyway, there's some of the commands related to mining.
+
+00:02:21.585 --> 00:02:26.379
+To recap, we just went over getmininginfo and prioritisetransaction.
+
+00:02:26.379 --> 00:02:30.894
+These types of commands will be very useful as we begin creating our own applications.
+
+00:02:30.895 --> 00:02:32.710
+Feel free to explore these further,
+
+00:02:32.710 --> 00:02:35.270
+before moving on to other commands.
+

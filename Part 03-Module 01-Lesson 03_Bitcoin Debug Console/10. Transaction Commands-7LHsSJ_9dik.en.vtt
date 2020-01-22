@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.399
+While it's generally don't give access to
+
+00:00:02.399 --> 00:00:05.634
+transaction information beyond the ones you made personally,
+
+00:00:05.634 --> 00:00:07.664
+but using the debug console,
+
+00:00:07.665 --> 00:00:11.894
+you can explore details of transactions from across the entire network.
+
+00:00:11.894 --> 00:00:15.269
+In this video, we'll cover three helpful commands related to
+
+00:00:15.269 --> 00:00:19.564
+transactions that you can perform in the Bitcoin Core debug console.
+
+00:00:19.565 --> 00:00:21.210
+The commands we'll cover are
+
+00:00:21.210 --> 00:00:26.510
+getchain transactions stats, getrawtransaction, and listtransaction.
+
+00:00:26.510 --> 00:00:30.740
+Transactions are at the core of everything that happens on the blockchain,
+
+00:00:30.739 --> 00:00:34.009
+and getting access to this information will be invaluable as you
+
+00:00:34.009 --> 00:00:37.920
+begin putting this type of functionality into your blockchain applications.
+
+00:00:37.920 --> 00:00:41.664
+To start, let's look at getchain transaction stats.
+
+00:00:41.664 --> 00:00:46.004
+Getchain transactions stat or getchaintxstats
+
+00:00:46.005 --> 00:00:51.300
+returns compute statistics about the total number and rate of transactions in the chain.
+
+00:00:51.299 --> 00:00:53.750
+This is a great way to get an overview of
+
+00:00:53.750 --> 00:00:56.530
+all transactions that are happening on the blockchain.
+
+00:00:56.530 --> 00:00:58.365
+Using the help function,
+
+00:00:58.365 --> 00:01:01.300
+you'll see that this returns information like the time,
+
+00:01:01.299 --> 00:01:05.579
+transaction count, block count and other statistics about transactions.
+
+00:01:05.579 --> 00:01:11.480
+Now, try running this command in your console by typing getchaintxstats.
+
+00:01:11.480 --> 00:01:15.090
+We can see that the timestamp of the final block is here,
+
+00:01:15.090 --> 00:01:17.670
+there are this many transactions and there's
+
+00:01:17.670 --> 00:01:20.954
+about this many transactions made per second.
+
+00:01:20.954 --> 00:01:24.280
+Next, let's look at getrawtransaction.
+
+00:01:24.280 --> 00:01:29.180
+Getrawtransaction allows you to look at the details of any raw transaction data.
+
+00:01:29.180 --> 00:01:34.740
+A raw transaction is a transaction that is formatted to be readable by computers.
+
+00:01:34.739 --> 00:01:38.500
+It follows the rules of the Bitcoin protocol to process
+
+00:01:38.500 --> 00:01:41.200
+the human readable transaction and turn it into
+
+00:01:41.200 --> 00:01:44.304
+a single value that can be interpreted by a computer.
+
+00:01:44.304 --> 00:01:47.230
+Having access to raw transaction data is
+
+00:01:47.230 --> 00:01:51.579
+the first step towards being able to create or manipulate these transactions.
+
+00:01:51.579 --> 00:01:55.265
+Let's look at the details of this command using the help function.
+
+00:01:55.265 --> 00:01:57.614
+As you can see, to run this command,
+
+00:01:57.614 --> 00:02:01.170
+you'll need to provide a transaction ID. Let's try that.
+
+00:02:01.170 --> 00:02:03.189
+A quick note on this command is that it
+
+00:02:03.189 --> 00:02:06.149
+defaults to accepting transactions and the mem pool.
+
+00:02:06.150 --> 00:02:08.650
+So, to get our mem pool transaction,
+
+00:02:08.650 --> 00:02:11.235
+we can type in getrawmempool.
+
+00:02:11.235 --> 00:02:12.970
+From this list of hashes,
+
+00:02:12.969 --> 00:02:15.849
+pick one as the input for getrawtransaction.
+
+00:02:15.849 --> 00:02:19.150
+Now, type getrawtransaction, paste in
+
+00:02:19.150 --> 00:02:22.689
+the transaction id and follow this with the word true.
+
+00:02:22.689 --> 00:02:27.099
+Using true, allows you to see more information about the transaction.
+
+00:02:27.099 --> 00:02:30.250
+When you're done, run this command and see what you get.
+
+00:02:30.250 --> 00:02:33.069
+What you'll see first is just a huge string of
+
+00:02:33.069 --> 00:02:35.674
+numbers containing information like the hash,
+
+00:02:35.675 --> 00:02:38.645
+version, size, and other useful details.
+
+00:02:38.645 --> 00:02:41.344
+This is a lot of information, so if you'd like,
+
+00:02:41.344 --> 00:02:44.645
+pause the video and take a look before we move on.
+
+00:02:44.645 --> 00:02:46.325
+For our last command,
+
+00:02:46.324 --> 00:02:48.399
+let's look at listtransactions.
+
+00:02:48.400 --> 00:02:49.849
+Like you might expect,
+
+00:02:49.849 --> 00:02:52.710
+this gives us a list of transactions for a given account.
+
+00:02:52.710 --> 00:02:55.120
+This is helpful if you ever want to explore
+
+00:02:55.120 --> 00:02:57.730
+transactions that have been made by a given user,
+
+00:02:57.729 --> 00:03:01.454
+or if you want to present this data to a user with your application.
+
+00:03:01.455 --> 00:03:03.045
+Using the help function,
+
+00:03:03.044 --> 00:03:05.854
+you can see this returns the account, address,
+
+00:03:05.854 --> 00:03:11.139
+category, amount or other details about a given set of transaction information.
+
+00:03:11.139 --> 00:03:14.318
+You can provide this command arguments like the account,
+
+00:03:14.318 --> 00:03:16.030
+total count of transactions,
+
+00:03:16.030 --> 00:03:18.425
+and any transactions you'd like to skip.
+
+00:03:18.425 --> 00:03:19.855
+To run this command,
+
+00:03:19.854 --> 00:03:23.109
+type listtransactions into the console and what you'll get
+
+00:03:23.110 --> 00:03:27.045
+back is a list of all the transactions for the account you specify.
+
+00:03:27.044 --> 00:03:29.099
+The default is your own account,
+
+00:03:29.099 --> 00:03:31.460
+and I don't have any transactions on this account,
+
+00:03:31.460 --> 00:03:34.115
+so it's just showing up as an empty array.
+
+00:03:34.115 --> 00:03:38.020
+Yours may also be blank but once you start working with transactions,
+
+00:03:38.020 --> 00:03:40.760
+this empty array should start to fill up.
+
+00:03:40.759 --> 00:03:43.014
+To quickly recap, we discussed
+
+00:03:43.014 --> 00:03:46.689
+three helpful commands you can use to explore transaction information.
+
+00:03:46.689 --> 00:03:53.134
+These commands were getchaintransactionstats, getrawtransaction and listtransactions.
+
+00:03:53.134 --> 00:03:56.169
+These commands will be very valuable as you start working with
+
+00:03:56.169 --> 00:03:59.799
+transactions while building your blockchain applications.
+

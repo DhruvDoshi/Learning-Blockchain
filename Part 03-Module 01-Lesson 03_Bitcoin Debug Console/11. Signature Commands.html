@@ -1,0 +1,346 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Signature Commands</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Bitcoin Debug Console</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Interview Debug Console.html">02. Interview: Debug Console</a>
+    </li>
+    <li class="">
+      <a href="03. Terminal Overview.html">03. Terminal Overview</a>
+    </li>
+    <li class="">
+      <a href="04. Debug Console.html">04. Debug Console</a>
+    </li>
+    <li class="">
+      <a href="05. Blockchain Commands.html">05. Blockchain Commands</a>
+    </li>
+    <li class="">
+      <a href="06. Hash Commands.html">06. Hash Commands</a>
+    </li>
+    <li class="">
+      <a href="07. Block Commands.html">07. Block Commands</a>
+    </li>
+    <li class="">
+      <a href="08. Wallet Commands.html">08. Wallet Commands</a>
+    </li>
+    <li class="">
+      <a href="09. Mempool Commands.html">09. Mempool Commands</a>
+    </li>
+    <li class="">
+      <a href="10. Transaction Commands.html">10. Transaction Commands</a>
+    </li>
+    <li class="">
+      <a href="11. Signature Commands.html">11. Signature Commands</a>
+    </li>
+    <li class="">
+      <a href="12. Network Commands.html">12. Network Commands</a>
+    </li>
+    <li class="">
+      <a href="13. Mining Commands.html">13. Mining Commands</a>
+    </li>
+    <li class="">
+      <a href="14. Bitcoin-CLI.html">14. Bitcoin-CLI</a>
+    </li>
+    <li class="">
+      <a href="15. Interview Use Help!.html">15. Interview: Use Help!</a>
+    </li>
+    <li class="">
+      <a href="16. Lesson Recap.html">16. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. Signature Commands</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="signature-commands">Signature Commands</h1>
+<p>In this section we'll explore information about signatures using the debug console.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Signature Commands</p></h3>
+  <video controls>
+  <source src="11. Signature Commands-T6M-RC7NmXc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="11. Signature Commands-T6M-RC7NmXc.en.vtt" label="en">
+</video>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <p><strong><em>Note: The current version for Bitcoin Core is 0.17.0.1, some functions and commands has been changed since the video was recorded, we are adding text notes if changes has been made.</em></strong></p>
+  </div>
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="changes-in-bitcoin-core-version-v01701">Changes in Bitcoin Core version v0.17.0.1</h3>
+<p><code>signrawtransaction</code> is deprecated and will be fully removed in v0.18. To use <code>signrawtransaction</code> in v0.17, restart bitcoind with <code>-deprecatedrpc=signrawtransaction</code>. </p>
+<p>Projects should transition to using <code>signrawtransactionwithkey</code> and <code>signrawtransactionwithwallet</code> before upgrading to v0.18.</p>
+<p>Try those commands using the help command:</p>
+<ul>
+<li><code>help signrawtransactionwithkey</code></li>
+</ul>
+<p>Sign inputs for raw transaction (serialized, hex-encoded). The second argument is an array of base58-encoded private keys that will be the only keys used to sign the transaction. The third optional argument (may be null) is an array of previous transaction outputs that this transaction depends on but may not yet be in the block chain.</p>
+<ul>
+<li><code>help signrawtransactionwithwallet</code></li>
+</ul>
+<p>Sign inputs for raw transaction (serialized, hex-encoded). The second optional argument (may be null) is an array of previous transaction outputs that this transaction depends on but may not yet be in the block chain</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="commands">Commands</h1>
+<blockquote>
+  <p><strong>signrawtransaction:</strong> Sign inputs for a raw transaction.</p>
+</blockquote>
+<blockquote>
+  <p><strong>signmessage:</strong> Sign message with the private key of an address</p>
+</blockquote>
+<h1 id="resources">Resources</h1>
+<blockquote>
+  <p>Learn more about the <a href="https://bitcoin.org/en/developer-reference#raw-transaction-format" target="_blank">Raw transaction format</a></p>
+</blockquote>
+<h1 id="key-terms">Key Terms</h1>
+<blockquote>
+  <p><strong>Signature:</strong> Establishes proof of ownership for each transaction on the blockchain.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="problem-signatures-debug-console">Problem: Signatures Debug Console</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Check all below that are valid arguments to the command signrawtransaction. (Only if you are using Bitcoin Core v16)</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1531159586250" name="672253" id="a1531159586250">
+      <label for="a1531159586250"><p>txid</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1531159786014" name="672253" id="a1531159786014">
+      <label for="a1531159786014"><p>vout</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1531159786520" name="672253" id="a1531159786520">
+      <label for="a1531159786520"><p>scriptPubKey</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1531159786945" name="672253" id="a1531159786945">
+      <label for="a1531159786945"><p>hex</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>txid</li>
+      <li>vout</li>
+      <li>scriptPubKey</li>
+      <li>hex</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Check all below that are valid arguments to the command <code>signrawtransactionwithwallet</code>. (Only if you are using Bitcoin Core v17)</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1541701090286" name="781453" id="a1541701090286">
+      <label for="a1541701090286"><p>hexstring</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1541701243543" name="781453" id="a1541701243543">
+      <label for="a1541701243543"><p>[{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},…]</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1541701266206" name="781453" id="a1541701266206">
+      <label for="a1541701266206"><p>scriptSig</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>hexstring</li>
+      <li>[{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...]</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

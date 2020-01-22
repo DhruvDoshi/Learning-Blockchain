@@ -1,0 +1,274 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.299
+The Bitcoin network is made up of a peer-to-peer network
+
+00:00:03.299 --> 00:00:07.029
+of computers that allow information to be shared across users.
+
+00:00:07.030 --> 00:00:09.929
+With the debug console we can query the level of
+
+00:00:09.929 --> 00:00:13.379
+pure connectivity and even modify our peer list.
+
+00:00:13.380 --> 00:00:18.225
+In this video we'll explore the peer-to-peer network using three commands,
+
+00:00:18.225 --> 00:00:22.785
+getnetworkinfo, getpeerinfo, and getconnectioncount.
+
+00:00:22.785 --> 00:00:25.800
+These are useful when we want to connect to other users,
+
+00:00:25.800 --> 00:00:29.585
+or understand the connections we've made with other users in the network.
+
+00:00:29.585 --> 00:00:31.940
+It might not be so clear why yet,
+
+00:00:31.940 --> 00:00:36.704
+but this is extremely useful when configuring backend services with multiple nodes.
+
+00:00:36.704 --> 00:00:39.765
+We'll be doing this type of work later in the program.
+
+00:00:39.765 --> 00:00:42.850
+For now, we're mostly hoping that you'd get some exposure to
+
+00:00:42.850 --> 00:00:47.024
+these commands so later we can focus on how to use them in your application.
+
+00:00:47.024 --> 00:00:50.030
+Let's get started with getnetworkinfo.
+
+00:00:50.030 --> 00:00:52.070
+You might be noticing a pattern here.
+
+00:00:52.070 --> 00:00:55.625
+Just like getblockchaininfo, and getmenpoolinfo,
+
+00:00:55.625 --> 00:00:57.744
+getnetworkinfo allows you to get
+
+00:00:57.744 --> 00:01:00.655
+a high level overview of the network you're currently on.
+
+00:01:00.655 --> 00:01:03.279
+This is a helpful way to get basic information,
+
+00:01:03.279 --> 00:01:06.234
+and sanity check that everything's working correctly.
+
+00:01:06.234 --> 00:01:07.900
+Using the help function,
+
+00:01:07.900 --> 00:01:11.915
+we can see that it will return information about our network like the version,
+
+00:01:11.915 --> 00:01:15.250
+subversion, protocol version, and much more.
+
+00:01:15.250 --> 00:01:18.265
+Read through some of the details provided in the console,
+
+00:01:18.265 --> 00:01:20.094
+then try running it for yourself.
+
+00:01:20.094 --> 00:01:23.224
+I'll run it here by typing getnetworkinfo.
+
+00:01:23.224 --> 00:01:27.964
+Here, we can see that the subversion is Satoshi 0160,
+
+00:01:27.965 --> 00:01:29.810
+going down a little further,
+
+00:01:29.810 --> 00:01:31.314
+you'll see the networks we're on.
+
+00:01:31.314 --> 00:01:35.759
+In this case, ipv4, ipv6, and onion.
+
+00:01:35.760 --> 00:01:39.460
+A lot of this has already been provided in the information panel.
+
+00:01:39.459 --> 00:01:42.759
+You can go there by clicking up here on the top left.
+
+00:01:42.760 --> 00:01:46.270
+This information might not be something you use for your application,
+
+00:01:46.269 --> 00:01:49.164
+but here's an example of a way you could use it.
+
+00:01:49.165 --> 00:01:53.660
+The Bitcoin Core wallet is pulling this information similar to how you just did,
+
+00:01:53.659 --> 00:01:56.265
+and it's presenting it to you on the user interface.
+
+00:01:56.265 --> 00:01:58.810
+It's a nice way to provide quick access to some of
+
+00:01:58.810 --> 00:02:01.750
+the more important information your users might need.
+
+00:02:01.750 --> 00:02:04.840
+Next, let's try the command getpeerinfo.
+
+00:02:04.840 --> 00:02:07.909
+This command returns data about each connected network node.
+
+00:02:07.909 --> 00:02:09.895
+Also known as your peers.
+
+00:02:09.895 --> 00:02:14.050
+Having peer Info allows you to see the details of the users in the network.
+
+00:02:14.050 --> 00:02:16.885
+This helps you check to see who you are connected to,
+
+00:02:16.884 --> 00:02:19.120
+and the details about their connection.
+
+00:02:19.120 --> 00:02:23.409
+This can be useful in situations where you'd like to add or remove peers,
+
+00:02:23.409 --> 00:02:26.650
+or work with the information provided to you about them.
+
+00:02:26.650 --> 00:02:31.325
+Using help, you'll see that this will allow you to get information like the ID,
+
+00:02:31.324 --> 00:02:35.604
+adress, and services for every node that is connected to the network.
+
+00:02:35.604 --> 00:02:39.019
+I'll try it now by typing getpeerinfo,
+
+00:02:39.020 --> 00:02:43.435
+you might notice that the output is pretty large compared to our other commands.
+
+00:02:43.435 --> 00:02:46.479
+That's because the data we get back is a separate group of
+
+00:02:46.479 --> 00:02:50.414
+information for every node we're connected to in the network.
+
+00:02:50.414 --> 00:02:54.318
+As an example of how you might be able to display this information,
+
+00:02:54.318 --> 00:02:57.244
+you can check out the peers window in the console.
+
+00:02:57.245 --> 00:02:58.965
+When I click on peers,
+
+00:02:58.965 --> 00:03:00.379
+I can see the node ID,
+
+00:03:00.379 --> 00:03:04.509
+service, ping and other details of each node in the network.
+
+00:03:04.509 --> 00:03:08.739
+This is all the same information that's presented in the get peer info command.
+
+00:03:08.740 --> 00:03:11.360
+So, when we talk about the peer to peer network,
+
+00:03:11.360 --> 00:03:13.670
+we've been mentioning it mostly as a concept.
+
+00:03:13.669 --> 00:03:17.718
+What's cool about this is that it's the first time you're seeing some of these peers,
+
+00:03:17.718 --> 00:03:21.544
+and what information is available to investigate the different nodes.
+
+00:03:21.544 --> 00:03:24.409
+Finally, let's look at get connection count.
+
+00:03:24.409 --> 00:03:28.829
+This command returns the number of connections you have to other nodes in the network.
+
+00:03:28.830 --> 00:03:31.320
+It's nothing fancy, but it's just another way
+
+00:03:31.319 --> 00:03:33.879
+to get information about nodes you're connected to.
+
+00:03:33.879 --> 00:03:35.354
+Using the help function,
+
+00:03:35.354 --> 00:03:37.649
+you can see that there's not really much to it.
+
+00:03:37.650 --> 00:03:39.914
+So, let's run it and see what we get.
+
+00:03:39.914 --> 00:03:42.840
+Right now, it's showing that we have eight peers.
+
+00:03:42.840 --> 00:03:44.640
+This might not seem like much,
+
+00:03:44.639 --> 00:03:47.204
+but it's another example of information you can have
+
+00:03:47.205 --> 00:03:50.555
+access to that you could potentially provide to your users.
+
+00:03:50.555 --> 00:03:53.409
+We haven't been giving exact use cases for each of these,
+
+00:03:53.409 --> 00:03:55.650
+because it depends on what you're making.
+
+00:03:55.650 --> 00:03:57.550
+But to get a little creative,
+
+00:03:57.550 --> 00:04:00.090
+maybe I'd want to build a social network app where
+
+00:04:00.090 --> 00:04:02.759
+the nodes I'm connected to are considered my friends.
+
+00:04:02.759 --> 00:04:04.469
+Using a command like this,
+
+00:04:04.469 --> 00:04:06.835
+I can show people how many friends they have.
+
+00:04:06.835 --> 00:04:10.540
+Just making that up, we're not totally focused on applications yet,
+
+00:04:10.539 --> 00:04:12.939
+but hopefully thinking of ideas like this can
+
+00:04:12.939 --> 00:04:15.770
+help you pull through some of the less exciting commands.
+
+00:04:15.770 --> 00:04:21.324
+As a final note, you can see each of these peers over in the peers window like before.
+
+00:04:21.324 --> 00:04:22.920
+It doesn't show account,
+
+00:04:22.920 --> 00:04:25.540
+but since it's pretty small I can easily see that it's
+
+00:04:25.540 --> 00:04:29.030
+correctly showing me that I have eight peers connected to me.
+
+00:04:29.029 --> 00:04:32.819
+That wraps up the three commands you can use to check out the network.
+
+00:04:32.819 --> 00:04:38.185
+To recap, we covered getnetworkinfo, getpeerinfo, and getconnectioncount.
+
+00:04:38.185 --> 00:04:41.930
+Feel free to explore these commands as you continue to expand your network.
+

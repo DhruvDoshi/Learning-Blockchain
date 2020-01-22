@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.055
+Hey, everybody.
+
+00:00:01.055 --> 00:00:03.090
+I'm back with Brandy and before we get started
+
+00:00:03.090 --> 00:00:05.355
+in this next lesson, I had a couple questions.
+
+00:00:05.355 --> 00:00:09.540
+We are choosing to focus a lot on the Bitcoin debug console throughout the lesson,
+
+00:00:09.540 --> 00:00:11.565
+and I was wondering what made you decide that
+
+00:00:11.565 --> 00:00:13.895
+this was important to learn and how does it help the students?
+
+00:00:13.895 --> 00:00:17.520
+Yes, excellent. So, the debug console is really another tool for
+
+00:00:17.520 --> 00:00:21.325
+us in our toolbox for discovering new services within blockchain.
+
+00:00:21.325 --> 00:00:25.145
+Now of course, every platform has their own toolset, right?
+
+00:00:25.145 --> 00:00:27.720
+Right now, we're discovering the world of
+
+00:00:27.720 --> 00:00:33.060
+Bitcoin Core and how we can work with the blockchain for Bitcoin course platform.
+
+00:00:33.060 --> 00:00:35.160
+And the debug console allows us to
+
+00:00:35.160 --> 00:00:38.340
+explore and that's where I really love about the debug console.
+
+00:00:38.340 --> 00:00:41.160
+All right, cool. And another question before we get started that I had,
+
+00:00:41.160 --> 00:00:44.990
+is we're focusing a lot so far in this program on Bitcoin specifically,
+
+00:00:44.990 --> 00:00:47.100
+but that's not the only blockchain out there.
+
+00:00:47.100 --> 00:00:48.960
+There's tons of other options and we actually
+
+00:00:48.960 --> 00:00:51.110
+playing on exploring some of them later in the program.
+
+00:00:51.110 --> 00:00:53.385
+Particularly, Ethereum, and I was wondering,
+
+00:00:53.385 --> 00:00:55.785
+how does some of the stuff we're going to learn about the debug console
+
+00:00:55.785 --> 00:00:58.785
+now translate into what we'll be doing with Ethereum later?
+
+00:00:58.785 --> 00:01:00.540
+Yeah, that's a fantastic question,
+
+00:01:00.540 --> 00:01:03.060
+and this is something I'm actually excited about.
+
+00:01:03.060 --> 00:01:06.480
+You know, you don't really appreciate the toolset until you see the power of
+
+00:01:06.480 --> 00:01:10.820
+the tool working and that's what we're doing at the debug console and right now,
+
+00:01:10.820 --> 00:01:12.740
+we're focusing on Bitcoin cause it's literally
+
+00:01:12.740 --> 00:01:15.040
+the first generation of blockchain services.
+
+00:01:15.040 --> 00:01:17.250
+Bitcoin created blockchain, right?
+
+00:01:17.250 --> 00:01:19.160
+I mean, obviously, it's an underpinning of
+
+00:01:19.160 --> 00:01:21.920
+the technology and now we're seeing the power of
+
+00:01:21.920 --> 00:01:23.180
+it as we're navigating board to
+
+00:01:23.180 --> 00:01:26.700
+second generation blockchain services and that's the Ethereum platform,
+
+00:01:26.700 --> 00:01:28.830
+second generation with smart contract.
+
+00:01:28.830 --> 00:01:31.700
+So, what's interesting is we're going to see a lot of these commands that
+
+00:01:31.700 --> 00:01:34.950
+we're utilizing now within the debug console also
+
+00:01:34.950 --> 00:01:38.270
+participate with the Ethereum platform and it's
+
+00:01:38.270 --> 00:01:42.350
+super nice because we get to utilize the same concepts with other platforms.
+
+00:01:42.350 --> 00:01:44.030
+So, we have Ethereum,
+
+00:01:44.030 --> 00:01:47.470
+but there's so many more out there that we can experiment with.
+
+00:01:47.470 --> 00:01:50.100
+So, it's really nice to know that there's always something to
+
+00:01:50.100 --> 00:01:53.250
+experiment with to understand what functionality really
+
+00:01:53.250 --> 00:01:56.430
+exists with that platform and it always starts with one way to
+
+00:01:56.430 --> 00:02:00.075
+discover functionality and the debug console is a fantastic way to do it.
+
+00:02:00.075 --> 00:02:02.880
+Great, thanks. Yeah, it's been really exciting seeing all the connections
+
+00:02:02.880 --> 00:02:05.755
+between the different platforms and how related they actually all are.
+
+00:02:05.755 --> 00:02:07.385
+So throughout the rest of the lesson out,
+
+00:02:07.385 --> 00:02:09.120
+we're going to be talking about the debug console
+
+00:02:09.120 --> 00:02:11.410
+and we hope you're excited to get started.
+

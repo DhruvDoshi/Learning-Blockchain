@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.759
+Now that we have the hash values of a block,
+
+00:00:02.759 --> 00:00:05.714
+we can start to further explore blocks on the blockchain.
+
+00:00:05.714 --> 00:00:08.369
+In this video, we'll cover three commands you
+
+00:00:08.369 --> 00:00:11.320
+can use to explore blocks in the debug console.
+
+00:00:11.320 --> 00:00:16.545
+The commands we'll cover are getblock, getblockheader and generate.
+
+00:00:16.545 --> 00:00:19.470
+These commands will be extremely useful to help you
+
+00:00:19.469 --> 00:00:22.429
+access data about specific blocks on the blockchain.
+
+00:00:22.429 --> 00:00:25.074
+To start, let's look at getblock.
+
+00:00:25.074 --> 00:00:28.489
+Getblock returns details of block information,
+
+00:00:28.489 --> 00:00:33.085
+the amount of detail returned can vary depending on the level you specify.
+
+00:00:33.085 --> 00:00:35.820
+This allows you to pull any of these details
+
+00:00:35.820 --> 00:00:38.570
+into applications you might create in the future.
+
+00:00:38.570 --> 00:00:42.284
+Using help, you can inspect the details of this command.
+
+00:00:42.284 --> 00:00:45.029
+What we need to provide is a block hash.
+
+00:00:45.030 --> 00:00:48.064
+Then we can specify whether we want a string of data,
+
+00:00:48.064 --> 00:00:50.234
+an object with block information,
+
+00:00:50.234 --> 00:00:53.905
+or the same object along with each transaction in the block.
+
+00:00:53.905 --> 00:00:57.605
+This is specified using 0, 1 or 2.
+
+00:00:57.604 --> 00:00:59.659
+Let's try running this command.
+
+00:00:59.659 --> 00:01:02.024
+First, we need to get a block hash.
+
+00:01:02.024 --> 00:01:06.049
+We can do that by running getblockhash and choosing a block number.
+
+00:01:06.049 --> 00:01:08.004
+I'll pick 100.
+
+00:01:08.004 --> 00:01:10.939
+Putting this hash into the getblock command,
+
+00:01:10.939 --> 00:01:12.834
+we get details like the hash,
+
+00:01:12.834 --> 00:01:15.899
+confirmations, size, and much more.
+
+00:01:15.900 --> 00:01:18.590
+Running this command and selecting 2,
+
+00:01:18.590 --> 00:01:22.465
+we'll see that the transaction has been broken out into even more detail.
+
+00:01:22.465 --> 00:01:27.125
+We now also have information like the hash, version and size.
+
+00:01:27.125 --> 00:01:29.189
+This is a lot of information,
+
+00:01:29.189 --> 00:01:33.950
+so feel free to pause the video and take time to inspect the data it has returned.
+
+00:01:33.950 --> 00:01:36.769
+Next, we'll cover getblockheader.
+
+00:01:36.769 --> 00:01:41.795
+getblockheader returns information about the header of a block, just like it says.
+
+00:01:41.795 --> 00:01:45.640
+This allows you to call more specific information in cases where you
+
+00:01:45.640 --> 00:01:49.734
+don't need access to all the block details you get from getblock.
+
+00:01:49.734 --> 00:01:51.659
+Running this using help,
+
+00:01:51.659 --> 00:01:54.369
+you'll see that this returns all the details of the block,
+
+00:01:54.370 --> 00:01:58.035
+but doesn't include transaction information like before.
+
+00:01:58.034 --> 00:02:00.489
+I'll run this in my debug console,
+
+00:02:00.489 --> 00:02:02.774
+but first I need to get a block hash again.
+
+00:02:02.775 --> 00:02:06.344
+I'll use getblockhash and choose block 19,
+
+00:02:06.344 --> 00:02:07.859
+because it's my favorite number.
+
+00:02:07.859 --> 00:02:11.500
+I now have a hash I can use to put in to getblockheader.
+
+00:02:11.500 --> 00:02:17.110
+Next, I'll run getblockheader and paste the hash from black 19 into the command.
+
+00:02:17.110 --> 00:02:20.130
+Now you can see the details of the header for this block,
+
+00:02:20.129 --> 00:02:23.275
+but don't have access to the transaction information.
+
+00:02:23.275 --> 00:02:26.560
+Finally, let's go over the generate command.
+
+00:02:26.560 --> 00:02:29.080
+Generate allows you to immediately mind
+
+00:02:29.080 --> 00:02:32.530
+the specified number of blocks to an address in the wallet.
+
+00:02:32.530 --> 00:02:37.050
+This is a way to create blocks that you can then interact with on the blockchain.
+
+00:02:37.050 --> 00:02:38.800
+This is extremely helpful for
+
+00:02:38.800 --> 00:02:42.555
+testing applications when you want more control over your environment.
+
+00:02:42.555 --> 00:02:46.340
+This command is actually only really useful on the regnet.
+
+00:02:46.340 --> 00:02:49.479
+The regnet allows you to create blocks instantly since there is
+
+00:02:49.479 --> 00:02:52.984
+no network that needs to verify any of these transactions.
+
+00:02:52.985 --> 00:02:55.585
+I'll switch over to the regnet now.
+
+00:02:55.585 --> 00:02:57.230
+Remember, to do this,
+
+00:02:57.229 --> 00:03:01.364
+type regtest = 1 into your bitcoin.config file.
+
+00:03:01.365 --> 00:03:03.439
+Then reload the software.
+
+00:03:03.439 --> 00:03:05.204
+Using the help function,
+
+00:03:05.205 --> 00:03:08.635
+you'll see that it allows you to specify a number of blocks to generate.
+
+00:03:08.634 --> 00:03:13.179
+Once I do, the console will instantly create this number of blocks on the regnet.
+
+00:03:13.180 --> 00:03:16.560
+Let's try it. I'll generate 100 blocks.
+
+00:03:16.560 --> 00:03:20.064
+What it returns is the hash for each of these blocks.
+
+00:03:20.064 --> 00:03:22.615
+I can now explore and work with these blocks
+
+00:03:22.615 --> 00:03:25.420
+just like any other that we've seen previously.
+
+00:03:25.419 --> 00:03:27.339
+Pick one of these values and run
+
+00:03:27.340 --> 00:03:31.189
+the command getblock to see more details of any block you'd like.
+
+00:03:31.189 --> 00:03:33.819
+All right, so there's a few commands you can use to
+
+00:03:33.819 --> 00:03:36.614
+get started exploring blocks with the debug console.
+
+00:03:36.615 --> 00:03:40.445
+We covered getblock, getblockheader and generate.
+
+00:03:40.444 --> 00:03:43.289
+If you like, continue playing around with these commands to
+
+00:03:43.289 --> 00:03:47.009
+create and inspect your own blocks using the debug console.
+
+00:03:47.009 --> 00:03:50.649
+Before moving on, remember to switch back to the test network.
+
+00:03:50.650 --> 00:03:52.090
+Throughout the rest of the lesson,
+
+00:03:52.090 --> 00:03:55.129
+we'll continue going over more of the commands available to you.
+

@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.785
+It's possible to explore Bitcoin data not only from websites and block explorers,
+
+00:00:04.785 --> 00:00:07.019
+but directly from a command line.
+
+00:00:07.019 --> 00:00:09.705
+Understanding how to do this is a huge step
+
+00:00:09.705 --> 00:00:12.675
+towards programming your own blockchain applications.
+
+00:00:12.675 --> 00:00:15.540
+In this video, we'll familiarize you with one way to
+
+00:00:15.539 --> 00:00:18.619
+do this using the Bitcoin Core Debug console.
+
+00:00:18.620 --> 00:00:23.390
+We'll introduce some of its core features and get you started with a few of its commands.
+
+00:00:23.390 --> 00:00:26.550
+The debug console assist with debugging efforts and
+
+00:00:26.550 --> 00:00:30.080
+provides a window to the Bitcoin Core RPC console.
+
+00:00:30.079 --> 00:00:34.989
+The RPC console is essential to back-end services with Bitcoin blockchain.
+
+00:00:34.990 --> 00:00:39.460
+It also allows you to investigate the blockchain as new blocks are introduced.
+
+00:00:39.460 --> 00:00:42.054
+Now let's go ahead and start using it.
+
+00:00:42.054 --> 00:00:43.689
+To access the console,
+
+00:00:43.689 --> 00:00:46.399
+first go to your Bitcoin core client.
+
+00:00:46.399 --> 00:00:50.089
+From there, navigate to help in the top menu bar,
+
+00:00:50.090 --> 00:00:52.695
+then select debug window.
+
+00:00:52.695 --> 00:00:57.155
+Here you should see a screen similar to ours welcoming you to the console.
+
+00:00:57.155 --> 00:01:01.674
+It also includes a warning message about being cautious when running commands.
+
+00:01:01.674 --> 00:01:04.269
+We recommend that while testing these features,
+
+00:01:04.269 --> 00:01:08.829
+you continue to use wallets that are not connected to any actual Bitcoin value.
+
+00:01:08.829 --> 00:01:10.420
+Please be careful.
+
+00:01:10.420 --> 00:01:13.730
+If you're connected to a wallet that is not storing information,
+
+00:01:13.730 --> 00:01:17.335
+there should be no problems with experimenting using the console.
+
+00:01:17.334 --> 00:01:19.254
+Down at the bottom of the screen,
+
+00:01:19.254 --> 00:01:21.280
+you'll see a place to input commands.
+
+00:01:21.280 --> 00:01:23.695
+This is how you interact with the console.
+
+00:01:23.694 --> 00:01:26.494
+A great way to start is with the help command.
+
+00:01:26.495 --> 00:01:28.030
+Select the command prompt,
+
+00:01:28.030 --> 00:01:30.234
+type "Help" and click "Enter."
+
+00:01:30.234 --> 00:01:32.950
+What you see now is all of the available commands,
+
+00:01:32.950 --> 00:01:35.984
+you can use to navigate the blockchain with this tool.
+
+00:01:35.984 --> 00:01:37.790
+There's a lot of commands here,
+
+00:01:37.790 --> 00:01:41.475
+but to help you out, they split them up into a few main categories.
+
+00:01:41.474 --> 00:01:45.384
+These categories are Blockchain, Control, Generating,
+
+00:01:45.385 --> 00:01:49.984
+Mining, Network, Raw transactions, Util and Wallet.
+
+00:01:49.984 --> 00:01:54.129
+Note that whenever you see something following the command and the help menu,
+
+00:01:54.129 --> 00:01:56.049
+it means that the console is expecting
+
+00:01:56.049 --> 00:02:00.539
+some extra input from you to return the information you request.
+
+00:02:00.540 --> 00:02:03.790
+Each of these commands are pretty clearly laid out to allow
+
+00:02:03.790 --> 00:02:06.795
+you to easily experiment based on what you're interested in.
+
+00:02:06.795 --> 00:02:10.530
+You can get the details on any of these commands by typing Help,
+
+00:02:10.530 --> 00:02:12.515
+followed by the name of the command.
+
+00:02:12.514 --> 00:02:15.339
+We'll use the Help function pretty extensively as we
+
+00:02:15.340 --> 00:02:18.474
+review these commands in more detail throughout the lesson.
+
+00:02:18.474 --> 00:02:20.710
+Try a few of them for yourself to get
+
+00:02:20.710 --> 00:02:23.474
+more information about any of the commands on the list.
+
+00:02:23.474 --> 00:02:26.859
+So there's some basics to get you started with the debug console.
+
+00:02:26.860 --> 00:02:29.110
+This is a really interesting tool that allows you to
+
+00:02:29.110 --> 00:02:31.645
+explore a ton of data on the blockchain.
+
+00:02:31.645 --> 00:02:34.525
+Remember, the Help command is your best friend here.
+
+00:02:34.525 --> 00:02:38.920
+You can always use this to explore more information about each of these commands,
+
+00:02:38.919 --> 00:02:41.984
+but we're definitely not done walking through the different commands available.
+
+00:02:41.985 --> 00:02:44.400
+We'll be going through more of these throughout the lesson.
+

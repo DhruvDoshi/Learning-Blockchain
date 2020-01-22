@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.995
+Alright. So we just wrapped up learning
+
+00:00:01.995 --> 00:00:04.800
+a ton of new commands that you can use in the debug console,
+
+00:00:04.800 --> 00:00:06.325
+and honestly it can really be a lot.
+
+00:00:06.325 --> 00:00:08.265
+There's dozens of commands probably.
+
+00:00:08.265 --> 00:00:10.290
+I was wondering, when you use it,
+
+00:00:10.290 --> 00:00:13.595
+is there any command in particular that you found particularly helpful?
+
+00:00:13.595 --> 00:00:16.680
+That's great. I mean, you just got done saying it right, helpful.
+
+00:00:16.680 --> 00:00:21.140
+Anytime that I need to discover new functionality on any blockchain platform,
+
+00:00:21.140 --> 00:00:23.605
+the very first go to command for me is help,
+
+00:00:23.605 --> 00:00:25.835
+and you can see that right there in the debug console.
+
+00:00:25.835 --> 00:00:27.540
+Just type in help, and it'll list
+
+00:00:27.540 --> 00:00:30.450
+all the available functionality in regards to console
+
+00:00:30.450 --> 00:00:33.400
+you can make for the Bitcoin Core Platform.
+
+00:00:33.400 --> 00:00:35.620
+It's the same similar thing you can do with other platforms,
+
+00:00:35.620 --> 00:00:39.970
+like Etherium, hyperledger, stellar, it just goes on.
+
+00:00:39.970 --> 00:00:43.800
+So help is by far my favorite command to use.
+
+00:00:43.800 --> 00:00:45.650
+Yeah. No, I definitely used it a time.
+
+00:00:45.650 --> 00:00:47.330
+There's a couple of other commands I like too.
+
+00:00:47.330 --> 00:00:51.210
+I find it interesting when certain commands string together.
+
+00:00:51.210 --> 00:00:53.280
+So it's like, to get block,
+
+00:00:53.280 --> 00:00:55.950
+you first have to get block hash and then you can sort of trace
+
+00:00:55.950 --> 00:00:59.490
+back to an original core idea.
+
+00:00:59.490 --> 00:01:01.840
+I find those helpful, but whenever I get lost in that,
+
+00:01:01.840 --> 00:01:03.725
+I go straight back to help too.
+
+00:01:03.725 --> 00:01:06.295
+So yeah, definitely very great command for me.
+
+00:01:06.295 --> 00:01:10.400
+It reminds me of a time where we were experimenting with some of the commands,
+
+00:01:10.400 --> 00:01:12.210
+you remember I was going along route like,
+
+00:01:12.210 --> 00:01:13.900
+I would go ahead and get
+
+00:01:13.900 --> 00:01:17.420
+a raw transaction right and I would get the information and then I would
+
+00:01:17.420 --> 00:01:22.610
+perform another command to go ahead and translate that to human readable tags like,
+
+00:01:22.610 --> 00:01:25.635
+"Hold on, Brandy, you wouldn't believe what I just discovered",
+
+00:01:25.635 --> 00:01:29.390
+and you showed me how to go ahead and do that all in one command. That was super cool.
+
+00:01:29.390 --> 00:01:31.485
+I just figured it out by using help.
+
+00:01:31.485 --> 00:01:35.465
+Perfect. So there we go, favorite command, Help.
+
+00:01:35.465 --> 00:01:37.075
+Thanks Brandy.
+
+00:01:37.075 --> 00:01:38.750
+You're welcome.
+

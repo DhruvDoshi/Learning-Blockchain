@@ -1,0 +1,235 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.435
+When getting started with the debug console,
+
+00:00:02.435 --> 00:00:06.814
+it's interesting to see that you can access data about the entire blockchain.
+
+00:00:06.815 --> 00:00:10.440
+In this video, we'll cover three commands you can use
+
+00:00:10.439 --> 00:00:14.379
+to explore the blockchain using the Bitcoin Core Debug Console.
+
+00:00:14.380 --> 00:00:20.920
+The commands will cover are getblockchaininfo, getblockcount and verifychain.
+
+00:00:20.920 --> 00:00:24.179
+The goal is for you to be comfortable exploring these commands
+
+00:00:24.179 --> 00:00:27.875
+and understanding the basics of what information they provide.
+
+00:00:27.875 --> 00:00:31.710
+This will be important later as you begin using these commands to build
+
+00:00:31.710 --> 00:00:35.770
+your own blockchain applications that need access to this type of data.
+
+00:00:35.770 --> 00:00:41.255
+Feel free to follow along as we work through each of these commands. Let's get started.
+
+00:00:41.255 --> 00:00:47.580
+First, getblockchaininfo returns various state information about blockchain processing.
+
+00:00:47.579 --> 00:00:52.795
+This is a great first step to get an overview of the entire bitcoin blockchain.
+
+00:00:52.795 --> 00:00:54.594
+Using the help function,
+
+00:00:54.594 --> 00:00:56.424
+I can see it returns information,
+
+00:00:56.424 --> 00:00:58.279
+like the chain, blocks,
+
+00:00:58.280 --> 00:01:00.905
+headers, and many other details.
+
+00:01:00.905 --> 00:01:03.039
+Now that I know what to expect,
+
+00:01:03.039 --> 00:01:06.164
+over on get blockchain info in my console.
+
+00:01:06.165 --> 00:01:10.145
+Here you'll see the values for each of the fields that we saw before.
+
+00:01:10.144 --> 00:01:12.439
+We can see that we're on the test chain.
+
+00:01:12.439 --> 00:01:14.019
+There are this number of blocks,
+
+00:01:14.019 --> 00:01:16.364
+this number of headers, and so on.
+
+00:01:16.364 --> 00:01:18.284
+When looking in your console,
+
+00:01:18.284 --> 00:01:20.584
+you'll probably see different values than I do.
+
+00:01:20.584 --> 00:01:23.869
+That's because the blockchain will continue to change over time,
+
+00:01:23.870 --> 00:01:27.240
+so things like the number of blocks will continue to grow.
+
+00:01:27.239 --> 00:01:31.344
+This command also shows you a few interesting things like the BIPS,
+
+00:01:31.344 --> 00:01:34.685
+hard forks or soft forks that have happened on the chain.
+
+00:01:34.685 --> 00:01:38.034
+Here's an example that comes up, BIP66,
+
+00:01:38.034 --> 00:01:43.099
+for this BIP, we can see the version and whether or not it was accepted to the network.
+
+00:01:43.099 --> 00:01:46.869
+In this case, it says the reject status equals true,
+
+00:01:46.870 --> 00:01:50.275
+which means that this was never implemented into the protocol.
+
+00:01:50.275 --> 00:01:51.915
+Scrolling a little lower,
+
+00:01:51.915 --> 00:01:57.005
+we can see BIP9 which includes two main updates, CSV and segwit.
+
+00:01:57.004 --> 00:01:59.819
+You can learn even more information about the forks
+
+00:01:59.819 --> 00:02:02.584
+shown here on the Bitcoin BIP GitHub page.
+
+00:02:02.584 --> 00:02:04.549
+We've linked that below the video.
+
+00:02:04.549 --> 00:02:07.530
+If you're interested, check out what CSV was meant to
+
+00:02:07.530 --> 00:02:11.004
+improve to better understand the effect it had on the blockchain.
+
+00:02:11.004 --> 00:02:13.655
+Next, we'll go over getblockcount.
+
+00:02:13.655 --> 00:02:15.930
+This command returns the number of blocks
+
+00:02:15.930 --> 00:02:18.629
+you've synced to your local copy of the blockchain.
+
+00:02:18.629 --> 00:02:21.484
+This is helpful in situations where you'd like to know
+
+00:02:21.485 --> 00:02:24.560
+how far along you are towards syncing to the network.
+
+00:02:24.560 --> 00:02:26.395
+Using the help function,
+
+00:02:26.395 --> 00:02:28.825
+I can expect what this command will return.
+
+00:02:28.824 --> 00:02:31.954
+Here it shows that it'll simply return a number.
+
+00:02:31.955 --> 00:02:36.130
+I can run this command by typing getblockcount into the console.
+
+00:02:36.129 --> 00:02:41.019
+Here, the console shows me that there are this number of blocks in my current blockchain.
+
+00:02:41.020 --> 00:02:43.580
+This is actually something you saw already in
+
+00:02:43.580 --> 00:02:47.450
+getblockchaininfo the difference here is that this specifically
+
+00:02:47.449 --> 00:02:49.554
+returns the number of blocks where get
+
+00:02:49.555 --> 00:02:53.890
+blockchaininfo returned this data along with tons of other information.
+
+00:02:53.889 --> 00:02:56.824
+Finally, the command verifychain,
+
+00:02:56.824 --> 00:02:59.649
+allows you to verify the blockchain database.
+
+00:02:59.650 --> 00:03:01.284
+Using the help function,
+
+00:03:01.284 --> 00:03:03.969
+you can see that this will return true or false
+
+00:03:03.969 --> 00:03:07.439
+depending on if the blocks you specify or verified.
+
+00:03:07.439 --> 00:03:11.020
+Running this command can take a bit of time as the debug console
+
+00:03:11.020 --> 00:03:14.870
+runs through the entire history of blocks to check and verify them.
+
+00:03:14.870 --> 00:03:17.270
+As you can see, when I run this,
+
+00:03:17.270 --> 00:03:21.960
+it returns true meaning that everything on the entire chain is accurate.
+
+00:03:21.960 --> 00:03:24.510
+When you do this, it doesn't look like much,
+
+00:03:24.509 --> 00:03:26.794
+but it's actually pretty amazing what it's doing.
+
+00:03:26.794 --> 00:03:29.829
+It's running through the entire history of transactions on
+
+00:03:29.830 --> 00:03:33.600
+the blockchain and checking to make sure that every block is valid.
+
+00:03:33.599 --> 00:03:36.719
+This is what we mean when we keep saying that everyone in the peer
+
+00:03:36.719 --> 00:03:39.694
+to peer network has the power to verify information,
+
+00:03:39.694 --> 00:03:40.914
+and with this command,
+
+00:03:40.914 --> 00:03:42.704
+you get to do it for yourself.
+
+00:03:42.705 --> 00:03:47.455
+That wraps up a quick overview of commands you can use to inspect the blockchain.
+
+00:03:47.455 --> 00:03:53.235
+The commands we covered were getblockchaininfo, getblockcount and verifychain.
+
+00:03:53.235 --> 00:03:56.555
+The commands allow you to explore this type of functionality,
+
+00:03:56.555 --> 00:03:58.740
+but also empower you to provide this type of
+
+00:03:58.740 --> 00:04:01.680
+data to users of your own blockchain application.
+
+00:04:01.680 --> 00:04:03.689
+Feel free to experiment with each of
+
+00:04:03.689 --> 00:04:06.870
+these commands to help you get a better understanding of the blockchain
+

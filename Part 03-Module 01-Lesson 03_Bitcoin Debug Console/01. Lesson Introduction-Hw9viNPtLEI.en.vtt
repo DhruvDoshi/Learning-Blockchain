@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.044
+Welcome to this lesson on the Bitcoin Core Debug Console.
+
+00:00:04.044 --> 00:00:06.629
+Previously, he worked on the testnet and create
+
+00:00:06.629 --> 00:00:10.500
+a transactions using the user interface of your Bitcoin core wallet.
+
+00:00:10.500 --> 00:00:12.929
+While this interface is a great start,
+
+00:00:12.929 --> 00:00:16.859
+the real power comes from being able to access this information programmatically.
+
+00:00:16.859 --> 00:00:20.994
+You can do that using what's known as the Bitcoin Core Debug Console.
+
+00:00:20.995 --> 00:00:23.190
+Throughout the lesson, we'll discuss many of
+
+00:00:23.190 --> 00:00:25.650
+the commands available to you in the debug console.
+
+00:00:25.649 --> 00:00:27.899
+Our goal is to help you get set up to
+
+00:00:27.899 --> 00:00:30.924
+confidently explore blockchain data using this tool.
+
+00:00:30.925 --> 00:00:35.359
+We'll do this by covering commands for each component in the block chain framework.
+
+00:00:35.359 --> 00:00:38.299
+This lesson builds on everything you've learned so far.
+
+00:00:38.299 --> 00:00:40.739
+It's where this program really starts to turn from
+
+00:00:40.740 --> 00:00:45.510
+conceptual ideas to the lower level nuts and bolts you'll need to build an application.
+
+00:00:45.509 --> 00:00:48.719
+Don't worry, we're not going off the deep end here and we've
+
+00:00:48.719 --> 00:00:51.780
+really tried to make this lesson in a way that's relatable,
+
+00:00:51.780 --> 00:00:56.015
+approachable and allows you to be prepared for more advanced topics later on.
+
+00:00:56.015 --> 00:01:00.268
+Also, there's one really important thing we want you to get from this lesson,
+
+00:01:00.268 --> 00:01:02.439
+that will take a little effort on your part.
+
+00:01:02.439 --> 00:01:05.909
+In this lesson, you'll have a huge opportunity to type the data you're
+
+00:01:05.909 --> 00:01:10.030
+seeing to the conceptual ideas we've talked about earlier in the program.
+
+00:01:10.030 --> 00:01:12.674
+For example, when looking at block data,
+
+00:01:12.674 --> 00:01:16.140
+think about how this relates to what you understand a block to be.
+
+00:01:16.140 --> 00:01:18.420
+What images in your head already?
+
+00:01:18.420 --> 00:01:21.340
+How does this data relate to that image?
+
+00:01:21.340 --> 00:01:23.790
+Putting in the extra effort here is going to
+
+00:01:23.790 --> 00:01:26.310
+allow you to visualize how all this connects.
+
+00:01:26.310 --> 00:01:31.060
+This will become invaluable as we start building more complicated programs later on.
+
+00:01:31.060 --> 00:01:33.674
+We put a few more details below the video.
+
+00:01:33.674 --> 00:01:36.855
+If you'd like, take some time to read through and when you're ready
+
+00:01:36.855 --> 00:01:40.680
+we'll see you in this lesson on the Bitcoin Core Debug Console.
+

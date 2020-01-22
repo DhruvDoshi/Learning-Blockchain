@@ -1,0 +1,208 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.620
+As a blockchain developer,
+
+00:00:01.620 --> 00:00:04.875
+you'll use transactions as a means to transfer value.
+
+00:00:04.875 --> 00:00:08.820
+Every transaction that's adopted in the blockchain need signatures.
+
+00:00:08.820 --> 00:00:12.905
+There are commands that provide a way to create signatures programmatically.
+
+00:00:12.904 --> 00:00:16.349
+In this video, we'll cover some helpful commands related to
+
+00:00:16.350 --> 00:00:19.795
+digital signatures you can perform in the debug console.
+
+00:00:19.795 --> 00:00:24.505
+The commands we'll cover are signrawtransaction and signmessage.
+
+00:00:24.504 --> 00:00:27.789
+These are a little more complicated than other commands and we'll be
+
+00:00:27.789 --> 00:00:31.184
+getting into much more detail on transactions later in the program.
+
+00:00:31.184 --> 00:00:33.729
+This video is just meant to introduce you to some of
+
+00:00:33.729 --> 00:00:36.934
+the commands you can use without getting into too much detail.
+
+00:00:36.935 --> 00:00:39.960
+First, we'll cover signrawtransaction.
+
+00:00:39.960 --> 00:00:45.039
+This does exactly what it says and allows you to sign the inputs for a raw transaction.
+
+00:00:45.039 --> 00:00:47.740
+The only difference between a transaction and
+
+00:00:47.740 --> 00:00:52.690
+a raw transaction is that a raw transaction is formatted to be readable by computers.
+
+00:00:52.689 --> 00:00:56.199
+It follows the rules of the bitcoin protocol to process
+
+00:00:56.200 --> 00:00:58.660
+the human readable transaction and turn it into
+
+00:00:58.659 --> 00:01:01.849
+a single value that can be interpreted by a computer.
+
+00:01:01.850 --> 00:01:04.829
+We'll be using this later in the program as we start to
+
+00:01:04.829 --> 00:01:07.980
+create and sign transactions for our applications.
+
+00:01:07.980 --> 00:01:09.609
+Using the help function,
+
+00:01:09.609 --> 00:01:11.280
+you can see that this command takes in
+
+00:01:11.280 --> 00:01:14.859
+quite a bit of arguments and can get pretty complex.
+
+00:01:15.189 --> 00:01:17.554
+Reading a little more detail,
+
+00:01:17.555 --> 00:01:20.625
+we can see that the second and third arguments are optional.
+
+00:01:20.625 --> 00:01:24.245
+This allows us to simplify the command a bit at least for now.
+
+00:01:24.245 --> 00:01:26.480
+Using only the required commands,
+
+00:01:26.480 --> 00:01:30.064
+what we need is a transaction hex string and a private key.
+
+00:01:30.064 --> 00:01:34.500
+Running this on a transaction that has already been processed results in an error.
+
+00:01:34.500 --> 00:01:37.180
+Since I don't have any unsigned transactions right now,
+
+00:01:37.180 --> 00:01:38.675
+I can't run this command.
+
+00:01:38.674 --> 00:01:42.090
+But here's a quick overview of how to get a transaction hex string
+
+00:01:42.090 --> 00:01:45.650
+and a private key in case you'd like to piece this together for yourself.
+
+00:01:45.650 --> 00:01:47.609
+To get a transaction hex string,
+
+00:01:47.609 --> 00:01:50.900
+first use getblockhash to find a block,
+
+00:01:50.900 --> 00:01:55.685
+then use getblock to find a transaction within that block.
+
+00:01:55.685 --> 00:02:01.719
+Finally, choose a transaction from the block and input this to get raw transaction.
+
+00:02:01.719 --> 00:02:05.390
+This returns the hex string for that transaction.
+
+00:02:05.390 --> 00:02:07.734
+Using this and a private key,
+
+00:02:07.734 --> 00:02:10.974
+you now have the inputs for signrawtransaction.
+
+00:02:10.974 --> 00:02:14.739
+You can get your private key using dumpprivatekey.
+
+00:02:14.740 --> 00:02:16.560
+We haven't covered that yet but it's
+
+00:02:16.560 --> 00:02:19.675
+a pretty simple way to get the private key for your wallet.
+
+00:02:19.675 --> 00:02:23.140
+Dump private key needs you to also give an address.
+
+00:02:23.139 --> 00:02:25.519
+You can get this by going to File,
+
+00:02:25.520 --> 00:02:30.655
+Receiving addresses and then creating a new one or copying an existing address.
+
+00:02:30.655 --> 00:02:35.560
+Now, paste that after the command and what you get back is a private key.
+
+00:02:35.560 --> 00:02:39.628
+Like I mentioned, I'm not running the signrawtransaction command,
+
+00:02:39.628 --> 00:02:44.004
+but this should give you at least some of the tools to start exploring this for yourself.
+
+00:02:44.004 --> 00:02:47.129
+Other commands involving signatures also get a little
+
+00:02:47.129 --> 00:02:50.185
+more complicated similar to signrawtransaction.
+
+00:02:50.185 --> 00:02:55.025
+Some of these commands are sign message and sign message with private key.
+
+00:02:55.025 --> 00:02:58.980
+These generally involve getting hold of some information about the wallets and
+
+00:02:58.979 --> 00:03:02.794
+transactions involved and piecing them together to sign a message.
+
+00:03:02.794 --> 00:03:06.280
+Transactions are at the core of many blockchain applications,
+
+00:03:06.280 --> 00:03:08.870
+we're just touching on these commands briefly for now,
+
+00:03:08.870 --> 00:03:13.974
+but future lessons will expand on the creation and signature of messages much more.
+
+00:03:13.974 --> 00:03:16.829
+To recap, we discussed some helpful commands
+
+00:03:16.830 --> 00:03:19.545
+that you can use to explore signature information.
+
+00:03:19.544 --> 00:03:22.009
+We went over some details on how to navigate
+
+00:03:22.009 --> 00:03:27.259
+the signrawtransaction command but didn't get into too much detail on how to execute it.
+
+00:03:27.259 --> 00:03:29.719
+This was mostly to make sure you're familiar with
+
+00:03:29.719 --> 00:03:33.159
+these commands but without getting too far into the details.
+
+00:03:33.159 --> 00:03:37.680
+If you'd like, use this as an opportunity to explore these commands for yourself.
+
+00:03:37.680 --> 00:03:41.284
+You're hopefully pretty familiar with the help command at this point and you've
+
+00:03:41.284 --> 00:03:45.115
+gotten most of the information you need to go ahead with these commands yourself.
+
+00:03:45.115 --> 00:03:48.995
+If you're not sure how to do this or would rather move forward, that's fine too.
+
+00:03:48.995 --> 00:03:52.069
+We'll jump back into a few new commands in the next section.
+
