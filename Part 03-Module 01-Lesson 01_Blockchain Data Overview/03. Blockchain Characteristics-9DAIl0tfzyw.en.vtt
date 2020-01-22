@@ -1,0 +1,283 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.955
+Blockchains, like a traditional database,
+
+00:00:02.955 --> 00:00:04.790
+are a way to store data.
+
+00:00:04.790 --> 00:00:08.995
+You can think of them as a dataset with specific characteristics.
+
+00:00:08.994 --> 00:00:11.954
+In this video, we will compare the characteristics
+
+00:00:11.955 --> 00:00:15.220
+of a Blockchain to those of a traditional database.
+
+00:00:15.220 --> 00:00:18.030
+To start, let's look at the network.
+
+00:00:18.030 --> 00:00:21.950
+Unlike traditional databases that rely on a centralized authority,
+
+00:00:21.949 --> 00:00:25.320
+blockchains are supported by a distributed network.
+
+00:00:25.320 --> 00:00:30.074
+Blockchains allow anyone to download a copy of the database for themselves.
+
+00:00:30.074 --> 00:00:34.954
+This gives them full access to the data and functions available to the database.
+
+00:00:34.954 --> 00:00:37.829
+A benefit of this is that no single entity
+
+00:00:37.829 --> 00:00:40.500
+can regulate the data that exists on the database.
+
+00:00:40.500 --> 00:00:42.929
+A downside to this is that there's
+
+00:00:42.929 --> 00:00:47.140
+no central authority to help dictate what information is accurate.
+
+00:00:47.140 --> 00:00:50.774
+The distributed network was made as a way to reach consensus
+
+00:00:50.774 --> 00:00:54.609
+on the accuracy of data without the need for this authority.
+
+00:00:54.609 --> 00:00:58.619
+As we've seen, the consensus algorithms involved with this can be pretty
+
+00:00:58.619 --> 00:01:02.500
+complicated and results in other issues like network speeds.
+
+00:01:02.500 --> 00:01:05.459
+Next, there's different functions available to users
+
+00:01:05.459 --> 00:01:08.779
+on a Blockchain when compared to a traditional database.
+
+00:01:08.780 --> 00:01:10.814
+While in a traditional database,
+
+00:01:10.814 --> 00:01:12.629
+users can create, read,
+
+00:01:12.629 --> 00:01:15.379
+update or delete data, in a Blockchain,
+
+00:01:15.379 --> 00:01:16.435
+they can only read,
+
+00:01:16.435 --> 00:01:18.100
+append or validate data.
+
+00:01:18.099 --> 00:01:23.969
+A major difference to note here is that Blockchains do not allow users to delete data.
+
+00:01:23.969 --> 00:01:26.819
+Rather than deleting or overriding all data,
+
+00:01:26.819 --> 00:01:28.844
+Blockchains create a new record.
+
+00:01:28.844 --> 00:01:31.814
+For example, in a Bitcoin transaction,
+
+00:01:31.814 --> 00:01:34.844
+let's say Brandy has 10 Bitcoin in her wallet.
+
+00:01:34.844 --> 00:01:39.700
+The transactions that lead to this balance are permanently stored on the Blockchain.
+
+00:01:39.700 --> 00:01:42.650
+If Brandy gives me four Bitcoin,
+
+00:01:42.650 --> 00:01:45.750
+that transaction is also recorded on the blockchain.
+
+00:01:45.750 --> 00:01:49.569
+Brandy's new wallet balance will appear as six Bitcoin.
+
+00:01:49.569 --> 00:01:55.064
+The transactions that lead to her original balance of 10 Bitcoin are still not wiped out.
+
+00:01:55.064 --> 00:01:59.640
+They're recorded on the Blockchain along with any future transaction information.
+
+00:01:59.640 --> 00:02:02.250
+Since you can't delete Blockchain data,
+
+00:02:02.250 --> 00:02:04.745
+the database is considered immutable.
+
+00:02:04.745 --> 00:02:08.099
+Immutable is the term used to describe any data that
+
+00:02:08.099 --> 00:02:11.694
+cannot be updated after being added to the database.
+
+00:02:11.694 --> 00:02:14.685
+The benefit of this is that the Blockchain maintains
+
+00:02:14.685 --> 00:02:19.009
+a permanent historical record of all transactions that have happened on the network.
+
+00:02:19.009 --> 00:02:22.359
+If there's any dispute over a Blockchain transaction,
+
+00:02:22.360 --> 00:02:24.790
+there's always evidence to go back and check.
+
+00:02:24.789 --> 00:02:27.219
+The downside to this is the immense amount of
+
+00:02:27.219 --> 00:02:31.044
+memory space and resources that are needed to store this dataset.
+
+00:02:31.044 --> 00:02:33.759
+Next, the way authorization is handled on
+
+00:02:33.759 --> 00:02:37.280
+a Blockchain is much different than in a traditional database.
+
+00:02:37.280 --> 00:02:42.340
+With a Blockchain, authorization isn't controlled by any central authority.
+
+00:02:42.340 --> 00:02:45.129
+Every user on the network has equal access to
+
+00:02:45.129 --> 00:02:48.025
+data and functions available to each of the users.
+
+00:02:48.025 --> 00:02:51.129
+While both types of data are very secure,
+
+00:02:51.129 --> 00:02:55.884
+the access you can gain from a single point of authorization is drastically different.
+
+00:02:55.884 --> 00:02:58.239
+Once you have the appropriate credentials,
+
+00:02:58.240 --> 00:03:01.045
+you can gain access to any type of database.
+
+00:03:01.044 --> 00:03:04.059
+The differences on a Blockchain the best you
+
+00:03:04.060 --> 00:03:07.129
+can do is get the credentials of a single user,
+
+00:03:07.129 --> 00:03:10.514
+and even then you can only access their personal data.
+
+00:03:10.514 --> 00:03:12.338
+With a traditional database,
+
+00:03:12.338 --> 00:03:14.530
+if you get authorization for the database,
+
+00:03:14.530 --> 00:03:18.414
+you just got access to the personal data of everyone in the system.
+
+00:03:18.414 --> 00:03:22.884
+For that reason, we consider data on a Blockchain to be more secure.
+
+00:03:22.884 --> 00:03:26.474
+But this type of security does come with some downsides.
+
+00:03:26.474 --> 00:03:30.030
+For one, without having a central authority and control,
+
+00:03:30.030 --> 00:03:33.265
+it's difficult to resolve disputes that might come up.
+
+00:03:33.264 --> 00:03:37.889
+With a Blockchain, you can't call a company to fix something you disagree with.
+
+00:03:37.889 --> 00:03:42.184
+The security is entirely handled by software running the system.
+
+00:03:42.185 --> 00:03:45.670
+The systems that help maintain Blockchain security exists to
+
+00:03:45.669 --> 00:03:49.264
+facilitate the fact that a Blockchain is highly transparent.
+
+00:03:49.264 --> 00:03:51.239
+As we mentioned previously,
+
+00:03:51.240 --> 00:03:53.260
+anyone can access the same data and
+
+00:03:53.259 --> 00:03:56.574
+functionality provided to anyone else on a Blockchain.
+
+00:03:56.574 --> 00:03:59.679
+This is in contrast to a traditional database where
+
+00:03:59.680 --> 00:04:03.140
+this permissioning is controlled by the authority that owns it.
+
+00:04:03.139 --> 00:04:06.309
+We consider this open access to be an upside to
+
+00:04:06.310 --> 00:04:11.145
+the Blockchain solutions because that's exactly why it was created in the first place.
+
+00:04:11.145 --> 00:04:14.650
+One potential downside to this is that you won't have
+
+00:04:14.650 --> 00:04:18.165
+a careful permissioning system like on a traditional database.
+
+00:04:18.165 --> 00:04:22.700
+To recap, we just compare the differences between the network, functions,
+
+00:04:22.699 --> 00:04:27.675
+mutability, security, and transparency of each of these database solutions.
+
+00:04:27.675 --> 00:04:30.340
+We tried to avoid making judgments about which
+
+00:04:30.339 --> 00:04:32.994
+is better because that's not really the point,
+
+00:04:32.995 --> 00:04:35.850
+neither of these solutions is better than the other.
+
+00:04:35.850 --> 00:04:39.950
+Overall, they're only better or worse in a given situation.
+
+00:04:39.949 --> 00:04:44.039
+There's also many other ways these databases could be compared.
+
+00:04:44.040 --> 00:04:46.115
+Things like the ease of use,
+
+00:04:46.115 --> 00:04:48.300
+integration with existing technologies,
+
+00:04:48.300 --> 00:04:52.079
+and other important characteristics can definitely come into play here.
+
+00:04:52.079 --> 00:04:55.319
+These are just some of the basics to get you started so feel
+
+00:04:55.319 --> 00:04:59.055
+free to dig deeper into these ideas if you're interested in learning more.
+
+00:04:59.055 --> 00:05:02.100
+Hopefully, this is a good starting point for you.
+
+00:05:02.100 --> 00:05:04.860
+Understanding these differences will help you decide when
+
+00:05:04.860 --> 00:05:09.040
+an application is best suited for the Blockchain and when it isn't.
+

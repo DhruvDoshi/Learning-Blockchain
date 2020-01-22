@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.014
+Knowing the basics of how each type of blockchain works,
+
+00:00:04.014 --> 00:00:07.754
+we can now decide which of these is the right one for our application.
+
+00:00:07.754 --> 00:00:10.949
+We can do this by asking ourselves questions.
+
+00:00:10.949 --> 00:00:14.089
+First, will all transactions be public?
+
+00:00:14.089 --> 00:00:18.725
+In this case, everyone will have full access to the data in the network.
+
+00:00:18.725 --> 00:00:20.780
+If that works for your application,
+
+00:00:20.780 --> 00:00:23.355
+you can choose a public blockchain.
+
+00:00:23.355 --> 00:00:27.120
+In most situations where a public blockchain won't work,
+
+00:00:27.120 --> 00:00:29.160
+it's because there are some regulations or
+
+00:00:29.160 --> 00:00:32.034
+permissions that a company will need control over.
+
+00:00:32.034 --> 00:00:34.219
+When working with company data,
+
+00:00:34.219 --> 00:00:37.649
+that's particularly a good time to think of the next question.
+
+00:00:37.649 --> 00:00:41.899
+Will all transactions be restricted to only specific users?
+
+00:00:41.899 --> 00:00:43.589
+If the answer is yes,
+
+00:00:43.590 --> 00:00:46.980
+then a private blockchain is probably the best option here.
+
+00:00:46.979 --> 00:00:49.619
+Another note though, is that it's also
+
+00:00:49.619 --> 00:00:52.524
+a good time to consider if you need a blockchain at all.
+
+00:00:52.524 --> 00:00:58.144
+Like we mentioned, a lot of the value of a blockchain is thought to be its open access.
+
+00:00:58.145 --> 00:01:01.510
+It's possible that a private blockchain is the right solution,
+
+00:01:01.509 --> 00:01:04.079
+but be sure to consider the value a blockchain is
+
+00:01:04.079 --> 00:01:07.364
+adding if this core benefit is being restricted.
+
+00:01:07.364 --> 00:01:09.670
+Finally, ask yourself this.
+
+00:01:09.670 --> 00:01:11.760
+Should some information be public,
+
+00:01:11.760 --> 00:01:13.965
+while other information is restricted?
+
+00:01:13.965 --> 00:01:18.329
+This could be the case if you want to share information across multiple companies,
+
+00:01:18.329 --> 00:01:21.170
+but not have it be completely open to the public.
+
+00:01:21.170 --> 00:01:23.049
+If the answer is yes,
+
+00:01:23.049 --> 00:01:26.905
+then a hybrid blockchain could be the right solution in this case.
+
+00:01:26.905 --> 00:01:32.219
+These questions are a great starting point as a check for any new ideas you might have.
+
+00:01:32.219 --> 00:01:33.954
+To make the final decision,
+
+00:01:33.954 --> 00:01:38.204
+we'll take some extra thought as you consider the unique situation you're up against.
+
+00:01:38.204 --> 00:01:41.459
+Once you decide which type of blockchain you'd like to use,
+
+00:01:41.459 --> 00:01:44.619
+there are still many things to consider about how to implement it.
+
+00:01:44.620 --> 00:01:46.990
+To understand how it could be implemented,
+
+00:01:46.989 --> 00:01:50.834
+it helps to dig in and see what the underlying data structures could look like.
+
+00:01:50.834 --> 00:01:55.369
+We'll cover that next by exploring data in the Bitcoin blockchain.
+

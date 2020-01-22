@@ -1,0 +1,211 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.339
+A database is a collection of
+
+00:00:03.339 --> 00:00:07.410
+information organized so that it can be accessed, managed, and updated.
+
+00:00:07.410 --> 00:00:10.800
+A blockchain is a type of database.
+
+00:00:10.800 --> 00:00:14.080
+But how do you know when a blockchain is the right type
+
+00:00:14.080 --> 00:00:17.370
+of database and when it might not be the best solution?
+
+00:00:17.370 --> 00:00:19.839
+To start, it helps to understand some of
+
+00:00:19.839 --> 00:00:23.089
+the core characteristics of a traditional database.
+
+00:00:23.089 --> 00:00:25.780
+In this video, we'll look at the basics of
+
+00:00:25.780 --> 00:00:29.320
+a traditional database using five basic characteristics.
+
+00:00:29.320 --> 00:00:32.640
+We'll discuss the basics of the network, functions,
+
+00:00:32.640 --> 00:00:37.265
+mutability, authorization, and transparency of the traditional system.
+
+00:00:37.265 --> 00:00:40.049
+With a better idea of how a traditional database
+
+00:00:40.049 --> 00:00:43.724
+works you'll be able to more easily compare it to a blockchain.
+
+00:00:43.725 --> 00:00:47.914
+First, how does the network of a traditional database operate?
+
+00:00:47.914 --> 00:00:51.945
+Here, data is stored and maintained by a central authority.
+
+00:00:51.945 --> 00:00:54.219
+This authority collects, manages,
+
+00:00:54.219 --> 00:00:55.899
+and owns this information.
+
+00:00:55.899 --> 00:01:01.214
+To get access to the data users need authentication from the database administrator.
+
+00:01:01.215 --> 00:01:03.660
+Let's use an airline as an example.
+
+00:01:03.659 --> 00:01:08.519
+In this case, the airline is the central authority that collects and owns the data.
+
+00:01:08.519 --> 00:01:12.634
+To access this information you'll either need to work with the airline
+
+00:01:12.635 --> 00:01:17.275
+or get authentication to access the information through something like their website.
+
+00:01:17.275 --> 00:01:20.260
+Once having permission to access the database,
+
+00:01:20.260 --> 00:01:23.505
+there's a few functions available for you to work with in the data.
+
+00:01:23.504 --> 00:01:27.015
+A traditional database allows for four basic functions;
+
+00:01:27.015 --> 00:01:30.165
+create, read, update, and delete.
+
+00:01:30.165 --> 00:01:33.010
+These functions are called CRUD for short.
+
+00:01:33.010 --> 00:01:37.389
+These give users the flexibility to not only retrieve and add new data,
+
+00:01:37.388 --> 00:01:39.899
+but to remove and change data as well.
+
+00:01:39.900 --> 00:01:43.344
+This provides a lot of flexibility for the database.
+
+00:01:43.344 --> 00:01:47.090
+For the airline, a benefit of this would be that they can do
+
+00:01:47.090 --> 00:01:51.025
+things like create new flight records or update existing ones.
+
+00:01:51.025 --> 00:01:56.830
+The functions available on a traditional dataset are set up so that the data is mutable.
+
+00:01:56.829 --> 00:01:59.674
+Data being mutable means that the records can be
+
+00:01:59.674 --> 00:02:02.894
+updated after being added to the database.
+
+00:02:02.894 --> 00:02:08.294
+This could be helpful in the case that an airline no longer offers a particular route.
+
+00:02:08.294 --> 00:02:12.784
+They can delete this data to ensure it doesn't show up in customer searches.
+
+00:02:12.784 --> 00:02:16.594
+This is useful, but there's also a potential downside to this.
+
+00:02:16.594 --> 00:02:19.560
+A flight could be deleted accidentally or even
+
+00:02:19.560 --> 00:02:22.884
+deleted on purpose by someone trying to hurt the system.
+
+00:02:22.884 --> 00:02:26.370
+There's usually security to ensure this doesn't happen,
+
+00:02:26.370 --> 00:02:28.405
+but it's definitely possible.
+
+00:02:28.405 --> 00:02:33.039
+Next, let's look at how authorization is handled on a traditional database.
+
+00:02:33.039 --> 00:02:35.370
+The central authority that manages
+
+00:02:35.370 --> 00:02:38.944
+the database is also in charge of handling it's authorization.
+
+00:02:38.944 --> 00:02:41.669
+The airlines needs can influence how they
+
+00:02:41.669 --> 00:02:45.459
+decided to structure their database and who they give access to.
+
+00:02:45.460 --> 00:02:47.849
+Users of this system rely on
+
+00:02:47.849 --> 00:02:52.414
+the security infrastructure set up by the airlines database administrators.
+
+00:02:52.414 --> 00:02:57.724
+One way the data is kept secure is by managing the transparency of the information.
+
+00:02:57.724 --> 00:02:59.710
+In a traditional database,
+
+00:02:59.710 --> 00:03:03.375
+the authority in control of the data grants permissions to it's users.
+
+00:03:03.375 --> 00:03:08.139
+They have complete control over permissions for each of the CRUD operations we mentioned.
+
+00:03:08.139 --> 00:03:10.289
+Maybe you can create data by booking
+
+00:03:10.289 --> 00:03:13.754
+a flight but you can't delete it without calling the airline first.
+
+00:03:13.754 --> 00:03:18.305
+This all depends on the permission level set by the authority in charge of the data.
+
+00:03:18.305 --> 00:03:21.480
+Since by default all the data is restricted,
+
+00:03:21.479 --> 00:03:25.959
+traditional databases are considered to have a low level of transparency.
+
+00:03:25.960 --> 00:03:28.409
+That wraps up this basic overview.
+
+00:03:28.409 --> 00:03:33.500
+To recap, in this section we discussed five characteristics of a traditional database.
+
+00:03:33.500 --> 00:03:37.560
+We now know that the network is dependent on a centralized authority.
+
+00:03:37.560 --> 00:03:40.574
+The functions available on the database are to create,
+
+00:03:40.574 --> 00:03:43.789
+read, update, and delete known as CRUD.
+
+00:03:43.789 --> 00:03:49.030
+These operations allow you to make changes to the data which means that it's mutable.
+
+00:03:49.030 --> 00:03:54.020
+Security is completely in the hands of the central authority that owns the data.
+
+00:03:54.020 --> 00:03:58.600
+Finally, these databases are generally not very transparent.
+
+00:03:58.599 --> 00:04:02.620
+This is a pretty high level overview but hopefully it gives you enough to have
+
+00:04:02.620 --> 00:04:07.020
+some intuition on when a traditional database could be used as an effective solution.
+
+00:04:07.020 --> 00:04:11.610
+Next, we'll look at how these characteristics compared to that of a blockchain.
+

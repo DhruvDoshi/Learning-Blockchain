@@ -1,0 +1,247 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.724
+The cool thing about bitcoin and the mining process is that it's not hidden from us.
+
+00:00:04.724 --> 00:00:06.250
+The codebase is public,
+
+00:00:06.250 --> 00:00:08.169
+and we can look at it for ourselves.
+
+00:00:08.169 --> 00:00:11.969
+This helps us better understand the process behind how certain things
+
+00:00:11.970 --> 00:00:16.560
+happen and how we might be able to improve the mining process by improving the code.
+
+00:00:16.559 --> 00:00:21.089
+In this video, we'll explore a few variables that help support bitcoin mining.
+
+00:00:21.089 --> 00:00:23.969
+We'll look at the code that makes the genesis block,
+
+00:00:23.969 --> 00:00:27.879
+the original timestamp on that block and a few other variables.
+
+00:00:27.879 --> 00:00:31.969
+It can be a bit overwhelming to jump into an entire repository.
+
+00:00:31.969 --> 00:00:35.060
+Here, we'll just focus on a few key points and from there,
+
+00:00:35.060 --> 00:00:38.500
+hopefully, you'll be comfortable enough to explore a few more on your own.
+
+00:00:38.500 --> 00:00:40.204
+If you'd like to follow along,
+
+00:00:40.204 --> 00:00:43.049
+there's a link to the bitcoin codebase down below the video.
+
+00:00:43.049 --> 00:00:44.619
+So, let's get started.
+
+00:00:44.619 --> 00:00:47.219
+To start, navigate to the source folder,
+
+00:00:47.219 --> 00:00:49.195
+named here as src.
+
+00:00:49.195 --> 00:00:53.274
+In this folder, you'll see a number of important files and folders.
+
+00:00:53.274 --> 00:00:56.589
+One of these is chainparams.cpp.
+
+00:00:56.590 --> 00:01:00.315
+This is used to set up the consensus rules for all the blocks.
+
+00:01:00.314 --> 00:01:02.544
+This is exactly what we're interested in.
+
+00:01:02.545 --> 00:01:04.850
+Click on this file to open it.
+
+00:01:04.849 --> 00:01:08.959
+One thing to note is that this file has a.cpp extension.
+
+00:01:08.959 --> 00:01:12.274
+That tells us that this is a C++ source file.
+
+00:01:12.275 --> 00:01:16.200
+You might not be familiar with C++ but the naming convention is
+
+00:01:16.200 --> 00:01:20.185
+just like how.js tells us that something's a JavaScript file.
+
+00:01:20.185 --> 00:01:22.140
+So, let's look at the code.
+
+00:01:22.140 --> 00:01:27.750
+The first thing we see here on line 17 is a function to create a genesis block.
+
+00:01:27.750 --> 00:01:30.605
+Notice the variables for that time of creation,
+
+00:01:30.605 --> 00:01:32.079
+the bits, the nonce,
+
+00:01:32.079 --> 00:01:34.594
+the version, and some other information.
+
+00:01:34.594 --> 00:01:36.875
+Being familiar with some of these ideas,
+
+00:01:36.875 --> 00:01:40.340
+it's pretty cool to me to see how they're actually implemented in the code.
+
+00:01:40.340 --> 00:01:42.975
+Next, I'll hit down the line 94.
+
+00:01:42.974 --> 00:01:47.979
+Here's where the different deployments of bitcoin improvement protocols are set up.
+
+00:01:47.980 --> 00:01:51.719
+For example, there was an update to the codebase known as CSV.
+
+00:01:51.719 --> 00:01:54.179
+You can see here that the changes were implemented
+
+00:01:54.180 --> 00:01:57.045
+at this time and that it'll stop at this time.
+
+00:01:57.045 --> 00:01:58.859
+Just a bit above this line,
+
+00:01:58.859 --> 00:02:01.935
+we can also see some variables used in consensus.
+
+00:02:01.935 --> 00:02:03.810
+Let's look at a few of them now.
+
+00:02:03.810 --> 00:02:08.620
+Here's one on line 77, nSubsidyHalvingInterval.
+
+00:02:08.620 --> 00:02:10.990
+This is what designates the halving interval.
+
+00:02:10.990 --> 00:02:13.320
+You might not be familiar with the halving interval,
+
+00:02:13.319 --> 00:02:16.979
+but hopefully you remember that miners are rewarded with bitcoin.
+
+00:02:16.979 --> 00:02:20.879
+Halving is the idea that after a certain amount of blocks are mined,
+
+00:02:20.879 --> 00:02:23.824
+the reward for all miners is cut in half.
+
+00:02:23.824 --> 00:02:25.429
+It's sad, but true.
+
+00:02:25.430 --> 00:02:29.450
+It's one reason why mining is not as profitable as it used to be.
+
+00:02:29.449 --> 00:02:33.289
+This line shows us that the halving interval is 210,000.
+
+00:02:33.289 --> 00:02:37.039
+This means that the amount miners are rewarded for successfully mining
+
+00:02:37.039 --> 00:02:41.504
+a block is halved after every 210,000 blocks.
+
+00:02:41.504 --> 00:02:45.835
+Here's a chart to show a little about how the having has happened over time.
+
+00:02:45.835 --> 00:02:51.805
+Until block 210,000, miners earned 50 bitcoin for each block they mined.
+
+00:02:51.805 --> 00:02:54.875
+From then until block 420,000,
+
+00:02:54.875 --> 00:02:57.680
+they earned half of that, 25 bitcoin.
+
+00:02:57.680 --> 00:03:02.504
+This trend continued and will continue for every 210,000 blocks.
+
+00:03:02.504 --> 00:03:06.294
+The fee they earn is on top of the transaction fees that they collect.
+
+00:03:06.294 --> 00:03:08.799
+These bitcoin are actually brand new coins
+
+00:03:08.800 --> 00:03:11.535
+that are added to the collection of all bitcoins.
+
+00:03:11.534 --> 00:03:14.115
+It's the only way new bitcoin are created,
+
+00:03:14.115 --> 00:03:17.770
+and this process helps control the supply of bitcoins available.
+
+00:03:17.770 --> 00:03:20.094
+All right, so let's get back into the code.
+
+00:03:20.094 --> 00:03:23.264
+There's two more consensus constants that I wanted to call out.
+
+00:03:23.264 --> 00:03:31.019
+They are in line 84 and 85, nPowTargetTimespan and nPowTargetSpacing.
+
+00:03:31.020 --> 00:03:34.450
+First, nPowTargetTimespan sets how
+
+00:03:34.449 --> 00:03:37.804
+often the proof-of-work puzzle adjusts its difficulty level.
+
+00:03:37.805 --> 00:03:39.844
+Here, it's set to every two weeks.
+
+00:03:39.844 --> 00:03:44.675
+nPowTargetSpacing determines when the network should expect a new block.
+
+00:03:44.675 --> 00:03:46.875
+Here it's set to every 10 minutes.
+
+00:03:46.875 --> 00:03:51.514
+This 10 minutes times 60 is just to convert the time to seconds.
+
+00:03:51.514 --> 00:03:56.234
+So, that wraps up some of the lines we wanted to look at in the bitcoin codebase.
+
+00:03:56.235 --> 00:03:59.880
+To recap, we looked at the genesis block, its original timestamp,
+
+00:03:59.879 --> 00:04:01.490
+and a few consensus variables,
+
+00:04:01.490 --> 00:04:06.100
+like those related to halving as well as the proof-of-work timespan and spacing.
+
+00:04:06.099 --> 00:04:08.870
+You can hopefully explore a few more lines on your own.
+
+00:04:08.870 --> 00:04:11.050
+It can maybe discover how certain things you're
+
+00:04:11.050 --> 00:04:14.120
+interested in have been implemented and the bitcoin blockchain.
+
+00:04:14.120 --> 00:04:16.465
+A lot of these same ideas have been used on
+
+00:04:16.464 --> 00:04:20.084
+other blockchains and it's important to see how they've gone about doing this.
+
+00:04:20.084 --> 00:04:22.599
+Coming up, you'll have a look at another codebase to
+
+00:04:22.600 --> 00:04:25.040
+see how some of these ideas have been implemented there.
+

@@ -1,0 +1,211 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.280
+We just saw how to investigate blockchain data,
+
+00:00:03.280 --> 00:00:05.555
+using an online block explorer.
+
+00:00:05.555 --> 00:00:09.575
+We're not ready yet to explore the data programmatically, like we mentioned.
+
+00:00:09.575 --> 00:00:14.225
+For that, you'll need to download some software which will focus on in a later lesson.
+
+00:00:14.225 --> 00:00:16.980
+For now, we didn't want to prepare you for what you
+
+00:00:16.980 --> 00:00:19.965
+can expect to see when you start exploring this data.
+
+00:00:19.965 --> 00:00:24.470
+For this example, we're using the same data we saw with the block explorer.
+
+00:00:24.470 --> 00:00:28.275
+This is considered to be human readable format for this data.
+
+00:00:28.275 --> 00:00:32.475
+It's structured using Json into a set of key value pairs.
+
+00:00:32.475 --> 00:00:36.110
+Here we can see all the same data that we did before.
+
+00:00:36.110 --> 00:00:37.760
+Here's the block header,
+
+00:00:37.760 --> 00:00:39.090
+which contains the hash,
+
+00:00:39.090 --> 00:00:41.685
+confirmations, and many other details.
+
+00:00:41.685 --> 00:00:44.670
+As we mentioned, when using the block explorer,
+
+00:00:44.670 --> 00:00:46.980
+the most notable is the block hash,
+
+00:00:46.980 --> 00:00:49.950
+height, previous block, and timestamp.
+
+00:00:49.950 --> 00:00:53.485
+You might not know what all these are yet, and that's fine.
+
+00:00:53.485 --> 00:00:58.450
+If you're curious, you can go to the Bitcoin developer glossary to learn more.
+
+00:00:58.450 --> 00:01:01.305
+We put a link to this down below the video.
+
+00:01:01.305 --> 00:01:04.440
+Here, we can also see the body of the block which
+
+00:01:04.440 --> 00:01:07.925
+contains the hash of each transaction held in the block.
+
+00:01:07.925 --> 00:01:09.560
+Using the hash values,
+
+00:01:09.560 --> 00:01:12.630
+we can investigate the details of these transactions.
+
+00:01:12.630 --> 00:01:16.200
+Let's take a look at this blocks coin-based transaction.
+
+00:01:16.200 --> 00:01:18.300
+Coin-based transactions are easy to
+
+00:01:18.300 --> 00:01:21.140
+find since they're the first transaction in the block.
+
+00:01:21.140 --> 00:01:24.220
+What we see here, looks a lot like the block header,
+
+00:01:24.220 --> 00:01:27.410
+but now it's the information for this specific block.
+
+00:01:27.410 --> 00:01:29.475
+The most important information,
+
+00:01:29.475 --> 00:01:30.975
+is the transaction id,
+
+00:01:30.975 --> 00:01:34.840
+hash, transaction inputs and transaction outputs.
+
+00:01:34.840 --> 00:01:37.200
+This might look a little different than before,
+
+00:01:37.200 --> 00:01:39.435
+but it's still the exact details we had seen
+
+00:01:39.435 --> 00:01:42.555
+about our transaction when we used the block explorer.
+
+00:01:42.555 --> 00:01:46.745
+Here's the transaction inputs and outputs just like before.
+
+00:01:46.745 --> 00:01:51.825
+First, we'll look at the transaction inputs shown here as VIN.
+
+00:01:51.825 --> 00:01:53.595
+When Bitcoin is sent,
+
+00:01:53.595 --> 00:01:56.070
+inputs are collected from the network and combined
+
+00:01:56.070 --> 00:01:59.715
+together to send to the address specified by the sender.
+
+00:01:59.715 --> 00:02:04.265
+The amounts that are used as the inputs are what is shown here.
+
+00:02:04.265 --> 00:02:08.500
+These inputs are combined together to make up the amount sent,
+
+00:02:08.500 --> 00:02:12.400
+the minor fee, and any change that is due back to the sender.
+
+00:02:12.400 --> 00:02:15.545
+Let's look at each of these in the data we have here.
+
+00:02:15.545 --> 00:02:19.090
+The transaction outputs are shown here as VOUT.
+
+00:02:19.090 --> 00:02:22.045
+First, they show the amount sent and second,
+
+00:02:22.045 --> 00:02:24.370
+the change that was given back to the sender.
+
+00:02:24.370 --> 00:02:27.635
+In this example, we can see that over 12 Bitcoin
+
+00:02:27.635 --> 00:02:31.240
+were sent and that no change was given back to the sender.
+
+00:02:31.240 --> 00:02:37.790
+The change is the value of the full input minus the value sent minus the miners reward.
+
+00:02:37.790 --> 00:02:40.190
+In this case, there's no value left
+
+00:02:40.190 --> 00:02:43.730
+over so there's no change to be given back to the sender.
+
+00:02:43.730 --> 00:02:46.220
+That's the basics of this data using
+
+00:02:46.220 --> 00:02:50.275
+the human readable Json format you'll encounter later in the program.
+
+00:02:50.275 --> 00:02:53.420
+One last thing we wanted to cover is what it looks like for
+
+00:02:53.420 --> 00:02:56.525
+a transaction to be in non-human readable format.
+
+00:02:56.525 --> 00:02:59.660
+Hopefully that clears out why we keep using this term.
+
+00:02:59.660 --> 00:03:02.095
+Let's take a look at a transaction.
+
+00:03:02.095 --> 00:03:06.165
+Transactions in the network needs to follow the Blockchain protocol.
+
+00:03:06.165 --> 00:03:10.710
+In this case, the data needs to be formatted in a hex encoded string.
+
+00:03:10.710 --> 00:03:17.730
+Hex encoded is just a specific format that uses characters ranging from zero zero to ff.
+
+00:03:17.730 --> 00:03:20.970
+As you can tell, it's not friendly to look at.
+
+00:03:20.970 --> 00:03:23.680
+We'll encounter these sometimes and it's important to know
+
+00:03:23.680 --> 00:03:26.725
+about them but it doesn't ever get any easier to read.
+
+00:03:26.725 --> 00:03:31.190
+That's everything we wanted to cover about block and transaction data for now.
+
+00:03:31.190 --> 00:03:34.200
+Take some time to look at data in the block explorer,
+
+00:03:34.200 --> 00:03:38.160
+then come back and see how that's represented in this new data format.
+
+00:03:38.160 --> 00:03:42.115
+It helps to be clear how each of these basic ideas are represented.
+
+00:03:42.115 --> 00:03:43.660
+Whether it be on a website,
+
+00:03:43.660 --> 00:03:47.360
+a data structure or later on in an application.
+

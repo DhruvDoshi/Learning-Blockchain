@@ -1,0 +1,172 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.640
+One type of update that can happen to
+
+00:00:02.640 --> 00:00:05.745
+a Blockchain results in what's known as a Hard Fork.
+
+00:00:05.745 --> 00:00:08.995
+In this video, we'll go over what a Hard Fork is,
+
+00:00:08.994 --> 00:00:11.219
+what effects it can have on a network,
+
+00:00:11.220 --> 00:00:14.285
+and look at an example using Bitcoin cash.
+
+00:00:14.285 --> 00:00:18.394
+A Hard Fork is a large change on the blockchain protocol.
+
+00:00:18.394 --> 00:00:21.480
+It's a permanent change to the software that conflicts with
+
+00:00:21.480 --> 00:00:25.780
+the existing version resulting in an entirely new software.
+
+00:00:25.780 --> 00:00:28.039
+Once a Hard Fork is implemented,
+
+00:00:28.039 --> 00:00:30.195
+it creates an entirely separate network.
+
+00:00:30.195 --> 00:00:32.200
+Users will need to choose if they want to
+
+00:00:32.200 --> 00:00:35.115
+stick with the current network or choose the new one.
+
+00:00:35.115 --> 00:00:38.315
+This happens because of how the change occurs.
+
+00:00:38.314 --> 00:00:40.960
+In a Hard Fork, software developers create
+
+00:00:40.960 --> 00:00:44.195
+an exact copy of the entire Blockchain protocol.
+
+00:00:44.195 --> 00:00:49.375
+They can do this because the codebase for most block chains are completely open source.
+
+00:00:49.375 --> 00:00:51.668
+Once the developers make this copy,
+
+00:00:51.668 --> 00:00:54.174
+they write their new code into the software.
+
+00:00:54.174 --> 00:00:57.954
+Next, they need to decide when this change will take place.
+
+00:00:57.954 --> 00:01:01.289
+The way they do this is by specifying a block number.
+
+00:01:01.289 --> 00:01:03.074
+For example, you could say,
+
+00:01:03.075 --> 00:01:07.000
+"Once we reach block 100 our changes will be implemented."
+
+00:01:07.000 --> 00:01:09.180
+At this point, some nodes continue with
+
+00:01:09.180 --> 00:01:13.080
+the original version and others transition to the alternative version.
+
+00:01:13.079 --> 00:01:15.719
+They show their support of the version they chose
+
+00:01:15.719 --> 00:01:18.405
+by adding blocks only to this new chain.
+
+00:01:18.405 --> 00:01:21.689
+Since each block chain is now building a different history,
+
+00:01:21.689 --> 00:01:23.370
+they're no longer compatible.
+
+00:01:23.370 --> 00:01:25.980
+Even though they're now operating separately,
+
+00:01:25.980 --> 00:01:29.049
+they still have a shared history from before the fork.
+
+00:01:29.049 --> 00:01:34.454
+That means that all transactions that happened before the fork are valid on both chains.
+
+00:01:34.454 --> 00:01:37.319
+This results in something pretty interesting.
+
+00:01:37.319 --> 00:01:40.304
+Since you have a history of valid transactions,
+
+00:01:40.305 --> 00:01:42.820
+they need to be represented on both chains.
+
+00:01:42.819 --> 00:01:44.359
+To make this happen,
+
+00:01:44.359 --> 00:01:46.549
+the coins you had on the original version are
+
+00:01:46.549 --> 00:01:49.134
+duplicated and given to you on the new version.
+
+00:01:49.135 --> 00:01:53.810
+So, if you had 100 coins on the original version before a Hard Fork,
+
+00:01:53.810 --> 00:01:58.070
+you'll also have a 100 coins and whatever currency was created by the fork.
+
+00:01:58.069 --> 00:02:00.409
+These coins are entirely separate from
+
+00:02:00.409 --> 00:02:04.125
+the original coin and their values don't affect each other at all.
+
+00:02:04.125 --> 00:02:06.620
+Some people call this free money,
+
+00:02:06.620 --> 00:02:09.289
+but that's only the case if the new currency
+
+00:02:09.289 --> 00:02:12.484
+ever gets accepted enough to gain any real value.
+
+00:02:12.485 --> 00:02:16.280
+Hard Forks have happened on many different block chains already.
+
+00:02:16.280 --> 00:02:19.754
+As an example, you may have heard of Bitcoin cash.
+
+00:02:19.754 --> 00:02:22.689
+This currency was originally created because of
+
+00:02:22.689 --> 00:02:26.185
+a disagreement on the block size of a Bitcoin block.
+
+00:02:26.185 --> 00:02:28.479
+Some developers wanted to double
+
+00:02:28.479 --> 00:02:32.484
+the current block size and others wanted to make it even larger.
+
+00:02:32.485 --> 00:02:34.599
+When they couldn't come to an agreement,
+
+00:02:34.598 --> 00:02:39.509
+some developers went with an increased size and other stayed with the current block size.
+
+00:02:39.509 --> 00:02:43.069
+That's why we now have bitcoin and Bitcoin cash.
+
+00:02:43.069 --> 00:02:48.000
+To recap, a Hard Fork is a major change to the protocol of a Blockchain.
+
+00:02:48.000 --> 00:02:52.889
+It creates an entirely alternative software that is incompatible with the original.
+
+00:02:52.889 --> 00:02:57.519
+This is different than a few other types of forks that we'll discuss next.
+

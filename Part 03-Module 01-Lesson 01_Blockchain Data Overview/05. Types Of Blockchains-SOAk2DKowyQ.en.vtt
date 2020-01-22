@@ -1,0 +1,217 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.105
+Once you decide that a blockchain seems like the right solution,
+
+00:00:04.105 --> 00:00:07.830
+you'll need to think through which type of blockchain you might want to use.
+
+00:00:07.830 --> 00:00:10.470
+There are three main types of blockchains.
+
+00:00:10.470 --> 00:00:14.900
+A public blockchain, a private blockchain and a Hybrid Blockchain.
+
+00:00:14.900 --> 00:00:17.219
+In this video, we'll define each of
+
+00:00:17.219 --> 00:00:19.515
+these blockchain types and cover when
+
+00:00:19.515 --> 00:00:22.260
+each might be the best solution for your application.
+
+00:00:22.260 --> 00:00:27.290
+First, a public blockchain is what we've been assuming through this program so far.
+
+00:00:27.289 --> 00:00:29.009
+On a public blockchain,
+
+00:00:29.010 --> 00:00:31.530
+everything is open for the entire network.
+
+00:00:31.530 --> 00:00:36.109
+Anyone can join and get access to add and verify transactions.
+
+00:00:36.109 --> 00:00:39.439
+Bitcoin is an example of a public blockchain.
+
+00:00:39.439 --> 00:00:43.789
+A private blockchain is basically the opposite of a public blockchain.
+
+00:00:43.789 --> 00:00:46.379
+You get the functionality of a blockchain,
+
+00:00:46.380 --> 00:00:49.790
+but still have the ability to restrict who can join the network.
+
+00:00:49.789 --> 00:00:54.054
+Rather than anyone being able to join and verify on the network,
+
+00:00:54.054 --> 00:00:57.715
+you can explicitly assign those permissions to specific users.
+
+00:00:57.715 --> 00:01:01.650
+This is similar to the difference between an internet and an intranet.
+
+00:01:01.649 --> 00:01:05.579
+The Internet is freely available and accessible to anyone,
+
+00:01:05.579 --> 00:01:09.655
+but companies may use an intranet to share secure internal documents.
+
+00:01:09.655 --> 00:01:14.015
+This allows them to keep permission restricted to the users within their company.
+
+00:01:14.015 --> 00:01:17.239
+That's exactly what you can do with a private blockchain.
+
+00:01:17.239 --> 00:01:22.564
+You can restrict users to the people in your company or to any group you have in mind.
+
+00:01:22.564 --> 00:01:25.739
+Private blockchains have an interesting reputation.
+
+00:01:25.739 --> 00:01:29.979
+Some people say they're useless and defeat the whole purpose of the blockchain.
+
+00:01:29.980 --> 00:01:34.064
+If you want full control over information you don't plan on sharing,
+
+00:01:34.064 --> 00:01:36.590
+then why not use a traditional database.
+
+00:01:36.590 --> 00:01:39.780
+On the other hand, some major corporations seem to be
+
+00:01:39.780 --> 00:01:43.340
+pushing the idea of privately hosted blockchain services.
+
+00:01:43.340 --> 00:01:46.620
+One useful possibility of a private blockchain is
+
+00:01:46.620 --> 00:01:49.859
+to restrict access to features that are still being tested.
+
+00:01:49.859 --> 00:01:52.620
+You wouldn't always want full open access to
+
+00:01:52.620 --> 00:01:56.020
+features that you're still working on and testing before deployment.
+
+00:01:56.019 --> 00:02:00.640
+A Hybrid Blockchain is a mix of both a public and private blockchain.
+
+00:02:00.640 --> 00:02:02.280
+In a hybrid Blockchain,
+
+00:02:02.280 --> 00:02:04.950
+transactions stay private while allowing a network
+
+00:02:04.950 --> 00:02:08.030
+of users to create and validate transactions.
+
+00:02:08.030 --> 00:02:09.435
+Owners of the blockchain,
+
+00:02:09.435 --> 00:02:12.120
+can determine which transactions should only be visible
+
+00:02:12.120 --> 00:02:15.509
+to certain smaller groups and which can remain public.
+
+00:02:15.509 --> 00:02:18.419
+The goal here is to get the best of both worlds.
+
+00:02:18.419 --> 00:02:22.530
+For example, you might be a company that wants to share product information with
+
+00:02:22.530 --> 00:02:27.330
+other companies and allow a subset of that information to be available publicly.
+
+00:02:27.330 --> 00:02:31.005
+As a food distributor maybe you track the price and ownership
+
+00:02:31.004 --> 00:02:34.919
+of your products supply chain as they move from the farmer to the consumer.
+
+00:02:34.919 --> 00:02:37.399
+You can track this on any blockchain,
+
+00:02:37.400 --> 00:02:41.254
+but on a Hybrid Blockchain you could set certain restrictions.
+
+00:02:41.254 --> 00:02:45.299
+You can share all the information with the companies that are involved but if you
+
+00:02:45.300 --> 00:02:47.460
+want consumers could be restricted from
+
+00:02:47.460 --> 00:02:50.415
+seeing the price at each stage in the supply chain.
+
+00:02:50.414 --> 00:02:54.120
+This would allow them to see that the food is really coming from where you say it
+
+00:02:54.120 --> 00:02:56.189
+is but wouldn't show them some of them were
+
+00:02:56.189 --> 00:02:58.979
+classified information that you'd prefer to hide.
+
+00:02:58.979 --> 00:03:02.750
+While it's easier to think about use cases for a Hybrid Blockchain,
+
+00:03:02.750 --> 00:03:07.344
+it's similar to a private blockchain and that some people really don't like the idea.
+
+00:03:07.344 --> 00:03:11.454
+It's easy to see that this is a form of re-centralizing the information
+
+00:03:11.454 --> 00:03:15.670
+to be restricted on an as needed basis by the company in control of it.
+
+00:03:15.669 --> 00:03:17.574
+What you do get from this though,
+
+00:03:17.574 --> 00:03:19.969
+is a middle ground where information can be shared on
+
+00:03:19.969 --> 00:03:23.990
+the blockchain even if some of the information needs to be kept through yourself.
+
+00:03:23.990 --> 00:03:27.439
+So to recap, we just went over three types of blockchains.
+
+00:03:27.439 --> 00:03:29.780
+Public, private and hybrid.
+
+00:03:29.780 --> 00:03:31.879
+Each of these networks operates using
+
+00:03:31.879 --> 00:03:36.514
+the same encrypted data using wallets and keys like we've spoken about previously.
+
+00:03:36.514 --> 00:03:41.334
+Where they differ is in how much you have the ability to restrict access to this data.
+
+00:03:41.335 --> 00:03:44.629
+public blockchains allow open access to all the data
+
+00:03:44.629 --> 00:03:47.974
+in the network and allow anyone to become a node in that network.
+
+00:03:47.974 --> 00:03:51.280
+Private blockchains do the complete opposite and restrict
+
+00:03:51.280 --> 00:03:54.810
+this data to only specific users and finally,
+
+00:03:54.810 --> 00:03:58.120
+Hybrid Blockchains are a mixture of these two types that allow you to
+
+00:03:58.120 --> 00:04:02.730
+restrict some information while allowing other information to remain public
+

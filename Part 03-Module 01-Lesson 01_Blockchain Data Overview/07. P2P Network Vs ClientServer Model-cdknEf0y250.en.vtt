@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.549
+As we've seen, the blockchain works using a peer-to-peer network.
+
+00:00:04.549 --> 00:00:08.655
+It's useful to understand how this compares to other possibilities.
+
+00:00:08.654 --> 00:00:11.544
+Is it better, worse, or just different?
+
+00:00:11.544 --> 00:00:14.429
+Well, it's actually more about picking the right tool for
+
+00:00:14.429 --> 00:00:18.774
+the application than trying to decide if one is always better than the other.
+
+00:00:18.774 --> 00:00:21.929
+Here we'll start by defining another type of network,
+
+00:00:21.929 --> 00:00:23.464
+the client server model.
+
+00:00:23.464 --> 00:00:26.089
+From there, we'll be prepared to compare them to
+
+00:00:26.089 --> 00:00:29.500
+decide when each might be a better fit for your application.
+
+00:00:29.500 --> 00:00:31.690
+Let's walk through the details.
+
+00:00:31.690 --> 00:00:35.420
+A client-server model is an application structure that breaks up
+
+00:00:35.420 --> 00:00:39.600
+tasks between service providers and service requesters.
+
+00:00:39.600 --> 00:00:42.289
+A server is a centralized resource that
+
+00:00:42.289 --> 00:00:45.414
+contains the information that users want to access.
+
+00:00:45.414 --> 00:00:48.200
+The client makes a request to the server and
+
+00:00:48.200 --> 00:00:51.630
+the server responds with the information the client needs.
+
+00:00:51.630 --> 00:00:54.990
+There are different types of servers depending on the situation.
+
+00:00:54.990 --> 00:00:59.795
+Web servers serve websites and file servers serve computer files.
+
+00:00:59.795 --> 00:01:03.780
+You can even take the client server analogy beyond computers.
+
+00:01:03.780 --> 00:01:06.299
+Anything that provides any service like food or
+
+00:01:06.299 --> 00:01:10.155
+beverages is a server and anyone they serve is the client.
+
+00:01:10.155 --> 00:01:14.530
+A client server infrastructure can contain many separate servers,
+
+00:01:14.530 --> 00:01:17.445
+but these servers are owned by a single authority.
+
+00:01:17.444 --> 00:01:20.439
+For example, Google, Amazon, Twitter,
+
+00:01:20.439 --> 00:01:24.359
+and many other sites keep their data stored across servers that they own.
+
+00:01:24.359 --> 00:01:28.344
+Having many servers helps ensure that if something happens to one,
+
+00:01:28.344 --> 00:01:30.304
+then information isn't lost.
+
+00:01:30.305 --> 00:01:34.040
+Clients or users like us will go to a website.
+
+00:01:34.040 --> 00:01:37.080
+Any action we take like asking a question or
+
+00:01:37.079 --> 00:01:40.185
+searching for a product is a new request to the server.
+
+00:01:40.185 --> 00:01:43.469
+Once the server finds the information you're requesting,
+
+00:01:43.469 --> 00:01:46.670
+it will serve it to you and load it onto your web browser.
+
+00:01:46.670 --> 00:01:50.555
+A single server can serve requests for many clients.
+
+00:01:50.555 --> 00:01:55.070
+They do this using a communication protocol that is built into the network.
+
+00:01:55.069 --> 00:02:00.524
+This request and response drives the entire relationship between clients and servers.
+
+00:02:00.525 --> 00:02:03.330
+This client server relationship is similar to
+
+00:02:03.329 --> 00:02:07.700
+the P2P network but the way it's executed is different.
+
+00:02:07.700 --> 00:02:10.479
+A peer-to-peer network is a network of
+
+00:02:10.479 --> 00:02:13.715
+computers that share access to files with each other.
+
+00:02:13.715 --> 00:02:18.175
+In peer-to-peer networks, every node is both the server and the client.
+
+00:02:18.175 --> 00:02:20.500
+They both hold information that others can
+
+00:02:20.500 --> 00:02:23.485
+access and can request information from others.
+
+00:02:23.485 --> 00:02:27.760
+The peer-to-peer model allows us to have distributed or decentralized
+
+00:02:27.759 --> 00:02:32.134
+networks rather than centralized networks like in a client-server model.
+
+00:02:32.134 --> 00:02:35.409
+There's one important thing to know as a potential problem of
+
+00:02:35.409 --> 00:02:39.704
+peer-to-peer networks in the case of Bitcoin and other proof-of-work blockchains.
+
+00:02:39.705 --> 00:02:42.140
+If you have access to more computing power,
+
+00:02:42.139 --> 00:02:46.494
+you can allocate more resources to mining and get more rewards for your effort.
+
+00:02:46.495 --> 00:02:51.150
+This gives you more money to buy more computers and get even more rewards.
+
+00:02:51.150 --> 00:02:55.555
+This cycle has caused problems for peer-to-peer networks using proof-of-work.
+
+00:02:55.555 --> 00:02:58.400
+The larger miners keep buying more resources,
+
+00:02:58.400 --> 00:03:00.270
+getting larger and larger and this
+
+00:03:00.270 --> 00:03:03.760
+centralizes all the work happening to just a few nodes.
+
+00:03:03.759 --> 00:03:07.439
+Centralizing the power and information defeats the purpose of
+
+00:03:07.439 --> 00:03:10.139
+a distributed network and is a major reason why
+
+00:03:10.139 --> 00:03:13.589
+the blockchain is turning to solutions outside of proof-of-work.
+
+00:03:13.590 --> 00:03:18.280
+Coming up, we'll look at some more differences between these two models.
+

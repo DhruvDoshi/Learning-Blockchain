@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.020 --> 00:00:06.669
+As you've seen, there are many differences between traditional databases and blockchains.
+
+00:00:06.669 --> 00:00:10.150
+Neither solution is best for every situation.
+
+00:00:10.150 --> 00:00:13.679
+It's helpful to understand when you would use a blockchain,
+
+00:00:13.679 --> 00:00:15.934
+and when it's not actually the best fit.
+
+00:00:15.935 --> 00:00:19.850
+In this video, we will focus specifically on blockchains.
+
+00:00:19.850 --> 00:00:22.950
+We'll go over a set of questions you can use to help
+
+00:00:22.949 --> 00:00:27.100
+decide if the blockchain is the right database solution for your needs.
+
+00:00:27.100 --> 00:00:29.514
+To get the most out of these questions,
+
+00:00:29.513 --> 00:00:32.960
+think of an example where you might want to use a blockchain.
+
+00:00:32.960 --> 00:00:36.704
+Consider a use case or application that you're building,
+
+00:00:36.704 --> 00:00:39.879
+we'll walk through these series of questions to figure out
+
+00:00:39.880 --> 00:00:42.940
+if a blockchain is the best solution for your example.
+
+00:00:42.939 --> 00:00:46.049
+Here are the five questions we need to answer,
+
+00:00:46.049 --> 00:00:51.729
+saying yes to any of these doesn't necessarily mean a blockchain is a good solution.
+
+00:00:51.729 --> 00:00:54.539
+But if you can answer yes to all of these questions,
+
+00:00:54.539 --> 00:00:58.784
+then a blockchain is likely a great solution for your application.
+
+00:00:58.784 --> 00:01:01.319
+Let's walk through them, one at a time.
+
+00:01:01.320 --> 00:01:05.000
+First, does the application need a database?
+
+00:01:05.000 --> 00:01:07.605
+This is a pretty broad place to start,
+
+00:01:07.605 --> 00:01:09.320
+but it's important to make sure that you've
+
+00:01:09.319 --> 00:01:11.909
+thought through the use case of your application.
+
+00:01:11.909 --> 00:01:15.054
+If you don't need to store data in a database,
+
+00:01:15.055 --> 00:01:16.745
+then you don't need a blockchain,
+
+00:01:16.745 --> 00:01:20.805
+and you actually don't need any type of database for your application.
+
+00:01:20.805 --> 00:01:25.485
+So next, will the application required shared write access?
+
+00:01:25.484 --> 00:01:26.929
+What this is asking,
+
+00:01:26.930 --> 00:01:32.118
+is if a collection of users will need access to add or write to the database.
+
+00:01:32.118 --> 00:01:37.055
+Internet and cloud-based applications commonly have shared write access.
+
+00:01:37.055 --> 00:01:41.995
+Something like Google Sheets was originally meant as a shared access spreadsheet,
+
+00:01:41.995 --> 00:01:46.810
+where Excel was more of an application to use on your personal computer.
+
+00:01:46.810 --> 00:01:51.120
+If your application requires this type of shared access database,
+
+00:01:51.120 --> 00:01:53.495
+you can select yes to this question.
+
+00:01:53.495 --> 00:01:57.355
+Third, do you need to create trust between users?
+
+00:01:57.355 --> 00:02:02.520
+With a blockchain, you're putting a system in place to establish trust between users.
+
+00:02:02.519 --> 00:02:07.539
+This is important whenever they wouldn't be able to establish trust themselves.
+
+00:02:07.540 --> 00:02:10.319
+In some cases, your users might already
+
+00:02:10.319 --> 00:02:13.754
+have a unified interests in cooperating with each other.
+
+00:02:13.754 --> 00:02:19.229
+They might already trust each other to only share accurate information on the database.
+
+00:02:19.229 --> 00:02:23.189
+It could be an application where trust isn't even a priority.
+
+00:02:23.189 --> 00:02:24.905
+In any of these cases,
+
+00:02:24.905 --> 00:02:27.625
+a blockchain might not add much value,
+
+00:02:27.625 --> 00:02:32.905
+but in a case where trust is a priority and the users can't trust one another,
+
+00:02:32.905 --> 00:02:35.365
+a blockchain is a great solution.
+
+00:02:35.365 --> 00:02:36.885
+If this is the case,
+
+00:02:36.884 --> 00:02:39.185
+you can answer yes to this question.
+
+00:02:39.185 --> 00:02:44.500
+Next, can your application operate without a trusted third party?
+
+00:02:44.500 --> 00:02:46.655
+If you're using a blockchain,
+
+00:02:46.655 --> 00:02:49.580
+you're attempting to replace the trusted third party.
+
+00:02:49.580 --> 00:02:53.190
+In a case where you'd still be depending on them to operate,
+
+00:02:53.189 --> 00:02:55.829
+you might consider not using a blockchain.
+
+00:02:55.830 --> 00:02:59.400
+If you can operate without becoming the trusted third party,
+
+00:02:59.400 --> 00:03:01.705
+you can answer yes to this question.
+
+00:03:01.705 --> 00:03:06.875
+Finally, can you operate without having control over permissions of the data?
+
+00:03:06.875 --> 00:03:08.659
+When using a blockchain,
+
+00:03:08.659 --> 00:03:10.909
+you won't have the ability to strictly control
+
+00:03:10.909 --> 00:03:13.824
+permissions over what the users can access,
+
+00:03:13.824 --> 00:03:17.509
+all data will be shared and owned by the network.
+
+00:03:17.509 --> 00:03:21.789
+For example, if you wanted to make a social media application,
+
+00:03:21.789 --> 00:03:26.810
+but also wanted to monitor user behavior and block users that you don't approve of,
+
+00:03:26.810 --> 00:03:29.814
+then a blockchain might not be the best choice.
+
+00:03:29.814 --> 00:03:33.960
+If your application can work without having control over permissions,
+
+00:03:33.960 --> 00:03:36.250
+you can answer yes to this question.
+
+00:03:36.250 --> 00:03:39.844
+At this point, if you've answered yes to each of these questions,
+
+00:03:39.844 --> 00:03:43.430
+then a blockchain could be an excellent choice for your application.
+
+00:03:43.430 --> 00:03:48.170
+If not, try to consider why you've answered no to some of these questions.
+
+00:03:48.169 --> 00:03:51.579
+Is there a way to tweak the functionality of the idea to
+
+00:03:51.580 --> 00:03:54.955
+become something that is better suited as a blockchain application?
+
+00:03:54.955 --> 00:03:58.495
+You don't want to force using a blockchain where it isn't needed.
+
+00:03:58.495 --> 00:04:02.810
+Traditional databases are more than capable for many situations.
+
+00:04:02.810 --> 00:04:05.949
+But it is worth thinking through some of these ideas,
+
+00:04:05.949 --> 00:04:07.929
+to figure out if maybe you'd want to approach
+
+00:04:07.930 --> 00:04:10.960
+your application a bit differently than you had imagined.
+
+00:04:10.960 --> 00:04:12.490
+This will ensure you have
+
+00:04:12.490 --> 00:04:16.629
+the best opportunity to build a successful blockchain application.
+

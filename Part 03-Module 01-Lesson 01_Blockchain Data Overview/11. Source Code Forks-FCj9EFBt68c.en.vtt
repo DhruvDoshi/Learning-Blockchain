@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.009
+We previously discussed hardforks and softforks.
+
+00:00:04.009 --> 00:00:07.679
+It's important to note that there's also something called a source code fork,
+
+00:00:07.679 --> 00:00:10.179
+which is neither of these.
+
+00:00:10.179 --> 00:00:12.779
+A source code fork is the term used for copying
+
+00:00:12.779 --> 00:00:17.070
+the entire codebase of an existing project to a new project.
+
+00:00:17.070 --> 00:00:21.260
+We mentioned that a source code fork happens in both a hardfork
+
+00:00:21.260 --> 00:00:24.780
+and a softfork because there needs to be a copy of the code base made.
+
+00:00:24.780 --> 00:00:28.359
+But, it's possible to create that copy then never
+
+00:00:28.359 --> 00:00:32.365
+tie back the updated software to the history of the software's blockchain.
+
+00:00:32.365 --> 00:00:34.529
+To be a softfork or hardfork,
+
+00:00:34.529 --> 00:00:36.430
+there needs to be that connection to
+
+00:00:36.429 --> 00:00:39.969
+the original blockchain that the new software was forked from.
+
+00:00:39.969 --> 00:00:45.549
+In a hardfork, the network maintains a shared history of transactions and in a softfork,
+
+00:00:45.549 --> 00:00:49.199
+they maintain both their history and future transactions.
+
+00:00:49.200 --> 00:00:52.960
+An example of a source code fork is light coin.
+
+00:00:52.960 --> 00:00:58.725
+Light coin is a source code fork of Bitcoin that resulted in an alternative currency.
+
+00:00:58.725 --> 00:01:02.170
+With light coin, they copied the Bitcoin code base,
+
+00:01:02.170 --> 00:01:04.329
+implemented their changes, and created
+
+00:01:04.329 --> 00:01:07.929
+an entirely new block chain with no association to Bitcoin.
+
+00:01:07.930 --> 00:01:12.475
+The currency now trades as a completely separate alternative to Bitcoin.
+
+00:01:12.474 --> 00:01:17.903
+To recap, changes are implemented in Bitcoin using the Bitcoin improvement proposals.
+
+00:01:17.903 --> 00:01:22.614
+These changes are voted on by minors and implemented by software developers.
+
+00:01:22.614 --> 00:01:26.284
+These changes result in either a hardfork or softfork.
+
+00:01:26.284 --> 00:01:29.054
+In a hard fork the new version is permanent
+
+00:01:29.055 --> 00:01:31.945
+and completely incompatible with the previous version.
+
+00:01:31.944 --> 00:01:36.744
+In softfork, the network only temporarily splits as the change rolls out.
+
+00:01:36.745 --> 00:01:39.820
+Both of these are different than a source code fork,
+
+00:01:39.819 --> 00:01:42.609
+which is just a copy of the existing code base with
+
+00:01:42.609 --> 00:01:45.989
+changes that break any relationship to the existing chain.
+
+00:01:45.989 --> 00:01:47.509
+In the following quiz,
+
+00:01:47.510 --> 00:01:51.024
+try to see if you can identify the different examples as either softforks,
+
+00:01:51.024 --> 00:01:53.840
+hardforks or source code forks.
+

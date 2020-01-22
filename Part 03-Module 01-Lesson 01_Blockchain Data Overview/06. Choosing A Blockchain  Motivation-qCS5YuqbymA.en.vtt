@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.270
+So, we just got done learning about different types of block chains,
+
+00:00:03.270 --> 00:00:05.004
+like public, private, and hybrid.
+
+00:00:05.004 --> 00:00:07.529
+And we're about to jump into the data model
+
+00:00:07.530 --> 00:00:09.780
+that kind of underlies any of those block chains.
+
+00:00:09.779 --> 00:00:13.009
+And I was wondering if you could explain kind of why that's important to understand?
+
+00:00:13.009 --> 00:00:15.390
+It's super important. When you sit there and think
+
+00:00:15.390 --> 00:00:17.810
+about the different types of block chains that exist,
+
+00:00:17.809 --> 00:00:20.524
+we have private, public,
+
+00:00:20.524 --> 00:00:21.639
+and of course hybrid.
+
+00:00:21.640 --> 00:00:24.410
+And it was fantastic, we just got done learning those differences.
+
+00:00:24.410 --> 00:00:28.039
+But, now it's time to explore block chain data model.
+
+00:00:28.039 --> 00:00:32.000
+We want to understand what that data really is and how we can work with it.
+
+00:00:32.000 --> 00:00:35.810
+That's going to dictate the type of usage in regards to a block chain type.
+
+00:00:35.810 --> 00:00:38.620
+Sometimes, data should be exposed on
+
+00:00:38.619 --> 00:00:41.619
+the private chain that's not accessible to the public.
+
+00:00:41.619 --> 00:00:45.044
+That's a great use case for having a private block chain.
+
+00:00:45.045 --> 00:00:48.535
+There's of course, so many more ways to go ahead and experiment with this,
+
+00:00:48.534 --> 00:00:51.149
+but the very first thing that we know, we need to explore.
+
+00:00:51.149 --> 00:00:53.254
+So, let's go ahead and start exploring block chain data.
+
+00:00:53.255 --> 00:00:55.160
+Great thanks Brandy
+

@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.060
+Previously, we covered some of the questions you can ask to
+
+00:00:03.060 --> 00:00:06.750
+decide if a blockchain is the right solution for your application.
+
+00:00:06.750 --> 00:00:09.105
+Once deciding to use a blockchain,
+
+00:00:09.105 --> 00:00:13.620
+it's important to know how the data is constructed so that you can use it effectively.
+
+00:00:13.619 --> 00:00:19.024
+In this video, we'll explore some of this data and investigate the structure of a block.
+
+00:00:19.024 --> 00:00:23.059
+Blocks contain two main sections that each hold important data.
+
+00:00:23.059 --> 00:00:25.589
+The first section is the block header.
+
+00:00:25.589 --> 00:00:29.039
+The block header contains metadata about the block including
+
+00:00:29.039 --> 00:00:33.170
+things like the hash value which allows to connect blocks into a chain.
+
+00:00:33.170 --> 00:00:35.899
+The second section is the body of the block.
+
+00:00:35.899 --> 00:00:39.640
+The body contains all of the blocks transaction information.
+
+00:00:39.640 --> 00:00:42.905
+We can investigate this data using a few different tools.
+
+00:00:42.905 --> 00:00:47.530
+To start, we'll take a closer look at this data using an online block explorer.
+
+00:00:47.530 --> 00:00:50.789
+Later on, we'll be doing this type of stuff programmatically.
+
+00:00:50.789 --> 00:00:53.820
+We're starting with this website so you can focus on the contents of
+
+00:00:53.820 --> 00:00:58.134
+the block rather than worrying about getting set up with your programming environment.
+
+00:00:58.134 --> 00:01:00.070
+If you'd like to follow along,
+
+00:01:00.070 --> 00:01:01.439
+you can go to the website block
+
+00:01:01.439 --> 00:01:05.435
+explorer.com or follow the link we've provided in the notes below.
+
+00:01:05.435 --> 00:01:07.435
+All right, let's get started.
+
+00:01:07.435 --> 00:01:10.049
+Let's begin by going to a specific block.
+
+00:01:10.049 --> 00:01:14.454
+You can do that by typing a block number over here in the top left.
+
+00:01:14.454 --> 00:01:18.980
+For this example, I'll use block 520607.
+
+00:01:18.980 --> 00:01:21.765
+But feel free to use whichever block you like.
+
+00:01:21.765 --> 00:01:23.390
+After Choosing a block,
+
+00:01:23.390 --> 00:01:24.734
+you'll see the block header.
+
+00:01:24.734 --> 00:01:26.819
+There's information here like the hash,
+
+00:01:26.819 --> 00:01:29.899
+height, timestamp in previous block.
+
+00:01:29.900 --> 00:01:32.645
+If you click on the previous or next block,
+
+00:01:32.644 --> 00:01:37.324
+the site will load information for whatever details are included for that block.
+
+00:01:37.325 --> 00:01:40.820
+Now, let's take a look at the block transaction data.
+
+00:01:40.819 --> 00:01:45.429
+You can scroll down to the bottom of the page to see each of the blocks transactions.
+
+00:01:45.430 --> 00:01:49.015
+This information makes up the bulk of the blocks data.
+
+00:01:49.015 --> 00:01:52.420
+They're listed in order as they were verified on the network.
+
+00:01:52.420 --> 00:01:54.909
+At the top is the first transaction and
+
+00:01:54.909 --> 00:01:57.789
+way down at the bottom is the most recent transaction.
+
+00:01:57.790 --> 00:02:00.940
+This first transaction is known as the coinbase.
+
+00:02:00.939 --> 00:02:03.140
+There's not really anything special about it,
+
+00:02:03.140 --> 00:02:05.875
+it's just the term used for the first transaction.
+
+00:02:05.875 --> 00:02:08.650
+Scrolling through to see some other transactions,
+
+00:02:08.650 --> 00:02:11.405
+you'll notice that each of them contains certain details.
+
+00:02:11.405 --> 00:02:17.189
+On the left is the transaction inputs and over on the right is the transaction outputs.
+
+00:02:17.189 --> 00:02:19.490
+Down at the bottom is the fee,
+
+00:02:19.490 --> 00:02:20.790
+the number of conformations,
+
+00:02:20.789 --> 00:02:22.125
+and the amounts sent.
+
+00:02:22.125 --> 00:02:24.435
+Let's look at this transaction.
+
+00:02:24.435 --> 00:02:26.430
+After clicking on the hash value,
+
+00:02:26.430 --> 00:02:29.310
+you'll see some of the summary data about the transaction
+
+00:02:29.310 --> 00:02:33.055
+followed by the details of the transaction inputs and outputs.
+
+00:02:33.055 --> 00:02:36.545
+These are the same details that were provided on the main page.
+
+00:02:36.544 --> 00:02:41.719
+This is telling us that these two inputs were added together giving us these outputs.
+
+00:02:41.719 --> 00:02:44.400
+The top one is how much we sent and the bottom
+
+00:02:44.400 --> 00:02:47.370
+one is how much change was given back to the sender.
+
+00:02:47.370 --> 00:02:50.189
+You can also see that to make this transaction,
+
+00:02:50.189 --> 00:02:52.359
+the miner collected this much as a fee.
+
+00:02:52.360 --> 00:02:54.495
+There are this many confirmations and
+
+00:02:54.495 --> 00:02:57.390
+this was the original amount of Bitcoin that was sent.
+
+00:02:57.389 --> 00:03:01.659
+That's the basics of how to get started with this online block explorer.
+
+00:03:01.659 --> 00:03:05.400
+Using this, you can continue to explore block data and transactions.
+
+00:03:05.400 --> 00:03:08.520
+This will help you get more familiar with how the ideas behind how
+
+00:03:08.520 --> 00:03:11.600
+a block works actually translates into real-world data
+

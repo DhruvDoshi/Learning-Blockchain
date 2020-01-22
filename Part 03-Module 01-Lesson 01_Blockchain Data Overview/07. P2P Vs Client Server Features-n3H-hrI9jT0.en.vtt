@@ -1,0 +1,286 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.600
+Previously, we defined the client server model and
+
+00:00:03.600 --> 00:00:07.970
+began reviewing some of the differences between this and peer to peer networks.
+
+00:00:07.969 --> 00:00:12.794
+In this video, we'll explore the differences between these networks in more depth.
+
+00:00:12.794 --> 00:00:16.214
+We'll look at how they operate using five different categories;
+
+00:00:16.214 --> 00:00:20.835
+infrastructure, cost, control, security, and stability.
+
+00:00:20.835 --> 00:00:24.894
+This will help you better understand when you should use a certain type of network,
+
+00:00:24.894 --> 00:00:27.390
+why it's best suited for a given circumstance,
+
+00:00:27.390 --> 00:00:29.750
+and how to apply it to your application.
+
+00:00:29.750 --> 00:00:33.219
+To start, let's look at the infrastructure of each.
+
+00:00:33.219 --> 00:00:35.049
+As we saw previously,
+
+00:00:35.049 --> 00:00:38.369
+the client-server model is generally a centralized model.
+
+00:00:38.369 --> 00:00:41.214
+While it's network may contain many servers,
+
+00:00:41.215 --> 00:00:43.935
+they're usually owned by a single corporation.
+
+00:00:43.935 --> 00:00:46.484
+This is different than a peer-to-peer.
+
+00:00:46.484 --> 00:00:50.725
+Here, the network is distributed across all the users in the network.
+
+00:00:50.725 --> 00:00:53.039
+Each of these users, known as nodes,
+
+00:00:53.039 --> 00:00:56.740
+are responsible for acting as both the clients and the servers.
+
+00:00:56.740 --> 00:00:59.935
+Next, let's look at the cost of each of these models.
+
+00:00:59.935 --> 00:01:04.125
+The client server model is more expensive upfront than a peer-to-peer.
+
+00:01:04.125 --> 00:01:06.680
+To make it client-server model work,
+
+00:01:06.680 --> 00:01:08.800
+you need to have a significant enough amount of
+
+00:01:08.799 --> 00:01:11.844
+availability to serve all the requests you're receiving.
+
+00:01:11.844 --> 00:01:14.829
+It's on you to make sure they're accounting for all of this and
+
+00:01:14.829 --> 00:01:18.164
+have the appropriate resources needed to keep things up and running.
+
+00:01:18.165 --> 00:01:21.550
+There are options available to make using the service cheaper,
+
+00:01:21.549 --> 00:01:25.640
+such as cloud service providers that allow you to access their server space.
+
+00:01:25.640 --> 00:01:29.144
+This is an alternative route that you can use for an application,
+
+00:01:29.144 --> 00:01:32.319
+but we're only really considering the cost here as the cost of
+
+00:01:32.319 --> 00:01:36.184
+setting up those original servers that you'd be borrowing space from.
+
+00:01:36.185 --> 00:01:42.180
+With a peer-to-peer, the load is distributed across all the nodes that join the network.
+
+00:01:42.180 --> 00:01:46.280
+You can join a peer-to-peer right now using your local computer.
+
+00:01:46.280 --> 00:01:49.570
+The cost of all the local computers being used to
+
+00:01:49.569 --> 00:01:52.794
+support the network can definitely add up to be very expensive,
+
+00:01:52.795 --> 00:01:55.570
+but in this case, both the load and the cost of
+
+00:01:55.569 --> 00:01:59.024
+the network is being distributed across each of the nodes.
+
+00:01:59.025 --> 00:02:01.780
+Next, when looking at the control of data,
+
+00:02:01.780 --> 00:02:05.849
+it's pretty simple to see the difference and we've covered this a few times already.
+
+00:02:05.849 --> 00:02:07.694
+In a client-server network,
+
+00:02:07.694 --> 00:02:09.519
+the central authority that serving
+
+00:02:09.520 --> 00:02:13.060
+the information has the authority to do whatever they like with it.
+
+00:02:13.060 --> 00:02:16.189
+If YouTube doesn't want a video shown, they can delete it.
+
+00:02:16.189 --> 00:02:20.329
+If Twitter thinks the user isn't following their guidelines, they can block them.
+
+00:02:20.330 --> 00:02:22.085
+In a peer-to-peer network,
+
+00:02:22.085 --> 00:02:24.925
+no one has the ability to do either of these things.
+
+00:02:24.925 --> 00:02:28.325
+Everything on the network is owned and shared by everyone.
+
+00:02:28.324 --> 00:02:30.829
+You can choose to leave the network, if you like,
+
+00:02:30.830 --> 00:02:34.960
+but you can't be blocked deleted or removed by a central authority.
+
+00:02:34.960 --> 00:02:36.895
+Next up is security.
+
+00:02:36.895 --> 00:02:40.310
+How does this differ between the two types of networks?
+
+00:02:40.310 --> 00:02:44.330
+Information security is a huge topic but for this comparison,
+
+00:02:44.330 --> 00:02:47.390
+we're focusing specifically on security as it relates to
+
+00:02:47.389 --> 00:02:51.139
+how easily someone can access the information on a network.
+
+00:02:51.139 --> 00:02:54.694
+Since the client-server model is run by a central authority
+
+00:02:54.694 --> 00:02:57.649
+with the ability to control permissions across the network,
+
+00:02:57.649 --> 00:03:00.474
+it's generally considered to be much more secure.
+
+00:03:00.474 --> 00:03:02.439
+In the peer-to-peer networks,
+
+00:03:02.439 --> 00:03:04.340
+nodes are free to share data across
+
+00:03:04.340 --> 00:03:07.745
+the network and any user will have access to this data.
+
+00:03:07.745 --> 00:03:09.655
+As we've seen on the blockchain,
+
+00:03:09.655 --> 00:03:11.159
+this can vary between public,
+
+00:03:11.159 --> 00:03:13.215
+private, and hybrid blockchains.
+
+00:03:13.215 --> 00:03:15.710
+It's important to note that just because peer to
+
+00:03:15.710 --> 00:03:18.479
+peer isn't as secure as the client server model,
+
+00:03:18.479 --> 00:03:21.210
+that doesn't mean that the blockchain isn't secure.
+
+00:03:21.210 --> 00:03:23.730
+That's because the peer-to-peer itself
+
+00:03:23.729 --> 00:03:26.664
+isn't what's contributing to the security of the blockchain.
+
+00:03:26.664 --> 00:03:29.754
+The blockchain security comes from using private keys,
+
+00:03:29.754 --> 00:03:31.844
+public keys, wallet addresses,
+
+00:03:31.844 --> 00:03:34.319
+and cryptography, like we've seen before.
+
+00:03:34.319 --> 00:03:37.469
+These security measures have all been added in to compensate for
+
+00:03:37.469 --> 00:03:41.129
+the fact that a peer-to-peer alone doesn't guarantee security,
+
+00:03:41.129 --> 00:03:43.449
+it just distributes the control.
+
+00:03:43.449 --> 00:03:48.014
+Finally, the stability of the network varies across these network types.
+
+00:03:48.014 --> 00:03:52.264
+Overall, a client-server model is generally considered more stable.
+
+00:03:52.264 --> 00:03:55.029
+That's because the central owner can add or remove
+
+00:03:55.030 --> 00:03:59.229
+computation and storage more easily to meet the demands of the clients.
+
+00:03:59.229 --> 00:04:02.435
+A peer-to-peer network is generally less stable,
+
+00:04:02.435 --> 00:04:04.485
+especially when it's getting started.
+
+00:04:04.485 --> 00:04:07.450
+By depending on users to serve up information,
+
+00:04:07.449 --> 00:04:09.829
+you're placing your stability in their hands.
+
+00:04:09.830 --> 00:04:12.295
+If there are only five peers in the network
+
+00:04:12.294 --> 00:04:14.849
+and three of them leave or the computers break,
+
+00:04:14.849 --> 00:04:17.814
+you just lost 60 percent of your network's power.
+
+00:04:17.814 --> 00:04:21.634
+Instability goes down as more nodes are added to the network.
+
+00:04:21.634 --> 00:04:24.399
+If your network now has 1,000 nodes,
+
+00:04:24.399 --> 00:04:28.794
+those same three nodes could crash but it wouldn't have as much impact.
+
+00:04:28.795 --> 00:04:32.955
+That wraps up our overview of the peer-to-peer versus client-server model.
+
+00:04:32.954 --> 00:04:35.969
+The goal here isn't to decide which is better overall,
+
+00:04:35.970 --> 00:04:38.505
+but to understand the pros and cons of each
+
+00:04:38.504 --> 00:04:41.654
+to determine which is a good fit for your application.
+
+00:04:41.654 --> 00:04:43.984
+The application you build in this program,
+
+00:04:43.985 --> 00:04:45.670
+we'll use a peer-to-peer model.
+
+00:04:45.670 --> 00:04:49.620
+Take some time to consider what decisions you can make to best leverage the strengths
+
+00:04:49.620 --> 00:04:54.280
+of this model and ways you can avoid some of the pitfalls with this technology.
+

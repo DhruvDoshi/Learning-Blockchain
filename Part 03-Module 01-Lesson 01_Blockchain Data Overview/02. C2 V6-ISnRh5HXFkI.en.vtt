@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.444
+So, when people talk about blockchains,
+
+00:00:02.444 --> 00:00:07.800
+probably the best single sentence in order to encapsulate what they do is they are
+
+00:00:07.799 --> 00:00:10.714
+tamper-resistant databases for storing things of
+
+00:00:10.714 --> 00:00:13.994
+value especially in an adversarial environment.
+
+00:00:13.994 --> 00:00:17.160
+You don't want somebody to randomly be able to write themselves a million dollars.
+
+00:00:17.160 --> 00:00:20.469
+You want to make it difficult and expensive for them to do that,
+
+00:00:20.469 --> 00:00:23.369
+maybe so expensive that it would be easier for them to make
+
+00:00:23.370 --> 00:00:27.155
+a million dollars honestly than to write themselves a million dollars in this database,
+
+00:00:27.155 --> 00:00:30.304
+and that's the fundamental problem the blockchain solve.
+
+00:00:30.304 --> 00:00:31.429
+So, among other things,
+
+00:00:31.429 --> 00:00:34.274
+since you don't want just anybody to be able to write themselves that data,
+
+00:00:34.274 --> 00:00:36.409
+you want it to be decentralized,
+
+00:00:36.409 --> 00:00:38.389
+you want the power to be spread out a bit rather
+
+00:00:38.390 --> 00:00:40.789
+than one actor being able to write themselves a million bucks.
+
+00:00:40.789 --> 00:00:43.189
+Once you start thinking about the requirements for database to
+
+00:00:43.189 --> 00:00:45.554
+represent money or money-like thing,
+
+00:00:45.554 --> 00:00:48.439
+you start to get to the phenomena that we observe in blockchain.
+
+00:00:48.439 --> 00:00:52.589
+So, decentralized, immutable, and subject to global consensus.
+

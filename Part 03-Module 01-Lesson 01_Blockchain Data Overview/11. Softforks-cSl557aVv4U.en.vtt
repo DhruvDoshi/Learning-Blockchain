@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.690
+Hard forks and soft forks are pretty similar overall,
+
+00:00:03.690 --> 00:00:06.004
+but the end result is much different.
+
+00:00:06.004 --> 00:00:10.974
+In this video, we'll go over what a soft fork is and how it's different from a hard fork.
+
+00:00:10.974 --> 00:00:16.004
+Then we'll go over an example of a soft fork known as segregated witness.
+
+00:00:16.004 --> 00:00:20.004
+A soft fork is a small change to the software protocol.
+
+00:00:20.004 --> 00:00:21.629
+This change makes it said that
+
+00:00:21.629 --> 00:00:25.634
+the updated version is still compatible with the original software.
+
+00:00:25.635 --> 00:00:30.050
+The changes made to the software are compatible with the original version.
+
+00:00:30.050 --> 00:00:33.770
+This differs from a hard fork where the changes are not compatible.
+
+00:00:33.770 --> 00:00:37.505
+In a soft fork, there's no permanent split in the chain.
+
+00:00:37.505 --> 00:00:39.655
+There may be a temporary split,
+
+00:00:39.655 --> 00:00:43.799
+but that's only to allow time for the changes to propagate through the network.
+
+00:00:43.799 --> 00:00:47.354
+Once everyone has upgraded to the updated protocol,
+
+00:00:47.354 --> 00:00:51.489
+the updated version of the network will be the only one that exists.
+
+00:00:51.490 --> 00:00:55.725
+An example of a soft fork is an improvement known as Segwit.
+
+00:00:55.725 --> 00:00:58.480
+Segwit, short for Segregated Witness,
+
+00:00:58.479 --> 00:01:04.144
+was a soft fork of Bitcoin meant to increase the amount of space available in each block.
+
+00:01:04.144 --> 00:01:07.424
+It allows a block to hold more transactions
+
+00:01:07.424 --> 00:01:10.644
+by removing the signature data from each transaction.
+
+00:01:10.644 --> 00:01:12.619
+Without this signature data,
+
+00:01:12.620 --> 00:01:17.305
+each transaction takes up less space which allows more of them to fit in each block,
+
+00:01:17.305 --> 00:01:19.720
+that's why it's called segregated witness.
+
+00:01:19.719 --> 00:01:22.094
+It's separating or segregating
+
+00:01:22.094 --> 00:01:25.784
+the witness which is the signature data from the transaction.
+
+00:01:25.784 --> 00:01:28.439
+We can use this as a great example to see
+
+00:01:28.439 --> 00:01:31.254
+the side effects of an update once it gets implemented.
+
+00:01:31.254 --> 00:01:34.224
+For one, if your wallet doesn't implement Segwit,
+
+00:01:34.224 --> 00:01:37.059
+you'll still receive transactions from wallets that do.
+
+00:01:37.060 --> 00:01:40.644
+What you end up with is transactions that you can't validate.
+
+00:01:40.644 --> 00:01:42.594
+This is why in a soft fork,
+
+00:01:42.594 --> 00:01:45.829
+you're required to update to the latest version of the protocol.
+
+00:01:45.829 --> 00:01:48.855
+Also, this update like all soft forks,
+
+00:01:48.855 --> 00:01:53.540
+is a trade off between both the advantages and disadvantages of implementing it.
+
+00:01:53.540 --> 00:01:56.445
+Segwit was able to improve the block chains efficiency,
+
+00:01:56.444 --> 00:02:00.534
+but also open the door for possible new ways to attack the network.
+
+00:02:00.534 --> 00:02:03.579
+In this case, Bitcoin decided that the benefits of
+
+00:02:03.579 --> 00:02:06.829
+improving the network outweighed the potential downsides.
+
+00:02:06.829 --> 00:02:09.724
+So, Segwit was implemented as a soft fork.
+
+00:02:09.724 --> 00:02:13.909
+To recap, a soft fork differs from a hard fork in a few ways;
+
+00:02:13.909 --> 00:02:18.490
+rather than being a large update that is not compatible with the original software,
+
+00:02:18.490 --> 00:02:22.310
+it's a small update that is considered backwards compatible.
+
