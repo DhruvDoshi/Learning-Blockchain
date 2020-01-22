@@ -1,0 +1,259 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Introduction</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Building Your Own Private Blockchain</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Details.html">02. Project Details</a>
+    </li>
+    <li class="">
+      <a href="03. Step 1 Review Boilerplate Code.html">03. Step 1: Review Boilerplate Code</a>
+    </li>
+    <li class="">
+      <a href="04. Step 2 Modify Functions to Persist Data.html">04. Step 2: Modify Functions to Persist Data</a>
+    </li>
+    <li class="">
+      <a href="05. Step 3 Test New Functionality.html">05. Step 3: Test New Functionality</a>
+    </li>
+    <li class="">
+      <a href="06. Extra Support.html">06. Extra Support</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Private Blockchain.html">Project Description - Private Blockchain</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Private Blockchain.html">Project Rubric - Private Blockchain</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Project Introduction</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-project-introduction"># Project Introduction</h2>
+<blockquote>
+  <p>Welcome to <strong>Project 2: Building Your Own Private Blockchain</strong></p>
+</blockquote>
+<p>In this course, you learned all about blockchain and transaction data models as well as the differences between public and private blockchains. In this project you will put this knowledge to practice by creating your own private blockchain. However, this current model has some flaws in saving, persisting, and validating data. Your challenge in this project is to refactor your private blockchain to securely handle this information. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-why-this-project"># Why this project?</h2>
+<p>This project introduces you to challenges faced when building out a blockchain storage method. So far, you’ve created a private blockchain that holds data in an array, but storing blockchain dataset in an array is not only expensive for computer memory but also inefficient for long term storage.</p>
+<p>A core responsibilities of a blockchain nodes is to validate the blockchain dataset. Hence a more efficient key-value database Leveldb is ideal for such operations. <em>Infact, Bitcoin core uses Leveldb to store block index and UTXO set</em></p>
+<p>*In this project you will learn to validate the blockchain dataset by converting the current validation functions from storing data in a chain array to storing it in Leveldb and  leveraging the persistence library <a href="http://leveldb.org/" target="_blank">LevelDB</a>. *</p>
+<p>By the end of the project, <em>you will have the skills needed to create your own private blockchain ledger that persists data and validates the blockchain ledger utilizing block hashes.</em></p>
+<h2 id="why-leveldb">Why LevelDB?</h2>
+<p>On the subject of why LevelDB is used in Bitcoin core, core developer Greg Maxwell stated the following to the bitcoin-dev mailing list in October 2015:</p>
+<p>"I think people are falling into a trap of thinking "It's a <database>, I know a <black box> for that!"; but the application and needs are very specialized here. . . It just so happens that on the back of the very bitcoin specific cryptographic consensus algorithim there was a slot where a pre-existing high performance key-value store fit; and so we're using one and saving ourselves some effort…</p>
+<p>Greg Maxwell stated the following in the same thread referenced above (in response to a proposal to switch to using sqlite):</p>
+<p>…[D]atabases sometimes have errors which cause them to fail to return records, or to return stale data. And if those exist consistency must be maintained; and "fixing" the bug can cause a divergence in consensus state that could open users up to theft.<br />
+Case in point, prior to leveldb's use in Bitcoin Core it had a bug that, under rare conditions, could cause it to consistently return not found on records that were really there. . . Leveldb fixed this serious bug in a minor update. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-what-will-i-learn"># What will I learn</h2>
+<p>This project will allow you to build and expand upon the concepts and skills you’ve gained throughout this course. With this project you will:</p>
+<ul>
+<li>Differentiate Private Blockchain and Public Blockchain</li>
+<li>Identify what are the basic components in a Private Blockchain</li>
+<li>Define what is an application Model</li>
+<li>Implement basics functionalities for your Private Blockchain</li>
+<li>Implement a method to persist your Private Blockchain</li>
+<li>Implement with Node.js your application</li>
+<li>Test the application functionalities</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-project-prerequisites"># Project Prerequisites</h2>
+<p>Completing this project successfully depends on your ability to apply skills you have learned throughout the program. The following lessons were made specifically to help you through this project. Feel free to reference this material as you complete the project.</p>
+<blockquote>
+  <ul>
+  <li><a href="https://classroom.udacity.com/nanodegrees/nd1309/parts/31b86083-85e4-43ae-b154-6905b461f2c1/modules/0af5bc78-b446-4b60-b9cd-8659536cd59f/lessons/808abc06-4959-499c-9c31-54be1838096f/concepts/c7210439-55cd-46e9-8a68-ed670b57d7d1" target="_blank">Lesson 01: Blockchain Data Overview</a></li>
+  <li><a href="https://classroom.udacity.com/nanodegrees/nd1309/parts/31b86083-85e4-43ae-b154-6905b461f2c1/modules/0af5bc78-b446-4b60-b9cd-8659536cd59f/lessons/8abea3d8-b174-4f57-ad1d-03bc1bf0f68d/concepts/9d7a7a0d-6cbe-410b-afd2-f5f8b2935cea" target="_blank">Lesson 02: Bitcoin Core Testnet</a></li>
+  <li><a href="https://classroom.udacity.com/nanodegrees/nd1309/parts/31b86083-85e4-43ae-b154-6905b461f2c1/modules/0af5bc78-b446-4b60-b9cd-8659536cd59f/lessons/04db8f80-0cda-4d49-9ccd-a2866d9daf5e/concepts/b11aced3-585e-43a0-abac-e9f06c5b77c2" target="_blank">Lesson 03: Bitcoin Debug Console</a></li>
+  <li><a href="https://classroom.udacity.com/nanodegrees/nd1309/parts/31b86083-85e4-43ae-b154-6905b461f2c1/modules/0af5bc78-b446-4b60-b9cd-8659536cd59f/lessons/970128bc-c405-4a22-8fed-d3f56d5dfac1/concepts/82364dd9-6e47-42e8-b115-aec86ebccf2e" target="_blank">Lesson 04: Blockchain Data</a></li>
+  <li><a href="https://classroom.udacity.com/nanodegrees/nd1309/parts/31b86083-85e4-43ae-b154-6905b461f2c1/modules/0af5bc78-b446-4b60-b9cd-8659536cd59f/lessons/bad0043c-5c20-4201-a7c7-4112d3253f6c/concepts/24197b75-77c9-476b-9595-7a1fe086d19b" target="_blank">Lesson 05: Private Blockchains</a></li>
+  </ul>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.960
+We need to add functionality to validate the blocks and
+
+00:00:03.960 --> 00:00:08.250
+process the data set when the Node.js application is restarting.
+
+00:00:08.250 --> 00:00:09.779
+In your next project,
+
+00:00:09.779 --> 00:00:11.864
+you are tasked with a few challenges.
+
+00:00:11.865 --> 00:00:16.219
+The first challenge is to process the data set utilizing level DB.
+
+00:00:16.219 --> 00:00:20.594
+Next, add functions to support block validation.
+
+00:00:20.594 --> 00:00:25.349
+We wanted to keep it fairly simple so we started you off with some boilerplate code.
+
+00:00:25.350 --> 00:00:27.150
+Don't get too excited.
+
+00:00:27.149 --> 00:00:30.029
+Even with boilerplate code you will still need to
+
+00:00:30.030 --> 00:00:33.410
+implement functions that support the project requirements.
+
+00:00:33.409 --> 00:00:38.414
+The boilerplate code contains comments to assist you in the success of your project.
+
+00:00:38.414 --> 00:00:42.519
+Good luck and we will see you in the next course.
+
