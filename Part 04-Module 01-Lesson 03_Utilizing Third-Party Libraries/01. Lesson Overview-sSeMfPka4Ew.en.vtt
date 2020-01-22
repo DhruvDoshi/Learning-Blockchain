@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.945
+Welcome to the party.
+
+00:00:01.945 --> 00:00:06.360
+The third-party library, or I'll see myself out.
+
+00:00:07.400 --> 00:00:09.695
+So far in the course,
+
+00:00:09.695 --> 00:00:11.699
+we went through the planning stages of
+
+00:00:11.699 --> 00:00:14.199
+integrating your private blockchain to a web service,
+
+00:00:14.199 --> 00:00:16.919
+and then dove into the Node.js Framework.
+
+00:00:16.920 --> 00:00:18.915
+This here is a quick lesson,
+
+00:00:18.914 --> 00:00:22.554
+where we'll take a look at some common libraries associated with these frameworks,
+
+00:00:22.554 --> 00:00:25.684
+which we'll be using in the upcoming project and discuss
+
+00:00:25.684 --> 00:00:30.469
+the ever growing importance of handling security on a blockchain web service.
+
+00:00:30.469 --> 00:00:36.859
+These are the lesson topics: how to discover and use common third-party libraries,
+
+00:00:36.859 --> 00:00:39.920
+using Bitcoin Core as an example to discover
+
+00:00:39.920 --> 00:00:44.189
+third-party libraries to assist with RPC functions that we've seen before,
+
+00:00:44.189 --> 00:00:46.820
+and lastly, discuss the risks and
+
+00:00:46.820 --> 00:00:49.700
+precautions of working with third-party libraries and wallets,
+
+00:00:49.700 --> 00:00:51.820
+or anything that stores value.
+
+00:00:51.820 --> 00:00:54.969
+All right. With that, let's get cracking.
+

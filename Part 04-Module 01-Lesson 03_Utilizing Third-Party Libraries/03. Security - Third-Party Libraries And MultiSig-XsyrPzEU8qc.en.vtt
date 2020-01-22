@@ -1,0 +1,280 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.330
+Third-party libraries bring a lot of benefits,
+
+00:00:03.330 --> 00:00:05.155
+but there are security concerns,
+
+00:00:05.155 --> 00:00:08.815
+especially when dealing with wallets or anything that stores value.
+
+00:00:08.814 --> 00:00:13.439
+We'll wrap up this lesson by discussing some of the best practices of working with
+
+00:00:13.439 --> 00:00:16.004
+third-party libraries and wallets and talk about
+
+00:00:16.004 --> 00:00:19.184
+using multisignature wallets as a security solution.
+
+00:00:19.184 --> 00:00:23.059
+Have you seen working with RESTful frameworks and third-party library integrations,
+
+00:00:23.059 --> 00:00:25.329
+such as bitcoin core npm?
+
+00:00:25.329 --> 00:00:28.739
+Third-party libraries make development a lot easier,
+
+00:00:28.739 --> 00:00:31.294
+but they can also introduce risks into your project.
+
+00:00:31.295 --> 00:00:35.289
+Here are some best practices to keep in mind to help minimize these risks.
+
+00:00:35.289 --> 00:00:37.854
+Use well-tested libraries.
+
+00:00:37.854 --> 00:00:39.949
+Well-tested libraries come from
+
+00:00:39.950 --> 00:00:44.600
+reputable sources with the advantage of being tested for many different scenarios.
+
+00:00:44.600 --> 00:00:48.560
+Many enterprise companies create libraries for their own benefit,
+
+00:00:48.560 --> 00:00:50.585
+but then release them to the public.
+
+00:00:50.585 --> 00:00:53.509
+Since these companies have an incentive to make sure
+
+00:00:53.509 --> 00:00:56.589
+the code doesn't negatively affect their own systems,
+
+00:00:56.590 --> 00:01:00.595
+we as outside developers can benefit from their vetted code.
+
+00:01:00.594 --> 00:01:03.310
+Thoroughly examine the documentation.
+
+00:01:03.310 --> 00:01:06.534
+To know how to effectively use a third-party library,
+
+00:01:06.534 --> 00:01:08.655
+you must read the documentation.
+
+00:01:08.655 --> 00:01:12.489
+Proper documentation will help you learn about usage restrictions,
+
+00:01:12.489 --> 00:01:13.984
+data input and output,
+
+00:01:13.984 --> 00:01:17.064
+and other important implementation details.
+
+00:01:17.064 --> 00:01:20.019
+Focus on scalable libraries.
+
+00:01:20.019 --> 00:01:22.244
+Like we saw with hapi.js,
+
+00:01:22.245 --> 00:01:24.695
+which is used for large businesses like Walmart,
+
+00:01:24.694 --> 00:01:27.979
+choosing a scalable library means you won't have to rewrite
+
+00:01:27.980 --> 00:01:32.034
+the code if your project grows beyond the limits of the third-party integration.
+
+00:01:32.034 --> 00:01:34.515
+Lastly, check security.
+
+00:01:34.515 --> 00:01:36.140
+This can't be said enough.
+
+00:01:36.140 --> 00:01:38.224
+Working as a blockchain developer,
+
+00:01:38.224 --> 00:01:41.974
+you'll often be dealing with confidential, high-value data.
+
+00:01:41.974 --> 00:01:44.644
+With the rise of data theft and hacking,
+
+00:01:44.644 --> 00:01:48.004
+pay close attention to security features of the library.
+
+00:01:48.004 --> 00:01:51.420
+What data security and encryption does it provide?
+
+00:01:51.420 --> 00:01:55.635
+You don't want to risk introducing your project to security vulnerabilities.
+
+00:01:55.635 --> 00:01:59.685
+This goes hand in hand with thoroughly reading the documentation.
+
+00:01:59.685 --> 00:02:01.710
+On the topic of security,
+
+00:02:01.709 --> 00:02:04.204
+I want to mention multisignature wallets.
+
+00:02:04.204 --> 00:02:09.064
+Multisignature wallets require more than one key to authorize the transaction.
+
+00:02:09.064 --> 00:02:12.050
+Let's use bitcoin as an example that we're most familiar with.
+
+00:02:12.050 --> 00:02:17.360
+Here, standard transactions require only one signature from the owner of the private key,
+
+00:02:17.360 --> 00:02:19.330
+associated with the bitcoin address.
+
+00:02:19.330 --> 00:02:23.600
+However, bitcoin networks support much more complicated transactions.
+
+00:02:23.599 --> 00:02:28.174
+They require the signatures of multiple people before the funds can be transferred.
+
+00:02:28.175 --> 00:02:32.515
+These are often referred to as m-of-n transactions.
+
+00:02:32.514 --> 00:02:35.059
+The idea here is that there are multiple parties
+
+00:02:35.060 --> 00:02:37.750
+involved in order for anything to get done.
+
+00:02:37.750 --> 00:02:39.650
+These parties can be people,
+
+00:02:39.650 --> 00:02:41.659
+institutions, or program scripts.
+
+00:02:41.659 --> 00:02:46.544
+Multisignature scripts set a condition where there are n number of public keys,
+
+00:02:46.544 --> 00:02:50.954
+at least m of them must provide signatures for the transaction to go through.
+
+00:02:50.955 --> 00:02:53.395
+This is a m-of-n schema,
+
+00:02:53.395 --> 00:02:55.850
+where n is the total number of keys,
+
+00:02:55.849 --> 00:02:59.824
+and m is a threshold of signatures required for validation.
+
+00:02:59.824 --> 00:03:01.549
+Depending on the network,
+
+00:03:01.550 --> 00:03:05.105
+there may be a limit set to the number of n public keys.
+
+00:03:05.104 --> 00:03:07.894
+Here are some real-world example use cases.
+
+00:03:07.895 --> 00:03:09.670
+In a one of two schema,
+
+00:03:09.669 --> 00:03:12.469
+say there's a husband and wife joint bank account.
+
+00:03:12.469 --> 00:03:16.430
+The signature of either spouse is sufficient to spend the funds.
+
+00:03:16.430 --> 00:03:19.550
+Smart contracts on Tumblebit, Coinswap,
+
+00:03:19.550 --> 00:03:23.540
+and Lightning Network can have a two of two schema.
+
+00:03:23.539 --> 00:03:27.019
+Meaning both parties must sign in for the contract to execute.
+
+00:03:27.020 --> 00:03:29.480
+Here's a notable example in practice.
+
+00:03:29.479 --> 00:03:35.709
+Bitfinex, one of the world's largest cryptocurrency exchanges uses a cold storage wallet.
+
+00:03:35.710 --> 00:03:38.094
+Now, this is a wallet that is kept offline.
+
+00:03:38.094 --> 00:03:41.705
+This is a three of six multisignature wallet.
+
+00:03:41.705 --> 00:03:44.490
+This wallet as of December 2017,
+
+00:03:44.490 --> 00:03:48.110
+contain over 141,000 bitcoins,
+
+00:03:48.110 --> 00:03:51.150
+and that's valued at over $1.5 billion.
+
+00:03:51.150 --> 00:03:53.620
+Presumably, the keys are kept very,
+
+00:03:53.620 --> 00:03:55.955
+very safe by Bitfinex's operators.
+
+00:03:55.955 --> 00:03:59.145
+A number of companies have developed multisignature wallets,
+
+00:03:59.145 --> 00:04:01.174
+from Armory, to Coinbase,
+
+00:04:01.174 --> 00:04:03.540
+to Electrum that we've worked with before.
+
+00:04:03.539 --> 00:04:06.769
+In future development, you might find yourself working on
+
+00:04:06.770 --> 00:04:10.005
+a platform that requires the security of a multisignature wallet,
+
+00:04:10.004 --> 00:04:14.750
+requiring multiple parties to present a valid signature before the data can be accessed.
+
+00:04:14.750 --> 00:04:17.504
+We won't be covering how to implement this now.
+
+00:04:17.504 --> 00:04:20.449
+But, do keep this in mind in the future as a way to increase
+
+00:04:20.449 --> 00:04:24.170
+the security of accessing data on your blockchain back room service.
+
+00:04:24.170 --> 00:04:25.955
+To wrap this section up,
+
+00:04:25.954 --> 00:04:28.504
+our topic of focus was security.
+
+00:04:28.504 --> 00:04:33.110
+We discussed some of the best practices when it comes to using a third-party library,
+
+00:04:33.110 --> 00:04:37.280
+and ended on the security offered by multisignature wallets.
+
+00:04:37.279 --> 00:04:39.799
+Security will be a major concern on
+
+00:04:39.800 --> 00:04:42.365
+almost every blockchain platform you end up building on.
+
+00:04:42.365 --> 00:04:45.350
+So, be vigilant when leveraging existing code and
+
+00:04:45.350 --> 00:04:49.400
+scoping out the safest route for interfacing with your blockchain.
+

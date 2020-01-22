@@ -1,0 +1,301 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Step 3: Configure Two Endpoints</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>RESTful Web API with Node.js Framework</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Details.html">02. Project Details</a>
+    </li>
+    <li class="">
+      <a href="03. Step 1 Select Node.js framework.html">03. Step 1: Select Node.js framework</a>
+    </li>
+    <li class="">
+      <a href="04. Step 2 Configure API Service.html">04. Step 2: Configure API Service</a>
+    </li>
+    <li class="">
+      <a href="05. Step 3 Configure Two Endpoints.html">05. Step 3: Configure Two Endpoints</a>
+    </li>
+    <li class="">
+      <a href="06. Step 4 Update project README.md.html">06. Step 4: Update project README.md</a>
+    </li>
+    <li class="">
+      <a href="07. Extra Support.html">07. Extra Support</a>
+    </li>
+    <li class="">
+      <a href="Project Description - RESTful Web API with Node.js Framework.html">Project Description - RESTful Web API with Node.js Framework</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - RESTful Web API with Node.js Framework.html">Project Rubric - RESTful Web API with Node.js Framework</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Step 3: Configure Two Endpoints</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-step-3-configure-two-endpoints"># Step 3: Configure two endpoints</h2>
+<p>You are tasked to create two endpoints which will allow your application to accept user requests. In this section, we’ll provide resources on how to do so effectively. </p>
+<blockquote>
+  <p><strong>GET Block Endpoint</strong></p>
+</blockquote>
+<blockquote>
+  <p><strong>POST Block Endpoint</strong></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-get-block-endpoint">## GET Block Endpoint</h2>
+<p>Configure a GET request using URL path with a block height parameter. The response for the endpoint should provide block object is JSON format.  </p>
+<h3 id="url">URL</h3>
+<blockquote>
+  <p>http://localhost:8000/block/[blockheight]</p>
+</blockquote>
+<h4 id="example-url-path">Example URL path:</h4>
+<p>http://localhost:8000/block/0, where '0' is the block height.</p>
+<h3 id="response">Response</h3>
+<p>The response for the endpoint should provide block object is JSON format.</p>
+<h4 id="example-get-response">Example GET Response</h4>
+<p>For URL, http://localhost:8000/block/0</p>
+<pre><code>HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 179
+accept-ranges: bytes
+Connection: close          
+{"hash":"49cce61ec3e6ae664514d5fa5722d86069cf981318fc303750ce66032d0acff3","height":0,"body":"First block in the chain - Genesis block","time":"1530311457","previousBlockHash":""}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-post-block-endpoint">## POST Block Endpoint</h2>
+<p>Post a new block with data payload option to add data to the block body. The block body should support a string of text. The response for the endpoint should provide block object in JSON format.</p>
+<h3 id="response">Response</h3>
+<p>The response for the endpoint should provide block object in JSON format. </p>
+<h4 id="example-post-response">Example POST response</h4>
+<p>For URL: http://localhost:8000/block</p>
+<pre><code>HTTP/1.1 200 OK
+content-type: application/json; charset=utf-8
+cache-control: no-cache
+content-length: 238
+Connection: close
+{"hash":"ffaffeb2330a12397acc069791323783ef1a1c8aab17ccf2d6788cdab0360b90","height":1,"body":"Testing block with test string data","time":"1531764891","previousBlockHash":"49cce61ec3e6ae664514d5fa5722d86069cf981318fc303750ce66032d0acff3"}</code></pre>
+<h3 id="validation">Validation</h3>
+<p>When posting to <code>localhost:8000/block</code> without any content on the payload, your service should not create a block. Be sure to validate if there is content in the block before creating and adding it to the chain.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-need-help-testing-your-endpoints">## Need help testing your endpoints?</h2>
+<p>Several tools are available on the internet to assist with API development and testing. If you're having troubles testing your endpoints, try one of the tools listed below:</p>
+<ul>
+<li><a href="https://www.getpostman.com/" target="_blank">Postman</a> is a powerful tool used to test web services. It was developed for sending HTTP requests in a simple and quick way.</li>
+<li><a href="https://curl.haxx.se/" target="_blank">CURL</a> is a command-line tool used to deliver requests supporting a variety of protocols like HTTP, HTTPS, FTP, FTPS, SFTP, and many more.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-rubric-item"># Rubric Item</h2>
+<p>Once you have completed this section successfully, you have fulfilled the requirements of rubric criterion:</p>
+<blockquote>
+  <p><strong>Criteria: GET Block Endpoint</strong></p>
+</blockquote>
+<blockquote>
+  <p><strong>Criteria: POST Block Endpoint</strong></p>
+</blockquote>
+<blockquote>
+  <p><strong>Criteria: Block Contents</strong></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

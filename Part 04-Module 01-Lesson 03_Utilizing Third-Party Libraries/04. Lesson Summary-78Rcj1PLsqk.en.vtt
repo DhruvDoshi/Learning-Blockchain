@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.785
+Now that was a short but really important discussion,
+
+00:00:03.785 --> 00:00:06.084
+and let's recap what we covered.
+
+00:00:06.084 --> 00:00:10.500
+We used Bitcoin Core as an example to discover third-party libraries,
+
+00:00:10.500 --> 00:00:13.990
+such as bitcoin-core and ethereumjs-util.
+
+00:00:14.330 --> 00:00:19.855
+We discussed the risks and precautions of working with third-party libraries and wallets.
+
+00:00:19.855 --> 00:00:23.660
+Lastly, we explored multi-signature wallets that use
+
+00:00:23.660 --> 00:00:28.190
+an M-of-N transaction scheme. Now, what's next?
+
+00:00:28.190 --> 00:00:32.130
+Moving forward, you'll pull together all the steps as you
+
+00:00:32.130 --> 00:00:36.570
+configure an API web service with GET and POST endpoints,
+
+00:00:36.570 --> 00:00:39.710
+and migrate over your private blockchain.
+

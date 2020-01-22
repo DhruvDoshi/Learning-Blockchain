@@ -1,0 +1,505 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Walk-through</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Build a Private Blockchain Notary Service</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Resources.html">02. Project Resources</a>
+    </li>
+    <li class="">
+      <a href="03. Project Walk-through.html">03. Project Walk-through</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Build a Private Blockchain Notary Service .html">Project Description - Build a Private Blockchain Notary Service </a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Build a Private Blockchain Notary Service .html">Project Rubric - Build a Private Blockchain Notary Service </a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Project Walk-through</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-lets-start-by-checking-this-diagram">## Let's start by checking this diagram</h2>
+<p>It is important for you as students take this document as a guide in the solution of your project, the methods name, explained in this document are not required are just examples, please make sure you read carefully the Project Rubric.</p>
+<p>Below is a <a href="https://www.ibm.com/developerworks/rational/library/3101.html" target="_blank">sequence diagram</a> that shows the flow of methods across the components - the user, the web API, the mempool, and the blockchain. </p>
+<p>The first method of a sequence diagram always starts at the top and is typically located on the left side of the diagram for readability. Subsequent methods are then added to the diagram slightly lower than the previous message.</p>
+<p>In this walk-through, we will follow the flow of interactions starting from <code>requestValidation</code> to the final <code>addblock</code>. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/project4-workflow.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-1-user-submit-a-validation-request">### 1. User submit a validation request</h2>
+<p>Users start out by submitting a validation request to an API endpoint:</p>
+<pre><code>curl -X POST \
+  http://localhost:8000/requestValidation \
+  -H 'Content-Type: application/json' \
+  -H 'cache-control: no-cache' \
+  -d '{
+    "address":"19xaiMqayaNrn3x7AjV5cU4Mk5f5prRVpL"
+}'</code></pre>
+<p>Example:</p>
+<pre><code>this.app.post("/requestValidation", (req, res) =&gt; { // Your code });</code></pre>
+<p><strong>Note:</strong> This example is using Express.js Web Framework, if you are using other framework it will be different.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-2-addrequestvalidation-method-in-the-mempool">### 2. <code>AddRequestValidation</code> method in the mempool</h2>
+<p>Mempool can be thought as a temporary storage for validation requests:</p>
+<pre><code>       this.mempool = [];
+       this.timeoutRequests = [];</code></pre>
+<p>A possible approach in this is to have arrays to store these temporary requests.</p>
+<p>If the user re-submits a request, the application will not add a new request; instead, it will return the same request that it is already in the mempool.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-3settimeout-method-in-the-mempool">### 3.<code>setTimeOut</code> method in the mempool</h2>
+<p>The request (as was mentioned before in the requirements) should be available for validation for 5 minutes. If the condition is met, we will need to delete the request. Let's create a function to help us do this:</p>
+<pre><code>self.timeoutRequests[request.walletAddress]=setTimeout(function(){ self.removeValidationRequest(request.walletAddress) }, TimeoutRequestsWindowTime );</code></pre>
+<p><strong>Tip</strong>: Here is one way to handle the time calculation:</p>
+<pre><code>const TimeoutRequestsWindowTime = 5*60*1000;
+
+let timeElapse = (new Date().getTime().toString().slice(0,-3)) - req.requestTimeStamp;
+let timeLeft = (TimeoutRequestsWindowTime/1000) - timeElapse;
+req.validationWindow = timeLeft;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-4requestobject-return-values">### 4.<code>requestObject</code> return values</h2>
+<p><code>requestObject</code> should return these values</p>
+<pre><code>{
+    "walletAddress": "19xaiMqayaNrn3x7AjV5cU4Mk5f5prRVpL",
+    "requestTimeStamp": "1541605128",
+    "message": "19xaiMqayaNrn3x7AjV5cU4Mk5f5prRVpL:1541605128:starRegistry",
+    "validationWindow": 300
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-5-user-will-send-a-validation-request">### 5. User will send a validation request</h2>
+<pre><code>curl -X POST \
+  http://localhost:8000/message-signature/validate \
+  -H 'Content-Type: application/json' \
+  -H 'cache-control: no-cache' \
+  -d '{
+"address":"19xaiMqayaNrn3x7AjV5cU4Mk5f5prRVpL",
+ "signature":"H8K4+1MvyJo9tcr2YN2KejwvX1oqneyCH+fsUL1z1WBdWmswB9bijeFfOfMqK68kQ5RO6ZxhomoXQG3fkLaBl+Q="
+}'</code></pre>
+<p><strong>Tip</strong>: To do this, get the “message” returned in the previous step and use your electrum wallet to sign that message:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2018-11-07-at-1.25.13-pm.png" alt="Use your electrum wallet, sign the message with the wallet address you use to submit your request." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Use your electrum wallet, sign the message with the wallet address you use to submit your request.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-6validaterequestbywallet-method-in-the-mempool">### 6.<code>validateRequestByWallet</code> method in the mempool</h2>
+<p>Create a method that allows you to validate the request following this logic:</p>
+<ul>
+<li>Find your request in the mempool array by wallet address.<ul>
+<li>Verify your windowTime.</li>
+<li>Verify the signature using:</li></ul></li>
+</ul>
+<pre><code>const bitcoinMessage = require('bitcoinjs-message'); 
+let isValid = bitcoinMessage.verify(message, address, signature);</code></pre>
+<ul>
+<li>Create the new object and save it into the <code>mempoolValid</code> array</li>
+</ul>
+<pre><code>this.registerStar = true;
+this.status = {
+     address: walletAddress,
+     requestTimeStamp: requestTimeStamp,
+     message: message,
+     validationWindow: validationWindow,
+     messageSignature: valid
+};</code></pre>
+<ul>
+<li>If you have implemented a timeoutArray, make sure you clean it up before returning the object.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-7-return-the-validrequest-object">### 7. Return the <code>validRequest</code> object</h2>
+<p><code>validRequest</code> should return this object:</p>
+<pre><code>{
+    "registerStar": true,
+    "status": {
+        "address": "19xaiMqayaNrn3x7AjV5cU4Mk5f5prRVpL",
+        "requestTimeStamp": "1541605128",
+        "message": "19xaiMqayaNrn3x7AjV5cU4Mk5f5prRVpL:1541605128:starRegistry",
+        "validationWindow": 200,
+        "messageSignature": true
+    }
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-8-a-user-will-send-star-data-to-be-stored">### 8. A user will send star data to be stored</h2>
+<p>Example of start data to be stored:</p>
+<p>Star story supports ASCII text, limited to 250 words (500 bytes), and hex encoded.</p>
+<pre><code>{
+"address": "19xaiMqayaNrn3x7AjV5cU4Mk5f5prRVpL",
+    "star": {
+            "dec": "68° 52' 56.9",
+            "ra": "16h 29m 1.0s",
+            "story": "Found star using https://www.google.com/sky/"
+        }
+}</code></pre>
+<p><strong>Note: Make sure only one Star can be send in the request</strong></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-9verifyaddressrequest-method">### 9.<code>verifyAddressRequest</code> method</h2>
+<p>Verify if the request validation exists and if it is valid.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-10-encode-star-story-data">### 10. Encode Star story data</h2>
+<p>Encode the story data of the star, this is the object you will save as a body of your block:</p>
+<pre><code>let body = {
+        address: req.body.address,
+        star: {
+              ra: RA,
+              dec: DEC,
+              mag: MAG,
+              cen: CEN,
+              story: Buffer(starStory).toString('hex')
+              }
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-11addblock-method">### 11.<code>addBlock</code> method</h2>
+<p>Your Blockchain implementation already has an <code>addblock(body)</code>. </p>
+<pre><code>let body = {
+      address: req.body.address,
+      star: {
+                ra: RA,
+                dec: DEC,
+                mag: MAG,
+                cen: CEN,
+                story: Buffer(starStory).toString('hex')
+        }
+ };
+ let block = new Block(body);
+// Use your `addBlock(block)` method</code></pre>
+<p>When you pass your start object as a parameter to this method, the application should return the object:</p>
+<pre><code>{
+     "hash": "a59e9e399bc17c2db32a7a87379a8012f2c8e08dd661d7c0a6a4845d4f3ffb9f",
+      "height": 1,
+      "body": {
+           "address": "142BDCeSGbXjWKaAnYXbMpZ6sbrSAo3DpZ",
+           "star": {
+                "ra": "16h 29m 1.0s",
+                "dec": "-26° 29' 24.9",
+                "story": 
+        "466f756e642073746172207573696e672068747470733a2f2f7777772e676f6f676c652e636f6d2f736b792f",
+                "storyDecoded": "Found star using https://www.google.com/sky/"
+             }
+       },
+      "time": "1532296234",
+       "previousBlockHash": "49cce61ec3e6ae664514d5fa5722d86069cf981318fc303750ce66032d0acff3"
+}</code></pre>
+<p><strong>Tip</strong>: Because <code>"storyDecoded"</code> property is not being saved in the block you should decode your story to be able to return this object.</p>
+<pre><code>hex2ascii(obj.body.star.story);</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/blockchain-line.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="additional-functionalities">Additional functionalities</h2>
+<p>Now that we have our application working, it is time to add some functionalities that allow users to retrieve the data stored in the blockchain dataset. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-1-get-star-block-by-hash-with-json-response">### 1. Get star block by hash with JSON response</h2>
+<p>The first step is modify your LevelDB methods to include a method that search for the block that has the <code>hash</code> that we are looking for.<br />
+Check on this example:</p>
+<pre><code>// Get block by hash
+   getBlockByHash(hash) {
+       let self = this;
+       let block = null;
+       return new Promise(function(resolve, reject){
+           self.db.createReadStream()
+           .on('data', function (data) {
+               if(data.hash === hash){
+                   block = data;
+               }
+           })
+           .on('error', function (err) {
+               reject(err)
+           })
+           .on('close', function () {
+               resolve(block);
+           });
+       });
+   }</code></pre>
+<p>Use this CURL example as a request:</p>
+<pre><code>// Curl request
+curl "http://localhost:8000/stars/hash:a59e9e399bc17c2db32a7a87379a8012f2c8e08dd661d7c0a6a4845d4f3ffb9f"</code></pre>
+<p>Then create an endpoint to call the method and return the block object.</p>
+<p><strong>Tip</strong>: Make sure that each time you are returning a block you need to decode the star’s story.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-2-get-star-block-by-wallet-address">## 2. Get star block by wallet address</h2>
+<p>Create the <code>getBlockByWalletAddress(address)</code> method using <code>db.createReadStream()</code> method from LevelDB.</p>
+<p><strong>Tip</strong>:   In this case you can have more than one block with stars registered by one user, so pay attention that you are going to return an array.</p>
+<p><strong>Tip</strong>: Make sure that each time you are returning a block you need to decode the star’s story.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-3-get-star-block-by-height">### 3. Get star block by height</h2>
+<p>Create the <code>getBlockByHeight(height)</code> method using <code>db.createReadStream()</code> if the key you are using to store data in LevelDB otherwise you can just use:<br />
+<code>
+// Get data from levelDB with key (Promise)
+    getLevelDBData(key){
+        let self = this;
+        return new Promise(function(resolve, reject) {
+            self.db.get(key, (err, value) =&gt; {
+                if(err){
+                    if (err.type == 'NotFoundError') {
+                        resolve(undefined);
+                    }else {
+                        console.log('Block ' + key + ' get failed', err);
+                        reject(err);
+                    }
+                }else {
+                    resolve(value);
+                }
+            });
+        });
+    }</code></p>
+<p><strong>Tip</strong>: Make sure that each time you are returning a block you need to decode the star’s story.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/blockchain-line.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-congratulations">## Congratulations!</h2>
+<p>You should have now your project almost ready, remember to update your <code>readme.md</code> file. </p>
+<p>If you have any question or doubt remember you can reach out your mentors in <a href="https://study-hall.udacity.com/" target="_blank">Student Hub</a> or post your code issue into <a href="https://knowledge.udacity.com" target="_blank">Knowledge</a>. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

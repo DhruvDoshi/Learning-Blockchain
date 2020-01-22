@@ -1,0 +1,271 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.660
+In this video, we'll discuss common third-party libraries
+
+00:00:03.660 --> 00:00:06.660
+that you can use to support your blockchain development needs,
+
+00:00:06.660 --> 00:00:10.940
+and then round it out by discussing considerations when choosing a third-party library.
+
+00:00:10.939 --> 00:00:16.405
+As developers, we know that using third-party libraries carries several benefits.
+
+00:00:16.405 --> 00:00:19.700
+First, we don't need to recreate code.
+
+00:00:19.699 --> 00:00:22.934
+Also, it allows us to take advantage of vetted code,
+
+00:00:22.934 --> 00:00:25.279
+and it makes our code cleaner.
+
+00:00:25.280 --> 00:00:30.859
+You learn how to take advantage of RESTful frameworks to use HTTP to obtain data.
+
+00:00:30.859 --> 00:00:33.570
+Now, what about other third-parties to help
+
+00:00:33.570 --> 00:00:36.484
+us interface with other aspects of the blockchain platform?
+
+00:00:36.484 --> 00:00:38.644
+To interact with external services,
+
+00:00:38.645 --> 00:00:41.955
+there are a few options to configure our codebase tool set.
+
+00:00:41.954 --> 00:00:45.469
+The first option is to create our own functions and
+
+00:00:45.469 --> 00:00:49.310
+organize these functions into a library that can be accessed with our codebase.
+
+00:00:49.310 --> 00:00:53.410
+The second option is to use a proven third-party library.
+
+00:00:53.409 --> 00:00:57.169
+The second option is more attractive as it saves development time,
+
+00:00:57.170 --> 00:00:59.164
+and often, increase the security.
+
+00:00:59.164 --> 00:01:02.075
+Of course, this will depend on the age
+
+00:01:02.075 --> 00:01:05.465
+of the third-party library along with its community support.
+
+00:01:05.465 --> 00:01:09.995
+Let's use our past experience with Bitcoin Core and discover solution to
+
+00:01:09.995 --> 00:01:15.115
+interact with the Bitcoin RPC functions utilizing our RESTful framework in Node.
+
+00:01:15.114 --> 00:01:19.549
+Remember that RPC stands for remote procedure calls,
+
+00:01:19.549 --> 00:01:23.209
+which describes the system when you send a command to a remote system,
+
+00:01:23.209 --> 00:01:26.120
+where it's processed and the results are returned back.
+
+00:01:26.120 --> 00:01:29.240
+An example of an RPC function that you used before in
+
+00:01:29.239 --> 00:01:32.584
+Bitcoin Core's debug console is verifymessage.
+
+00:01:32.584 --> 00:01:36.199
+This function takes in an address, a signature,
+
+00:01:36.200 --> 00:01:39.609
+and a message, and returns back true or false,
+
+00:01:39.608 --> 00:01:41.519
+whether or not the signatures verified.
+
+00:01:41.519 --> 00:01:44.344
+To reiterate, what we want to do is find
+
+00:01:44.344 --> 00:01:47.060
+a NodeJS third-party library that will
+
+00:01:47.060 --> 00:01:50.594
+allow us to interact with Bitcoin Core's RPC function.
+
+00:01:50.594 --> 00:01:55.265
+There have been a number of third-party libraries created to wrapped RPC interface.
+
+00:01:55.265 --> 00:01:57.040
+If we just open up Google,
+
+00:01:57.040 --> 00:02:00.650
+and do a simple search for NodeJS Bitcoin Core,
+
+00:02:00.650 --> 00:02:05.010
+the first we always see is Bitcoin Core Node package.
+
+00:02:05.010 --> 00:02:09.194
+This package or library can interface with RPC,
+
+00:02:09.194 --> 00:02:13.969
+execute wallet operations, and query the network in the blockchain,
+
+00:02:13.969 --> 00:02:15.875
+which is everything that we're looking for.
+
+00:02:15.875 --> 00:02:18.150
+If we scroll down that page a little bit,
+
+00:02:18.150 --> 00:02:19.935
+we see that GitHub repo,
+
+00:02:19.935 --> 00:02:26.875
+how to install it using npm as well as how to include it using require Bitcoin Core.
+
+00:02:26.875 --> 00:02:29.344
+Even further down on that page,
+
+00:02:29.344 --> 00:02:32.930
+you'll see a state that all RPC methods are exposed to
+
+00:02:32.930 --> 00:02:37.805
+the client interface as a CamelCase version of those available in Bitcoind.
+
+00:02:37.805 --> 00:02:42.969
+Knowing that, here's a code snippet of what are verified message RPC
+
+00:02:42.969 --> 00:02:48.210
+method that we've seen before in the debug console would look like as a function in Node.
+
+00:02:48.210 --> 00:02:51.599
+I've included this code snippet down below.
+
+00:02:51.599 --> 00:02:56.049
+Notice here is a CamelCase version of what we use in Bitcoin Core.
+
+00:02:56.050 --> 00:02:58.435
+It also takes in the same parameters,
+
+00:02:58.435 --> 00:03:00.219
+an address, a signature,
+
+00:03:00.219 --> 00:03:05.490
+and a message, and returns back true or false whether or not that signature is verified.
+
+00:03:05.490 --> 00:03:09.465
+We won't get into the implementation mechanics in this section just yet.
+
+00:03:09.465 --> 00:03:12.400
+I'm showing you this to demonstrate how we can
+
+00:03:12.400 --> 00:03:16.039
+find third-party libraries that support your blockchain Web Service needs.
+
+00:03:16.039 --> 00:03:18.699
+Later in this course, you'll get a chance to
+
+00:03:18.699 --> 00:03:22.155
+implement out similar features on your own private blockchain.
+
+00:03:22.155 --> 00:03:26.659
+Now, we just saw one common third-party library, specifically for Bitcoin.
+
+00:03:26.659 --> 00:03:31.919
+There are many other ones for other platforms such as ethereumjs-util.
+
+00:03:32.199 --> 00:03:34.879
+As the overview page states,
+
+00:03:34.879 --> 00:03:38.319
+it's a collection of utility functions for Ethereum.
+
+00:03:38.319 --> 00:03:43.185
+It can be used in NodeJS or it can be used in the browser with browserify.
+
+00:03:43.185 --> 00:03:47.810
+It's also a pretty active package with over 3,000 weekly downloads.
+
+00:03:47.810 --> 00:03:50.030
+I'd like you to take some time to think
+
+00:03:50.030 --> 00:03:52.680
+of two more blockchain platforms that you find interesting,
+
+00:03:52.680 --> 00:03:57.385
+and search for some popular third-party libraries you could use when developing for them.
+
+00:03:57.384 --> 00:04:00.185
+You might be surprised at the community of developers
+
+00:04:00.185 --> 00:04:03.435
+already at work building out tools for these platforms.
+
+00:04:03.435 --> 00:04:06.120
+One last thing to call when choosing a library,
+
+00:04:06.120 --> 00:04:08.030
+do a security check.
+
+00:04:08.030 --> 00:04:12.064
+What I mean by this is look into how often it is updated.
+
+00:04:12.064 --> 00:04:16.370
+You don't want to pick a library that's older and neglected in a newer framework.
+
+00:04:16.370 --> 00:04:20.035
+Doing so, you run the risk that if there are problems with the code,
+
+00:04:20.035 --> 00:04:21.535
+it likely won't get fixed,
+
+00:04:21.535 --> 00:04:24.189
+and you either need to do unwanted workarounds,
+
+00:04:24.189 --> 00:04:25.594
+or have to scratch your efforts,
+
+00:04:25.595 --> 00:04:27.430
+and start all over again.
+
+00:04:27.430 --> 00:04:30.134
+Here's a recap of what we covered.
+
+00:04:30.134 --> 00:04:33.889
+We discussed some common third-party libraries for Node,
+
+00:04:33.889 --> 00:04:36.349
+and explored a simple use case of how to use
+
+00:04:36.350 --> 00:04:39.855
+one for Bitcoin Core to wrap RPC functionality.
+
+00:04:39.855 --> 00:04:44.145
+We ended by discussing considerations when choosing a library.
+
+00:04:44.144 --> 00:04:46.234
+Like I mentioned before,
+
+00:04:46.235 --> 00:04:50.160
+take some time to think up two more blockchain platforms you find interesting,
+
+00:04:50.160 --> 00:04:54.805
+and search for some popular third-party libraries you could use for developing with them.
+
+00:04:54.805 --> 00:04:58.600
+Not only will this help you sharpen your skills to discover useful,
+
+00:04:58.600 --> 00:05:01.064
+healthy and well-maintained third-party libraries,
+
+00:05:01.064 --> 00:05:03.259
+it could save you some time down the road
+
+00:05:03.259 --> 00:05:06.539
+if you ever do want to develop for these platforms.
+

@@ -1,0 +1,234 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Third-Party Libraries with Bitcoin Core</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Utilizing Third-Party Libraries</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Overview.html">01. Lesson Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Third-Party Libraries with Bitcoin Core.html">02. Third-Party Libraries with Bitcoin Core</a>
+    </li>
+    <li class="">
+      <a href="03. Security - Third-Party Libraries and MultiSig.html">03. Security - Third-Party Libraries and MultiSig</a>
+    </li>
+    <li class="">
+      <a href="04. Lesson Summary.html">04. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Third-Party Libraries with Bitcoin Core</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Third-Party Libraries With Bitcoin Core</p></h3>
+  <video controls>
+  <source src="02. Third-Party Libraries With Bitcoin Core-2Ym6UOrw7xk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Third-Party Libraries With Bitcoin Core-2Ym6UOrw7xk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/bitcoin-core" target="_blank">bitcoin-core npm package</a></li>
+<li><a href="https://www.npmjs.com/package/ethereumjs-util" target="_blank">ethereumjs-util npm package</a></li>
+<li><a href="https://www.npmjs.com/search?q=keywords:blockchain" target="_blank">general query for blockchain npm packages</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="bitcoin-core-example">bitcoin-core Example</h2>
+<p><strong>Example:</strong> VerifyMessage RPC function using bitcoin-core Node.js.</p>
+<pre><code class="javascript language-javascript">const bitcoin = require('bitcoin');
+
+// Bitcoin-core: verifyMessage
+function verifyMessage(walletAddress, signature, message){
+ response = 'false';
+ const client = new bitcoin.Client({
+   host: 'localhost',
+   port: 8332,
+   user: 'user',
+   pass: 'password!'
+ });
+ client.cmd('verifymessage', walletAddress, signature, message, function(err, result, resHeaders) {
+   if (err) {
+     // console.log(err);
+     return console.log("Incorrect submission");
+   }
+   if (result===true) {
+     console.log('Validation passed');
+   }  
+   console.log(' Validation: ', result);
+   response = result;
+ })
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Join the Third-Party Library Party</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Not only will this help you sharpen your skills to discover useful, healthy, and well-maintained third-party libraries, it could save you some time down the road if you ever want to develop for these platforms.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="e819cbcc-0c29-4fca-9d2e-ad3665242d03--0">
+        <label for="e819cbcc-0c29-4fca-9d2e-ad3665242d03--0"><p>I decided on a blockchain platform, researched and found some useful third-party libraries</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="e819cbcc-0c29-4fca-9d2e-ad3665242d03--1">
+        <label for="e819cbcc-0c29-4fca-9d2e-ad3665242d03--1"><p>BONUS: I reviewed a library another student shared, and left some constructive comment (e.g. "Be careful when using this library, there's a max number of calls." "Wow! This is exactly what I've been looking for!")</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Many of these platforms are still being built out by young development communities, so right now's the perfect time to get involved! </p>
+<p>If you find a development project going on that piques your interest, why not contact the admins and see how you can get involved. </p>
+<p>Alternatively, if there's no project for a need you find, why not start it?</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>
