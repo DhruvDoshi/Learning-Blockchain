@@ -1,0 +1,460 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Part 1: Write a smart contract</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Decentralized Star Notary Project</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Details.html">02. Project Details</a>
+    </li>
+    <li class="">
+      <a href="03. Part 1 Write a smart contract.html">03. Part 1: Write a smart contract</a>
+    </li>
+    <li class="">
+      <a href="04. Part 2 Test smart contract code coverage.html">04. Part 2: Test smart contract code coverage</a>
+    </li>
+    <li class="">
+      <a href="05. Part 3 Deploy smart contract on a public test network.html">05. Part 3: Deploy smart contract on a public test network</a>
+    </li>
+    <li class="">
+      <a href="06. Part 4 Modify client code to interact with smart contract.html">06. Part 4: Modify client code to interact with smart contract</a>
+    </li>
+    <li class="">
+      <a href="07. Extra Support - Solidity Review.html">07. Extra Support - Solidity Review</a>
+    </li>
+    <li class="">
+      <a href="08. Extra Support - Deploying with Truffle.html">08. Extra Support - Deploying with Truffle</a>
+    </li>
+    <li class="">
+      <a href="09. Optional Configure RESTful API endpoint.html">09. Optional: Configure RESTful API endpoint</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Decentralized Star Notary Project.html">Project Description - Decentralized Star Notary Project</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Decentralized Star Notary Project.html">Project Rubric - Decentralized Star Notary Project</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Part 1: Write a smart contract</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-part-1-write-a-smart-contract-with-functions-to-support-proof-of-existence-ie-notarization-"># Part 1: Write a smart contract with functions to support proof of existence (i.e. notarization) </h2>
+<p>In order for stars to be notarized, we will need to create a smart contract that support proof of existence. The smart contract(s) you you build should have these requirements:</p>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id="**requirement_1**"><strong>Requirement 1</strong></th>
+  <th id="define_and_implement_erc-721_interface">Define and implement ERC-721 interface</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>Requirement 2</strong></td>
+  <td>Add metadata to the star token</td>
+  </tr>
+  <tr>
+  <td><strong>Requirement 3</strong></td>
+  <td>Configure uniqueness with the stars</td>
+  </tr>
+  <tr>
+  <td><strong>Requirement 4</strong></td>
+  <td>Contain required functions</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-requirement-1-define-and-implement-erc-721-interface-"># Requirement 1: Define and implement ERC-721 interface </h2>
+<p>Probably you follow along the code sessions with instructors during the lessons but we would like to provide you a starter code that will help you to be successful with the project, and ensure your project contains all the initial requirements (it’ll make your life and the lives of your project reviewers much happier :) </p>
+<p>The starter code contains the project boilerplate built during the screencasts. Within the starter code you have two directories to work from. The difference between the two, is the option to allow you to build your project with or without Zeppelin.</p>
+<blockquote>
+  <p><a href="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/September/5ba55d78_project-5-starter-code/project-5-starter-code.zip" target="_blank">Download Starter Code </a></p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-requirement-2-add-metadata-to-the-star-token"># Requirement 2: Add metadata to the star token</h2>
+<p>The star token should have these pieces of metadata added:</p>
+<ul>
+<li>Star coordinators<ul>
+<li>Dec</li>
+<li>Mag</li>
+<li>Cent</li></ul></li>
+<li>Star story</li>
+</ul>
+<p>To this remember the best option is to use a <code>struct</code>:</p>
+<pre><code>struct Star {
+        string name;
+        string starStory;
+        string ra;
+        string dec;
+        string mag;
+    }</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-requirement-3-configure-uniqueness-with-the-stars"># Requirement 3: Configure uniqueness with the stars</h2>
+<p>Make sure to configure uniqueness with the stars, where uniqueness is based on coordinates. In other words,  stars with the same coordinates are not permitted.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-requirement-4-contain-required-functions-"># Requirement 4: Contain required functions </h2>
+<p>Using what was covered in the course, add these functions to your smart contract:</p>
+<p>File: <strong>StarNotary.sol</strong></p>
+<pre><code>contract StarNotary is ERC721Token {
+
+}</code></pre>
+<ul>
+<li>createStar()</li>
+</ul>
+<pre><code>function createStar(string _name, string _starStory, string _ra, string _dec, string _mag, uint256 _tokenId) public {
+        // Create a `Star memory newStar` variable
+        // Verify uniquenessFactor `keccak256(_ra, _dec, _mag)`
+
+        ERC721Token.mint(_tokenId);
+ }</code></pre>
+<ul>
+<li>putStarUpForSale()</li>
+</ul>
+<pre><code>function putStarUpForSale(uint256 _tokenId, uint256 _price) public {
+        // `require` owner in the token is equal to `msg.sender`
+        starsForSale[_tokenId] = _price;
+ }</code></pre>
+<ul>
+<li>buyStar()</li>
+</ul>
+<pre><code>function buyStar(uint256 _tokenId) public payable {
+        // Verify if the star is for sale
+       // Verify you have amount
+       require(msg.value &gt;= starCost);
+      // If everything is okay transfer
+       if(msg.value &gt; starCost) {
+            msg.sender.transfer(msg.value - starCost);
+        }
+    }</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>File: <strong>ERC721Token.sol</strong></p>
+<pre><code>import './ERC721.sol';
+contract ERC721Token is ERC721 {
+
+}</code></pre>
+<ul>
+<li>mint()</li>
+</ul>
+<pre><code>function mint(uint256 _tokenId) public { 
+        // Add your logic here and at the end:
+
+        emit Transfer(address(0), msg.sender, _tokenId);
+    }</code></pre>
+<ul>
+<li>approve()</li>
+</ul>
+<pre><code>    /// @notice Change or reaffirm the approved address for an NFT
+    /// @dev The zero address indicates there is no approved address.
+    ///  Throws unless `msg.sender` is the current NFT owner, or an authorized
+    ///  operator of the current owner.
+    /// @param _approved The new approved NFT controller
+    /// @param _tokenId The NFT to approve
+    function approve(address _approved, uint256 _tokenId) external payable { 
+        // Add your logic here
+        emit Approval(msg.sender, _approved, _tokenId);
+    }</code></pre>
+<ul>
+<li>setApprovalForAll()</li>
+</ul>
+<pre><code>/// @notice Enable or disable approval for a third party ("operator") to manage
+    ///  all of `msg.sender`'s assets
+    /// @dev Emits the ApprovalForAll event. The contract MUST allow
+    ///  multiple operators per owner.
+    /// @param _operator Address to add to the set of authorized operators
+    /// @param _approved True if the operator is approved, false to revoke approval
+    function setApprovalForAll(address _operator, bool _approved) external { 
+        // Add your logic here
+        emit ApprovalForAll(msg.sender, _operator, _approved);
+    }</code></pre>
+<ul>
+<li>getApproved()</li>
+</ul>
+<pre><code>     /// @notice Get the approved address for a single NFT
+    /// @dev Throws if `_tokenId` is not a valid NFT.
+    /// @param _tokenId The NFT to find the approved address for
+    /// @return The approved address for this NFT, or the zero address if there is none
+    function getApproved(uint256 _tokenId) public view returns (address) { 
+        //Add your logic here
+    }</code></pre>
+<ul>
+<li>isApprovedForAll()</li>
+</ul>
+<pre><code>/// @notice Query if an address is an authorized operator for another address
+    /// @param _owner The address that owns the NFTs
+    /// @param _operator The address that acts on behalf of the owner
+    /// @return True if `_operator` is an approved operator for `_owner`, false otherwise
+    function isApprovedForAll(address _owner, address _operator) public view returns (bool) { 
+        // Add your logic here
+    }</code></pre>
+<ul>
+<li>ownerOf()</li>
+</ul>
+<pre><code>    /// @notice Find the owner of an NFT
+    /// @dev NFTs assigned to zero address are considered invalid, and queries
+    ///  about them do throw.
+    /// @param _tokenId The identifier for an NFT
+    /// @return The address of the owner of the NFT
+    function ownerOf(uint256 _tokenId) external view returns (address) { 
+        return tokenToOwner[_tokenId];
+    }</code></pre>
+<ul>
+<li>transferFrom() with helper</li>
+</ul>
+<pre><code>     /// @notice Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE
+    ///  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE
+    ///  THEY MAY BE PERMANENTLY LOST
+    /// @dev Throws unless `msg.sender` is the current owner, an authorized
+    ///  operator, or the approved address for this NFT. Throws if `_from` is
+    ///  not the current owner. Throws if `_to` is the zero address. Throws if
+    ///  `_tokenId` is not a valid NFT.
+    /// @param _from The current owner of the NFT
+    /// @param _to The new owner
+    /// @param _tokenId The NFT to transfer
+    function transferFrom(address _from, address _to, uint256 _tokenId) external payable hasPermission(msg.sender, _tokenId) { 
+
+        transferFromHelper(_from, _to, _tokenId);
+    }
+
+    function transferFromHelper(address _from, address _to, uint256 _tokenId) internal { 
+        tokenToOwner[_tokenId] = _to; 
+        ownerToBalance[_from] -= 1;
+
+        emit Transfer(_from, _to, _tokenId);
+    }</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-expected-challenges">## Expected Challenges</h2>
+<p>As a note of caution, </p>
+<ul>
+<li><strong>Solidity is picky!</strong> - There will be limitations for the way you work with strings. For instance, if we desire to perform concatenation. To perform this, you will need to create a function to support string manipulation. </li>
+<li><strong>Uniqless by coordinates</strong> will be challenging due to the limitations with Solidity to iterate over mappings.</li>
+</ul>
+<p>If you need some initial guidance, check out the resources we’ve provided for you in the <a href="https://classroom.udacity.com/nanodegrees/nd1309-beta/parts/753813ec-d2b7-4574-b4e3-4b84c4900b46/modules/f615d662-ae4c-4634-ba85-9804b3a7c159/lessons/d2f7eb7c-0368-4f3f-9288-39069990a0e3/concepts/f74a248c-2cb0-4750-a851-89d1b39eb94f?contentVersion=1.0.0&contentLocale=en-us" target="_blank">Extra Support - Solidity Review</a>; however, always remember to review the <a href="https://solidity.readthedocs.io/en/v0.4.24/" target="_blank">full developer documentation</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

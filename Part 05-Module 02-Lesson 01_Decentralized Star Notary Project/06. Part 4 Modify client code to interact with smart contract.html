@@ -1,0 +1,188 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Part 4: Modify client code to interact with smart contract</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Decentralized Star Notary Project</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Details.html">02. Project Details</a>
+    </li>
+    <li class="">
+      <a href="03. Part 1 Write a smart contract.html">03. Part 1: Write a smart contract</a>
+    </li>
+    <li class="">
+      <a href="04. Part 2 Test smart contract code coverage.html">04. Part 2: Test smart contract code coverage</a>
+    </li>
+    <li class="">
+      <a href="05. Part 3 Deploy smart contract on a public test network.html">05. Part 3: Deploy smart contract on a public test network</a>
+    </li>
+    <li class="">
+      <a href="06. Part 4 Modify client code to interact with smart contract.html">06. Part 4: Modify client code to interact with smart contract</a>
+    </li>
+    <li class="">
+      <a href="07. Extra Support - Solidity Review.html">07. Extra Support - Solidity Review</a>
+    </li>
+    <li class="">
+      <a href="08. Extra Support - Deploying with Truffle.html">08. Extra Support - Deploying with Truffle</a>
+    </li>
+    <li class="">
+      <a href="09. Optional Configure RESTful API endpoint.html">09. Optional: Configure RESTful API endpoint</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Decentralized Star Notary Project.html">Project Description - Decentralized Star Notary Project</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Decentralized Star Notary Project.html">Project Rubric - Decentralized Star Notary Project</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Part 4: Modify client code to interact with smart contract</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-part-4-modify-client-code-to-interact-with-smart-contract"># Part 4: Modify client code to interact with smart contract</h2>
+<p>Using javascript, you’ll need to modify the client code to interact with your smart contract.</p>
+<p>Front-end is configured to:</p>
+<ul>
+<li>1) Claim a new star. Each new star support these pieces of metadata:<ul>
+<li>Star coordinators</li>
+<li>Dec</li>
+<li>Mag</li>
+<li>Cent</li>
+<li>Star story</li></ul></li>
+</ul>
+<pre><code>&lt;button id="claim-button" onclick="claimButtonClicked()"&gt;Claim Star&lt;/button&gt;</code></pre>
+<ul>
+<li>2) Lookup a star by ID using tokenIdToStarInfo()</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

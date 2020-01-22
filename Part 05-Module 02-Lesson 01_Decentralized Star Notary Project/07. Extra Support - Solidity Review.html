@@ -1,0 +1,323 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Extra Support - Solidity Review</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Decentralized Star Notary Project</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Introduction.html">01. Project Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Project Details.html">02. Project Details</a>
+    </li>
+    <li class="">
+      <a href="03. Part 1 Write a smart contract.html">03. Part 1: Write a smart contract</a>
+    </li>
+    <li class="">
+      <a href="04. Part 2 Test smart contract code coverage.html">04. Part 2: Test smart contract code coverage</a>
+    </li>
+    <li class="">
+      <a href="05. Part 3 Deploy smart contract on a public test network.html">05. Part 3: Deploy smart contract on a public test network</a>
+    </li>
+    <li class="">
+      <a href="06. Part 4 Modify client code to interact with smart contract.html">06. Part 4: Modify client code to interact with smart contract</a>
+    </li>
+    <li class="">
+      <a href="07. Extra Support - Solidity Review.html">07. Extra Support - Solidity Review</a>
+    </li>
+    <li class="">
+      <a href="08. Extra Support - Deploying with Truffle.html">08. Extra Support - Deploying with Truffle</a>
+    </li>
+    <li class="">
+      <a href="09. Optional Configure RESTful API endpoint.html">09. Optional: Configure RESTful API endpoint</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Decentralized Star Notary Project.html">Project Description - Decentralized Star Notary Project</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Decentralized Star Notary Project.html">Project Rubric - Decentralized Star Notary Project</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Extra Support - Solidity Review</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Solidity-Review 1</p></h3>
+  <video controls>
+  <source src="07. Solidity-Review 1-3jHs_M-zSA0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="07. Solidity-Review 1-3jHs_M-zSA0.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-extra-support"># Extra Support</h2>
+<p>In this section, we provide a brief Solidity review. For full developer documentation, review the following: <a href="https://solidity.readthedocs.io/en/v0.4.24/" target="_blank">https://solidity.readthedocs.io/en/v0.4.24/</a></p>
+<p>Topics covered in this section are:</p>
+<ul>
+<li>Solidity versioning</li>
+<li>Contracts</li>
+<li>Variables<ul>
+<li>Variable types</li>
+<li>Booleans</li>
+<li>Integers</li>
+<li>Addresses</li>
+<li>Strings</li>
+<li>Variable definition</li></ul></li>
+<li>Arithmetics<ul>
+<li>Arithmetic operations</li></ul></li>
+<li>Structs</li>
+<li>Mappings</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/block-line-fill-small.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solidity-review">Solidity review</h1>
+<p>This page list common Solidity syntax. It's geared for a quick review as your working through the development of your smart contracts. For more depth, please review Solidity developer documentation: <a href="https://solidity.readthedocs.io/en/v0.4.24/" target="_blank">https://solidity.readthedocs.io/en/v0.4.24/</a></p>
+<h2 id="solidity-versioning">Solidity versioning</h2>
+<p>Solidity source files can contain any number of contract definitions. Each Solidity file also includes a thing called "Version Pragma". It is used to prevent the code from being compiled with future compiler versions that might introduce incompatible changes. Most of the time, the definition looks like this:</p>
+<pre><code>pragma solidity ^0.4.20;</code></pre>
+<p>In the example above 0.4.20 is the desired compiler version.</p>
+<h2 id="contracts">Contracts</h2>
+<p>Now, let's put it into code.</p>
+<p>Contracts in Solidity are similar to classes in object-oriented languages. They contain data in variables and functions that can modify these variables.</p>
+<p>They are defined by using a contract keyword, followed by the contract name and two brackets { } which will later enclose contract variables and functions. For example:</p>
+<pre><code>pragma solidity ^0.4.20;
+
+contract ParentObject {
+
+
+
+}</code></pre>
+<h2 id="variables">Variables</h2>
+<p>Wow! You've successfully created the frame of your contract! Now, it's time to start learning about how your contract will work. We'll start by finding out what type of variables there are.</p>
+<h3 id="variable-types">Variable types</h3>
+<p>State variables are used to store information on the blockchain. They can also be manipulated by the functions within the contract.</p>
+<p>Solidity is a statically typed programming language, meaning that each variable must have its type specified. Examples of the main data types:</p>
+<h3 id="booleans">Booleans</h3>
+<p>Can only have one of the two following values: true or false. The keyword for booleans is bool.</p>
+<h3 id="integers">Integers</h3>
+<p>Integers can be split into main groups: regular integers (can store both positive and negative values) and unsigned integers (can only store values that are 0 or higher)</p>
+<p>Regular integer has keywords from int8 to int256. The number signifies the maximum number of bits it can store (thus limiting the maximum value), and it can be any number between 8 and 256 as long as it incremented in steps of 8 (e.g., int16 is valid but int17is not). The int keyword alone would be understood as int256.</p>
+<p>Unsigned integers follow the same logic. The only difference is the keyword which ranges from uint8 to uint256. Keyword uintcan also be used instead of uint256.</p>
+<h3 id="addresses">Addresses</h3>
+<p>The address keyword is used to hold Ethereum addresses. If you're planning to store an Ethereum address, you will need to use the address keyword.</p>
+<h3 id="strings">Strings</h3>
+<p>The string variable is used to store text information. If you need to store a variable that should contain text information use the string keyword.</p>
+<h3 id="variable-definition">Variable definition</h3>
+<p>There are more data types, but we will go into more details in further lessons.</p>
+<p>Variables and their values are defined like this.</p>
+<p>contract Pizza {</p>
+<pre><code>bool isWarm = true;
+
+uint slicesLeft = 3;</code></pre>
+<p>}</p>
+<pre><code>pragma solidity ^0.4.20;
+
+contract ParentObject {
+
+    // Write your solution below
+
+    uint maxChildrenPerParentOpject = 10;
+
+    uint minChildrenPerParentOpject = 1;
+
+}</code></pre>
+<h2 id="arithmetics">Arithmetics</h2>
+<p>Now that you learned to define the variables for your contract, it's time to go through some basic math commands that will be useful later for defining your smart contract code.</p>
+<h3 id="arithmetic-operations">Arithmetic operations</h3>
+<p>Integers can be used for arithmetic operations:</p>
+<ul>
+<li>Addition x + y</li>
+<li>Subtraction x - y</li>
+<li>Multiplication x * y</li>
+<li>Division x / y</li>
+<li>Remainder x % y</li>
+<li>Exponentiation x ** y (x to the power of y)</li>
+</ul>
+<p>For example:</p>
+<pre><code>uint x = 16;
+uint pizza = 4;
+uint result = 0;
+result = x + pizza;     // 16 + 4 = 20
+result = x - pizza;     // 16 - 4 = 12
+result = x * pizza;     // 16 * 4 = 64
+result = x / pizza;     // 16 / 4 = 4
+result = x % pizza;     // 16 % 4 = 0
+result = x ** pizza;    // 16 ^ 4 = 65536</code></pre>
+<p>A real world example:</p>
+<pre><code>uint pizzaSlices = 6;
+
+uint people = 2;
+
+uint slicesPerPerson = pizzaSlices / people;</code></pre>
+<h2 id="structs">Structs</h2>
+<p>As we've learned the basics for defining variables, now we will learn to create the structure that defines your variables properties: name, type, coordinates (X and Y), and so forth.</p>
+<h3 id="structs-1">Structs</h3>
+<p>A struct is a special data type that allows the programmer to group a list of variables.</p>
+<p>Structures are defined like this:</p>
+<p>struct Car {</p>
+<pre><code>string make;
+
+string model;
+
+uint16 year;
+
+uint16 horsepower;</code></pre>
+<p>}</p>
+<h2 id="mappings">Mappings</h2>
+<p>Now that you've defined your variables, we'll learn how to create a variable that will later map your variable to the blockchain - a special list where all other variables are stored.</p>
+<p>Mappings allow the programmer to create key-value pairs and store them as a list. Concepts like this also are known as hash tables.</p>
+<p>Mappings are defined like this:</p>
+<p>mapping(key_type =&gt; key_value) mappingName;</p>
+<p>key_type should be replaced by a data type. Two commonly used variable types for mapping keys that we already know about are address and uint. It is important to note that not every data type can be used as a key. For instance, structs and other mappings cannot be used as keys.</p>
+<p>Similarly, key_value should be replaced by the value type. Unlike with keys, Solidity does not limit the data type for values. It can be anything, including structs and other mappings.</p>
+<p>A real-world example of a mapping:</p>
+<p>mapping(address =&gt; uint256) balance;</p>
+<p>This mapping could hold the bank account balance in uint256 for the given address.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>
