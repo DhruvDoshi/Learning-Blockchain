@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.120
+Hey, and welcome to this introduction to Sails js.
+
+00:00:03.120 --> 00:00:07.344
+In this video, we'll start taking a deeper look at the Sails js framework.
+
+00:00:07.344 --> 00:00:10.484
+To start, we'll go to sailsjs.com.
+
+00:00:10.484 --> 00:00:12.239
+The first thing you'll notice here is
+
+00:00:12.240 --> 00:00:15.394
+the cool-looking squid that links to some basic information.
+
+00:00:15.394 --> 00:00:19.214
+This squid is the start of a trend you'll see a lot with this framework.
+
+00:00:19.214 --> 00:00:22.975
+It seems like they've done everything they can to make connections between the framework,
+
+00:00:22.975 --> 00:00:25.605
+and sailboats, and ocean creatures.
+
+00:00:25.605 --> 00:00:27.359
+You can scroll down a little to see
+
+00:00:27.359 --> 00:00:30.344
+the main things they point out that Sails can help you with.
+
+00:00:30.344 --> 00:00:33.259
+The framework is written completely in JavaScript,
+
+00:00:33.259 --> 00:00:34.969
+can connect to any database,
+
+00:00:34.969 --> 00:00:39.679
+and provides blueprints to help create Rest APIs instead of building them from scratch.
+
+00:00:39.679 --> 00:00:43.195
+Also, it's compatible with any front-end like Angular,
+
+00:00:43.195 --> 00:00:45.909
+React, iOS and anything else.
+
+00:00:45.909 --> 00:00:51.265
+It's got easy WebSocket integration and also provides professional support for its users.
+
+00:00:51.265 --> 00:00:53.895
+What this all means is that it's simple to use,
+
+00:00:53.895 --> 00:00:55.725
+well integrated with other tools,
+
+00:00:55.725 --> 00:00:58.835
+and has excellent documentation to help you get started.
+
+00:00:58.835 --> 00:01:01.384
+You can see all that up here in the menu bar.
+
+00:01:01.384 --> 00:01:03.890
+Under get started, they help you set sail
+
+00:01:03.890 --> 00:01:06.534
+with the basics of starting your first application.
+
+00:01:06.534 --> 00:01:08.765
+From installation, to app creation,
+
+00:01:08.765 --> 00:01:10.099
+to some new cool ideas,
+
+00:01:10.099 --> 00:01:12.674
+it's all here to help support you along the way.
+
+00:01:12.674 --> 00:01:16.344
+Under support, you'll see community resources like FAQs,
+
+00:01:16.344 --> 00:01:18.385
+live chat, Stack Overflow,
+
+00:01:18.385 --> 00:01:19.700
+and classes you can take.
+
+00:01:19.700 --> 00:01:23.025
+There's also professional resources like partnerships,
+
+00:01:23.025 --> 00:01:26.555
+support, presentations, and Sails job opportunity.
+
+00:01:26.555 --> 00:01:28.465
+Finally, under the documentation,
+
+00:01:28.465 --> 00:01:30.310
+you'll find stuff like reference material,
+
+00:01:30.310 --> 00:01:32.174
+descriptions of important concepts,
+
+00:01:32.174 --> 00:01:35.239
+tutorials, and even more useful resources.
+
+00:01:35.239 --> 00:01:38.949
+They've made this site really intuitive for you to explore yourself.
+
+00:01:38.950 --> 00:01:42.915
+So, feel free to read through and work through some of the material they provide.
+
+00:01:42.915 --> 00:01:45.980
+Coming up, we'll work through their Hello World application
+
+00:01:45.980 --> 00:01:48.725
+together to help make sure you're comfortable with the basics.
+
+00:01:48.724 --> 00:01:52.214
+So, if you'd, like explore documentation for a bit and when you're ready,
+
+00:01:52.215 --> 00:01:53.730
+we'll see you in the next video.
+

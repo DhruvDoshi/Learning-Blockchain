@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.259
+Node.js has a number of components you'll need to be familiar with.
+
+00:00:04.259 --> 00:00:06.500
+If you are already comfortable with Node,
+
+00:00:06.500 --> 00:00:08.425
+feel free to skip over this section.
+
+00:00:08.425 --> 00:00:12.880
+However, if you would like to brush up on your Node knowledge, stick around.
+
+00:00:12.880 --> 00:00:16.080
+Your private blockchain is coded in JavaScript.
+
+00:00:16.079 --> 00:00:17.989
+So, we'll be adding onto it Node.js
+
+00:00:17.989 --> 00:00:21.034
+components for the data in the blockchain to be consumable.
+
+00:00:21.035 --> 00:00:25.045
+The Node platform offers us a lot of components to help us built this out.
+
+00:00:25.045 --> 00:00:27.560
+Now, we won't go into detail about all of them,
+
+00:00:27.559 --> 00:00:31.839
+only focusing on critical components that we'll be interacting with in this project.
+
+00:00:31.839 --> 00:00:34.969
+Let's start with the general concept of modules.
+
+00:00:34.969 --> 00:00:37.729
+Related pieces of code are encapsulated into
+
+00:00:37.729 --> 00:00:41.454
+modules and they can be thought of as JavaScript Libraries.
+
+00:00:41.454 --> 00:00:44.045
+Node has different types of modules.
+
+00:00:44.045 --> 00:00:46.500
+First off, there's a core modules.
+
+00:00:46.500 --> 00:00:51.575
+Now, these are the bare minimum Node.js functionalities provided to you by the platform.
+
+00:00:51.575 --> 00:00:55.495
+These include the HTTP module, which includes classes,
+
+00:00:55.494 --> 00:00:59.750
+methods, and events to create a Node.js HTTP server.
+
+00:00:59.750 --> 00:01:02.210
+There's also the FS module,
+
+00:01:02.210 --> 00:01:05.060
+which helps you work with file input and output.
+
+00:01:05.060 --> 00:01:07.700
+There are also third-party modules,
+
+00:01:07.700 --> 00:01:11.930
+which are a wrapper for some API functions for third party companies.
+
+00:01:11.930 --> 00:01:15.040
+For example, there's mongodb module,
+
+00:01:15.040 --> 00:01:18.705
+and this is a wrapper to easily interact with mongodb.
+
+00:01:18.704 --> 00:01:22.215
+Then, we have the package.json file.
+
+00:01:22.215 --> 00:01:27.385
+Package.json is a file the lives in the root of your package/application.
+
+00:01:27.385 --> 00:01:32.170
+It tells NPM how your package is structured and how to install it.
+
+00:01:32.170 --> 00:01:35.769
+This is similar to a manifest in other applications.
+
+00:01:35.769 --> 00:01:39.659
+Now, speaking of NPM or Node Package Manager,
+
+00:01:39.659 --> 00:01:44.079
+this is a package manager for Node.js packages or modules.
+
+00:01:44.079 --> 00:01:49.469
+For the project, you'll be using it to configure and manage project dependencies.
+
+00:01:49.469 --> 00:01:54.329
+Lastly, we have the Node Version Manager or NVM.
+
+00:01:54.329 --> 00:01:58.879
+This is a tool that allows you to seamlessly switch between different versions of Node.
+
+00:01:58.879 --> 00:02:00.649
+You can install each version with
+
+00:02:00.650 --> 00:02:05.115
+a single command and set a default via the command line interface.
+
+00:02:05.114 --> 00:02:07.969
+For the project, you'll be using it to compare
+
+00:02:07.969 --> 00:02:11.789
+Node versions and make a selection based on the project needs.
+
+00:02:11.789 --> 00:02:15.429
+Instructions for installing NVM are linked down below.
+
+00:02:15.430 --> 00:02:19.155
+There are wraps of the core components of Node that we'll be discussing.
+
+00:02:19.155 --> 00:02:23.180
+Next, we'll take a look at the client and server features,
+
+00:02:23.180 --> 00:02:28.360
+and how we can use them to configure API endpoints to retrieve and post block data.
+

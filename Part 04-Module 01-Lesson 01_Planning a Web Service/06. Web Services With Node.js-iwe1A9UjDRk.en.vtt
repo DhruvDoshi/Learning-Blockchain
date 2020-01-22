@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.975
+This section is about planning and developing your mental tools.
+
+00:00:03.975 --> 00:00:06.810
+Let's talk about how we made the decisions we did to
+
+00:00:06.809 --> 00:00:10.169
+configure an API web service with GET/POST endpoints.
+
+00:00:10.169 --> 00:00:11.865
+For this course and project,
+
+00:00:11.865 --> 00:00:16.070
+we decided to build and deploy a local web service with Node.js.
+
+00:00:16.070 --> 00:00:19.690
+I want to discuss the reasons behind why we chose to use Node.js and
+
+00:00:19.690 --> 00:00:21.855
+elaborate on its components there will be
+
+00:00:21.855 --> 00:00:25.030
+integral to the development process as we move forward.
+
+00:00:25.030 --> 00:00:28.920
+In this section, we will introduce Node.js then
+
+00:00:28.920 --> 00:00:32.190
+set it up and then quickly overview nodes components.
+
+00:00:32.189 --> 00:00:36.334
+Then, we'll cover the client and server features and, lastly,
+
+00:00:36.335 --> 00:00:38.000
+discuss the appropriate mock data
+
+00:00:38.000 --> 00:00:42.740
+set remember a large part of this lesson is building the skills to know
+
+00:00:42.740 --> 00:00:45.710
+how to analyze your blockchain use case and determine if it
+
+00:00:45.710 --> 00:00:49.945
+requires a web service or not and if so, how to plan for it.
+
+00:00:49.945 --> 00:00:54.359
+With that in mind, let's start with a quick introduction of Node.js.
+

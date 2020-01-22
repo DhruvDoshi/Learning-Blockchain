@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.734
+Welcome to the lesson, Web Services with Node.js.
+
+00:00:03.734 --> 00:00:05.849
+This lesson is meant to help get you up and
+
+00:00:05.849 --> 00:00:08.724
+running with a few popular Node.js Frameworks.
+
+00:00:08.724 --> 00:00:11.219
+In the last lesson, we looked more closely at
+
+00:00:11.220 --> 00:00:15.710
+web applications and discussed the difference between back and front end development.
+
+00:00:15.710 --> 00:00:17.400
+We went over Node.js,
+
+00:00:17.399 --> 00:00:19.934
+which helps you serve both back and front end data.
+
+00:00:19.934 --> 00:00:24.494
+Knowing this helps you understand how to construct a solution for your application needs.
+
+00:00:24.495 --> 00:00:27.900
+In this lesson, we'll dive deeper into how you can more easily
+
+00:00:27.899 --> 00:00:31.674
+build out applications using what's known as a RESTful framework.
+
+00:00:31.675 --> 00:00:34.579
+RESTful frameworks give you access to guidelines and
+
+00:00:34.579 --> 00:00:37.804
+tools that help you develop applications more efficiently.
+
+00:00:37.804 --> 00:00:40.780
+Node.js has many frameworks, and in this lesson,
+
+00:00:40.780 --> 00:00:44.365
+we'll cover three of them, Express, Sails and Hapi.
+
+00:00:44.365 --> 00:00:47.060
+We'll cover when each framework could be the right tool for
+
+00:00:47.060 --> 00:00:50.105
+the job and when you might be better off with something else.
+
+00:00:50.104 --> 00:00:51.829
+You'll also get up and running with
+
+00:00:51.829 --> 00:00:55.295
+the small Hello World application using each of these frameworks.
+
+00:00:55.295 --> 00:00:58.670
+Coming up next, we'll look a little closer at what a framework is,
+
+00:00:58.670 --> 00:01:01.015
+then get started with our own application.
+
+00:01:01.015 --> 00:01:02.945
+So, welcome again to the lesson.
+
+00:01:02.945 --> 00:01:06.000
+I'm excited to get started with Node.js Frameworks.
+

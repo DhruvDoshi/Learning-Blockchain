@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.730
+Hey and welcome back.
+
+00:00:01.730 --> 00:00:04.080
+In this video, we'll walk through the steps needed to
+
+00:00:04.080 --> 00:00:07.040
+create your hapi js Hello World application.
+
+00:00:07.040 --> 00:00:11.905
+To get started, go back to hapijs.com and click on Tutorials.
+
+00:00:11.904 --> 00:00:16.230
+The first tutorial is to help get you up and running with hapi js.
+
+00:00:16.230 --> 00:00:20.050
+To start, we'll need to create a directory for our project.
+
+00:00:20.050 --> 00:00:22.335
+To do this, open your terminal.
+
+00:00:22.335 --> 00:00:24.095
+I'll create mine on my desktop.
+
+00:00:24.094 --> 00:00:26.219
+So, first I'll cd to my desktop,
+
+00:00:26.219 --> 00:00:29.289
+and then make a directory called hapi-app.
+
+00:00:29.289 --> 00:00:36.204
+Next, cd into this folder and type npm init to initialize npm for the project.
+
+00:00:36.204 --> 00:00:41.954
+After initializing npm, type npm install hapi --save,
+
+00:00:41.954 --> 00:00:46.619
+to install hapi js and write dependencies to your package.json file.
+
+00:00:46.619 --> 00:00:50.119
+After this, you'll create the server script in Sails js.
+
+00:00:50.119 --> 00:00:51.210
+This was done for you,
+
+00:00:51.210 --> 00:00:52.789
+but we did something similar to this,
+
+00:00:52.789 --> 00:00:54.954
+when we were getting started with Express.
+
+00:00:54.954 --> 00:00:56.429
+To create this file,
+
+00:00:56.429 --> 00:00:59.854
+I'll use touch server.js in my terminal.
+
+00:00:59.854 --> 00:01:01.939
+Now that we have all our files ready,
+
+00:01:01.939 --> 00:01:05.864
+we'll need to paste the server script code into our server.js file.
+
+00:01:05.864 --> 00:01:09.474
+For this, I actually prefer to use the code shown on the homepage.
+
+00:01:09.474 --> 00:01:12.199
+It's slightly different than that on the tutorial page,
+
+00:01:12.200 --> 00:01:14.760
+but I find that it's quicker for me to get started this way.
+
+00:01:14.760 --> 00:01:16.815
+So, I'll go back to the homepage,
+
+00:01:16.814 --> 00:01:19.439
+paste in the code and save this file.
+
+00:01:19.439 --> 00:01:23.780
+Perfect. Now, we have everything set up and we're ready to run our application.
+
+00:01:23.780 --> 00:01:29.310
+To run the file, open your terminal and type in npm start, then hit Enter.
+
+00:01:29.310 --> 00:01:33.615
+This creates an application you can view in your browser by going to your local host.
+
+00:01:33.614 --> 00:01:35.464
+So, let's go to the browser.
+
+00:01:35.465 --> 00:01:39.924
+Go to local host:colon8000/hello and there we go.
+
+00:01:39.924 --> 00:01:43.480
+We're up and running with our hello world application using hapi js.
+

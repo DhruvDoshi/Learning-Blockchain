@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.559
+This lesson was all about planning and developing the mental framework for how
+
+00:00:04.559 --> 00:00:08.714
+to go about converting a private Blockchain into a valuable web services.
+
+00:00:08.714 --> 00:00:11.669
+In this lesson, we discuss how to analyze
+
+00:00:11.669 --> 00:00:15.120
+blockchain use cases to determine if it requires a web service.
+
+00:00:15.119 --> 00:00:17.914
+Then we decide on a web service language.
+
+00:00:17.914 --> 00:00:22.500
+Explained the Node.js framework and components for the blockchain.
+
+00:00:22.500 --> 00:00:26.490
+Lastly, decide an appropriate mock data set.
+
+00:00:26.489 --> 00:00:29.820
+Throughout this lesson, we laid the foundation for how
+
+00:00:29.820 --> 00:00:32.793
+to modify our private blockchain with Node.js,
+
+00:00:32.793 --> 00:00:36.114
+RESTful APIs, and other third-party libraries to
+
+00:00:36.115 --> 00:00:40.704
+interact with your private Blockchain to submit and audit Blockchain data.
+
+00:00:40.704 --> 00:00:43.835
+Coming up, we'll begin the process to configure
+
+00:00:43.835 --> 00:00:47.640
+web API services with GET and POST endpoints.
+

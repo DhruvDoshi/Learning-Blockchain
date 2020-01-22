@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.430
+What's a web service in the context of the blockchain world?
+
+00:00:02.430 --> 00:00:04.450
+So, a traditional web service it's just,
+
+00:00:04.450 --> 00:00:08.370
+you've got a server and you may have some front in front
+
+00:00:08.369 --> 00:00:12.029
+of it or some API gateway and then clients will query
+
+00:00:12.029 --> 00:00:15.629
+that server and get back data right as it will render in the browser
+
+00:00:15.630 --> 00:00:20.365
+or they will consume it at the command line or via program and do something with it.
+
+00:00:20.364 --> 00:00:24.299
+The difference in the blockchain era is a web service's back-end is no longer
+
+00:00:24.300 --> 00:00:29.589
+just a Postgres or MySQL database often in the cloud,
+
+00:00:29.589 --> 00:00:32.039
+but it can also include
+
+00:00:32.039 --> 00:00:35.804
+a decentralized blockchain backend or multiple de-centralized backends.
+
+00:00:35.804 --> 00:00:39.240
+Notice that, web service in the era blockchain doesn't have
+
+00:00:39.240 --> 00:00:42.480
+to only have a blockchain based backend but just another backend,
+
+00:00:42.479 --> 00:00:44.224
+it's a sheared backend that
+
+00:00:44.225 --> 00:00:49.865
+multiple different actors can read from and if they spend digital currency can write too.
+
+00:00:49.865 --> 00:00:54.829
+So, that's what a web service is in the age of blockchain it's got usually both the
+
+00:00:54.829 --> 00:00:57.469
+original Postgres based backend and it
+
+00:00:57.469 --> 00:01:00.539
+can tap into one or more blockchain based de-centralized backends.
+
+00:01:00.539 --> 00:01:02.570
+So, do companies in systems need to rewire
+
+00:01:02.570 --> 00:01:05.394
+the entire stack to take adventure blockchain technology?
+
+00:01:05.394 --> 00:01:07.114
+In some cases yes,
+
+00:01:07.114 --> 00:01:12.319
+because what a blockchain represents is a completely new payment rail and whether
+
+00:01:12.319 --> 00:01:13.369
+the complete new payment rail is
+
+00:01:13.370 --> 00:01:15.950
+completely different often regulatory environment and
+
+00:01:15.950 --> 00:01:18.840
+a completely different degree of risk tolerance for the business.
+
+00:01:18.840 --> 00:01:22.549
+In my view, relatively few companies that
+
+00:01:22.549 --> 00:01:28.015
+are Finance 1.0 or Wall Street 1.0 will be able to make the transition successfully.
+
+00:01:28.015 --> 00:01:29.905
+If you look at what the internet did,
+
+00:01:29.905 --> 00:01:34.439
+it has basically disrupted traditional books, newspapers, movies, music,
+
+00:01:34.439 --> 00:01:37.489
+and relatively few of the incumbents are still around
+
+00:01:37.489 --> 00:01:40.670
+today in the same form like Blockbuster was disrupted by
+
+00:01:40.670 --> 00:01:43.760
+Netflix and Kodak was disrupted by Instagram and
+
+00:01:43.760 --> 00:01:45.260
+the digital players have
+
+00:01:45.260 --> 00:01:47.990
+different economics and cost structure and they came up in a different way.
+
+00:01:47.989 --> 00:01:51.319
+I think blockchain has that same revolutionary potential.
+
+00:01:51.319 --> 00:01:53.569
+Now with that said, some of the incumbents were
+
+00:01:53.569 --> 00:01:56.059
+smart and they did at least play it a good defense.
+
+00:01:56.060 --> 00:01:59.299
+The New York Times for example has a very good website,
+
+00:01:59.299 --> 00:02:03.500
+many of the music and movie companies eventually did get into streaming simply
+
+00:02:03.500 --> 00:02:05.450
+some defense and I do expect some of
+
+00:02:05.450 --> 00:02:08.069
+the existing financial incumbents to play defense right?
+
+00:02:08.069 --> 00:02:09.949
+So, the banks and when they're smart
+
+00:02:09.949 --> 00:02:12.084
+enough that they are working on blockchain based things.
+
+00:02:12.085 --> 00:02:13.710
+But it's not core to them,
+
+00:02:13.710 --> 00:02:16.680
+they weren't built on the blockchain and they've got 50, 70,
+
+00:02:16.680 --> 00:02:18.439
+100 years of legacy that they have to deal
+
+00:02:18.439 --> 00:02:20.740
+with the theme of the New York Times still has log
+
+00:02:20.740 --> 00:02:25.000
+in contracts because it's still doing paper news.
+
+00:02:25.000 --> 00:02:27.710
+Something that's built on a blockchain has
+
+00:02:27.710 --> 00:02:30.110
+a fundamental agility and advantage sure
+
+00:02:30.110 --> 00:02:32.330
+that's something that's a legacy business doesn't have,
+
+00:02:32.330 --> 00:02:35.990
+that's why it's challenging but not impossible for companies to
+
+00:02:35.990 --> 00:02:42.409
+rip and replace or augment their existing payment systems with blockchain.
+

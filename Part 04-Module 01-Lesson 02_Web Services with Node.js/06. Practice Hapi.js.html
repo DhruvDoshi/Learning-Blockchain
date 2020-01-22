@@ -1,0 +1,426 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practice Hapi.js</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Web Services with Node.js</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. RESTful APIs with Node.js Frameworks.html">02. RESTful APIs with Node.js Frameworks</a>
+    </li>
+    <li class="">
+      <a href="03. Express.js.html">03. Express.js</a>
+    </li>
+    <li class="">
+      <a href="04. Practice Express.js.html">04. Practice Express.js</a>
+    </li>
+    <li class="">
+      <a href="05. Hapi.js.html">05. Hapi.js</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Hapi.js.html">06. Practice Hapi.js</a>
+    </li>
+    <li class="">
+      <a href="07. Sails.js.html">07. Sails.js</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Practice Hapi.js</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="lets-do-some-coding-practice">Let's do some Coding Practice</h1>
+<p>In the previous section, you were introduced to one of the most popular Web Frameworks in Node.js - <strong>Hapi.js</strong>. Let's practice it here! We won't cover all of the features of this framework, but we'll help you get started and prepare for your next project. If you already know how to work with this framework, feel free to move forward to the next section.</p>
+<p>To do this quiz, you will follow a few simple steps:</p>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id="**step_1**"><strong>Step 1</strong></th>
+  <th id="clone_the_project_repository_in_this_[github](https://github.com/udacity/nd1309-rest-api-hapi/tree/master)_repository">Clone the project repository in this <a href="https://github.com/udacity/nd1309-rest-api-hapi/tree/master" target="_blank">Github</a> repository</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>Step 2</strong></td>
+  <td>Open the terminal and install the packages: <code>npm install</code></td>
+  </tr>
+  <tr>
+  <td><strong>Step 3</strong></td>
+  <td>Open the file app.js and blockcontroller.js and start coding - See additional info below</td>
+  </tr>
+  <tr>
+  <td><strong>Step 4</strong></td>
+  <td>Run your application <code>node app.js</code></td>
+  </tr>
+  <tr>
+  <td><strong>Step 5</strong></td>
+  <td>Use Curl or Postman to test the endpoints</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="additional-info-for-step-3">Additional Info for Step 3</h2>
+<h3 id="review-the-boilerplate-code">Review the boilerplate code</h3>
+<p>After you've cloned your repository and installed the node packages using <code>npm install</code>, you'll need to install the following packages: </p>
+<ul>
+<li>"crypto-js": "^3.1.9-1",</li>
+<li>"hapi": "^17.6.0"</li>
+</ul>
+<p>You've been using <code>crypto-js</code> a lot so far. However, if you need extra help with it, feel free to read about it in the following <a href="https://www.npmjs.com/package/crypto-js" target="_blank">link</a>.</p>
+<p>The package <code>hapi</code> is the most important package because it allows you to use the features of the Hapi Framework to create your RESTful API. Check out the <a href="https://hapijs.com/tutorials/" target="_blank">documentation</a> to familiarize yourself with the core concepts of this framework.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-code">The code</h2>
+<p>In your boilerplate code, you'll be provided with a <strong>Block.js</strong> file. In this file, you'll have an implementation of the <strong>Block</strong> class:</p>
+<pre><code>class Block {
+    constructor(data){
+        this.hash = "";
+        this.height = 0;
+        this.body = data;
+        this.time = new Date().getTime().toString().slice(0,-3);
+    }
+}</code></pre>
+<p>This is the model class to store the block data. (You've worked with this class before.)</p>
+<p>One important thing to notice in the project is that the whole project has been implemented using <code>class</code> Object Oriented Programming. There are multiple ways to use the Hapi.js framework, but we think it is useful to introduce ES6 for this project.</p>
+<h3 id="hapi-framework-configuration">Hapi framework configuration</h3>
+<p>Let's take a look at the <strong>app.js</strong> file. It contains the <code>BlockAPI</code> class. In this class, we are configuring the main code blocks necessary to use Hapi.js:</p>
+<pre><code>const Hapi = require('hapi');
+
+/**
+ * Class Definition for the REST API
+ */
+class BlockAPI {
+
+    /**
+     * Constructor that allows us to initialize the class 
+     */
+    constructor() {
+        this.server = Hapi.Server({
+            port: 3000,
+            host: 'localhost'
+        });
+        this.initControllers();
+        this.start();
+    }
+
+    /**
+     * Initialization of all the controllers
+     */
+    initControllers() {
+        require("./BlockController.js")(this.server);
+    }
+
+    async start() {
+        await this.server.start();
+        console.log(`Server running at: ${this.server.info.uri}`);
+    }
+
+}
+
+new BlockAPI();</code></pre>
+<ul>
+<li>The method <code>initControllers()</code> allows us to initialize all the controller classes. In this case, we have only created one controller. If you have more than one controller, you will need to initialized them here.</li>
+<li>The method <code>start()</code> is an asynchronous method that runs the server.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="blockcontroller-class-creating-endpoints">BlockController class. Creating Endpoints</h3>
+<p>The BlockController class contains the code of your endpoints:</p>
+<pre><code>const SHA256 = require('crypto-js/sha256');
+const BlockClass = require('./Block.js');
+
+/**
+ * Controller Definition to make routes work with blocks
+ */
+class BlockController {
+
+    /**
+     * Constructor to create a new BlockController. You need to initialize all your endpoints here.
+     * @param {*} server 
+     */
+    constructor(server) {
+        this.server = server;
+        this.blocks = [];
+        this.initializeMockData();
+        this.getBlockByIndex();
+        this.postNewBlock();
+    }
+
+    /**
+     * Implement a GET Endpoint to retrieve a block by index, url: "/api/block/:index"
+     */
+    getBlockByIndex() {
+        this.server.route({
+            method: 'GET',
+            path: '/api/block/{index}',
+            handler: (request, h) =&gt; {
+
+            }
+        });
+    }
+
+    /**
+     * Implement a POST Endpoint to add a new Block, url: "/api/block"
+     */
+    postNewBlock() {
+        this.server.route({
+            method: 'POST',
+            path: '/api/block',
+            handler: (request, h) =&gt; {
+
+            }
+        });
+    }
+
+    /**
+     * Helper method to initialize a Mock dataset. Add 10 test blocks to the blocks array.
+     */
+    initializeMockData() {
+        if(this.blocks.length === 0){
+            for (let index = 0; index &lt; 10; index++) {
+                let blockAux = new BlockClass.Block(`Test Data #${index}`);
+                blockAux.height = index;
+                blockAux.hash = SHA256(JSON.stringify(blockAux)).toString();
+                this.blocks.push(blockAux);
+            }
+        }
+    }
+
+
+}
+
+/**
+ * Exporting the BlockController class
+ * @param {*} server 
+ */
+module.exports = (server) =&gt; { return new BlockController(server);}</code></pre>
+<p>The <code>initializeMockData()</code> method creates mock data for you to work with.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="your-tasks">Your Tasks</h2>
+<p>Implement the following endpoint:</p>
+<pre><code>/**
+     * Implement a GET Endpoint to retrieve a block by index, url: "/api/block/:index"
+     */
+    getBlockByIndex() {
+        this.server.route({
+            method: 'GET',
+            path: '/api/block/{index}',
+            handler: (request, h) =&gt; {
+
+            }
+        });
+    }
+
+    /**
+     * Implement a POST Endpoint to add a new Block, url: "/api/block"
+     */
+    postNewBlock() {
+        this.server.route({
+            method: 'POST',
+            path: '/api/block',
+            handler: (request, h) =&gt; {
+
+            }
+        });
+    }</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="tests-your-endpoints">Tests your endpoints</h2>
+<p>Use <a href="https://curl.haxx.se/docs/manual.html" target="_blank">Curl</a> or <a href="https://www.getpostman.com/" target="_blank">Postman</a> to test your endpoints.</p>
+<p>This is just a practice exercise but if you want to discuss about what you did in this practice and work around a solution you can ask your Mentors in Study Hub.</p>
+<p>Postman Example:</p>
+<pre><code>curl -X POST \
+  http://localhost:3000/api/block \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 1e551722-4382-49cc-84f1-19d3d433c1e7' \
+  -d '{
+    "data":"Some data example"
+}'</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Select</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Mark the checkboxes when you complete the following tasks:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1538672230903" name="730139" id="a1538672230903">
+      <label for="a1538672230903"><p>I implemented the <code>getBlockByIndex()</code>get  endpoint.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1538672265213" name="730139" id="a1538672265213">
+      <label for="a1538672265213"><p>I implemented <code>postNewBlock()</code> post endpoint.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1538672274368" name="730139" id="a1538672274368">
+      <label for="a1538672274368"><p>I tested the endpoints with Curl or POSTMAN.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>I implemented the ```getBlockByIndex()```get  endpoint.</li>
+      <li>I implemented ```postNewBlock()``` post endpoint.</li>
+      <li>I tested the endpoints with Curl or POSTMAN.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

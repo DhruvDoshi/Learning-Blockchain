@@ -1,0 +1,290 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hapi.js</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Web Services with Node.js</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. RESTful APIs with Node.js Frameworks.html">02. RESTful APIs with Node.js Frameworks</a>
+    </li>
+    <li class="">
+      <a href="03. Express.js.html">03. Express.js</a>
+    </li>
+    <li class="">
+      <a href="04. Practice Express.js.html">04. Practice Express.js</a>
+    </li>
+    <li class="">
+      <a href="05. Hapi.js.html">05. Hapi.js</a>
+    </li>
+    <li class="">
+      <a href="06. Practice Hapi.js.html">06. Practice Hapi.js</a>
+    </li>
+    <li class="">
+      <a href="07. Sails.js.html">07. Sails.js</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Hapi.js</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="hapijs-overview">Hapi.js Overview</h2>
+<p>Welcome to this section on hapi.js!</p>
+<p>In this section, we’ll be creating our own hello world hapi application. To do that we’ve broken the section up into 3 main sections.</p>
+<ul>
+<li><p><strong>Getting started</strong>: In the first video, we’ll take a look at hapijs.com, and check out some of the resources and documentation. </p></li>
+<li><p><strong>Hello World</strong>: In the second video, you’ll get hapi.js installed locally and get your ‘hello world’ application up and running.</p></li>
+<li><p><strong>Code Overview</strong>: Finally, we’ll go back into the local environment and walk through the code to better understand what’s going on with our new application.</p></li>
+</ul>
+<h2 id="system-requirements">System Requirements</h2>
+<p>Hapi.js should be simple to install and get started with. It is compatible with any operating system and only requires some space in your working directory to install its dependencies.</p>
+<p>When you’re ready, come see the next video where we overview <a href="https://hapijs.com/" target="_blank">hapijs.com</a>. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Hapi.Js Getting Started </p></h3>
+  <video controls>
+  <source src="05. Hapi.Js Getting Started -o-O5ZSCdjlA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Hapi.Js Getting Started -o-O5ZSCdjlA.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="hapijs-hello-world">Hapi.js Hello World</h2>
+<p>You can follow the documentation <a href="https://hapijs.com/tutorials" target="_blank">here</a> to get started with your first hapijs hello world application. </p>
+<p>In the next video, we’ll walk through this process step by step to get up and running with our first hapijs application.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Hapi.Js Hello World</p></h3>
+  <video controls>
+  <source src="05. Hapi.Js Hello World-3p2kgUpM2Bc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Hapi.Js Hello World-3p2kgUpM2Bc.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="hapijs-hello-world-recap">Hapijs Hello World Recap</h2>
+<p>Here are each of the steps we took to create our Hapi.js hello world application.</p>
+<p>You can get started by following the get started documentation here <a href="https://hapijs.com/tutorials" target="_blank">https://hapijs.com/tutorials</a>.</p>
+<h3 id="open-terminal">Open Terminal</h3>
+<ul>
+<li><code>cd desktop</code></li>
+<li><code>mkdir hapi-app</code></li>
+<li><code>cd hapi-app</code></li>
+<li><code>npm init</code></li>
+<li><code>npm install --save hapi</code></li>
+<li><code>touch server.js</code></li>
+</ul>
+<h3 id="open-serverjs">Open server.js</h3>
+<p>In your server.js file, paste the following code then save your file.</p>
+<pre><code>'use strict';
+
+const Hapi=require('hapi');
+
+// Create a server with a host and port
+const server=Hapi.server({
+    host:'localhost',
+    port:8000
+});
+
+// Add the route
+server.route({
+    method:'GET',
+    path:'/hello',
+    handler:function(request,h) {
+
+        return'hello world';
+    }
+});
+
+// Start the server
+async function start() {
+
+    try {
+        await server.start();
+    }
+    catch (err) {
+        console.log(err);
+        process.exit(1);
+    }
+
+    console.log('Server running at:', server.info.uri);
+};
+
+start();</code></pre>
+<h3 id="run-serverjs">Run server.js</h3>
+<p>Finally, use <code>npm start</code> to run the server.js file to launch your application.</p>
+<h3 id="open-browser">Open Browser</h3>
+<p>The application was create on port 8000. To get there, open up your web browser and navigate to <code>localhost:8000/hello</code>.</p>
+<h2 id="hapijs-environment">Hapi.js Environment</h2>
+<p>In the next video, we’ll do a quick overview of the project files and some details of what’s going on in the server.js file. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Hapi.Js Environment </p></h3>
+  <video controls>
+  <source src="05. Hapi.Js Environment -exXbhCW2EDQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. Hapi.Js Environment -exXbhCW2EDQ.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="hapijs-recap">Hapi.js Recap</h2>
+<p>Congratulations on getting through this section! Here you created your hello world hapi.js application.</p>
+<p>Hapijs Homepage: First, we went over the basics of what problems they try to solve and where you can find out more information about the framework. </p>
+<p>Hapijs Hello World: Next, we created a basic application using the hapijs getting started tutorial.  </p>
+<p>Hapijs Resources: This is a great framework and there are many resources to help you get started. If you’re interested in learning more, they provide a great list of books, blogs, and more on their site. <a href="https://hapijs.com/resources" target="_blank">https://hapijs.com/resources</a>. </p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://hapijs.com/" target="_blank">Hapi.js Homepage</a></li>
+<li><a href="https://hapijs.com/tutorials" target="_blank">Hapi.js Tutorials</a></li>
+<li><a href="https://hapijs.com/resources" target="_blank">Hapi.js Resources</a></li>
+</ul>
+<p>Congratulations again on getting started with your hapijs application!</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

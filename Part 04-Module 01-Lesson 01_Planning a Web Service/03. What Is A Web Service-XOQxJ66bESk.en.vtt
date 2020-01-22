@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.424
+In the upcoming several sections,
+
+00:00:02.424 --> 00:00:05.160
+we'll begin developing the ability to analyze
+
+00:00:05.160 --> 00:00:09.339
+your blocking use-case and determine if it requires a web service or not,
+
+00:00:09.339 --> 00:00:10.724
+whether that's the backend,
+
+00:00:10.724 --> 00:00:13.149
+the frontend portion, or maybe both.
+
+00:00:13.150 --> 00:00:16.475
+We'll begin by reviewing what is a web service,
+
+00:00:16.475 --> 00:00:21.280
+then discuss considerations with integrating a blockchain with web services.
+
+00:00:21.280 --> 00:00:25.975
+Lastly, we'll plan how to configure web services with our private blockchain.
+
+00:00:25.975 --> 00:00:28.815
+So, we start. What is a web service?
+
+00:00:28.815 --> 00:00:33.285
+A web service is a function that can be accessed by other programs over the web,
+
+00:00:33.284 --> 00:00:36.759
+and don't confuse a web service with a website.
+
+00:00:36.759 --> 00:00:40.189
+Websites allow people to communicate and collaborate with each
+
+00:00:40.189 --> 00:00:44.979
+other while web services allow programs to communicate and collaborate with each other.
+
+00:00:44.979 --> 00:00:47.804
+For example, you could go to the website
+
+00:00:47.804 --> 00:00:50.090
+google.com/maps and search for
+
+00:00:50.090 --> 00:00:53.435
+your home address to see a map of where you live in the browser.
+
+00:00:53.435 --> 00:00:56.210
+But what if you wanted to write a computer program that takes
+
+00:00:56.210 --> 00:00:59.615
+an address and shows a map similar to how Google map does it?
+
+00:00:59.615 --> 00:01:02.480
+You could either write a whole new mapping program from
+
+00:01:02.479 --> 00:01:06.634
+scratch or you could call the web service that Google map provides,
+
+00:01:06.635 --> 00:01:10.995
+send it the address and the service will return a map of the location,
+
+00:01:10.995 --> 00:01:13.210
+which you can display in your program.
+
+00:01:13.209 --> 00:01:15.839
+This is a very simplified example,
+
+00:01:15.840 --> 00:01:19.280
+but it illustrates that a web service allows programs to
+
+00:01:19.280 --> 00:01:23.710
+retrieve information from and submit information to some resource.
+
+00:01:23.709 --> 00:01:28.179
+Web services is split into the frontend and backend concerns.
+
+00:01:28.180 --> 00:01:30.835
+In client-server web service models,
+
+00:01:30.834 --> 00:01:33.069
+the frontend part is called the client,
+
+00:01:33.069 --> 00:01:36.044
+and the server side is called the backend.
+
+00:01:36.045 --> 00:01:38.359
+To help cement this concept in our minds,
+
+00:01:38.359 --> 00:01:41.670
+let's check out this table comparing the frontend and the backend,
+
+00:01:41.670 --> 00:01:44.114
+focusing on the frontend side first.
+
+00:01:44.114 --> 00:01:46.849
+The frontend, or the client focuses on
+
+00:01:46.849 --> 00:01:51.284
+the presentation layer such as the graphical user interface or the command line.
+
+00:01:51.284 --> 00:01:55.649
+Common languages that developers use to create the frontend are markup or
+
+00:01:55.650 --> 00:02:00.305
+web languages such as HTML, CSS, and JavaScript.
+
+00:02:00.305 --> 00:02:02.980
+An example of a frontend is
+
+00:02:02.980 --> 00:02:05.995
+the Udacity classroom that you're interacting with in this browser.
+
+00:02:05.995 --> 00:02:07.960
+A frontend developer created
+
+00:02:07.959 --> 00:02:11.614
+this user interface that retrieves information that you currently see.
+
+00:02:11.615 --> 00:02:13.500
+Things such as the video file,
+
+00:02:13.500 --> 00:02:16.389
+the text, and the images that are on the screen.
+
+00:02:16.389 --> 00:02:19.479
+The backend or the server focuses on
+
+00:02:19.479 --> 00:02:22.840
+the database layer or any other method of data storage.
+
+00:02:22.840 --> 00:02:28.025
+Common languages for backend development include NO-JS, PHP,
+
+00:02:28.025 --> 00:02:31.800
+Python, Oracle, MySQL and SAP,
+
+00:02:31.800 --> 00:02:34.200
+and these are all scripting languages.
+
+00:02:34.199 --> 00:02:38.359
+Remember what I said that the user interface of the Udacity classroom is a concern of
+
+00:02:38.360 --> 00:02:43.420
+the frontend or the backend part handles storing the data you're able to see.
+
+00:02:43.419 --> 00:02:47.494
+For example, this video was stored in some database.
+
+00:02:47.495 --> 00:02:49.895
+When it needs to be displayed in your browser,
+
+00:02:49.895 --> 00:02:54.820
+the frontend talked to backend in order to retrieve and display that sorted video.
+
+00:02:54.819 --> 00:02:58.900
+Now, that wraps it up for a quick overview of what a web service is.
+
+00:02:58.900 --> 00:03:01.280
+With that in mind, let's discuss what to
+
+00:03:01.280 --> 00:03:05.090
+consider when integrating a blockchain with web services.
+

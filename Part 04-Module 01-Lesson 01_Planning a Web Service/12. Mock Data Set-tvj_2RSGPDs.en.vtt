@@ -1,0 +1,154 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.865
+Let's wrap up this discussion with the topic of mock data for a web service.
+
+00:00:04.865 --> 00:00:11.589
+In this section, we'll cover why use mock data and choosing an initial data set.
+
+00:00:11.589 --> 00:00:14.785
+So first up, why use mock data.
+
+00:00:14.785 --> 00:00:18.719
+Before deploying live and during your development process,
+
+00:00:18.719 --> 00:00:22.289
+it's important to routinely test your project for bugs as you're building it out.
+
+00:00:22.289 --> 00:00:24.754
+If you wait until the very end to start testing,
+
+00:00:24.754 --> 00:00:28.210
+it'll be much harder to figure out the causes of issues that come up.
+
+00:00:28.210 --> 00:00:32.100
+Testing with mock data also allows developers to simulate that
+
+00:00:32.100 --> 00:00:36.000
+their code works as desired without affecting any live production data.
+
+00:00:36.000 --> 00:00:38.750
+When integrating your blockchain with web services,
+
+00:00:38.750 --> 00:00:42.210
+there are many considerations for choosing to test with mock data.
+
+00:00:42.210 --> 00:00:46.320
+Here are some things to keep in mind. Block size.
+
+00:00:46.320 --> 00:00:48.880
+What happens if the amount of new data going into
+
+00:00:48.880 --> 00:00:51.240
+the block exceeds the maximum block size?
+
+00:00:51.240 --> 00:00:54.560
+How will this be handled? Chain size.
+
+00:00:54.560 --> 00:00:56.429
+If there's no limit here,
+
+00:00:56.429 --> 00:00:57.820
+it's important to test
+
+00:00:57.820 --> 00:01:02.560
+block creation functionality and performance as the chain continues to lengthen.
+
+00:01:02.560 --> 00:01:05.545
+Performance. How long does it take to
+
+00:01:05.545 --> 00:01:09.219
+query if it requires looking at every single block in the chain?
+
+00:01:09.219 --> 00:01:14.579
+Security. Are there weaknesses that allow the data to be easily hacked?
+
+00:01:14.579 --> 00:01:19.890
+Data corruption. What happens to the data in a block if a block gets corrupted?
+
+00:01:19.890 --> 00:01:25.245
+Is there a way to repair the block and can the chain beyond the damaged block be reached?
+
+00:01:25.245 --> 00:01:28.150
+Remember, whatever your reason for mock data,
+
+00:01:28.150 --> 00:01:30.859
+to test early and to test often.
+
+00:01:30.859 --> 00:01:35.980
+Next, let's see the considerations when choosing an initial mock data set.
+
+00:01:35.980 --> 00:01:40.450
+First, know what type of data you're going to work with ahead of time.
+
+00:01:40.450 --> 00:01:42.840
+This saves you a ton of work down the road.
+
+00:01:42.840 --> 00:01:45.715
+For example, if you start coding for a string,
+
+00:01:45.715 --> 00:01:47.770
+then you find out you needed an integer.
+
+00:01:47.769 --> 00:01:52.074
+This means you need to go back and revisit those functions to support this datatype.
+
+00:01:52.075 --> 00:01:54.745
+When it comes to web backend services,
+
+00:01:54.745 --> 00:01:57.140
+configuring backend endpoints requires
+
+00:01:57.140 --> 00:02:01.099
+understanding what responses are expected for client requests.
+
+00:02:01.099 --> 00:02:03.739
+Knowing the desired outputs ahead of time,
+
+00:02:03.739 --> 00:02:06.944
+allow you to focus on particular endpoint solutions.
+
+00:02:06.944 --> 00:02:10.525
+This type of planning typically requires mock data.
+
+00:02:10.525 --> 00:02:13.610
+With mock data, you can utilize a string to
+
+00:02:13.610 --> 00:02:16.895
+mock the endpoint data as a placeholder with a desired output.
+
+00:02:16.895 --> 00:02:18.740
+Once the upload is concluded,
+
+00:02:18.740 --> 00:02:22.075
+you can remove the string and replace it with the real data.
+
+00:02:22.074 --> 00:02:25.579
+Using actual data can come in a variety of forms,
+
+00:02:25.580 --> 00:02:28.610
+from dynamic data held within a database to
+
+00:02:28.610 --> 00:02:32.075
+calling other functions or responses to a client requests.
+
+00:02:32.074 --> 00:02:33.709
+In our upcoming project,
+
+00:02:33.710 --> 00:02:37.320
+you'll be using the blockchain that you built already as your mock data,
+
+00:02:37.319 --> 00:02:39.750
+and while this is a simplified use case,
+
+00:02:39.750 --> 00:02:41.745
+remember the purpose it serves.
+
+00:02:41.745 --> 00:02:44.474
+As the projects you build get more complex,
+
+00:02:44.474 --> 00:02:48.469
+these same considerations we discussed here will still apply.
+

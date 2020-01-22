@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.465
+Hey and welcome back.
+
+00:00:01.465 --> 00:00:06.044
+At this point you're hopefully up and running with your Hello World Hapi JS application.
+
+00:00:06.044 --> 00:00:08.519
+In this video, we'll open up the project we just
+
+00:00:08.519 --> 00:00:11.594
+made to get a better idea of what's going on with the code.
+
+00:00:11.595 --> 00:00:14.835
+To start, open up the project folder in your editor.
+
+00:00:14.835 --> 00:00:17.550
+What you'll notice here is that there's much less going
+
+00:00:17.550 --> 00:00:20.195
+on than there was with your Sales JS application.
+
+00:00:20.195 --> 00:00:23.884
+It actually looks much more similar to the Express application.
+
+00:00:23.884 --> 00:00:25.800
+Here's the node modules,
+
+00:00:25.800 --> 00:00:29.580
+the package.json and the server.js file we created.
+
+00:00:29.579 --> 00:00:32.609
+The server.js file is a little different than what we
+
+00:00:32.609 --> 00:00:35.714
+saw in our Express application's index.js file,
+
+00:00:35.715 --> 00:00:38.285
+but it's doing all the same basic things.
+
+00:00:38.284 --> 00:00:42.254
+Let's walk through some of the code to get a better idea of what's going on here.
+
+00:00:42.255 --> 00:00:45.705
+First, we create a constant that requires Hapi.
+
+00:00:45.704 --> 00:00:47.119
+In the next few lines,
+
+00:00:47.119 --> 00:00:49.614
+we create a server hosted on port 8,000,
+
+00:00:49.615 --> 00:00:54.280
+which is why we're able to access this app at localhost 8,000 in the browser.
+
+00:00:54.280 --> 00:00:56.304
+Next, we add the roots in,
+
+00:00:56.304 --> 00:00:57.774
+in this case using GET,
+
+00:00:57.774 --> 00:01:00.244
+but can be GET or Post or whatever,
+
+00:01:00.244 --> 00:01:03.364
+depending on how you want to handle the URL endpoints.
+
+00:01:03.365 --> 00:01:05.930
+This is followed by the path for the URL.
+
+00:01:05.930 --> 00:01:09.560
+In this case, it's being placed at localhost:8000/hello.
+
+00:01:11.540 --> 00:01:13.609
+Down towards the bottom,
+
+00:01:13.609 --> 00:01:16.000
+you have the functions that are used to start the server.
+
+00:01:16.000 --> 00:01:20.379
+Some error handling and a lock to the console that tells you the server is running.
+
+00:01:20.379 --> 00:01:23.149
+So, that's really the basics of what's going on inside
+
+00:01:23.150 --> 00:01:26.040
+the project folder of your Hapi JS application.
+
+00:01:26.040 --> 00:01:28.729
+We went through this a little quicker than the other applications
+
+00:01:28.728 --> 00:01:31.879
+because it's a lot of pretty similar stuff that you've seen already.
+
+00:01:31.879 --> 00:01:34.250
+As always, you can check out the documentation and
+
+00:01:34.250 --> 00:01:36.890
+resources supplied on the Hapi JS homepage.
+
+00:01:36.890 --> 00:01:39.945
+This is a great way to learn more about this framework's functionality,
+
+00:01:39.944 --> 00:01:42.949
+or to keep going through some of the tutorials they provide.
+
+00:01:42.950 --> 00:01:46.010
+Great job working through this section and congratulations on getting
+
+00:01:46.010 --> 00:01:49.070
+started with your Hello World Hapi JS application.
+

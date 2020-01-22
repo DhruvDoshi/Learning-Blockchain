@@ -1,0 +1,181 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.490
+Let's start with a quick introduction to
+
+00:00:02.490 --> 00:00:05.985
+Node.js and why we chose it to build our web service.
+
+00:00:05.985 --> 00:00:09.339
+Your private blockchain is coded in JavaScript.
+
+00:00:09.339 --> 00:00:11.769
+For the data in the blockchain to be consumable,
+
+00:00:11.769 --> 00:00:14.754
+we'll add onto it Node.js components.
+
+00:00:14.755 --> 00:00:17.150
+Now before we decided on Node.js,
+
+00:00:17.149 --> 00:00:19.079
+we had to decide on a language.
+
+00:00:19.079 --> 00:00:20.839
+When working with a web service,
+
+00:00:20.839 --> 00:00:24.745
+there's a number of different language options you can choose from, for example,
+
+00:00:24.745 --> 00:00:31.210
+Haskell, PHP, Python, Java, JavaScript, or Ruby.
+
+00:00:31.210 --> 00:00:33.840
+We chose to use JavaScript because,
+
+00:00:33.840 --> 00:00:36.425
+first, a very popular developer language.
+
+00:00:36.424 --> 00:00:39.369
+Many of you watching probably already know JavaScript.
+
+00:00:39.369 --> 00:00:41.195
+So, you can quickly jump into developing
+
+00:00:41.195 --> 00:00:44.115
+without needing to take extra time to learn language.
+
+00:00:44.115 --> 00:00:47.940
+Also, there's a wealth of existing tooling already available,
+
+00:00:47.939 --> 00:00:50.390
+which, as a developer, is really nice.
+
+00:00:50.390 --> 00:00:54.070
+This means you don't have to reinvent the wheel every time from scratch.
+
+00:00:54.070 --> 00:00:57.560
+Knowing JavaScript and Node.js are enough to
+
+00:00:57.560 --> 00:01:01.245
+build programs that interact with many major blockchain APIs,
+
+00:01:01.244 --> 00:01:04.810
+including Bitcoin, Ethereum, and NEO.
+
+00:01:04.810 --> 00:01:08.100
+Lastly, though seemingly simple,
+
+00:01:08.099 --> 00:01:11.649
+JavaScript is a really expressive and powerful language,
+
+00:01:11.650 --> 00:01:15.435
+hence why it's gained so much popularity in the web development world.
+
+00:01:15.435 --> 00:01:17.915
+Now, these are the reasons we use.
+
+00:01:17.915 --> 00:01:21.960
+When building out your own web service and trying to decide what language to use,
+
+00:01:21.959 --> 00:01:24.119
+keep these considerations in mind.
+
+00:01:24.120 --> 00:01:26.035
+Are you concerned with the front-end,
+
+00:01:26.034 --> 00:01:27.939
+the back-end, or both components?
+
+00:01:27.939 --> 00:01:30.064
+How well is this language maintained?
+
+00:01:30.064 --> 00:01:33.189
+How well does this language integrate with other systems?
+
+00:01:33.189 --> 00:01:35.390
+What is its performance like?
+
+00:01:35.390 --> 00:01:40.420
+Keeping these thoughts in mind will help you narrow down your choices to the best option.
+
+00:01:40.420 --> 00:01:44.299
+Once we decided JavaScript is our language of choice,
+
+00:01:44.299 --> 00:01:47.489
+we needed to decide which JavaScript tool to use.
+
+00:01:47.489 --> 00:01:51.890
+In the end, we chose to use the JavaScript engine, Node.js.
+
+00:01:51.890 --> 00:01:56.269
+Node is a very popular open-source runtime environment
+
+00:01:56.269 --> 00:01:59.584
+that executes JavaScript code server side.
+
+00:01:59.584 --> 00:02:01.949
+Unlike other JavaScript development,
+
+00:02:01.950 --> 00:02:04.394
+it requires running in a web browser.
+
+00:02:04.394 --> 00:02:08.875
+Node.js provides a runtime environment directly on the computer.
+
+00:02:08.875 --> 00:02:13.344
+Node.js is built on Google Chrome's V8 VM engine,
+
+00:02:13.344 --> 00:02:16.944
+which in turn supports JavaScript in the Chrome browser.
+
+00:02:16.944 --> 00:02:20.120
+It runs on various platforms such as Windows,
+
+00:02:20.120 --> 00:02:22.430
+Linux, Unix, and Mac.
+
+00:02:22.430 --> 00:02:24.594
+In addition to this flexibility,
+
+00:02:24.594 --> 00:02:29.185
+we focused on Node for this project because Node uses single-threaded,
+
+00:02:29.185 --> 00:02:34.215
+non-blocking asynchronous programming, which means that it's very memory efficient.
+
+00:02:34.215 --> 00:02:36.935
+It's adopted by many enterprise companies,
+
+00:02:36.935 --> 00:02:39.314
+including Walmart, PayPal, and Uber,
+
+00:02:39.314 --> 00:02:41.129
+meaning, it's very scalable.
+
+00:02:41.129 --> 00:02:43.924
+As a flourishing open-source community,
+
+00:02:43.925 --> 00:02:46.010
+constantly creating new modules,
+
+00:02:46.009 --> 00:02:49.569
+leading to a large ecosystem of open-source libraries.
+
+00:02:49.569 --> 00:02:52.069
+Lastly, it allows the use of
+
+00:02:52.069 --> 00:02:56.469
+the same JavaScript code for both front-end and back-end development,
+
+00:02:56.469 --> 00:02:58.930
+leading to a cleaner codebase.
+
+00:02:58.930 --> 00:03:02.860
+Now that we've decided to use Node.js to build our web service,
+
+00:03:02.860 --> 00:03:05.310
+let's set it up on our computer.
+

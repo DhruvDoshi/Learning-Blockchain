@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.160
+Welcome to this video, on getting started with hapi js.
+
+00:00:03.160 --> 00:00:06.390
+In this video, we'll quickly go over the goals of this framework as
+
+00:00:06.389 --> 00:00:09.934
+well as the tools and resources available to you as a developer.
+
+00:00:09.935 --> 00:00:14.140
+To get to the hapi js website, go to hapijs.com.
+
+00:00:14.140 --> 00:00:16.380
+As we've seen they pitch themselves as
+
+00:00:16.379 --> 00:00:19.554
+a rich framework for building applications and services.
+
+00:00:19.554 --> 00:00:23.009
+They're selling point is that it allows developers to focus on writing
+
+00:00:23.010 --> 00:00:26.985
+reusable application logic instead of spending time building infrastructure.
+
+00:00:26.984 --> 00:00:29.730
+This makes it super quick and simple to get started building
+
+00:00:29.730 --> 00:00:34.270
+applications and it's a great fit for the project we'll be working on in this course.
+
+00:00:34.270 --> 00:00:36.540
+Right on the front page they show you how to install
+
+00:00:36.539 --> 00:00:39.064
+this framework using npm install hapi,
+
+00:00:39.064 --> 00:00:40.989
+which we'll be doing in just a minute.
+
+00:00:40.990 --> 00:00:43.520
+Scrolling down a bit they go right in and show you
+
+00:00:43.520 --> 00:00:46.025
+how to start building an application for yourself.
+
+00:00:46.024 --> 00:00:51.320
+You will initialize with your package.json saving hapi.js as a dependency,
+
+00:00:51.320 --> 00:00:55.353
+and below that is the script we'll use to start up and run your application.
+
+00:00:55.353 --> 00:00:57.064
+Back up at the top of the page,
+
+00:00:57.064 --> 00:00:58.519
+you'll get access to documents,
+
+00:00:58.520 --> 00:01:03.109
+resources, tutorials and a community of developers that can help you out along the way.
+
+00:01:03.109 --> 00:01:05.144
+Looking over at the resources,
+
+00:01:05.144 --> 00:01:07.759
+you can see the books that they recommend to get started.
+
+00:01:07.760 --> 00:01:10.940
+Books are great, but sometimes it take a lot of commitment to get through,
+
+00:01:10.939 --> 00:01:14.194
+especially if your main focus isn't on mastering hapi js.
+
+00:01:14.194 --> 00:01:16.219
+In that case, you can go down a little further
+
+00:01:16.219 --> 00:01:18.439
+and see different resources like code samples,
+
+00:01:18.439 --> 00:01:21.474
+boilerplates, projects, tutorials, and videos.
+
+00:01:21.474 --> 00:01:26.669
+These are excellent ways to get more ideas for what you can accomplish using hapi js.
+
+00:01:26.670 --> 00:01:29.780
+Finally, head over to tutorials to help get started
+
+00:01:29.780 --> 00:01:32.769
+with installing and creating your Hello World application.
+
+00:01:32.769 --> 00:01:34.519
+We'll be working through this next,
+
+00:01:34.519 --> 00:01:36.409
+but since we've been through a few of these now,
+
+00:01:36.409 --> 00:01:38.524
+you might feel comfortable trying it for yourself.
+
+00:01:38.525 --> 00:01:39.975
+If so that's great,
+
+00:01:39.974 --> 00:01:41.594
+but if you'd rather walk along with me,
+
+00:01:41.594 --> 00:01:45.370
+then we'll be going through it in the next video and I'll see you there.
+

@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.654
+Welcome to the lesson on planning a Web service.
+
+00:00:03.654 --> 00:00:07.914
+Previously, you learned how to create your own private blockchain.
+
+00:00:07.915 --> 00:00:10.120
+For a private blockchain to be valuable,
+
+00:00:10.119 --> 00:00:12.599
+it will need to integrate with the Web service so that
+
+00:00:12.599 --> 00:00:15.664
+the information is consumable for client applications.
+
+00:00:15.664 --> 00:00:20.589
+Think of it this way, since blockchains at their simplest are a form of data storage,
+
+00:00:20.589 --> 00:00:24.329
+we'll need a way to extract out information to be able to use it.
+
+00:00:24.329 --> 00:00:29.344
+Web services bridge the gap for consumers to interact with data in the blockchain.
+
+00:00:29.344 --> 00:00:34.984
+Web services are also pervasive in how the world transmits and uses information nowadays.
+
+00:00:34.984 --> 00:00:39.250
+Even the video that you're watching inside of this browser is thanks to a Web service,
+
+00:00:39.250 --> 00:00:43.005
+where the client is retrieving information that it needs from the server.
+
+00:00:43.005 --> 00:00:46.415
+Throughout this lesson, we'll be breaking down this diagram.
+
+00:00:46.414 --> 00:00:50.240
+Learning how to modify our private blockchain with Node.js,
+
+00:00:50.240 --> 00:00:52.664
+RESTful APIs, and other third-party
+
+00:00:52.664 --> 00:00:55.695
+libraries to be useful for consumers to interact with.
+
+00:00:55.695 --> 00:00:58.140
+A lot of this lesson is about planning,
+
+00:00:58.140 --> 00:00:59.975
+planning, and more planning.
+
+00:00:59.975 --> 00:01:03.250
+In order to understand the thought processes behind this plans,
+
+00:01:03.250 --> 00:01:05.150
+they will help you in the future as you develop
+
+00:01:05.150 --> 00:01:09.740
+your own blockchain services and consider integrating them with Web services.
+
+00:01:09.739 --> 00:01:13.295
+In this lesson, we'll guide you to understand, first,
+
+00:01:13.295 --> 00:01:18.234
+how to analyze blockchain use cases to determine if it requires a Web service.
+
+00:01:18.234 --> 00:01:21.444
+Then, decide on a Web service language.
+
+00:01:21.444 --> 00:01:26.724
+Next, we'll explain Node.js frameworks and its components for the blockchain.
+
+00:01:26.724 --> 00:01:30.989
+Lastly, we'll decide on an appropriate mock data set.
+
+00:01:30.989 --> 00:01:34.969
+Now, this course assumes that you already have some familiarity with
+
+00:01:34.969 --> 00:01:39.215
+the concept of Web services and are comfortable using JavaScript.
+
+00:01:39.215 --> 00:01:44.200
+If not, please, do take some time to review the resources I've linked down below.
+
+00:01:44.200 --> 00:01:46.400
+Having a grasp of these topics will make
+
+00:01:46.400 --> 00:01:49.640
+your experience learning the upcoming topics much easier.
+
+00:01:49.640 --> 00:01:53.620
+Now, let's start with an overview of Web services.
+

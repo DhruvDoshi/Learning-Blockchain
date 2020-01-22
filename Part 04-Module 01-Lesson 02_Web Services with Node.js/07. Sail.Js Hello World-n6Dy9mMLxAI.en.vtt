@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.835
+Welcome back. In this video,
+
+00:00:01.835 --> 00:00:04.429
+we're going to walk through creating the Sails "Hello, World!"
+
+00:00:04.429 --> 00:00:08.094
+application. We'll just be following along through their documentation.
+
+00:00:08.095 --> 00:00:10.769
+So, if you'd rather speak through and do it yourself,
+
+00:00:10.769 --> 00:00:13.484
+you'll be right along with us by the end of this video.
+
+00:00:13.484 --> 00:00:15.219
+If you stick with us, hopefully,
+
+00:00:15.220 --> 00:00:17.370
+there's some helpful tips and tricks along the way
+
+00:00:17.370 --> 00:00:20.269
+that will help you get even more familiar with the process.
+
+00:00:20.269 --> 00:00:23.544
+To start, head back to sailsjs.com.
+
+00:00:23.545 --> 00:00:26.250
+Once you're there, click on Get started.
+
+00:00:26.250 --> 00:00:30.405
+Scrolling down, you'll see the directions on how to start building your application.
+
+00:00:30.405 --> 00:00:34.125
+At this point, you've hopefully been working with Node.js for awhile already.
+
+00:00:34.125 --> 00:00:36.159
+So, you can skip this first section.
+
+00:00:36.159 --> 00:00:40.394
+Now, jump over to your terminal to install Sails using the command they show,
+
+00:00:40.395 --> 00:00:44.850
+npm install sails -g. After a few seconds,
+
+00:00:44.850 --> 00:00:47.760
+you'll have Sails installed on your computer.
+
+00:00:48.840 --> 00:00:52.800
+Next, we need to create a place to hold the test project.
+
+00:00:52.799 --> 00:00:54.984
+To do that, I'll go to my desktop,
+
+00:00:54.984 --> 00:00:57.134
+create a Sails project folder,
+
+00:00:57.134 --> 00:00:59.089
+then cd into that folder.
+
+00:00:59.090 --> 00:01:02.365
+Now, type sails new test-project.
+
+00:01:02.365 --> 00:01:05.900
+A prompt will appear that is giving you the option to either start
+
+00:01:05.900 --> 00:01:09.725
+your app with existing functionality or to start from scratch.
+
+00:01:09.724 --> 00:01:14.164
+For this demo, we'll start with the template web app by selecting one.
+
+00:01:14.165 --> 00:01:17.495
+At this point, all the dependencies will start to install,
+
+00:01:17.495 --> 00:01:19.160
+which can take a minute or so.
+
+00:01:19.159 --> 00:01:22.789
+You can open the folder to see all the files that are being installed.
+
+00:01:22.790 --> 00:01:27.905
+When it's done, it'll let you know that the Sails app test project was created.
+
+00:01:27.905 --> 00:01:33.060
+Finally, navigate into your test project folder using cd test-project.
+
+00:01:33.060 --> 00:01:36.350
+Then type sails lift into the terminal.
+
+00:01:36.349 --> 00:01:39.864
+See, it's not only the squid pictures in documentation,
+
+00:01:39.864 --> 00:01:43.099
+even the code itself is playing off the sailboat analogy.
+
+00:01:43.099 --> 00:01:45.129
+At this point, you've lifted the Sails,
+
+00:01:45.129 --> 00:01:47.655
+and you're ready to check out your Sails application.
+
+00:01:47.655 --> 00:01:54.379
+Open a new browser window and type localhost:1337 to see how it looks.
+
+00:01:54.379 --> 00:01:57.369
+It's pretty nice how much they set up for us to start.
+
+00:01:57.370 --> 00:01:59.965
+The page itself directs you through what they've done,
+
+00:01:59.965 --> 00:02:02.870
+how it works, and where to find even more resources.
+
+00:02:02.870 --> 00:02:06.370
+Feel free to look around for a little while to explore your new application.
+
+00:02:06.370 --> 00:02:08.625
+When you're ready, come back to us the next video,
+
+00:02:08.625 --> 00:02:11.669
+where we'll go through the project files to look through what just happened.
+
