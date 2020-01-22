@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.334
+Congratulations! That was a lot,
+
+00:00:02.334 --> 00:00:03.839
+and you all went through it.
+
+00:00:03.839 --> 00:00:07.605
+To recap, we went over how to use MetaMask in our webpage.
+
+00:00:07.605 --> 00:00:10.080
+We tested our smart contract as we wrote it,
+
+00:00:10.080 --> 00:00:12.949
+to make sure it behaves exactly like we expect to.
+
+00:00:12.949 --> 00:00:15.660
+Afterwards, we explored some of the standards that
+
+00:00:15.660 --> 00:00:19.685
+the Ethereum community established on how to write certain smart contracts,
+
+00:00:19.684 --> 00:00:22.734
+and implemented the ERC-721 standard.
+
+00:00:22.734 --> 00:00:26.640
+I then showed you how to use Zeppelin to leverage the already implemented set of
+
+00:00:26.640 --> 00:00:30.789
+libraries and standards to make smart contract development super fast.
+
+00:00:30.789 --> 00:00:33.225
+Lastly, we went over using Truffle for
+
+00:00:33.225 --> 00:00:36.795
+easier web development and Infura for easy deployment.
+
+00:00:36.795 --> 00:00:38.640
+You're now fully equipped with some of
+
+00:00:38.640 --> 00:00:41.230
+the best tool in the industry has to offer at this time.
+
+00:00:41.229 --> 00:00:44.959
+You'll have a blast exploring all these tools to build your uncensored,
+
+00:00:44.960 --> 00:00:48.799
+de-centralized, unstoppable app. Have fun.
+

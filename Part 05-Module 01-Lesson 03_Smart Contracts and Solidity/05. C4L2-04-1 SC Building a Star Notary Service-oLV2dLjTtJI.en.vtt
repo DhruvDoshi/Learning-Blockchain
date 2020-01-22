@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.250
+Now, let's make a star notary service which will be
+
+00:00:02.250 --> 00:00:05.609
+a smart contract represent a star that a person could own.
+
+00:00:05.610 --> 00:00:09.940
+Let's go back to remix that we used before and make a new file.
+
+00:00:11.599 --> 00:00:15.074
+We'll begin this just like we did before by defining
+
+00:00:15.074 --> 00:00:17.910
+first the solidity version that we'll be using.
+
+00:00:17.910 --> 00:00:23.070
+Next, we'll start our contract with a contract keyword and the contract name.
+
+00:00:27.019 --> 00:00:30.314
+Let's begin by given the star a name.
+
+00:00:30.315 --> 00:00:33.600
+We'll initialize that variable field for the star name,
+
+00:00:33.600 --> 00:00:34.859
+and then in the constructor,
+
+00:00:34.859 --> 00:00:38.439
+we'll assign the star name to be any name we want.
+
+00:00:40.670 --> 00:00:45.965
+Great. Now, let's add logic for the star to also have an owner.
+
+00:00:45.965 --> 00:00:50.795
+To do that, we'll need to make a new variable field to hold the star owner.
+
+00:00:50.795 --> 00:00:55.700
+Notice how both the star name and the star owner variables are public.
+
+00:00:55.700 --> 00:00:57.480
+This means that anyone can call
+
+00:00:57.479 --> 00:01:01.609
+the smart contract and ask it for those public variable names,
+
+00:01:01.609 --> 00:01:05.034
+then let's make a function to claim that star.
+
+00:01:05.034 --> 00:01:08.539
+We'll start our function with the function keyword followed
+
+00:01:08.540 --> 00:01:11.859
+by function name and any type of parameters.
+
+00:01:11.859 --> 00:01:17.159
+Lastly, we'll say that it's a public method that's accessible outside the contract.
+
+00:01:17.159 --> 00:01:19.880
+Great. Now, all we have to do is set
+
+00:01:19.879 --> 00:01:23.789
+the star owner variable to be the color of this method.
+
+00:01:23.790 --> 00:01:28.765
+In solidity, we have global variables to get information about the transaction.
+
+00:01:28.765 --> 00:01:31.969
+So, all we have to do to find out who initiated
+
+00:01:31.969 --> 00:01:36.439
+this function call is to look at the msg.sender variable.
+
+00:01:36.439 --> 00:01:39.439
+I highly encourage you to check out the link to
+
+00:01:39.439 --> 00:01:44.269
+solidity's documentation about other global variables and what they're used for.
+
+00:01:44.269 --> 00:01:46.084
+Now that we have our contract,
+
+00:01:46.084 --> 00:01:50.500
+we can manually test it out just like we did before with the HelloWorld example.
+
+00:01:50.500 --> 00:01:55.250
+Let's first compile and make sure that there are no compiler errors.
+
+00:01:55.250 --> 00:01:57.980
+Now, we're ready to deploy.
+
+00:01:57.980 --> 00:02:00.130
+Look at the run tab on the right,
+
+00:02:00.129 --> 00:02:03.424
+it's like JavaScript VM for the environment like we did before,
+
+00:02:03.424 --> 00:02:08.079
+and click on the deploy after selecting StarNotary from the drop-down.
+
+00:02:08.080 --> 00:02:12.530
+Great. It deployed the test environment in our browser.
+
+00:02:12.530 --> 00:02:15.740
+Notice now that we have two of the variable fields
+
+00:02:15.740 --> 00:02:19.455
+available for us to call as well as the function that we need.
+
+00:02:19.455 --> 00:02:23.935
+This is because all these fields knows more contract are public.
+
+00:02:23.935 --> 00:02:26.819
+Let's look at what the star name is.
+
+00:02:26.819 --> 00:02:29.590
+Great. The output is what we expected it to be.
+
+00:02:29.590 --> 00:02:32.150
+Now, let's see who the owner is.
+
+00:02:32.150 --> 00:02:37.115
+If you notice, the owner is zero because there is no owner yet.
+
+00:02:37.115 --> 00:02:42.254
+Let's go ahead and click on the claimStar and check who the owner is now.
+
+00:02:42.254 --> 00:02:46.789
+The owner should be the account that you used to initiate this function call,
+
+00:02:46.789 --> 00:02:49.069
+which you can see on the top.
+
+00:02:49.069 --> 00:02:52.084
+We can change your account to be something else
+
+00:02:52.085 --> 00:02:54.545
+and claim the star with a different account,
+
+00:02:54.544 --> 00:02:57.839
+and now the star has a different owner.
+
+00:02:59.259 --> 00:03:04.639
+Congrats, you just made a smart contract that tracks ownership of a digital item.
+
+00:03:04.639 --> 00:03:06.054
+In the next lesson,
+
+00:03:06.055 --> 00:03:08.930
+I'll show you how to set up your local test environment to help us
+
+00:03:08.930 --> 00:03:12.840
+add more complex logic to our star notary service.
+

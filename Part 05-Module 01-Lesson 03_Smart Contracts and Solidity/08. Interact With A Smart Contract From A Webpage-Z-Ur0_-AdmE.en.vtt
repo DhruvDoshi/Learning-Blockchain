@@ -1,0 +1,373 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.430
+Now that we have our smart contract ready to store
+
+00:00:02.430 --> 00:00:05.849
+a star in this deployed tar local Ethereum test network,
+
+00:00:05.849 --> 00:00:08.820
+let's now build a simple web page to interact with it.
+
+00:00:08.820 --> 00:00:11.040
+I'm going to be using Visual Studio Code as
+
+00:00:11.039 --> 00:00:14.594
+my IDE or Integrated Development Environment and I highly recommend,
+
+00:00:14.595 --> 00:00:17.519
+but please feel free to use any editor of your choice.
+
+00:00:17.519 --> 00:00:20.009
+Go ahead and get the support files for this section.
+
+00:00:20.010 --> 00:00:22.780
+You should find just a simple index HTML page,
+
+00:00:22.780 --> 00:00:26.310
+and some very basic CSS to make it look pretty.
+
+00:00:28.730 --> 00:00:32.880
+The first tool that we'll learn about is web3.js.
+
+00:00:32.880 --> 00:00:36.320
+web3.js is a JavaScript library that has a collection of
+
+00:00:36.320 --> 00:00:40.914
+helper tools and modules that will help us to talk to an Ethereum provider or node.
+
+00:00:40.914 --> 00:00:43.850
+In this case, the Ethereum provider that we'll use is
+
+00:00:43.850 --> 00:00:48.240
+the local test network that we have deploying our smart contracts to.
+
+00:00:48.520 --> 00:00:53.960
+Okay. Now, let's look at index.html file that was given to us.
+
+00:00:53.960 --> 00:00:55.670
+Notice that on line seven,
+
+00:00:55.670 --> 00:00:57.335
+we're importing our style sheet,
+
+00:00:57.335 --> 00:01:02.420
+and on line nine, we're importing the web3.js library that we just talked about.
+
+00:01:02.420 --> 00:01:05.064
+Now take a look at line 32.
+
+00:01:05.064 --> 00:01:09.995
+Here we are instantiating our web3 object using the Ethereum provider which in this case,
+
+00:01:09.995 --> 00:01:15.385
+is our local tests network that lives on our local host on port 8545.
+
+00:01:15.385 --> 00:01:17.230
+Remember, if you're using
+
+00:01:17.230 --> 00:01:20.710
+Ganache graphical user interface instead of the command-line tool,
+
+00:01:20.709 --> 00:01:25.939
+your local Ethereum test network will be on port 7545 instead.
+
+00:01:27.920 --> 00:01:31.034
+Now that we have our web3 object,
+
+00:01:31.034 --> 00:01:33.884
+we can use it to talk to our Ethereum test network.
+
+00:01:33.885 --> 00:01:36.000
+For example, here we can grab
+
+00:01:36.000 --> 00:01:40.055
+the top account or wallet associated with our local Ethereum test network,
+
+00:01:40.055 --> 00:01:42.330
+and set it as our default account.
+
+00:01:42.329 --> 00:01:44.969
+By setting it as our default account,
+
+00:01:44.969 --> 00:01:48.715
+they'll be used whenever we make calls to our smart contract.
+
+00:01:48.715 --> 00:01:51.090
+Take a look at the codes up here.
+
+00:01:51.090 --> 00:01:52.670
+In this section, we'll grab
+
+00:01:52.670 --> 00:01:56.644
+the application binary interface or ABI of our smart contracts,
+
+00:01:56.644 --> 00:01:59.750
+so that we can build a Javascript representation of it.
+
+00:01:59.750 --> 00:02:02.540
+This gives us the ability to call the functions and
+
+00:02:02.540 --> 00:02:07.005
+variables associated with our smart contracts from within our webpage.
+
+00:02:07.004 --> 00:02:10.814
+We'll then construct a reference where I already deployed smart contract
+
+00:02:10.814 --> 00:02:15.384
+by specifying the contract address for where it was deployed on the Ethereum network.
+
+00:02:15.384 --> 00:02:20.429
+Next, we'll write methods to display information we'll get from smart contract like
+
+00:02:20.430 --> 00:02:25.950
+name and owner and enable functionality to claim a star or a button on our webpage.
+
+00:02:27.199 --> 00:02:32.614
+Let's go back to remix in order to get the ABI for our smart contract.
+
+00:02:32.615 --> 00:02:35.045
+Within the compile tab on the right,
+
+00:02:35.044 --> 00:02:37.524
+we'll click on the details button.
+
+00:02:37.525 --> 00:02:40.909
+Here, we'll see a bunch of details about our smart contract.
+
+00:02:40.909 --> 00:02:45.354
+The section we care about right now is called the ABI.
+
+00:02:45.354 --> 00:02:48.119
+We can look at what the ABI has.
+
+00:02:48.120 --> 00:02:53.259
+For example, here we have claimStar which is the function that we wrote.
+
+00:02:54.110 --> 00:02:57.525
+Here, we have a constructor,
+
+00:02:57.525 --> 00:03:02.180
+and the next two are starName and starOwner which are
+
+00:03:02.180 --> 00:03:07.069
+functions so that we can view the public variables that we wrote.
+
+00:03:07.069 --> 00:03:09.174
+In order to get the ABI,
+
+00:03:09.175 --> 00:03:12.140
+click on this button to the right of it which will copy
+
+00:03:12.139 --> 00:03:16.469
+the value to our clipboard. Let's go back to the code.
+
+00:03:16.629 --> 00:03:22.405
+Find the place where we need to place an ABI and go ahead and do just that.
+
+00:03:22.405 --> 00:03:26.039
+Great.
+
+00:03:26.039 --> 00:03:30.159
+Now, we have a Javascript representation for our smart contract.
+
+00:03:30.259 --> 00:03:32.639
+Next thing we're going to have to do,
+
+00:03:32.639 --> 00:03:36.089
+is grab the contract address, and paste it in here.
+
+00:03:36.090 --> 00:03:38.378
+Since we use remix to deploy,
+
+00:03:38.378 --> 00:03:41.419
+we can find the smart contract address and limits as well.
+
+00:03:41.419 --> 00:03:44.155
+If you go to the run tab on the right,
+
+00:03:44.155 --> 00:03:47.009
+we'll look at this deployed contracts that we have.
+
+00:03:47.009 --> 00:03:51.629
+Here we have StarNotary deployed at this particular address.
+
+00:03:51.629 --> 00:03:56.219
+To get the address, you can click on copy value
+
+00:03:56.219 --> 00:04:01.060
+to clipboard button again and paste it in here.
+
+00:04:02.210 --> 00:04:06.365
+So now, we have an interface for our smart contract,
+
+00:04:06.365 --> 00:04:09.780
+and we know exactly where in the blockchain it is.
+
+00:04:10.550 --> 00:04:14.540
+Now, we can use this in order to get values from
+
+00:04:14.539 --> 00:04:19.069
+our smart contract that is now deployed on our test Ethereum network.
+
+00:04:19.069 --> 00:04:21.844
+So, to get the starNotary name,
+
+00:04:21.845 --> 00:04:26.735
+all you have to do is call the starName function,
+
+00:04:26.735 --> 00:04:31.350
+which as you can see here returns an output of type string.
+
+00:04:32.050 --> 00:04:36.725
+Now, because everything dealing with blockchain is asynchronous,
+
+00:04:36.725 --> 00:04:39.235
+we're going to get a callback function.
+
+00:04:39.235 --> 00:04:44.480
+The callback function is going to have an error or a result.
+
+00:04:46.160 --> 00:04:48.510
+If we don't have an error,
+
+00:04:48.509 --> 00:04:50.839
+then we know we have a valve results,
+
+00:04:50.839 --> 00:04:55.689
+and we can put this valve results into the label for our starName.
+
+00:04:55.689 --> 00:04:58.730
+The label here has an ID starName.
+
+00:04:58.730 --> 00:05:01.330
+So, we'll go ahead and use that.
+
+00:05:08.120 --> 00:05:11.379
+We'll set it to the results.
+
+00:05:11.870 --> 00:05:16.069
+If there is an error, then let's go ahead and make
+
+00:05:16.069 --> 00:05:21.149
+a console log so that we can debug further if we do have an error.
+
+00:05:29.569 --> 00:05:35.310
+Great. Now, we can do something very similar for the starOwner as well.
+
+00:05:36.339 --> 00:05:39.435
+We can call starOwner,
+
+00:05:39.435 --> 00:05:44.550
+which once again, gives us a callback function of error and result.
+
+00:05:44.860 --> 00:05:49.764
+If we don't have an error, then we're good to go.
+
+00:05:49.764 --> 00:05:54.185
+In here, we have a label with an ID starOwner,
+
+00:05:54.185 --> 00:06:03.610
+then we can then grab and set to the results.
+
+00:06:03.610 --> 00:06:09.819
+If there is an error, it'll go ahead and print a message for us,
+
+00:06:11.930 --> 00:06:15.435
+so it'll help us debug further.
+
+00:06:15.435 --> 00:06:23.149
+Okay, we also have a button to claim the star.
+
+00:06:23.149 --> 00:06:24.739
+The button is right here,
+
+00:06:24.740 --> 00:06:28.170
+and this is the method that we're about to implement.
+
+00:06:30.230 --> 00:06:34.920
+Once again, we can call claimStar,
+
+00:06:34.920 --> 00:06:37.869
+which is a method on our smart contract,
+
+00:06:37.869 --> 00:06:44.515
+and it'll call that method with a default account associated with the web3 object,
+
+00:06:44.514 --> 00:06:50.534
+and once again we're going to get callback function with an error and the results,
+
+00:06:50.535 --> 00:06:53.560
+and if there is no error,
+
+00:06:54.819 --> 00:07:01.480
+we can reload the page so that our values get refreshed.
+
+00:07:05.870 --> 00:07:09.810
+Now, this isn't a perfect solution,
+
+00:07:09.810 --> 00:07:12.975
+and we'll see why in a moment.
+
+00:07:12.975 --> 00:07:16.610
+The reason for this is because blockchain is asynchronous,
+
+00:07:16.610 --> 00:07:20.305
+and sometimes it takes a little bit for it to sync.
+
+00:07:20.305 --> 00:07:23.605
+Just because we call the claimStar method,
+
+00:07:23.605 --> 00:07:28.770
+it doesn't guarantee that it fully went through by the time I reload the page.
+
+00:07:28.870 --> 00:07:34.550
+I'll show you how to get around this problem in the next section but for now just be
+
+00:07:34.550 --> 00:07:40.410
+aware that sometimes this may not work and you might have to reload the page twice.
+
+00:07:41.209 --> 00:07:45.435
+Okay, now that we implemented everything,
+
+00:07:45.435 --> 00:07:48.790
+let's go see if it works.
+
+00:07:51.589 --> 00:07:56.689
+Again just a static page with some Javascript involved.
+
+00:07:56.689 --> 00:07:58.430
+We don't need anything extra.
+
+00:07:58.430 --> 00:08:01.500
+We can just load it in our webpage.
+
+00:08:06.470 --> 00:08:10.080
+Great. So, we have the star name which is
+
+00:08:10.079 --> 00:08:14.349
+Awesome Udacity Star and for now we have no owner.
+
+00:08:14.350 --> 00:08:17.250
+So, when I click the Claim Star,
+
+00:08:17.250 --> 00:08:21.144
+it will use the default account which is the top account from
+
+00:08:21.144 --> 00:08:26.959
+the test accounts that was available to me from the Ethereum test network,
+
+00:08:26.959 --> 00:08:31.349
+and that account is going to be [inaudible] ,
+
+00:08:31.350 --> 00:08:33.490
+and it's this account right here.
+
+00:08:34.879 --> 00:08:39.259
+Next up, I'll show you how to better interact with
+
+00:08:39.259 --> 00:08:43.679
+your smart contract by using something called events.
+

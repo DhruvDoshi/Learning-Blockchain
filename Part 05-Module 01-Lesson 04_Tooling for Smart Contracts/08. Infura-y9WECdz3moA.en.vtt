@@ -1,0 +1,214 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.685
+Our next tool in our tool kit is to utilize Infura.
+
+00:00:03.685 --> 00:00:07.109
+We want to utilize Infura to help assist us with
+
+00:00:07.110 --> 00:00:11.695
+deploying our smart contracts onto various network types with Ethereum.
+
+00:00:11.695 --> 00:00:14.515
+It's really beneficial because it saves us a lot of time.
+
+00:00:14.515 --> 00:00:18.164
+Previously, you would have to download the node and synchronize with the network,
+
+00:00:18.164 --> 00:00:22.679
+which we all know is invasive both on our Internet usage for bandwidth,
+
+00:00:22.679 --> 00:00:25.105
+as well as storage with our local systems.
+
+00:00:25.105 --> 00:00:28.710
+So, let's take advantage of Infura, create an account.
+
+00:00:28.710 --> 00:00:30.640
+After we have our account created,
+
+00:00:30.640 --> 00:00:32.840
+let's now go ahead and go back to our command line
+
+00:00:32.840 --> 00:00:36.590
+prompt and start the note G command line interface.
+
+00:00:36.590 --> 00:00:38.970
+Let's pay attention to our mnemonic words.
+
+00:00:38.969 --> 00:00:42.009
+These are like our wallet words that we can use
+
+00:00:42.009 --> 00:00:46.184
+to incorporate within truffle.js configuration.
+
+00:00:46.185 --> 00:00:49.280
+What we want to do is obtain Testnet tokens.
+
+00:00:49.280 --> 00:00:51.675
+So, we went to the Testnet faucet,
+
+00:00:51.674 --> 00:00:55.774
+and we're going to go ahead and get our wallet address from Ganache,
+
+00:00:55.774 --> 00:00:59.789
+copy it and paste it into a social network feed.
+
+00:00:59.789 --> 00:01:07.344
+So, we can go ahead and fulfill the obligation to request tokens from our Testnet faucet.
+
+00:01:07.344 --> 00:01:11.194
+So, right here, I simply just went ahead and
+
+00:01:11.194 --> 00:01:16.224
+pasted that posting directly into the Rinkeby faucet,
+
+00:01:16.224 --> 00:01:18.155
+and we have a couple options.
+
+00:01:18.155 --> 00:01:21.829
+We'll select the three ethers initially,
+
+00:01:21.829 --> 00:01:25.054
+so that way we can do another request in a shorter time period.
+
+00:01:25.055 --> 00:01:28.520
+It's going to take a little bit for this to go through,
+
+00:01:28.519 --> 00:01:30.479
+but you'll notice that once when it's complete,
+
+00:01:30.480 --> 00:01:32.490
+you'll secure the tokens within your wallet,
+
+00:01:32.489 --> 00:01:33.954
+and it will be funded.
+
+00:01:33.954 --> 00:01:36.364
+Once funded, we can continue forward.
+
+00:01:36.364 --> 00:01:37.819
+It's always good to go ahead and take
+
+00:01:37.819 --> 00:01:41.439
+that transaction ID and verify it with the Block Explorer, so that way,
+
+00:01:41.439 --> 00:01:44.390
+you know in confidence that this wallet has been funded,
+
+00:01:44.390 --> 00:01:48.265
+and you could proceed forward with configuring Infura.
+
+00:01:48.265 --> 00:01:50.269
+After you log into Infura,
+
+00:01:50.269 --> 00:01:52.549
+go ahead and set up a new project.
+
+00:01:52.549 --> 00:01:54.349
+Select the 'Add New Project' option,
+
+00:01:54.349 --> 00:01:57.265
+and give your project a name.
+
+00:01:57.265 --> 00:01:59.870
+Once you knew you have your project configured,
+
+00:01:59.870 --> 00:02:01.984
+you have options for the type of network.
+
+00:02:01.984 --> 00:02:03.995
+Right here we selected the Rinkeby network.
+
+00:02:03.995 --> 00:02:05.740
+Copy that to the clipboard.
+
+00:02:05.739 --> 00:02:10.400
+This is going to be the Euro path through Infura's systems.
+
+00:02:10.400 --> 00:02:12.914
+You're going to want to paste that in as a provider
+
+00:02:12.913 --> 00:02:16.784
+within your truffle configuration file.
+
+00:02:16.784 --> 00:02:22.204
+So here we have Rinkeby with the Truffle configuration file pointed to Infura.
+
+00:02:22.205 --> 00:02:25.600
+Okay. Next, we want to go ahead and deploy with truffles.
+
+00:02:25.599 --> 00:02:27.094
+So, we're going to implement the command,
+
+00:02:27.094 --> 00:02:30.344
+truffle deploy, network Rinkeby.
+
+00:02:30.344 --> 00:02:32.784
+What this doing is telling truffle,
+
+00:02:32.784 --> 00:02:36.629
+we want to use the configuration that we configured within
+
+00:02:36.629 --> 00:02:43.370
+our truffle config file to deploy our smart contracts to the Rinkeby test network.
+
+00:02:43.370 --> 00:02:47.159
+As you see here, we're compiling our smart contracts.
+
+00:02:47.159 --> 00:02:49.139
+The contracts are coming through,
+
+00:02:49.139 --> 00:02:50.959
+we're not running into any errors.
+
+00:02:50.960 --> 00:02:52.300
+It's a little slower.
+
+00:02:52.300 --> 00:02:56.930
+That's because it's communicating with Infura system versus our local host.
+
+00:02:56.930 --> 00:03:00.709
+So, it's always best practice to go ahead and establish
+
+00:03:00.709 --> 00:03:04.830
+testing of your smart contracts locally first, it reduces latency.
+
+00:03:04.830 --> 00:03:07.460
+Then, next go ahead and once when you're
+
+00:03:07.460 --> 00:03:10.700
+ready to test it on the test network, publish it.
+
+00:03:10.699 --> 00:03:15.859
+Right here we have our smart contract within the Block Explorer,
+
+00:03:15.860 --> 00:03:19.385
+and we just got done validating it by copying and pasting
+
+00:03:19.384 --> 00:03:21.590
+the contract address that was reported in
+
+00:03:21.590 --> 00:03:25.259
+our command line interface directly on Etherscan Block Explorer,
+
+00:03:25.259 --> 00:03:27.229
+and just make sure to note that
+
+00:03:27.229 --> 00:03:30.599
+the Block Explorer is on the test network that you selected.
+
+00:03:30.599 --> 00:03:32.794
+Fantastic, good job. With that,
+
+00:03:32.794 --> 00:03:36.149
+you finally took your smart contract,
+
+00:03:36.150 --> 00:03:42.330
+converted it over to be compatible with the Infura network,
+
+00:03:42.330 --> 00:03:48.280
+taking advantage of Rinkeby's Testnet. Excellent work.
+

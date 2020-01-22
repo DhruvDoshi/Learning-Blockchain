@@ -1,0 +1,274 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart Contracts</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Smart Contracts and Solidity</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Smart Contracts.html">02. Smart Contracts</a>
+    </li>
+    <li class="">
+      <a href="03. Solidity Introduction.html">03. Solidity Introduction</a>
+    </li>
+    <li class="">
+      <a href="04. Identity  Smart Contracts.html">04. Identity &amp; Smart Contracts</a>
+    </li>
+    <li class="">
+      <a href="05. Building a Star Notary Service.html">05. Building a Star Notary Service</a>
+    </li>
+    <li class="">
+      <a href="06. Deploying Smart Contract - Ganache.html">06. Deploying Smart Contract - Ganache</a>
+    </li>
+    <li class="">
+      <a href="07. Deploying Smart Contract Review.html">07. Deploying Smart Contract Review</a>
+    </li>
+    <li class="">
+      <a href="08. Interact with a Smart Contract from a Webpage.html">08. Interact with a Smart Contract from a Webpage</a>
+    </li>
+    <li class="">
+      <a href="09. Using Events from a Smart Contract.html">09. Using Events from a Smart Contract</a>
+    </li>
+    <li class="">
+      <a href="10. Lesson Recap.html">10. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Smart Contracts</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-smart-contracts">## Smart Contracts</h2>
+<p>To kick off this lesson, we will understand the basics of Ethereum Smart Contracts and Solidity. </p>
+<p><em>An Ethereum smart contract is self-executing computer programs used to facilitate a transaction between various parties (e.g. a buyer and a seller) and can be verified by all participating nodes in the Ethereum network.</em></p>
+<p>Let's explore with Elena how smart contracts have helped change the developer ecosystem. </p>
+<hr />
+<p>Understanding this concept will help you with this part of the project: </p>
+<table>
+<thead>
+<tr>
+<th id="**part_1**"><strong>Part 1</strong></th>
+<th id="**write_a_smart_contract_with_functions_to_support_proof_of_existence_(i.e._notarization)**"><strong>Write a smart contract with functions to support proof of existence (i.e. notarization)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Part 2</strong></td>
+<td>Test smart contract code coverage</td>
+</tr>
+<tr>
+<td><strong>Part 3</strong></td>
+<td>Deploy smart contract on a public test network (Rinkeby)</td>
+</tr>
+<tr>
+<td><strong>Part 4</strong></td>
+<td>Modify client code to interact with a smart contract</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Smart Contracts</p></h3>
+  <video controls>
+  <source src="02. Smart Contracts-9vVT15oyi5Y.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Smart Contracts-9vVT15oyi5Y.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://dada.nyc/home" target="_blank">Art</a></li>
+<li><a href="https://www.originprotocol.com/en" target="_blank">Service providers</a></li>
+<li><a href="https://dydx.exchange" target="_blank">Derivatives</a></li>
+<li>[Credit](<a href="https://bloom.co/" target="_blank">https://bloom.co/</a>  )</li>
+<li><a href="https://dharma.io/" target="_blank">Loans</a></li>
+<li><a href="https://www.cryptokitties.co/" target="_blank">Cryptokitties</a></li>
+<li><a href="https://www.nytimes.com/2018/05/18/style/cryptokitty-auction.html" target="_blank">Cryptokitty Auction</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-case-study-cryptokitties-smart-contract">## Case Study: CryptoKitties Smart Contract</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>While on the surface CryptoKitties may seem like a trivial game, it has been revolutionary in demonstrating the power of blockchain transactions beyond simple financial transactions.</p>
+<p>The CryptoKitties game demonstrates owning a digital asset (CryptoKitty) and how that asset is tied to a digital identity and how transactions between users can take place via smart contracts, digital identities and their digital assets. </p>
+<p>If we explore the <a href="https://ethfiddle.com/09YbyJRfiI" target="_blank">CryptoKitties source code</a>, there are important takeaways we can use to apply to smart contracts we write in the future. </p>
+<p>Take some time to review this post - <a href="https://medium.com/loom-network/how-to-code-your-own-cryptokitties-style-game-on-ethereum-7c8ac86a4eb3" target="_blank">How to Code Your Own CryptoKitties-Style Game on Ethereum</a>. Be aware that this article is not meant for beginners; however, we are asking you to review it to help expose you to how to structure and design smart contracts as you continue learning more on this topic. </p>
+<p>Keep these questions in mind as you're reading:</p>
+<ol>
+<li>Cryptokitties contains more than one contract. How are all these contracts related? What does each contract focus on? (e.g. KittyBase.sol focuses on the core data of the app)</li>
+<li>How are gen0 kitties produced?</li>
+<li>How is data stored (or not)?  (Note this is kind of a trick question)</li>
+<li>The article discusses Kitties as Tokens and the difference between fungible and non-fungible token transactions. If the difference is unclear, no worries, we will discuss more later. If you'd like to learn more now, checkout <a href="https://cointelegraph.com/explained/non-fungible-tokens-explained" target="_blank">this article</a>.</li>
+</ol>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="502097e4-1cf4-4e9c-a15c-e8fc39058763--0">
+        <label for="502097e4-1cf4-4e9c-a15c-e8fc39058763--0"><p>I've reviewed this post: <a href="https://medium.com/loom-network/how-to-code-your-own-cryptokitties-style-game-on-ethereum-7c8ac86a4eb3" target="_blank">How to Code Your Own CryptoKitties-Style Game on Ethereum</a></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="502097e4-1cf4-4e9c-a15c-e8fc39058763--1">
+        <label for="502097e4-1cf4-4e9c-a15c-e8fc39058763--1"><p>I've thought about the questions posted above to understand designing smart contracts.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Thanks for taking the time to better prepare yourself for designing smart contracts!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.259
+Now that we have fully implemented ERC-721,
+
+00:00:04.259 --> 00:00:09.359
+let's transform our star notary service into an ERC-721 token.
+
+00:00:09.359 --> 00:00:12.584
+We'll start with a blank star notary contract.
+
+00:00:12.585 --> 00:00:18.920
+First, we'll import the ERC-721 token contract we implemented in the previous lesson.
+
+00:00:18.920 --> 00:00:23.240
+We'll use inheritance to say that the star notary contract is
+
+00:00:23.239 --> 00:00:26.839
+an ERC-721 token so that it
+
+00:00:26.839 --> 00:00:30.710
+inherent to all those methods and mappings we implemented before.
+
+00:00:30.710 --> 00:00:35.990
+Let's write a method to create a star given a star name and its ID.
+
+00:00:35.990 --> 00:00:39.804
+The ERC-721 token contract, however,
+
+00:00:39.804 --> 00:00:44.689
+doesn't have any logic to hold any metadata for a token.
+
+00:00:44.689 --> 00:00:50.530
+Let's define a struct that'll hold all additional metadata we need for a star,
+
+00:00:50.530 --> 00:00:53.039
+which is just the name for now.
+
+00:00:53.039 --> 00:00:57.994
+Now, we can create an instance of the star struct to hold the star name.
+
+00:00:57.994 --> 00:01:00.019
+Notice the memory keyword here.
+
+00:01:00.020 --> 00:01:02.840
+The memory keyword denotes that this is
+
+00:01:02.840 --> 00:01:09.540
+a temporary variable held only in-memory and will be released after the function call.
+
+00:01:10.269 --> 00:01:15.560
+Let's establish a relationship between the star info and its ID by
+
+00:01:15.560 --> 00:01:21.150
+making a mapping that will map the star ID to its additional metadata.
+
+00:01:21.150 --> 00:01:24.500
+We can now save the in-memory struct we
+
+00:01:24.500 --> 00:01:28.680
+made in our mapping so that it's saved permanently.
+
+00:01:30.069 --> 00:01:35.854
+Remember the mint function we implemented earlier for the ERC-721 token?
+
+00:01:35.855 --> 00:01:40.323
+Since the star notary inherent from the ERC-721 token contract,
+
+00:01:40.323 --> 00:01:44.239
+we can simply call it here by passing the star ID and
+
+00:01:44.239 --> 00:01:49.649
+all that logic of creating a non-fungible token is taken care of.
+
+00:01:50.769 --> 00:01:54.799
+All right. Now that we have a function to create a star,
+
+00:01:54.799 --> 00:02:00.890
+let's go ahead and create a test to see if we can create a star and get its name.
+
+00:02:00.890 --> 00:02:04.250
+We'll create a star of a specified token or star
+
+00:02:04.250 --> 00:02:08.430
+ID and see if it's named got saved in our mapping.
+
+00:02:08.830 --> 00:02:11.280
+Since the mapping is public,
+
+00:02:11.280 --> 00:02:15.349
+we can access it like any other public method.
+
+00:02:20.629 --> 00:02:23.384
+Let's see if it passes.
+
+00:02:23.384 --> 00:02:28.814
+Great. Now, let's say if you own a star,
+
+00:02:28.814 --> 00:02:32.775
+you might want to put it up for sale at a specified price.
+
+00:02:32.775 --> 00:02:36.200
+So, let's go ahead and make a method for that.
+
+00:02:40.699 --> 00:02:44.799
+That require that only one person who could put
+
+00:02:44.800 --> 00:02:49.160
+up the star for sale is the owner of that star.
+
+00:02:50.840 --> 00:02:57.425
+We need a mapping to denote which star are up for sale and for how much.
+
+00:02:57.425 --> 00:02:59.795
+To save the fact that the owner of
+
+00:02:59.794 --> 00:03:04.339
+a specified star wants to put it up for sale at a particular price,
+
+00:03:04.340 --> 00:03:08.520
+all we have to do is make an entry in that mapping.
+
+00:03:13.219 --> 00:03:18.139
+Next, we should allow someone to buy a star that's up for sale.
+
+00:03:18.139 --> 00:03:22.234
+We can do that by making a buy star function that is payable,
+
+00:03:22.235 --> 00:03:26.350
+meaning, that this function can accept funds.
+
+00:03:33.979 --> 00:03:41.219
+First, we'll have to check that the star they're trying to buy is indeed for sale.
+
+00:03:43.819 --> 00:03:50.139
+To do that, we can check if the price for that star is greater than zero.
+
+00:03:50.139 --> 00:03:54.289
+Remember, zero is the default value for objects in Solidity.
+
+00:03:54.289 --> 00:03:59.000
+So, a star that's not for sale would have a default value of zero in
+
+00:03:59.000 --> 00:04:04.750
+that mapping even if we never explicitly put it in there in the first place.
+
+00:04:04.750 --> 00:04:08.509
+Next, let's grab that star cost from
+
+00:04:08.509 --> 00:04:16.709
+the mapping and let's grab the current star owner.
+
+00:04:25.350 --> 00:04:28.450
+We need to require that the funds sent in
+
+00:04:28.449 --> 00:04:31.509
+this transaction call are equal to or greater than
+
+00:04:31.509 --> 00:04:37.745
+the star price and we can see from looking at the message.value.
+
+00:04:37.745 --> 00:04:41.649
+There's no need to do anything extra for the funds to transfer,
+
+00:04:41.649 --> 00:04:43.659
+the funds are already located to
+
+00:04:43.660 --> 00:04:47.005
+the star notary contract at the start of this transaction.
+
+00:04:47.004 --> 00:04:49.870
+Notice that, the star that is about to be
+
+00:04:49.870 --> 00:04:53.454
+transferred is still associated with some state.
+
+00:04:53.454 --> 00:04:59.879
+For example, it's still marked as for sale in our star for sale mapping and
+
+00:04:59.879 --> 00:05:03.399
+the ERC-721 token implementation it might
+
+00:05:03.399 --> 00:05:08.449
+have some approver who is approved to transfer it.
+
+00:05:17.480 --> 00:05:21.639
+The new owner of that star might not want that,
+
+00:05:21.639 --> 00:05:25.525
+so we need to clear the state associated with that star
+
+00:05:25.524 --> 00:05:31.269
+before we transfer it by setting its values in those mappings to zero.
+
+00:05:44.000 --> 00:05:48.345
+Okay. Great. We're now ready to transfer.
+
+00:05:48.345 --> 00:05:53.115
+If we look at our ERC-721 token implementation,
+
+00:05:53.115 --> 00:05:55.485
+we have a transfer from method.
+
+00:05:55.485 --> 00:05:57.884
+However, in order to call that method,
+
+00:05:57.884 --> 00:06:02.680
+the caller must have permission which they might not have yet,
+
+00:06:02.680 --> 00:06:05.245
+but the rest of the logic we can use.
+
+00:06:05.245 --> 00:06:08.754
+So, instead, let's make a transfer helper method and
+
+00:06:08.754 --> 00:06:14.469
+consolidate this logic in an internal method without requiring permissions.
+
+00:06:14.470 --> 00:06:19.480
+This is safe to do because internal methods can only be called within
+
+00:06:19.480 --> 00:06:26.000
+the contract or contracts that inherit from it like our star notary service.
+

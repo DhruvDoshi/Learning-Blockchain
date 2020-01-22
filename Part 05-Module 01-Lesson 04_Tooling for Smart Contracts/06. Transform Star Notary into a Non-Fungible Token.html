@@ -1,0 +1,351 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transform Star Notary into a Non-Fungible Token</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Tooling for Smart Contracts</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started with MetaMask.html">02. Getting Started with MetaMask</a>
+    </li>
+    <li class="">
+      <a href="03. Unit tests in Javascript and Solidity with Truffle.html">03. Unit tests in Javascript and Solidity with Truffle</a>
+    </li>
+    <li class="">
+      <a href="04. Ethereum Improvement Proposals and Standards.html">04. Ethereum Improvement Proposals and Standards</a>
+    </li>
+    <li class="">
+      <a href="05. Star Notary as ERC-721.html">05. Star Notary as ERC-721</a>
+    </li>
+    <li class="">
+      <a href="06. Transform Star Notary into a Non-Fungible Token.html">06. Transform Star Notary into a Non-Fungible Token</a>
+    </li>
+    <li class="">
+      <a href="07. Getting Started with OpenZeppelin.html">07. Getting Started with OpenZeppelin</a>
+    </li>
+    <li class="">
+      <a href="08. Infura.html">08. Infura</a>
+    </li>
+    <li class="">
+      <a href="09. Lesson Recap.html">09. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Transform Star Notary into a Non-Fungible Token</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-transform-star-notary-into-a-non-fungible-token"># Transform Star Notary into a Non-Fungible Token</h2>
+<p>In the previous concept, you saw how to implement ERC-721. Now, let’s transform our StarNotary service into an ERC-721 token. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>C4L3 04.2.1 SC Transforming Star Notary Into A Non-Fungible Token, Part 1 (Slower)</p></h3>
+  <video controls>
+  <source src="06. C4L3 04.2.1 SC Transforming Star Notary Into A Non-Fungible Token, Part 1 (Slower)-uCJGnVomLDk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. C4L3 04.2.1 SC Transforming Star Notary Into A Non-Fungible Token, Part 1 (Slower)-uCJGnVomLDk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="transform-star-notary-into-a-non-fungible-token-part-2">Transform Star Notary into a Non-Fungible Token Part 2</h2>
+<hr />
+<p>In the next video, we'll continue transforming our StarNotary service into an ERC-721 token. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>C4L3 04.2.2 SC Transforming Star Notary Into A Non-Fungible Token, Part 2 (Slower)</p></h3>
+  <video controls>
+  <source src="06. C4L3 04.2.2 SC Transforming Star Notary Into A Non-Fungible Token, Part 2 (Slower)-hO8qkdELE_I.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. C4L3 04.2.2 SC Transforming Star Notary Into A Non-Fungible Token, Part 2 (Slower)-hO8qkdELE_I.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-resources">## Resources</h2>
+<p><a href="https://solidity.readthedocs.io/en/v0.4.24/contracts.html#visibility-and-getters" target="_blank">Visibility and Getters</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-code"># Code</h2>
+<p>In this section, we setup:</p>
+<ul>
+<li><strong>StarNotary.sol</strong> - Transforms star notary service into non-fungible token by implementing the ERC721 interface setup in the previous concept</li>
+<li><strong>StarNotaryTest.js</strong> which tests:<ul>
+<li>Buying and selling stars</li>
+<li>User can sell a star</li>
+<li>User can buy a star that was put up for sale</li></ul></li>
+</ul>
+<h2 id="-starnotarysol">## StarNotary.sol</h2>
+<pre><code>pragma solidity ^0.4.23;
+
+import './ERC721Token.sol';
+
+contract StarNotary is ERC721Token { 
+
+    struct Star { 
+        string name; 
+    }
+
+    mapping(uint256 =&gt; Star) public tokenIdToStarInfo; 
+    mapping(uint256 =&gt; uint256) public starsForSale;
+
+    function createStar(string _name, uint256 _tokenId) public { 
+        Star memory newStar = Star(_name);
+
+        tokenIdToStarInfo[_tokenId] = newStar;
+
+        ERC721Token.mint(_tokenId);
+    }
+
+    function putStarUpForSale(uint256 _tokenId, uint256 _price) public { 
+        require(this.ownerOf(_tokenId) == msg.sender);
+
+        starsForSale[_tokenId] = _price;
+    }
+
+    function buyStar(uint256 _tokenId) public payable { 
+        require(starsForSale[_tokenId] &gt; 0);
+
+        uint256 starCost = starsForSale[_tokenId];
+        address starOwner = this.ownerOf(_tokenId);
+        require(msg.value &gt;= starCost);
+
+        clearOtherStates(_tokenId);
+
+        ERC721Token.transferFromHelper(starOwner, msg.sender, _tokenId);
+
+        starOwner.transfer(starCost);
+
+        if(msg.value &gt; starCost) { 
+            msg.sender.transfer(msg.value - starCost);
+        }
+    }
+
+
+    function clearOtherStates(uint256 _tokenId) private { 
+        // clear approvals
+        tokenToApproved[_tokenId] = address(0);
+
+        // clear being on sale 
+        starsForSale[_tokenId] = 0;
+    }
+}</code></pre>
+<h2 id="-starnotarytestjs">## StarNotaryTest.js</h2>
+<pre><code>const StarNotary = artifacts.require('StarNotary')
+
+contract('StarNotary', accounts =&gt; { 
+
+    beforeEach(async function() { 
+        this.contract = await StarNotary.new({from: accounts[0]})
+    })
+
+    describe('can create a star', () =&gt; { 
+        it('can create a star and get its name', async function () { 
+            let tokenId = 1
+
+            await this.contract.createStar('Awesome Star!', tokenId, {from: accounts[0]})
+
+            assert.equal(await this.contract.tokenIdToStarInfo(tokenId), 'Awesome Star!')
+        })
+    })
+
+    describe('buying and selling stars', () =&gt; { 
+
+        let user1 = accounts[1]
+        let user2 = accounts[2]
+
+        let starId = 1
+        let starPrice = web3.toWei(.01, "ether")
+
+        beforeEach(async function () {
+            await this.contract.createStar('awesome star', starId, {from: user1})
+        })
+
+        describe('user1 can sell a star', () =&gt; { 
+            it('user1 can put up their star for sale', async function () { 
+                await this.contract.putStarUpForSale(starId, starPrice, {from: user1})
+
+                assert.equal(await this.contract.starsForSale(starId), starPrice)
+            })
+
+            it('user1 gets the funds after selling a star', async function () { 
+                let starPrice = web3.toWei(.05, 'ether')
+
+                await this.contract.putStarUpForSale(starId, starPrice, {from: user1})
+
+                let balanceOfUser1BeforeTransaction = web3.eth.getBalance(user1)
+                await this.contract.buyStar(starId, {from: user2, value: starPrice})
+                let balanceOfUser1AfterTransaction = web3.eth.getBalance(user1)
+
+                assert.equal(balanceOfUser1BeforeTransaction.add(starPrice).toNumber(), 
+                            balanceOfUser1AfterTransaction.toNumber())
+            })
+        })
+
+        describe('user2 can buy a star that was put up for sale', () =&gt; { 
+            beforeEach(async function () { 
+                await this.contract.putStarUpForSale(starId, starPrice, {from: user1})
+            })
+
+            it('user2 is the owner of the star after they buy it', async function () { 
+                await this.contract.buyStar(starId, {from: user2, value: starPrice})
+
+                assert.equal(await this.contract.ownerOf(starId), user2)
+            })
+
+            it('user2 correctly has their balance changed', async function () { 
+                let overpaidAmount = web3.toWei(.05, 'ether')
+
+                const balanceOfUser2BeforeTransaction = web3.eth.getBalance(user2)
+                await this.contract.buyStar(starId, {from: user2, value: overpaidAmount, gasPrice:0})
+                const balanceAfterUser2BuysStar = web3.eth.getBalance(user2)
+
+                assert.equal(balanceOfUser2BeforeTransaction.sub(balanceAfterUser2BuysStar), starPrice)
+            })
+        })
+    })
+})</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

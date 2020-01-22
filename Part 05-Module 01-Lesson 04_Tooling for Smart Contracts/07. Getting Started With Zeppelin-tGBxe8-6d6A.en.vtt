@@ -1,0 +1,277 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.160
+In this section, we'll go over
+
+00:00:02.160 --> 00:00:06.134
+an amazing framework for writing smart contracts called OpenZeppelin.
+
+00:00:06.134 --> 00:00:10.629
+OpenZeppelin is a library of extremely useful smart contracts that have
+
+00:00:10.630 --> 00:00:15.505
+followed best practices and adhered to all standards with the focus on security.
+
+00:00:15.505 --> 00:00:18.390
+It's used by numerous projects and teams making it
+
+00:00:18.390 --> 00:00:22.140
+secure and battled-tested collection of libraries.
+
+00:00:22.140 --> 00:00:26.894
+To demonstrate the extreme usefulness of OpenZeppelin's ecosystem,
+
+00:00:26.894 --> 00:00:28.980
+let's go ahead and see how we can write
+
+00:00:28.980 --> 00:00:31.699
+our star notary service with the help of OpenZeppelin.
+
+00:00:31.699 --> 00:00:34.560
+First, we have to install OpenZeppelin.
+
+00:00:34.560 --> 00:00:37.585
+So, let's go back to our smart contract's directory,
+
+00:00:37.585 --> 00:00:40.000
+and perform the installation steps needed.
+
+00:00:40.000 --> 00:00:41.835
+Utilizing node package manager,
+
+00:00:41.835 --> 00:00:44.960
+lets initiate the npm initialization command.
+
+00:00:44.960 --> 00:00:46.984
+This time, we'll use y flag,
+
+00:00:46.984 --> 00:00:51.304
+the y flag allows us to automate the yes for any promptings that exist.
+
+00:00:51.304 --> 00:00:55.490
+Next, npm install with save-exact command.
+
+00:00:55.490 --> 00:00:57.829
+The save-exact command allows us to save
+
+00:00:57.829 --> 00:01:00.850
+the exact version number for the package that we're installing,
+
+00:01:00.850 --> 00:01:03.925
+in this case, OpenZeppelin for solidity.
+
+00:01:03.924 --> 00:01:07.399
+To view the save dependencies after the installation utilizing
+
+00:01:07.400 --> 00:01:11.140
+node package manager it's always good to investigate package.json,
+
+00:01:11.140 --> 00:01:13.959
+just to double-check that we have the right package.
+
+00:01:13.959 --> 00:01:16.754
+Considering that we had went ahead and utilize the y command,
+
+00:01:16.754 --> 00:01:18.619
+which can save a lot of prompting,
+
+00:01:18.620 --> 00:01:21.969
+I think it's a good time right now just to go ahead and double-check this.
+
+00:01:21.969 --> 00:01:23.304
+Yep. Look at that.
+
+00:01:23.305 --> 00:01:25.565
+We have the correct version of OpenZeppelin,
+
+00:01:25.564 --> 00:01:28.030
+and we can proceed forward with confidence.
+
+00:01:28.030 --> 00:01:32.534
+Okay, let's go check out the OpenZeppelin GitHub repository,
+
+00:01:32.534 --> 00:01:34.549
+take some time to review the ReadMe,
+
+00:01:34.549 --> 00:01:37.369
+within the ReadMe there's lot of useful information ranging
+
+00:01:37.370 --> 00:01:40.725
+from installation, usage, to security.
+
+00:01:40.724 --> 00:01:43.714
+It's always good to investigate this.
+
+00:01:43.715 --> 00:01:45.515
+Okay, what we're going to do next,
+
+00:01:45.515 --> 00:01:49.129
+is navigate to the actual contracts directory.
+
+00:01:49.129 --> 00:01:53.229
+Let's just double-check where we're at in regards to creating a new token,
+
+00:01:53.230 --> 00:01:55.700
+we need the ERC721 standard,
+
+00:01:55.700 --> 00:02:00.665
+and sure enough, we have the ERC721 solidity file.
+
+00:02:00.665 --> 00:02:06.405
+Okay, we have some commands that we're interested in like, balanceOf an ownerOf.
+
+00:02:06.405 --> 00:02:11.539
+So, I think the next step here is to go ahead and go back to our node modules,
+
+00:02:11.539 --> 00:02:14.030
+and we're going to go to our contracts directory,
+
+00:02:14.030 --> 00:02:17.705
+and you'll notice it's very similar to GitHub repository.
+
+00:02:17.705 --> 00:02:21.280
+If you're wondering, is this a clone of repository?
+
+00:02:21.280 --> 00:02:22.740
+The answer is yes.
+
+00:02:22.740 --> 00:02:26.890
+You can see right here we have the ERC721 solidity file,
+
+00:02:26.889 --> 00:02:30.184
+and it matches the GitHub repository.
+
+00:02:30.185 --> 00:02:35.074
+Look here, we have our balanceOf function with ownerOf function,
+
+00:02:35.074 --> 00:02:37.039
+and our approve function.
+
+00:02:37.039 --> 00:02:39.995
+Okay. This is looking really good for us,
+
+00:02:39.995 --> 00:02:42.955
+let's go ahead and proceed forward.
+
+00:02:42.955 --> 00:02:46.140
+Okay, next we want to navigate to our StarNotary,
+
+00:02:46.139 --> 00:02:47.664
+and take advantage of OpenZeppelin.
+
+00:02:47.664 --> 00:02:49.789
+The very first thing we need to do to do this,
+
+00:02:49.789 --> 00:02:54.914
+is modify our import statement to go ahead and point it to OpenZeppelin.
+
+00:02:54.914 --> 00:02:59.819
+We know that we have OpenZeppelin by investigating our node modules,
+
+00:02:59.819 --> 00:03:01.699
+so what we're doing here is putting in that path,
+
+00:03:01.699 --> 00:03:03.469
+it's a similar path as the GitHub,
+
+00:03:03.469 --> 00:03:05.109
+as well as our node modules.
+
+00:03:05.110 --> 00:03:07.540
+So, let's just input it right here.
+
+00:03:07.539 --> 00:03:15.604
+This is going to allow us to take advantage of the ERC721 interface from OpenZeppelin.
+
+00:03:15.604 --> 00:03:24.049
+Okay. So, let's go ahead and bring up the OpenZeppelin solidity file into a new window,
+
+00:03:24.050 --> 00:03:26.590
+so that way we can go ahead and compare command,
+
+00:03:26.590 --> 00:03:29.509
+and migrate over those functions that we're interested in.
+
+00:03:29.509 --> 00:03:34.359
+The very first function is the mint function.
+
+00:03:34.360 --> 00:03:37.140
+All right, so this looks like the mint function,
+
+00:03:37.139 --> 00:03:39.329
+what we want, let's go ahead and copy it.
+
+00:03:39.330 --> 00:03:40.895
+We'll just retype it out here,
+
+00:03:40.895 --> 00:03:42.335
+we're going to go ahead and remove
+
+00:03:42.335 --> 00:03:46.170
+our current mint function and incorporate OpenZeppelin's mint function.
+
+00:03:46.169 --> 00:03:49.780
+So, when I put in the message.sender variable,
+
+00:03:49.780 --> 00:03:52.110
+as well as a tokenId variable.
+
+00:03:52.110 --> 00:03:58.825
+Okay. Perfect. Next, we want to go ahead and remove token from,
+
+00:03:58.824 --> 00:04:02.869
+add token to, so let's do that now.
+
+00:04:02.870 --> 00:04:06.980
+We're removing our transfer helper because it's no longer needed,
+
+00:04:06.979 --> 00:04:11.429
+and it simplifies our file considering that we're taking advantage of OpenZeppelin.
+
+00:04:11.430 --> 00:04:16.120
+So, let's go ahead and incorporate the removeTokenFrom user,
+
+00:04:16.120 --> 00:04:19.725
+go ahead and take advantage of the removeTokenFrom,
+
+00:04:19.725 --> 00:04:22.814
+put in the starOwner and the tokenId.
+
+00:04:22.814 --> 00:04:25.500
+Next, addTokenTo,
+
+00:04:25.500 --> 00:04:31.214
+message.sender, and then we're going to incorporate the variable of tokenId.
+
+00:04:31.214 --> 00:04:32.689
+Okay, it's time to test.
+
+00:04:32.689 --> 00:04:37.910
+During the test you can see that OpenZeppelin is actually being included within our test.
+
+00:04:37.910 --> 00:04:40.025
+So, we know the import statement is working,
+
+00:04:40.024 --> 00:04:42.259
+and our tests have passed.
+
+00:04:42.259 --> 00:04:44.944
+Fantastic. As you notice,
+
+00:04:44.944 --> 00:04:47.240
+that's the power of OpenZeppelin,
+
+00:04:47.240 --> 00:04:50.420
+to incorporate a library of standards that you can incorporate
+
+00:04:50.420 --> 00:04:53.660
+as interfaces to allow inheritance of
+
+00:04:53.660 --> 00:04:57.560
+various functions and objects that you can utilize within your web development
+
+00:04:57.560 --> 00:05:01.720
+practice's when you're creating solidity smart contracts.
+

@@ -1,0 +1,256 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.620 --> 00:00:06.225
+In this video, we'll talk about the difference between private and public blockchains.
+
+00:00:06.224 --> 00:00:08.580
+Ethereum is a public blockchain.
+
+00:00:08.580 --> 00:00:10.740
+This means that any computer from around
+
+00:00:10.740 --> 00:00:13.505
+the world can participate in the Ethereum network.
+
+00:00:13.505 --> 00:00:15.880
+We call such computers nodes,
+
+00:00:15.880 --> 00:00:18.719
+and anyone with access to the Ethereum node can
+
+00:00:18.719 --> 00:00:22.375
+create their public Ethereum address that we call a wallet.
+
+00:00:22.375 --> 00:00:25.265
+A private blockchain operates very similarly,
+
+00:00:25.265 --> 00:00:27.920
+except that it doesn't allow just anyone to participate in
+
+00:00:27.920 --> 00:00:32.304
+this network but only those nodes and users that are permissioned to do so.
+
+00:00:32.304 --> 00:00:35.450
+You may have a private version of the Ethereum blockchain,
+
+00:00:35.450 --> 00:00:37.310
+but then that network cannot be part of
+
+00:00:37.310 --> 00:00:40.530
+the public Ethereum network that we're all familiar with.
+
+00:00:40.530 --> 00:00:43.954
+Private blockchains have entirely different use cases.
+
+00:00:43.954 --> 00:00:47.689
+For example, JPMorgan, a huge financial institution,
+
+00:00:47.689 --> 00:00:49.789
+is developing a project called Quorum,
+
+00:00:49.789 --> 00:00:51.935
+which is a private version of Ethereum.
+
+00:00:51.935 --> 00:00:55.550
+It's intended to be used by enterprise companies who need to be very
+
+00:00:55.549 --> 00:00:59.869
+careful about what nodes can handle their sensitive financial information.
+
+00:00:59.869 --> 00:01:04.745
+Private blockchains allow you to control what nodes participate in the network.
+
+00:01:04.745 --> 00:01:08.795
+Because there is a centralized authority that controls the participant list,
+
+00:01:08.795 --> 00:01:12.019
+private blockchains by definition are highly censored.
+
+00:01:12.019 --> 00:01:15.619
+The motivation behind running private blockchains is that you can allow
+
+00:01:15.620 --> 00:01:19.719
+only trusted nodes to participate and operate on sensitive data.
+
+00:01:19.719 --> 00:01:21.760
+In this course, we'll learn about
+
+00:01:21.760 --> 00:01:26.410
+a popular Ethereum local test environment that'll just run on your computer.
+
+00:01:26.409 --> 00:01:31.084
+Because this test environment is local and accessible by only your computer,
+
+00:01:31.084 --> 00:01:34.000
+we can technically call it private.
+
+00:01:34.040 --> 00:01:37.675
+To run a local version of Ethereum on your computer,
+
+00:01:37.674 --> 00:01:40.310
+we'll use a great tool called Ganache.
+
+00:01:40.310 --> 00:01:43.605
+Ganache is a very easy to use and well-maintained tool
+
+00:01:43.605 --> 00:01:47.134
+to help you develop on Ethereum in a local environment.
+
+00:01:47.134 --> 00:01:52.625
+Follow the instructions below on how to download and install both Ganache and Ganahe CLI.
+
+00:01:52.625 --> 00:01:55.439
+If you're comfortable with command-line interface tools,
+
+00:01:55.439 --> 00:01:57.825
+I'll recommend using Ganache CLI.
+
+00:01:57.825 --> 00:02:02.795
+But also be aware that there is a graphical user interface version for Ganache as well.
+
+00:02:02.795 --> 00:02:04.885
+If you'll be using the command line tool,
+
+00:02:04.885 --> 00:02:10.955
+go ahead and open a terminal window and type ganache-cli after installation.
+
+00:02:10.955 --> 00:02:12.950
+You'll see your local network being
+
+00:02:12.949 --> 00:02:16.824
+initialized with 10 test account and their private keys.
+
+00:02:16.824 --> 00:02:21.574
+All of them are loaded with 100 ether each for you to play around with.
+
+00:02:21.574 --> 00:02:24.319
+If you're using the graphical user interface,
+
+00:02:24.319 --> 00:02:25.789
+all you have to do is open the app,
+
+00:02:25.789 --> 00:02:29.239
+and you'll see the same thing in a graphical format..
+
+00:02:29.759 --> 00:02:33.169
+Okay, let's go back to Remix.
+
+00:02:33.169 --> 00:02:35.409
+If you're using the same browser and computer,
+
+00:02:35.409 --> 00:02:38.299
+then Remix will automatically save all your previous work.
+
+00:02:38.300 --> 00:02:42.075
+You should see the simple star notary contract we worked on before.
+
+00:02:42.074 --> 00:02:43.709
+We won't change any code,
+
+00:02:43.710 --> 00:02:47.300
+but we will change the environment to where our code will be deployed.
+
+00:02:47.300 --> 00:02:50.495
+Last time, we used a test environment in the browser.
+
+00:02:50.495 --> 00:02:53.900
+This time, we'll deploy it to our Ganache local network.
+
+00:02:53.900 --> 00:02:56.770
+Go back to the run tab, but this time,
+
+00:02:56.770 --> 00:03:00.110
+choose Web3 Provider from the environment drop-down.
+
+00:03:00.110 --> 00:03:04.940
+It'll ask you if you're sure you want to select this option, and click "Yes".
+
+00:03:04.939 --> 00:03:07.009
+Next screen is going to ask you for
+
+00:03:07.009 --> 00:03:10.174
+the end point of the Ethereum node you want to connect to,
+
+00:03:10.175 --> 00:03:12.140
+and it should be prepopulated with
+
+00:03:12.139 --> 00:03:15.159
+a local Ganache network that's running on your computer.
+
+00:03:15.159 --> 00:03:17.025
+If you use Ganache CLI,
+
+00:03:17.025 --> 00:03:19.950
+this should be localhost:8545,
+
+00:03:19.949 --> 00:03:23.299
+and if you're using Ganache's graphical user interface,
+
+00:03:23.300 --> 00:03:27.650
+the endpoint should be localhost:7545.
+
+00:03:27.650 --> 00:03:31.465
+Also note that if you ever stop your Ganache app or process,
+
+00:03:31.465 --> 00:03:35.990
+you'll have to reload the Remix page and redo the steps to reconnect.
+
+00:03:35.990 --> 00:03:39.510
+Once you specified which network you want to deploy to,
+
+00:03:39.509 --> 00:03:41.689
+go ahead and click "Deploy".
+
+00:03:41.689 --> 00:03:43.414
+If you look at Ganache,
+
+00:03:43.414 --> 00:03:47.129
+you should see that transaction go through to create your contract.
+
+00:03:47.129 --> 00:03:50.844
+With the command line, it'll look something like this.
+
+00:03:50.844 --> 00:03:54.185
+If you're using the Ganache graphical user interface app,
+
+00:03:54.185 --> 00:03:56.650
+it'll look something like this.
+
+00:03:56.650 --> 00:04:01.629
+We can use Remix just like last time to make calls on your smart contract,
+
+00:04:01.629 --> 00:04:05.814
+and you'll see that these transactions go through Ganache instead.
+
+00:04:05.814 --> 00:04:11.395
+Congrats, you deployed your first smart contract to local tests Ethereum network.
+
+00:04:11.395 --> 00:04:14.485
+Deploying to one of the official Ethereum test networks
+
+00:04:14.485 --> 00:04:17.975
+or even Ethereum main net is just as easy.
+
+00:04:17.975 --> 00:04:20.445
+To recap, in this segment,
+
+00:04:20.444 --> 00:04:25.009
+we learned how to deploy our smart contract to our private local version of Ethereum.
+
+00:04:25.009 --> 00:04:27.689
+This allows us to have greater visibility in how
+
+00:04:27.689 --> 00:04:31.420
+our smart contract would behave on the real Ethereum main net.
+
+00:04:31.420 --> 00:04:32.990
+On the next lesson,
+
+00:04:32.990 --> 00:04:36.370
+we'll continue to build onto our smart contract and introduce
+
+00:04:36.370 --> 00:04:40.910
+more complexity to build a full-blown decentralized app.
+

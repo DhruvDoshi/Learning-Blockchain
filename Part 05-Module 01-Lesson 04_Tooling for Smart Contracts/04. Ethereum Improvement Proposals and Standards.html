@@ -1,0 +1,199 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ethereum Improvement Proposals and Standards</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Tooling for Smart Contracts</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started with MetaMask.html">02. Getting Started with MetaMask</a>
+    </li>
+    <li class="">
+      <a href="03. Unit tests in Javascript and Solidity with Truffle.html">03. Unit tests in Javascript and Solidity with Truffle</a>
+    </li>
+    <li class="">
+      <a href="04. Ethereum Improvement Proposals and Standards.html">04. Ethereum Improvement Proposals and Standards</a>
+    </li>
+    <li class="">
+      <a href="05. Star Notary as ERC-721.html">05. Star Notary as ERC-721</a>
+    </li>
+    <li class="">
+      <a href="06. Transform Star Notary into a Non-Fungible Token.html">06. Transform Star Notary into a Non-Fungible Token</a>
+    </li>
+    <li class="">
+      <a href="07. Getting Started with OpenZeppelin.html">07. Getting Started with OpenZeppelin</a>
+    </li>
+    <li class="">
+      <a href="08. Infura.html">08. Infura</a>
+    </li>
+    <li class="">
+      <a href="09. Lesson Recap.html">09. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Ethereum Improvement Proposals and Standards</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-ethereum-improvement-proposals-and-standards"># Ethereum Improvement Proposals and Standards</h2>
+<p>Similar to the Bitcoin Improvement Proposals we discussed earlier, Ethereum has its own standards to continuously improve its codebase called Ethereum Improvement Proposals (EIP). In this section, we will go over how the Ethereum community proposes improvements and how that affects the smart contract development best practices. </p>
+<p>Additionally, we will explore Ethereum Request for Comments (ERCs) which are application level standards and conventions. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Ethereum Improvement Proposals And Standards</p></h3>
+  <video controls>
+  <source src="04. Ethereum Improvement Proposals And Standards-zAOKDmPb5rM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. Ethereum Improvement Proposals And Standards-zAOKDmPb5rM.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-resources">## Resources</h2>
+<p>[Ethereum Improvement Proposals](<a href="https://github.com/ethereum/EIPs" target="_blank">https://github.com/ethereum/EIPs</a><br />
+<a href="https://eips.ethereum.org/" target="_blank">https://eips.ethereum.org/</a> )<br><br />
+<a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md" target="_blank">ERC-721</a></p>
+<h2 id="-definitions"># Definitions</h2>
+<ul>
+<li><strong>Ethereum Improvement Proposals (EIPs)</strong> - The standards followed to proposal updates to the Ethereum platform, including core protocol specifications, client APIs, and contract standards.</li>
+<li><strong>Ethereum Request for Comments (ERC)</strong> - Application-level standards and conventions, including contract standards such as token standards. One of the most famous is ERC20 which set a standard interface for tokens.</li>
+<li><strong>Fungible asset</strong> - a good that can be replaced by another identical item; mutually interchangeable. Example - Money is fungible. If wanted to spend a dollar, it doesn’t matter if I spend this dollar bill, or that dollar bill, as the value of all dollar bills is the same. <ul>
+<li><strong>ERC20</strong> - Tokens created with the ERC20 interface are fungible. </li></ul></li>
+<li><strong>Non-fungible asset</strong> - A good distinguishable assets that is unique. Example - Goods such as land, artwork, or collectibles are unique. One collectable baseball card cannot be replace by another. <ul>
+<li><strong>ERC721</strong> - Tokens created with the ERC721 interface are non-fungible. Recall earlier we saw that <a href="https://medium.com/loom-network/how-to-code-your-own-cryptokitties-style-game-on-ethereum-7c8ac86a4eb3" target="_blank">CryptoKitties use the ERC721</a> token spec because each CryptoKitty is considered a unique collectible. </li></ul></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.089
+Congratulations on making it through the lesson.
+
+00:00:03.089 --> 00:00:06.195
+In this lesson, we went over the basics of solidity.
+
+00:00:06.195 --> 00:00:10.345
+We wrote a simple Smart Contract that we deployed in our locally Ethereum test network.
+
+00:00:10.345 --> 00:00:13.075
+We also made a simple web page to interact with it.
+
+00:00:13.074 --> 00:00:14.879
+In the next lesson, we'll dive into
+
+00:00:14.880 --> 00:00:17.964
+the more complex aspects of writing in decentralized app.
+
+00:00:17.964 --> 00:00:21.519
+We'll learn about the Ethereum improvement proposals and standards,
+
+00:00:21.519 --> 00:00:23.640
+and use the numerous development tools of
+
+00:00:23.640 --> 00:00:27.800
+the Ethereum development ecosystem has to offer. Let's get to it.
+

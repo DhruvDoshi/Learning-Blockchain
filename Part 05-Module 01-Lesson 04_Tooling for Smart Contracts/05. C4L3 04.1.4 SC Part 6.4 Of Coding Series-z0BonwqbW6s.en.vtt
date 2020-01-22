@@ -1,0 +1,130 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.040
+There might be case scenarios where you want to get permission for an operator to
+
+00:00:05.040 --> 00:00:09.780
+transfer all your tokens and the set approval for our method is just for that.
+
+00:00:09.779 --> 00:00:14.459
+This makes it more convenient for an exchange to the trades on your behalf.
+
+00:00:14.460 --> 00:00:16.785
+This is specifically for operators,
+
+00:00:16.785 --> 00:00:22.060
+they can exchange our marketplace and not an individual person or user.
+
+00:00:22.429 --> 00:00:25.814
+To do that, we'll create a new mapping.
+
+00:00:25.815 --> 00:00:30.870
+This will be a nested mapping that given a user and given an operator will
+
+00:00:30.870 --> 00:00:33.050
+return a true or false for whether or not they're
+
+00:00:33.049 --> 00:00:37.059
+operator can transfer tokens on that user's behalf.
+
+00:00:44.530 --> 00:00:47.899
+To implement the setup rule for our method,
+
+00:00:47.899 --> 00:00:50.600
+we simply set the given operator to have
+
+00:00:50.600 --> 00:00:55.140
+the given approval permissions for the caller of this method.
+
+00:00:56.359 --> 00:01:01.100
+We'll also need to emit the approval for our event given the owner,
+
+00:01:01.100 --> 00:01:04.230
+operator, and permission status.
+
+00:01:13.519 --> 00:01:16.694
+To implement there is approval for our method,
+
+00:01:16.694 --> 00:01:23.429
+we simply return a permission status in our mapping given the owner and the operator.
+
+00:01:27.579 --> 00:01:33.289
+We'll change this method from being external to public so that once again,
+
+00:01:33.290 --> 00:01:37.355
+we can use it in our modifier function called has permission.
+
+00:01:37.355 --> 00:01:40.895
+Here we'll check if the caller has approval over
+
+00:01:40.894 --> 00:01:47.340
+all that users tokens and is therefore approved to make the transaction.
+
+00:01:51.890 --> 00:01:55.349
+Great. Now, let's test this logic also.
+
+00:01:55.349 --> 00:02:00.474
+So, we'll have another describe block to test the approval for our behavior.
+
+00:02:00.474 --> 00:02:05.449
+Once again, lamented token ID of one to user one and then have that
+
+00:02:05.450 --> 00:02:12.060
+user given operator permission over other tokens and capture that transaction receipt.
+
+00:02:13.729 --> 00:02:20.599
+We'll then test if the operator is indeed approved for all the user one's assets.
+
+00:02:20.599 --> 00:02:26.060
+The other tests we might want to add are similar to the ones we've done before.
+
+00:02:26.060 --> 00:02:29.009
+So, let me do those on your own.
+
+00:02:56.479 --> 00:02:59.189
+Great, our test passed.
+
+00:02:59.189 --> 00:03:05.280
+Lastly, there may be scenarios where we might want to test a transaction to fail.
+
+00:03:08.509 --> 00:03:15.019
+Let's make a helper function that will help us expect a throat or failed transaction.
+
+00:03:15.020 --> 00:03:20.550
+We'll actually assert that the error for that transaction exists.
+
+00:03:32.560 --> 00:03:36.050
+This might be useful for example to test that a
+
+00:03:36.050 --> 00:03:38.945
+random person trying to steal some tokens,
+
+00:03:38.944 --> 00:03:41.579
+this model allowed to do so.
+
+00:04:12.349 --> 00:04:21.925
+Okay. Let's run our test one last time to make sure everything works. Great job.
+
+00:04:21.925 --> 00:04:25.295
+That was a tough code in a lot of test cases.
+
+00:04:25.295 --> 00:04:30.069
+Writings to my contracts well requires a ton of test intelligence.
+
+00:04:30.069 --> 00:04:33.849
+Even though it might seem like we wrote a lot of tests here,
+
+00:04:33.850 --> 00:04:37.870
+for a production project we would write a lot more to achieve
+
+00:04:37.870 --> 00:04:43.045
+the highest code coverage possible and test a lot more scenarios.
+
+00:04:43.045 --> 00:04:46.180
+Next step, I'll show you how to transfer
+
+00:04:46.180 --> 00:04:50.240
+our star notary service to be a non-fungible token.
+

@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.740 --> 00:00:03.599
+In this video, we'll talk about solidity,
+
+00:00:03.600 --> 00:00:06.629
+the most popular programming language for Smart Contracts.
+
+00:00:06.629 --> 00:00:08.384
+Solidity is statically typed,
+
+00:00:08.384 --> 00:00:10.529
+high order language for writing smart contracts
+
+00:00:10.529 --> 00:00:13.154
+that run on the Ethereum Virtual Machine or EVM.
+
+00:00:13.154 --> 00:00:15.139
+It can support inheritance, libraries,
+
+00:00:15.140 --> 00:00:19.185
+user-defined types, and many other popular features for programming language.
+
+00:00:19.184 --> 00:00:22.410
+Its syntax is most compared to C++ and JavaScript.
+
+00:00:22.410 --> 00:00:25.379
+But bear in mind that it's new and rapidly evolving language,
+
+00:00:25.379 --> 00:00:28.414
+so it does have a number of limitations you might not be used to.
+
+00:00:28.414 --> 00:00:32.155
+The easiest way to introduce solidity is to go through a "Hello World" example.
+
+00:00:32.155 --> 00:00:34.020
+To get going, we'll use Remix,
+
+00:00:34.020 --> 00:00:36.910
+an online browser-based IDE for solidity.
+
+00:00:36.909 --> 00:00:39.434
+Once Remix loads, go ahead and close out of
+
+00:00:39.435 --> 00:00:43.080
+any default programs that opens and make a new file.
+
+00:00:47.140 --> 00:00:51.189
+Now, let's make a HelloWorld Solidity Smart Contract.
+
+00:00:51.189 --> 00:00:55.699
+Go ahead and make a new file and call it HelloWorld.sol.
+
+00:00:55.700 --> 00:00:58.790
+The first thing we have to define when writing
+
+00:00:58.789 --> 00:01:02.629
+the Smart Contract and solidity is which version of solidity we'll be using.
+
+00:01:02.630 --> 00:01:07.245
+For this example, we'll use version 0.4.24.
+
+00:01:07.245 --> 00:01:10.730
+Next, we'll use a contract keyword to declare our contract,
+
+00:01:10.730 --> 00:01:14.609
+and we'll make a variable of type string called message.
+
+00:01:16.810 --> 00:01:19.609
+We'll give our message variable a value in
+
+00:01:19.609 --> 00:01:23.459
+the constructor by assigning a string Hello World.
+
+00:01:24.849 --> 00:01:29.869
+We'll then make a function to retrieve our message called getMessage.
+
+00:01:29.870 --> 00:01:33.070
+It'll be public so anyone can access it,
+
+00:01:33.069 --> 00:01:35.329
+it'll be a view function meaning,
+
+00:01:35.329 --> 00:01:37.340
+we won't modify any state,
+
+00:01:37.340 --> 00:01:42.180
+but just view the status of existing variables and it'll return a string.
+
+00:01:42.180 --> 00:01:47.405
+This function will simply return the message we initialized in the constructor.
+
+00:01:47.405 --> 00:01:51.829
+To compile, you can simply use the keyboard shortcut Command S,
+
+00:01:51.829 --> 00:01:55.689
+or click on the "Compile" tab on the right and click "Start to compile."
+
+00:01:55.689 --> 00:02:00.789
+The green banner indicates our contract compiled and so now we can run it.
+
+00:02:00.790 --> 00:02:06.365
+Head over to the "Run" tab and from the "Environment's" drop-down choose JavaScript VM.
+
+00:02:06.364 --> 00:02:08.960
+Don't worry about any of the other settings.
+
+00:02:08.960 --> 00:02:10.939
+Go ahead and click on the "Deploy" button after
+
+00:02:10.939 --> 00:02:12.789
+the drop-down with Smart Contract selected.
+
+00:02:12.789 --> 00:02:13.939
+You should see a message in
+
+00:02:13.939 --> 00:02:16.539
+the console window in the middle that it's successfully deployed.
+
+00:02:16.539 --> 00:02:20.929
+We can extend that view to see more details of the contract deployment.
+
+00:02:20.930 --> 00:02:23.590
+Notice that now we have a section called "Deployed
+
+00:02:23.590 --> 00:02:26.254
+Contracts" with expanding arrow next to it.
+
+00:02:26.254 --> 00:02:29.780
+Click on it to see the deployed Hello World Smart Contract.
+
+00:02:29.780 --> 00:02:32.409
+Here, we can see that the Smart Contract we deployed
+
+00:02:32.409 --> 00:02:35.030
+has one method that we created called getMessage.
+
+00:02:35.030 --> 00:02:36.719
+Go ahead and click on it.
+
+00:02:36.719 --> 00:02:38.900
+In the console, you should see your request to call
+
+00:02:38.900 --> 00:02:41.465
+the method being executed and on the right hand side,
+
+00:02:41.465 --> 00:02:43.625
+you should see the output HelloWorld.
+
+00:02:43.625 --> 00:02:48.455
+Congrats, you've now completed your first solidity Smart Contract program.
+
+00:02:48.455 --> 00:02:53.730
+Next, we'll create some more complex solidity programs using more advanced tooling.
+

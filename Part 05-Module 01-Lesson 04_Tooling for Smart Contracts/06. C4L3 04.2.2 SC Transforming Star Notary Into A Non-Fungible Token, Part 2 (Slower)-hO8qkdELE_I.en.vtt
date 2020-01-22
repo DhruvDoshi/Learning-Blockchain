@@ -1,0 +1,262 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.490 --> 00:00:05.714
+It's best practice to review the developer documentation.
+
+00:00:05.714 --> 00:00:08.429
+Located within this lesson resource is a link
+
+00:00:08.429 --> 00:00:11.969
+relating to the topic called Visibility and Getters.
+
+00:00:11.970 --> 00:00:15.525
+We will discuss the four types based on this documentation.
+
+00:00:15.525 --> 00:00:18.695
+The first type; Public, accessible by all.
+
+00:00:18.695 --> 00:00:20.879
+A public function are part of
+
+00:00:20.879 --> 00:00:25.424
+a contract's inheritance and can be either called internally via messages.
+
+00:00:25.425 --> 00:00:27.495
+For public state variables,
+
+00:00:27.495 --> 00:00:29.850
+an automatic getter function is generating.
+
+00:00:29.850 --> 00:00:31.740
+The second type; Private,
+
+00:00:31.739 --> 00:00:33.299
+only in this contract.
+
+00:00:33.299 --> 00:00:35.625
+Private functions in state variables are
+
+00:00:35.625 --> 00:00:38.625
+only visible for the contract they are defined in,
+
+00:00:38.625 --> 00:00:43.230
+and not in derived contracts The third type;
+
+00:00:43.229 --> 00:00:47.489
+Internal, only this contract and contracts deriving from it.
+
+00:00:47.490 --> 00:00:51.859
+Those functions in state variables can only be accessed internally.
+
+00:00:51.859 --> 00:00:56.269
+For example, from within the current contract or contracts deriving from it,
+
+00:00:56.270 --> 00:01:01.605
+without using this statement for the contracts contexts.
+
+00:01:01.604 --> 00:01:04.363
+The fourth type; External,
+
+00:01:04.364 --> 00:01:08.000
+cannot be accessed internally, only externally.
+
+00:01:08.000 --> 00:01:11.689
+External functions are part of the contracts interface,
+
+00:01:11.689 --> 00:01:16.489
+which means they can be called from other contracts via transactions.
+
+00:01:16.489 --> 00:01:21.534
+An external function cannot be called internally.
+
+00:01:21.534 --> 00:01:28.515
+For example, the function does not work, but this.function works.
+
+00:01:28.515 --> 00:01:34.359
+External functions are sometimes more efficient when they receive large arrays of data.
+
+00:01:34.359 --> 00:01:35.995
+As you might have noticed,
+
+00:01:35.995 --> 00:01:39.170
+it's important to understand the types of visibility you are working
+
+00:01:39.170 --> 00:01:42.500
+with regarding contract functions and state variables.
+
+00:01:42.500 --> 00:01:45.894
+Let's continue with our StarNotary internal transfer helper.
+
+00:01:45.894 --> 00:01:49.609
+As you might have noticed, it's important to understand the type of visibility
+
+00:01:49.609 --> 00:01:53.435
+you're working with regarding contract functions and state variables.
+
+00:01:53.435 --> 00:01:56.975
+Let's continue with our StarNotary internal transfer helper.
+
+00:01:56.974 --> 00:02:03.059
+We can now use our transfer helper method to transfer the star to its buyer.
+
+00:02:11.349 --> 00:02:17.134
+Lastly, we want to make sure that if the buyer overpaid for some reason,
+
+00:02:17.134 --> 00:02:21.375
+they get a refund and the overpaid amount as returned back to them.
+
+00:02:21.375 --> 00:02:24.710
+We can do that by first checking if there is a difference,
+
+00:02:24.710 --> 00:02:29.010
+and then transferring that different over back to the buyer.
+
+00:02:38.569 --> 00:02:43.209
+Wonderful. We're now ready for some more test.
+
+00:02:48.439 --> 00:02:51.495
+Let's create variable for user1,
+
+00:02:51.495 --> 00:02:56.180
+user2, and starID, similar to what we did before.
+
+00:02:59.900 --> 00:03:03.314
+Since we now deal with a creator star,
+
+00:03:03.314 --> 00:03:08.020
+we can create one in the beforeEach function.
+
+00:03:12.020 --> 00:03:18.620
+First, let's test that a user can put up their star for itself for a certain price.
+
+00:03:34.060 --> 00:03:39.055
+Whenever passing it value at an ether to a Smart Contract,
+
+00:03:39.055 --> 00:03:41.629
+it must be done in Wei.
+
+00:03:41.789 --> 00:03:45.709
+Wei is the smallest denomination of Ether.
+
+00:03:45.710 --> 00:03:49.590
+So, 0.01 Ether would look like that.
+
+00:03:49.590 --> 00:03:53.205
+Since that's too many zeros to count easily,
+
+00:03:53.205 --> 00:03:58.980
+we can use the web3 object to Wei function to get the star cost in Wei.
+
+00:03:58.979 --> 00:04:02.319
+We'll assert that after putting up a star for cell,
+
+00:04:02.319 --> 00:04:07.049
+we can see it in the mapping associated with that star's price.
+
+00:04:18.740 --> 00:04:21.465
+Now, let's test the buying logic,
+
+00:04:21.464 --> 00:04:22.839
+which is a bit more involved,
+
+00:04:22.839 --> 00:04:27.199
+so let's make sure to describe a block for it to group those test.
+
+00:04:27.199 --> 00:04:31.914
+We'll test by buying behavior after the star has been put up for cell.
+
+00:04:31.915 --> 00:04:35.060
+So, let's put that in the beforeEach function.
+
+00:04:35.060 --> 00:04:37.040
+However, in the real world,
+
+00:04:37.040 --> 00:04:43.470
+we would want to have much more thorough tests to test all scenarios.
+
+00:04:43.790 --> 00:04:52.000
+Let's test that user2 can indeed buy that star and becomes the new owner.
+
+00:05:18.199 --> 00:05:22.979
+Let's check the scenario when user2 overpaid for that star.
+
+00:05:22.980 --> 00:05:26.620
+Meaning, they sent more ether than necessary,
+
+00:05:33.189 --> 00:05:37.115
+and let's check that they got refunded the difference.
+
+00:05:37.115 --> 00:05:41.280
+We can capture their balanced right before the transaction.
+
+00:05:46.910 --> 00:05:49.305
+When the transaction is made,
+
+00:05:49.305 --> 00:05:52.920
+we can pass in gas cost as zero.
+
+00:05:52.920 --> 00:05:55.170
+This only works for the test purpose,
+
+00:05:55.170 --> 00:05:58.069
+so that our math becomes easier and we can
+
+00:05:58.069 --> 00:06:02.759
+capture the balance of user2 right after the transaction.
+
+00:06:05.300 --> 00:06:10.280
+We can then assert that the balance after the transaction minus the
+
+00:06:10.279 --> 00:06:15.809
+balanced before the transaction is exactly the star cost.
+
+00:06:20.240 --> 00:06:24.269
+One test we forgot to do is to see if user1
+
+00:06:24.269 --> 00:06:28.234
+gets paid for the star they successively sold.
+
+00:06:28.235 --> 00:06:31.324
+Let's make a described block for the selling behavior.
+
+00:06:31.324 --> 00:06:35.509
+Move the one test we have for testing the selling behavior in there,
+
+00:06:35.509 --> 00:06:37.730
+and add the other one.
+
+00:06:37.730 --> 00:06:43.660
+We'll make a test that make sure that after a user successfully sells their star,
+
+00:06:43.660 --> 00:06:47.400
+they get the star price that they sold it for.
+
+00:06:47.500 --> 00:06:54.160
+Let's say they put up their star for sell for 0.05 ether,
+
+00:06:54.160 --> 00:06:56.490
+and user 2 buys it.
+
+00:06:56.490 --> 00:07:02.250
+Their balance after this transaction should increase by 0.05 ether.
+
+00:07:43.129 --> 00:07:48.110
+Unfortunately, this test fails because we forgot about that logic,
+
+00:07:48.110 --> 00:07:52.030
+so let's go ahead and fix this test by putting that logic in.
+
+00:07:52.029 --> 00:07:55.489
+All we have to do is transfer over the star cost to
+
+00:07:55.490 --> 00:08:00.400
+its old owner at the end of the buyStar function.
+
+00:08:06.589 --> 00:08:09.944
+Now all our tests are good.
+
+00:08:09.944 --> 00:08:12.490
+Awesome. Great job.
+

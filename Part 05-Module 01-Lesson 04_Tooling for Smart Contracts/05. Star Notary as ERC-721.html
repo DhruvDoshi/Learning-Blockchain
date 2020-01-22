@@ -1,0 +1,624 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Star Notary as ERC-721</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Tooling for Smart Contracts</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Getting Started with MetaMask.html">02. Getting Started with MetaMask</a>
+    </li>
+    <li class="">
+      <a href="03. Unit tests in Javascript and Solidity with Truffle.html">03. Unit tests in Javascript and Solidity with Truffle</a>
+    </li>
+    <li class="">
+      <a href="04. Ethereum Improvement Proposals and Standards.html">04. Ethereum Improvement Proposals and Standards</a>
+    </li>
+    <li class="">
+      <a href="05. Star Notary as ERC-721.html">05. Star Notary as ERC-721</a>
+    </li>
+    <li class="">
+      <a href="06. Transform Star Notary into a Non-Fungible Token.html">06. Transform Star Notary into a Non-Fungible Token</a>
+    </li>
+    <li class="">
+      <a href="07. Getting Started with OpenZeppelin.html">07. Getting Started with OpenZeppelin</a>
+    </li>
+    <li class="">
+      <a href="08. Infura.html">08. Infura</a>
+    </li>
+    <li class="">
+      <a href="09. Lesson Recap.html">09. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Star Notary as ERC-721</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-star-notary-as-erc---721"># Star Notary as ERC - 721</h2>
+<p>In this section, we will discuss how to implement the ERC-721 interface. Once we implement the functions required for the interface, we will implement unit tests in Javascript and Solidity with the help of Truffle. </p>
+<p><em>We'll do this in 4 steps throughout this concept.</em></p>
+<ul>
+<li><strong>Step 1</strong>: ERC-721 Basics</li>
+<li><strong>Step 2</strong>: Build out the Functions</li>
+<li><strong>Step 3</strong>: Transfer Logic</li>
+<li><strong>Step 4</strong>: Set Approval Method</li>
+</ul>
+<p>Each step is laid out below in more detail. You can find all of the code written throughout these videos at the bottom of the page.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-1-erc-721-basics">Step 1: ERC-721 Basics</h2>
+<hr />
+<p>In this section, you'll get started with the basics of implementing an ERC-721 token. Follow along using the <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md" target="_blank">ERC-721 Interface Definition</a> for the video below. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>C4L3 04.1.1 SC Part 6.1 Of Coding Series</p></h3>
+  <video controls>
+  <source src="05. C4L3 04.1.1 SC Part 6.1 Of Coding Series-WG-zg5mLPg8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. C4L3 04.1.1 SC Part 6.1 Of Coding Series-WG-zg5mLPg8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-2-build-out-the-functions">Step 2: Build out the Functions</h2>
+<hr />
+<p>Now that you've gotten up and running with ERC-721, you'll need to implement some logic to the token functions. In the next video, we'll do exactly that!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>C4L3 04.1.2 SC Part 6.2 Of Coding Series</p></h3>
+  <video controls>
+  <source src="05. C4L3 04.1.2 SC Part 6.2 Of Coding Series-FUYQ69X6h0c.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. C4L3 04.1.2 SC Part 6.2 Of Coding Series-FUYQ69X6h0c.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-3-transfer-logic">Step 3: Transfer Logic</h2>
+<hr />
+<p>The next step in building out our ERC-721 token is to build out the transfer logic. The following video walks through each of the steps needed to do that.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>C4L3 04.1.3 SC Part 6.3 Of Coding Series</p></h3>
+  <video controls>
+  <source src="05. C4L3 04.1.3 SC Part 6.3 Of Coding Series-JMZY1cKQhfE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. C4L3 04.1.3 SC Part 6.3 Of Coding Series-JMZY1cKQhfE.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-4-set-approval-method">Step 4: Set Approval Method</h3>
+<hr />
+<p>Finally, we'll add in functionality that gives permissions for an operator to transfer all your tokens. We'll implement this functionality in the next video using the set approval method.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>C4L3 04.1.4 SC Part 6.4 Of Coding Series</p></h3>
+  <video controls>
+  <source src="05. C4L3 04.1.4 SC Part 6.4 Of Coding Series-z0BonwqbW6s.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. C4L3 04.1.4 SC Part 6.4 Of Coding Series-z0BonwqbW6s.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-resources">## Resources</h2>
+<ul>
+<li><a href="https://www.myetherwallet.com/helpers.html" target="_blank">My Ether Wallet</a></li>
+<li><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md" target="_blank">ERC-721 Interface Definition</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-code"># Code</h2>
+<p>In this section, we added 3 new files:</p>
+<ul>
+<li><strong>ERC721.sol</strong> - This is a standard description, and a copy of the interface definition. </li>
+<li><strong>ERC721Token.sol</strong> - This contract is our implementation of the ERC721 interface. </li>
+<li><strong>ERC721TokenTest.js</strong> - This file contains the tests for the ERC721Token.sol contract. </li>
+</ul>
+<p>Code for each file is shown below. </p>
+<h2 id="-erc721sol">## ERC721.sol</h2>
+<pre><code>pragma solidity ^0.4.20;
+
+/// @title ERC-721 Non-Fungible Token Standard
+/// @dev See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
+interface ERC721 {
+    /// @dev This emits when ownership of any NFT changes by any mechanism.
+    ///  This event emits when NFTs are created (`from` == 0) and destroyed
+    ///  (`to` == 0). Exception: during contract creation, any number of NFTs
+    ///  may be created and assigned without emitting Transfer. At the time of
+    ///  any transfer, the approved address for that NFT (if any) is reset to none.
+    event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
+
+    /// @dev This emits when the approved address for an NFT is changed or
+    ///  reaffirmed. The zero address indicates there is no approved address.
+    ///  When a Transfer event emits, this also indicates that the approved
+    ///  address for that NFT (if any) is reset to none.
+    event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId);
+
+    /// @dev This emits when an operator is enabled or disabled for an owner.
+    ///  The operator can manage all NFTs of the owner.
+    event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
+
+    /// @notice Count all NFTs assigned to an owner
+    /// @dev NFTs assigned to the zero address are considered invalid, and this
+    ///  function throws for queries about the zero address.
+    /// @param _owner An address for whom to query the balance
+    /// @return The number of NFTs owned by `_owner`, possibly zero
+    function balanceOf(address _owner) external view returns (uint256);
+
+    /// @notice Find the owner of an NFT
+    /// @dev NFTs assigned to zero address are considered invalid, and queries
+    ///  about them do throw.
+    /// @param _tokenId The identifier for an NFT
+    /// @return The address of the owner of the NFT
+    function ownerOf(uint256 _tokenId) external view returns (address);
+
+    /// @notice Transfers the ownership of an NFT from one address to another address
+    /// @dev Throws unless `msg.sender` is the current owner, an authorized
+    ///  operator, or the approved address for this NFT. Throws if `_from` is
+    ///  not the current owner. Throws if `_to` is the zero address. Throws if
+    ///  `_tokenId` is not a valid NFT. When transfer is complete, this function
+    ///  checks if `_to` is a smart contract (code size &gt; 0). If so, it calls
+    ///  `onERC721Received` on `_to` and throws if the return value is not
+    ///  `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`.
+    /// @param _from The current owner of the NFT
+    /// @param _to The new owner
+    /// @param _tokenId The NFT to transfer
+    /// @param data Additional data with no specified format, sent in call to `_to`
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes data) external payable;
+
+    /// @notice Transfers the ownership of an NFT from one address to another address
+    /// @dev This works identically to the other function with an extra data parameter,
+    ///  except this function just sets data to "".
+    /// @param _from The current owner of the NFT
+    /// @param _to The new owner
+    /// @param _tokenId The NFT to transfer
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId) external payable;
+
+    /// @notice Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE
+    ///  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE
+    ///  THEY MAY BE PERMANENTLY LOST
+    /// @dev Throws unless `msg.sender` is the current owner, an authorized
+    ///  operator, or the approved address for this NFT. Throws if `_from` is
+    ///  not the current owner. Throws if `_to` is the zero address. Throws if
+    ///  `_tokenId` is not a valid NFT.
+    /// @param _from The current owner of the NFT
+    /// @param _to The new owner
+    /// @param _tokenId The NFT to transfer
+    function transferFrom(address _from, address _to, uint256 _tokenId) external payable;
+
+    /// @notice Change or reaffirm the approved address for an NFT
+    /// @dev The zero address indicates there is no approved address.
+    ///  Throws unless `msg.sender` is the current NFT owner, or an authorized
+    ///  operator of the current owner.
+    /// @param _approved The new approved NFT controller
+    /// @param _tokenId The NFT to approve
+    function approve(address _approved, uint256 _tokenId) external payable;
+
+    /// @notice Enable or disable approval for a third party ("operator") to manage
+    ///  all of `msg.sender`'s assets
+    /// @dev Emits the ApprovalForAll event. The contract MUST allow
+    ///  multiple operators per owner.
+    /// @param _operator Address to add to the set of authorized operators
+    /// @param _approved True if the operator is approved, false to revoke approval
+    function setApprovalForAll(address _operator, bool _approved) external;
+
+    /// @notice Get the approved address for a single NFT
+    /// @dev Throws if `_tokenId` is not a valid NFT.
+    /// @param _tokenId The NFT to find the approved address for
+    /// @return The approved address for this NFT, or the zero address if there is none
+    function getApproved(uint256 _tokenId) external view returns (address);
+
+    /// @notice Query if an address is an authorized operator for another address
+    /// @param _owner The address that owns the NFTs
+    /// @param _operator The address that acts on behalf of the owner
+    /// @return True if `_operator` is an approved operator for `_owner`, false otherwise
+    function isApprovedForAll(address _owner, address _operator) external view returns (bool);
+}</code></pre>
+<h2 id="-erc721tokensol">## ERC721Token.sol</h2>
+<pre><code>pragma solidity ^0.4.24; 
+
+import './ERC721.sol';
+
+contract ERC721Token is ERC721 {
+
+    mapping(uint256 =&gt; address) tokenToOwner; 
+    mapping(address =&gt; uint256) ownerToBalance; 
+    mapping(uint256 =&gt; address) tokenToApproved;
+    mapping(address =&gt; mapping(address =&gt; bool)) ownerToOperator;
+
+    modifier hasPermission(address _caller, uint256 _tokenId) { 
+        require(_caller == tokenToOwner[_tokenId] 
+        || getApproved(_tokenId) == _caller 
+        || isApprovedForAll(tokenToOwner[_tokenId], _caller));
+        _;
+    }
+
+    function mint(uint256 _tokenId) public { 
+        require(tokenToOwner[_tokenId] == address(0), "this token belongs to someone else already");
+
+        tokenToOwner[_tokenId] = msg.sender; 
+        ownerToBalance[msg.sender] += 1;
+
+        emit Transfer(address(0), msg.sender, _tokenId);
+    }
+
+    /// @notice Count all NFTs assigned to an owner
+    /// @dev NFTs assigned to the zero address are considered invalid, and this
+    ///  function throws for queries about the zero address.
+    /// @param _owner An address for whom to query the balance
+    /// @return The number of NFTs owned by `_owner`, possibly zero
+    function balanceOf(address _owner) external view returns (uint256) { 
+        require(_owner != address(0), "cannot ask of balance of address 0");
+        return ownerToBalance[_owner];
+    }
+
+    /// @notice Find the owner of an NFT
+    /// @dev NFTs assigned to zero address are considered invalid, and queries
+    ///  about them do throw.
+    /// @param _tokenId The identifier for an NFT
+    /// @return The address of the owner of the NFT
+    function ownerOf(uint256 _tokenId) external view returns (address) { 
+        return tokenToOwner[_tokenId];
+    }
+
+    /// @notice Transfers the ownership of an NFT from one address to another address
+    /// @dev Throws unless `msg.sender` is the current owner, an authorized
+    ///  operator, or the approved address for this NFT. Throws if `_from` is
+    ///  not the current owner. Throws if `_to` is the zero address. Throws if
+    ///  `_tokenId` is not a valid NFT. When transfer is complete, this function
+    ///  checks if `_to` is a smart contract (code size &gt; 0). If so, it calls
+    ///  `onERC721Received` on `_to` and throws if the return value is not
+    ///  `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`.
+    /// @param _from The current owner of the NFT
+    /// @param _to The new owner
+    /// @param _tokenId The NFT to transfer
+    /// @param data Additional data with no specified format, sent in call to `_to`
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes data) external payable { 
+        // WILL NOT IMPLEMENT
+    }
+
+    /// @notice Transfers the ownership of an NFT from one address to another address
+    /// @dev This works identically to the other function with an extra data parameter,
+    ///  except this function just sets data to "".
+    /// @param _from The current owner of the NFT
+    /// @param _to The new owner
+    /// @param _tokenId The NFT to transfer
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId) external payable { 
+        // WILL NOT IMPLEMENT
+    }
+
+    /// @notice Transfer ownership of an NFT -- THE CALLER IS RESPONSIBLE
+    ///  TO CONFIRM THAT `_to` IS CAPABLE OF RECEIVING NFTS OR ELSE
+    ///  THEY MAY BE PERMANENTLY LOST
+    /// @dev Throws unless `msg.sender` is the current owner, an authorized
+    ///  operator, or the approved address for this NFT. Throws if `_from` is
+    ///  not the current owner. Throws if `_to` is the zero address. Throws if
+    ///  `_tokenId` is not a valid NFT.
+    /// @param _from The current owner of the NFT
+    /// @param _to The new owner
+    /// @param _tokenId The NFT to transfer
+    function transferFrom(address _from, address _to, uint256 _tokenId) external payable hasPermission(msg.sender, _tokenId) { 
+
+        tokenToOwner[_tokenId] = _to; 
+        ownerToBalance[_from] -= 1;
+
+        emit Transfer(_from, _to, _tokenId);
+    }
+
+    /// @notice Change or reaffirm the approved address for an NFT
+    /// @dev The zero address indicates there is no approved address.
+    ///  Throws unless `msg.sender` is the current NFT owner, or an authorized
+    ///  operator of the current owner.
+    /// @param _approved The new approved NFT controller
+    /// @param _tokenId The NFT to approve
+    function approve(address _approved, uint256 _tokenId) external payable { 
+        require(tokenToOwner[_tokenId] == msg.sender);
+
+        tokenToApproved[_tokenId] = _approved;
+
+        emit Approval(msg.sender, _approved, _tokenId);
+    }
+
+    /// @notice Enable or disable approval for a third party ("operator") to manage
+    ///  all of `msg.sender`'s assets
+    /// @dev Emits the ApprovalForAll event. The contract MUST allow
+    ///  multiple operators per owner.
+    /// @param _operator Address to add to the set of authorized operators
+    /// @param _approved True if the operator is approved, false to revoke approval
+    function setApprovalForAll(address _operator, bool _approved) external { 
+        ownerToOperator[msg.sender][_operator] = _approved;
+
+        emit ApprovalForAll(msg.sender, _operator, _approved);
+    }
+
+    /// @notice Get the approved address for a single NFT
+    /// @dev Throws if `_tokenId` is not a valid NFT.
+    /// @param _tokenId The NFT to find the approved address for
+    /// @return The approved address for this NFT, or the zero address if there is none
+    function getApproved(uint256 _tokenId) public view returns (address) { 
+        return tokenToApproved[_tokenId];
+    }
+
+    /// @notice Query if an address is an authorized operator for another address
+    /// @param _owner The address that owns the NFTs
+    /// @param _operator The address that acts on behalf of the owner
+    /// @return True if `_operator` is an approved operator for `_owner`, false otherwise
+    function isApprovedForAll(address _owner, address _operator) public view returns (bool) { 
+        return ownerToOperator[_owner][_operator];
+    }
+}</code></pre>
+<h2 id="-erc721tokentestjs">## ERC721TokenTest.js</h2>
+<pre><code>const ERC721Token = artifacts.require('ERC721Token')
+
+contract('ERC721Token', accounts =&gt; { 
+    var defaultAccount = accounts[0]
+    var user1 = accounts[1]
+    var user2 = accounts[2]
+    var operator = accounts[3]
+
+    beforeEach(async function() { 
+        this.contract = await ERC721Token.new({from: defaultAccount})
+    })
+
+    describe('can create a token', () =&gt; { 
+        let tokenId = 1
+        let tx
+
+        beforeEach(async function () { 
+            tx = await this.contract.mint(tokenId, {from: user1})
+        })
+
+        it('ownerOf tokenId is user1', async function () { 
+            assert.equal(await this.contract.ownerOf(tokenId), user1)
+        })
+
+        it('balanceOf user1 is incremented by 1', async function () { 
+            let balance = await this.contract.balanceOf(user1)
+
+            assert.equal(balance.toNumber(), 1)
+        })
+
+        it('emits the correct event during creation of a new token', async function () { 
+            assert.equal(tx.logs[0].event, 'Transfer')
+        })
+    })
+
+    describe('can transfer token', () =&gt; { 
+        let tokenId = 1
+        let tx 
+
+        beforeEach(async function () { 
+            await this.contract.mint(tokenId, {from: user1})
+
+            tx = await this.contract.transferFrom(user1, user2, tokenId, {from: user1})
+        })
+
+        it('token has new owner', async function () { 
+            assert.equal(await this.contract.ownerOf(tokenId), user2)
+        })
+
+        it('emits the correct event', async function () { 
+            assert.equal(tx.logs[0].event, 'Transfer')
+            assert.equal(tx.logs[0].args._tokenId, tokenId)
+            assert.equal(tx.logs[0].args._to, user2)
+            assert.equal(tx.logs[0].args._from, user1)
+        })
+
+        it('only permissioned users can transfer tokens', async function() { 
+            let randomPersonTryingToStealTokens = accounts[4]
+
+            await expectThrow(this.contract.transferFrom(user1, randomPersonTryingToStealTokens, tokenId, {from: randomPersonTryingToStealTokens}))
+        })
+    })
+
+    describe('can grant approval to transfer', () =&gt; { 
+        let tokenId = 1
+        let tx 
+
+        beforeEach(async function () { 
+            await this.contract.mint(tokenId, {from: user1})
+            tx = await this.contract.approve(user2, tokenId, {from: user1})
+        })
+
+        it('set user2 as an approved address', async function () { 
+            assert.equal(await this.contract.getApproved(tokenId), user2)
+        })
+
+        it('user2 can now transfer', async function () { 
+            await this.contract.transferFrom(user1, user2, tokenId, {from: user2})
+
+            assert.equal(await this.contract.ownerOf(tokenId), user2)
+        })
+
+        it('emits the correct event', async function () { 
+            assert.equal(tx.logs[0].event, 'Approval')
+        })
+    })
+
+    describe('can set an operator', () =&gt; { 
+        let tokenId = 1
+        let tx 
+
+        beforeEach(async function () { 
+            await this.contract.mint(tokenId, {from: user1})
+
+            tx = await this.contract.setApprovalForAll(operator, true, {from: user1})
+        })
+
+        it('can set an operator', async function () { 
+            assert.equal(await this.contract.isApprovedForAll(user1, operator), true)
+        })
+    })
+})
+
+var expectThrow = async function(promise) { 
+    try { 
+        await promise
+    } catch (error) { 
+        assert.exists(error)
+        return
+    }
+
+    assert.fail('Expected an error but didnt see one!')
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

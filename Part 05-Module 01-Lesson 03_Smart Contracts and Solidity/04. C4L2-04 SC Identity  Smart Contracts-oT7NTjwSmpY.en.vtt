@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.419
+In this video, we'll talk about what identity means on the Ethereum blockchain.
+
+00:00:04.419 --> 00:00:07.049
+Identity can be defined in many ways.
+
+00:00:07.049 --> 00:00:09.960
+It's an extremely broad topic that might involve tying
+
+00:00:09.960 --> 00:00:13.245
+your real-world identity to an Ethereum public address.
+
+00:00:13.244 --> 00:00:15.239
+However, for our purposes,
+
+00:00:15.240 --> 00:00:19.344
+we'll just say that you're blushing identity is your theory and public address.
+
+00:00:19.344 --> 00:00:23.254
+This means that when a smart contract allocates resources to user,
+
+00:00:23.254 --> 00:00:25.919
+just given that user tokens or other assets,
+
+00:00:25.920 --> 00:00:29.280
+they're doing so by using that user's public Ethereum address,
+
+00:00:29.280 --> 00:00:32.410
+which is also called the wallet.
+
+00:00:32.950 --> 00:00:37.170
+Let's explore the Ethereum blockchain and see if we can deduce
+
+00:00:37.170 --> 00:00:41.695
+some pieces of information from some of the users on the Ethereum blockchain.
+
+00:00:41.695 --> 00:00:44.554
+Let's go back to the CryptoPunks website
+
+00:00:44.554 --> 00:00:47.909
+and look at one of the owners for one of the Punks.
+
+00:00:50.590 --> 00:00:54.680
+Here we can see that this particular Ethereum public wallet
+
+00:00:54.679 --> 00:00:57.070
+is the owner for this CryptoPunk.
+
+00:00:57.070 --> 00:01:00.420
+We can then use an Ethereum blockchain explorer such that
+
+00:01:00.420 --> 00:01:04.500
+Etherscan to see more information about this user.
+
+00:01:11.120 --> 00:01:16.310
+Here we can see their entire transaction history and see what other assets that
+
+00:01:16.310 --> 00:01:21.344
+wallet has as well as what smart contracts this wallet interacted with.
+
+00:01:21.344 --> 00:01:25.245
+Etherscan is really good at showing you transaction histories,
+
+00:01:25.245 --> 00:01:29.344
+but not so great at viewing what other crypto collectibles as wallet has.
+
+00:01:29.344 --> 00:01:32.269
+Other websites like Rare Bits specialize in
+
+00:01:32.269 --> 00:01:35.089
+figuring out what crypto collectibles a wallet has,
+
+00:01:35.090 --> 00:01:39.630
+and so here we can see that this wallet also has some other crypto assets.
+
+00:01:39.629 --> 00:01:42.109
+To summarize, even though we do not know
+
+00:01:42.109 --> 00:01:45.084
+the real identity of the user for this random wallet,
+
+00:01:45.084 --> 00:01:48.904
+we can say that this user's blockchain identity is their wallet.
+
+00:01:48.905 --> 00:01:54.320
+In short, Ethereum public address allows you to have an identity on the Ethereum network.
+
+00:01:54.319 --> 00:01:56.389
+It allows for smart contracts and
+
+00:01:56.390 --> 00:02:00.780
+other users to allocate resources or assets to your wallet.
+

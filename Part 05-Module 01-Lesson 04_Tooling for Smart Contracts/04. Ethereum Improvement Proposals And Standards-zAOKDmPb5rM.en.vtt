@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.140 --> 00:00:05.339
+In this section, we'll go over how the Ethereum community proposes improvements,
+
+00:00:05.339 --> 00:00:09.039
+and how that affects the smart contract development best practices.
+
+00:00:09.039 --> 00:00:11.449
+The list of Ethereum improvement proposals,
+
+00:00:11.449 --> 00:00:15.954
+or EIPs, can be found on Ethereum's GitHub repository.
+
+00:00:15.955 --> 00:00:18.920
+Anyone can propose a new EIP.
+
+00:00:18.920 --> 00:00:23.655
+That EIP then goes through a review process by anyone in the Ethereum community.
+
+00:00:23.655 --> 00:00:26.190
+I encourage you to look through some of the open EIPs,
+
+00:00:26.190 --> 00:00:28.230
+and see if you can provide valuable feedback to
+
+00:00:28.230 --> 00:00:32.489
+the review process because you're all now part of the Ethereum community.
+
+00:00:32.488 --> 00:00:36.390
+Let's explore the more readable view for all EIPs.
+
+00:00:36.390 --> 00:00:38.969
+An EIP is one of these types.
+
+00:00:38.969 --> 00:00:41.339
+We will focus on exploring ERCs,
+
+00:00:41.340 --> 00:00:44.595
+which are applicational standards and conventions.
+
+00:00:44.594 --> 00:00:49.700
+Here we'll see a list of all ERC/EIPs and their statuses.
+
+00:00:49.700 --> 00:00:52.859
+Let's look at some of the accepted ones.
+
+00:00:54.289 --> 00:00:58.379
+One of the most important ERCs is the ERC-20.
+
+00:00:58.380 --> 00:01:01.545
+Ethereum is the largest, tougher, pretty tokens.
+
+00:01:01.545 --> 00:01:04.129
+Ethereum makes it really easy for anyone to create
+
+00:01:04.129 --> 00:01:07.674
+their own token cryptocurrency with a simple smart contract.
+
+00:01:07.674 --> 00:01:10.489
+Unfortunately, before there was a standard of how to write
+
+00:01:10.489 --> 00:01:13.129
+these tokens smart contracts in order for a marketplace,
+
+00:01:13.129 --> 00:01:15.935
+service, or an exchange to add these custom tokens,
+
+00:01:15.935 --> 00:01:19.090
+they would need to know the contract interface for each token.
+
+00:01:19.090 --> 00:01:22.780
+So, the Ethereum community decided to create a standard or an interface,
+
+00:01:22.780 --> 00:01:25.885
+that would dictate higher smart contract for token should be written.
+
+00:01:25.885 --> 00:01:27.640
+This last marketplace, exchanges,
+
+00:01:27.640 --> 00:01:30.635
+or services, to easily interact with it.
+
+00:01:30.635 --> 00:01:33.969
+In short, ERC-20 is an interface that
+
+00:01:33.969 --> 00:01:37.405
+proposes how token smart contracts should be written.
+
+00:01:37.405 --> 00:01:40.909
+ERC-20 tokens are fungible, like money.
+
+00:01:40.909 --> 00:01:42.679
+If I wanted to spend a dollar,
+
+00:01:42.680 --> 00:01:45.790
+it doesn't matter if I spent this dollar bill or that dollar bill,
+
+00:01:45.790 --> 00:01:48.410
+as the value of all dollar bills is the same.
+
+00:01:48.409 --> 00:01:52.075
+Non-fungible assets are distinguishable assets that are unique,
+
+00:01:52.075 --> 00:01:54.640
+like land, artwork, or collectibles.
+
+00:01:54.640 --> 00:01:59.200
+Just as we have a way to represent wealth with non-fungible assets in the real world,
+
+00:01:59.200 --> 00:02:01.930
+we have a way to do that with Ethereum as well.
+
+00:02:01.930 --> 00:02:06.680
+The standard to represent non-fungible tokens is called ERC-721,
+
+00:02:06.680 --> 00:02:08.930
+and it looks like this.
+
+00:02:08.930 --> 00:02:12.694
+The authors of this proposal wanted to create an interface
+
+00:02:12.694 --> 00:02:15.799
+that represented all possible distinguishable assets on Ethereum,
+
+00:02:15.800 --> 00:02:18.030
+like physical property, virtual collectibles,
+
+00:02:18.030 --> 00:02:19.955
+or even negative assets like debt.
+
+00:02:19.955 --> 00:02:22.820
+This means that in order for us to make a collection,
+
+00:02:22.819 --> 00:02:28.435
+undistinguishable stars for a star notary that is a true non-fungible asset on Ethereum,
+
+00:02:28.435 --> 00:02:30.620
+we must follow this standard.
+
+00:02:30.620 --> 00:02:34.155
+Let's go ahead and implement the ERC-721 standard,
+
+00:02:34.155 --> 00:02:37.039
+so we can use it for our star notary service.
+

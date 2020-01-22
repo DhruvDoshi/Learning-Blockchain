@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.509
+Welcome to the lesson on the Ethereum Smart Contracts and Solidity.
+
+00:00:03.509 --> 00:00:06.639
+I'm Alina, and I'll be your instructor for this lesson and the next.
+
+00:00:06.639 --> 00:00:07.904
+In the last lesson,
+
+00:00:07.905 --> 00:00:10.080
+we learned the basics of a Ethereum.
+
+00:00:10.080 --> 00:00:12.720
+In this lesson, we'll talk about Ethereum smart contracts,
+
+00:00:12.720 --> 00:00:15.705
+what they are, and how you can get started building your own.
+
+00:00:15.705 --> 00:00:20.234
+You'll learn the basics of how to write and manually test your smart contract.
+
+00:00:20.234 --> 00:00:24.780
+This will set you up to write complex decentralized applications in the next lesson.
+
+00:00:24.780 --> 00:00:29.190
+This will be a huge step towards understanding smart contract development,
+
+00:00:29.190 --> 00:00:31.095
+and I'm excited to teach it to you.
+
+00:00:31.094 --> 00:00:36.325
+Smart contracts on Etherium are programs that can be run on the Ethereum network.
+
+00:00:36.325 --> 00:00:39.605
+These programs are deployed to the entire network and
+
+00:00:39.604 --> 00:00:43.714
+each call to a smart contract is verified by all participating nodes.
+
+00:00:43.715 --> 00:00:46.520
+This allows for trusted parties to participate in
+
+00:00:46.520 --> 00:00:50.830
+complex financial contracts without any third party supervision.
+
+00:00:50.829 --> 00:00:55.339
+Numerous projects are working on prediction markets that allow anyone to bet on
+
+00:00:55.340 --> 00:00:57.460
+a future event and be paid out if
+
+00:00:57.460 --> 00:01:00.859
+their prediction was correct without any central authority.
+
+00:01:00.859 --> 00:01:03.469
+Other projects are working on loans,
+
+00:01:03.469 --> 00:01:06.200
+where anyone around the world can request or offer
+
+00:01:06.200 --> 00:01:10.210
+funds for a loan entirely from a de-centralized smart contract.
+
+00:01:10.209 --> 00:01:13.279
+The concept of a smart contract is not a new one.
+
+00:01:13.280 --> 00:01:17.355
+In fact, it was first proposed by Nick Szabo in the mid-nineties.
+
+00:01:17.355 --> 00:01:22.950
+Etherium however, is the first blockchain to have implemented a smart contracts platform.
+
+00:01:22.950 --> 00:01:25.409
+In comparison to bitcoin scripts,
+
+00:01:25.409 --> 00:01:28.209
+Ethereum smart contracts are Turing Complete.
+
+00:01:28.209 --> 00:01:31.864
+This simply means that smart contract code is non-deterministic,
+
+00:01:31.864 --> 00:01:33.524
+and can have conditional branching,
+
+00:01:33.525 --> 00:01:35.395
+jumps, and for loops.
+
+00:01:35.394 --> 00:01:39.039
+The versatility for what's smart contracts can be used for has
+
+00:01:39.040 --> 00:01:43.040
+resulted in vastly different developer ecosystems in comparison to Bitcoin.
+
+00:01:43.040 --> 00:01:47.854
+Ethereum developer ecosystem is rich in Turing and open-source projects.
+
+00:01:47.853 --> 00:01:50.840
+Many projects and entire companies emerged with
+
+00:01:50.840 --> 00:01:54.000
+their core tech being built on Ethereum smart contracts.
+
+00:01:54.000 --> 00:01:57.474
+Some of these projects have made quite a stir in the medium.
+
+00:01:57.474 --> 00:02:01.219
+These Ethereum-based projects have distributed the token that they made
+
+00:02:01.219 --> 00:02:06.950
+Ethereum smart contract to the public in what is called initial coin offerings or ICO.
+
+00:02:06.950 --> 00:02:10.500
+Collectively, these projects raise billions of dollars.
+
+00:02:10.500 --> 00:02:12.965
+These projects range from focusing on games,
+
+00:02:12.965 --> 00:02:15.115
+to provide services, to art,
+
+00:02:15.115 --> 00:02:18.020
+to different types of insurance, to credit,
+
+00:02:18.020 --> 00:02:22.055
+loans, derivatives, and even keeping track of physical property.
+
+00:02:22.055 --> 00:02:25.370
+To date, there're roughly 1,000 such projects that have made a
+
+00:02:25.370 --> 00:02:28.998
+token on top of Ethereum with the help of a smart contract.
+
+00:02:28.998 --> 00:02:31.849
+One of the more successful and creative use cases for
+
+00:02:31.849 --> 00:02:34.549
+a smart contract has been around gaming.
+
+00:02:34.550 --> 00:02:38.500
+One such extremely successful project is called cryptokitties.
+
+00:02:38.500 --> 00:02:41.465
+Cryptokitties is a game that allows you to buy,
+
+00:02:41.465 --> 00:02:43.879
+own, and breed digital cats.
+
+00:02:43.879 --> 00:02:48.234
+Certain cats are worth more than others based on the rarity of their genes.
+
+00:02:48.235 --> 00:02:51.650
+The price release cats vary from just a few dollars to
+
+00:02:51.650 --> 00:02:57.730
+the most expensive kitty ever sold for $140,000 in the digital art auction.
+
+00:02:57.729 --> 00:03:01.549
+A smart contract has to compile down to op-codes that
+
+00:03:01.550 --> 00:03:04.925
+the Etherium Virtual Machine or EVM can understand.
+
+00:03:04.925 --> 00:03:08.150
+Though there are many programming languages for smart contracts,
+
+00:03:08.150 --> 00:03:10.474
+the most maintained one is called solidity,
+
+00:03:10.474 --> 00:03:12.685
+provided by the Etherium foundation.
+
+00:03:12.685 --> 00:03:16.560
+Solidity is the one that we'll focus on for this course.
+

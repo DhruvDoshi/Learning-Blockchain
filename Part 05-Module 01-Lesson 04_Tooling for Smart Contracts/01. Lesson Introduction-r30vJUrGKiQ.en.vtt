@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.060
+Hello everyone. Welcome to this lesson on,
+
+00:00:03.060 --> 00:00:04.799
+tooling for smart contracts.
+
+00:00:04.799 --> 00:00:07.500
+In this lesson, we'll introduce various tools and
+
+00:00:07.500 --> 00:00:10.935
+open-source platforms for faster smart contract development.
+
+00:00:10.935 --> 00:00:13.940
+These tools will help us achieve more complex functionality,
+
+00:00:13.939 --> 00:00:16.844
+and increase security of our smart contracts.
+
+00:00:16.844 --> 00:00:19.799
+We'll go over how to use a great tool called Metamask,
+
+00:00:19.800 --> 00:00:23.140
+for seamless interaction with your smart contracts from our web page.
+
+00:00:23.140 --> 00:00:27.070
+Next up, I'll show you how to write JavaScript tests for a smart contract.
+
+00:00:27.070 --> 00:00:31.230
+We'll then explore how the Ethereum community accepts new standards and improvements,
+
+00:00:31.230 --> 00:00:35.320
+and how to use the Zeppelin framework to increase security of your smart contracts.
+
+00:00:35.320 --> 00:00:38.475
+Afterwards, we'll focus on easier web development,
+
+00:00:38.475 --> 00:00:43.245
+and introduce a simple way to deploy your smart contract to the official test networks,
+
+00:00:43.244 --> 00:00:45.409
+and finally, to Ethereum itself.
+
+00:00:45.409 --> 00:00:49.765
+These are great tools that are used for production projects in the industry today.
+
+00:00:49.765 --> 00:00:55.799
+They'll help you greatly to make an awesome final project for this course. Let's dive in.
+

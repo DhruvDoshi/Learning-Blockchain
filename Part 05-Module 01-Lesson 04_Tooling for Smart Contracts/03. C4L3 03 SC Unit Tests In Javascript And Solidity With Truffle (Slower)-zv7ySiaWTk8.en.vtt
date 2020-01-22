@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.830 --> 00:00:05.250
+In this section, we'll go over best practices on how to test
+
+00:00:05.250 --> 00:00:09.960
+your smart contracts by introducing the Truffle unit test environment.
+
+00:00:09.960 --> 00:00:14.235
+So far, we've only been testing our smart contracts manually,
+
+00:00:14.234 --> 00:00:16.439
+which is by far not the best practice.
+
+00:00:16.440 --> 00:00:19.410
+Since smart contracts is generally pretty difficult,
+
+00:00:19.410 --> 00:00:21.554
+we'll use a great tool called Truffle.
+
+00:00:21.554 --> 00:00:23.730
+Truffle makes it very easy to write unit tests,
+
+00:00:23.730 --> 00:00:26.804
+mostly Solidity and JavaScript for your smart contracts.
+
+00:00:26.804 --> 00:00:31.079
+I'll show you how to quickly and easily test your code with JavaScript.
+
+00:00:31.079 --> 00:00:35.579
+First, let's install Truffle from the command line using NPM
+
+00:00:35.579 --> 00:00:39.489
+by running npm install truffle --global.
+
+00:00:39.490 --> 00:00:44.075
+Let's make a new folder in your project directory for all our smart contract logic.
+
+00:00:44.075 --> 00:00:47.495
+Go ahead and navigate to it and type Truffle in it.
+
+00:00:47.494 --> 00:00:50.089
+But now initialize this directory for Truffle,
+
+00:00:50.090 --> 00:00:51.800
+and if you look at the directory again,
+
+00:00:51.799 --> 00:00:56.574
+you'll see that now we have three new folders: contracts, tests, and migrations.
+
+00:00:56.575 --> 00:00:59.700
+We'll now move our code for our smart contracts from
+
+00:00:59.700 --> 00:01:03.290
+Remix into a new file and the contrast directory.
+
+00:01:03.289 --> 00:01:05.584
+If you're using Visual Studio Code,
+
+00:01:05.584 --> 00:01:08.539
+I highly recommend installing Solidity plug-in,
+
+00:01:08.540 --> 00:01:10.355
+as it is extremely helpful.
+
+00:01:10.355 --> 00:01:16.655
+We'll also make a new file and test directory and call it StarNotaryTest.js.
+
+00:01:16.655 --> 00:01:21.739
+We'll first begin writing our tests by giving the definition of our smart contract.
+
+00:01:21.739 --> 00:01:25.129
+Truffle exposes an artifact object for a smart contract that
+
+00:01:25.129 --> 00:01:29.579
+contains information such as the ABI and other info.
+
+00:01:30.859 --> 00:01:34.879
+Truffle uses the Mocha JavaScript testing framework but with
+
+00:01:34.879 --> 00:01:38.569
+more additional helper keywords to help us test for contracts.
+
+00:01:38.569 --> 00:01:42.354
+Remember those 10 test accounts we got from our local test network?
+
+00:01:42.355 --> 00:01:45.350
+We can use them here as well to write our unit tests.
+
+00:01:45.349 --> 00:01:50.219
+We'll go ahead and set the owner wallet to the first of those accounts.
+
+00:01:50.959 --> 00:01:55.199
+Now, we'll instantiate our smart contract needed for each clause.
+
+00:01:55.200 --> 00:01:58.234
+Remember, whenever dealing with any interaction in the block chain,
+
+00:01:58.234 --> 00:01:59.719
+it will be asynchronous.
+
+00:01:59.719 --> 00:02:04.355
+So, we'll be using the async and await keywords and denote that behavior.
+
+00:02:04.355 --> 00:02:07.579
+Let's begin testing some basic functionality
+
+00:02:07.579 --> 00:02:10.354
+by grouping your tests in the describe clause.
+
+00:02:10.354 --> 00:02:13.129
+We'll then create a test to just see the name of
+
+00:02:13.129 --> 00:02:16.709
+a restaurant owner using created correctly in the constructor.
+
+00:02:23.050 --> 00:02:28.680
+Great. Now, we're ready to run our tests in the command line tool.
+
+00:02:29.889 --> 00:02:32.794
+From the smart contract directory,
+
+00:02:32.794 --> 00:02:34.674
+run a Truffle test.
+
+00:02:34.675 --> 00:02:39.120
+You'll see your smart contract get compiled and run our tests.
+
+00:02:39.120 --> 00:02:41.955
+Great, it looks like our test passed.
+
+00:02:41.955 --> 00:02:48.780
+Let's keep going. Let's test that our star can be claimed.
+
+00:02:48.780 --> 00:02:52.319
+Let's make a test that it checks that it belongs to address zero initially,
+
+00:02:52.319 --> 00:02:54.234
+and then after the owner claims that,
+
+00:02:54.235 --> 00:02:56.695
+the owner becomes the owner of the star.
+
+00:02:56.694 --> 00:02:59.430
+I'm going to quickly check that our assumptions are correct,
+
+00:02:59.430 --> 00:03:02.680
+and the star first belongs to address zero.
+
+00:03:06.379 --> 00:03:10.419
+Now, let's add the rest of the logic.
+
+00:03:16.550 --> 00:03:20.380
+Let's see if those tests worked.
+
+00:03:29.449 --> 00:03:34.699
+It looks like they did. Great. Now, let's test
+
+00:03:34.699 --> 00:03:40.019
+out the star can be claimed again after an owner has claimed that initially.
+
+00:03:40.610 --> 00:03:42.660
+We'll put that logic,
+
+00:03:42.659 --> 00:03:44.000
+and then before each clause,
+
+00:03:44.000 --> 00:03:49.710
+and focus on testing just the behavior that happens after someone already claimed it.
+
+00:04:01.699 --> 00:04:03.959
+Now, let's run those tests,
+
+00:04:03.960 --> 00:04:06.610
+and it looks like that should be it.
+
+00:04:12.770 --> 00:04:16.710
+Congrats. You now know an effective way to unit
+
+00:04:16.709 --> 00:04:20.245
+test your smart contracts for faster development later on.
+
+00:04:20.245 --> 00:04:25.680
+Next up, we'll go over more complex in theorem App Development Standards.
+
